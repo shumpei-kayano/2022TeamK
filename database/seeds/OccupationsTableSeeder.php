@@ -11,7 +11,7 @@ class OccupationsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ranks')->insert([
+        DB::table('occupations')->insert([
             [
                 'occupation_name' => 'フロントエンドエンジニア',
             ],

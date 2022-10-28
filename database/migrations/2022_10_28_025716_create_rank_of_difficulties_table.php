@@ -16,7 +16,7 @@ class CreateRankOfDifficultiesTable extends Migration
         Schema::create('rank_of_difficulties', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('rank');
-            $table->integer('mac_experience');
+            $table->integer('max_experience');
         });
     }
 
