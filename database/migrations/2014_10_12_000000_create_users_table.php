@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->integer('total_experience');
+            $table->integer('total_experience')->default(0);
             $table->integer('certification_key');
             $table->timestamps();
         });
