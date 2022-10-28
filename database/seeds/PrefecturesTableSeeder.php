@@ -11,6 +11,13 @@ class PrefecturesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('prefectures')->insert([
+            [
+                'prefectures_name' => '北海道'
+            ],
+            [
+                'prefectures_name' => '青森県'
+            ],
+        ]);
     }
 }
