@@ -73,7 +73,7 @@ class OccupationsTableSeeder extends Seeder
                 'occupation_name' => 'テクニカルサポートエンジニア',
             ],
             [
-                'occupation_name' => 'エンジニアマネージャー,
+                'occupation_name' => 'エンジニアマネージャー',
             ],
             [
                 'occupation_name' => 'プロダクトマネージャー',
