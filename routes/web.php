@@ -24,3 +24,6 @@ Route::middleware(['verified'])->group(function () {
     //★ログイン後のルート設定★//
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
