@@ -16,8 +16,24 @@
 
                     <form method="GET" action="/account">
                     @csrf
-                    <input type="submit">
+                    <input type="submit" name="account" value="アカウント">
                     </form>
+
+                    <form method="GET" action="/favorite">
+                        @csrf
+                        <input type="submit" name="favorite" value="お気に入り">
+                        </form>
+
+                    <form method="GET" action="/show">
+                            @csrf
+                            <input type="submit" name="show" value="案件検索">
+                        </form>
+
+                    <form method="GET" action="/portfolio">
+                            @csrf
+                            <input type="submit" name="portfolio" value="ポートフォリオ">
+                        </form>
+                        
                 </div>
             </div>
         </div>

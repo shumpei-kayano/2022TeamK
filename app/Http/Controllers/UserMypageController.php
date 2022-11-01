@@ -36,4 +36,12 @@ class UserMypageController extends Controller
     {
         return view('dalateComplete');
     }
+    public function favorite(Request $request)
+    {
+        return view('favorite');
+    }
+    public function favoriteDelete(Request $request)
+    {
+        return view('');
+    }
 }

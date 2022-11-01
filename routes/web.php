@@ -23,6 +23,16 @@ Route::middleware(['verified'])->group(function () {
 
     //★ログイン後のルート設定★//
 
+    // マイページルート
 Route::get('/account', 'UserMypageController@account')->name('account');
+Route::get('/favorite', 'UserMypageController@favorite')->name('favorite');
+
+    // 案件ルート
+Route::get('/show', 'MatterController@show')->name('show');
+
+    // ポートフォリオルート
+Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
+Route::get('/update', 'PortfolioController@update')->name('update');
+
 
 });
