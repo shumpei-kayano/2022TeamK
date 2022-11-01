@@ -23,4 +23,6 @@ Route::middleware(['verified'])->group(function () {
 
     //★ログイン後のルート設定★//
 
+Route::get('/account', 'UserMypageController@account')->name('account');
+
 });
