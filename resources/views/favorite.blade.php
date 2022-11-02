@@ -66,7 +66,7 @@ body {
   font-size:1.0rem;
   text-align: left;
   margin-left: 2%;
-  margin-top: 2%;
+  margin-top: 90px;
 }
 
 #sc {
@@ -103,7 +103,7 @@ body {
     font-size: 1.0rem;
    text-align: right;
    margin-right: 5%;
-   padding-top: 100px;
+   padding-top: 50px;
 }
 </style>
 

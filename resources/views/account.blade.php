@@ -22,12 +22,14 @@
   </header>
   <h2>アカウント情報</h2>
   <p id="back"><a href="login">マイページに戻る</a></p>
-  <h3><a href="account" style="margin-right:18%;">アカウント情報の編集</a></h3>
+  <form method="GET" action="/accountUpdate"><a href="home" name="hensyuu" id="update" style="padding-right:2%;">アカウント情報の編集</a>
+    @csrf
+  </form>
 
   <div style="background:#FCEDED;margin-left:auto;margin-right:auto; width:700px; padding:150px; border-radius: 10px; border: 2px solid #000000;">
-<p id="id">{{ $user->email }}：<input type="text" name="userid" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
+<p id="id">ID：<input type="text" name="userid" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
     border-color: #000000;"></p>
-<p id="pass">パスワード：<input type="text" name="password" placeholder="入力してください" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
+<p id="pass">パスワード：<input type="text" name="password" placeholder="{{ $user->email }}" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
         border-color: #000000;"></p>
 </div>
 <h4><a href="dalete" style="margin-right:18%;">アカウント削除はこちらから</a></h4>
@@ -73,11 +75,7 @@ h2{
   margin-top: 2%;
 }
 
-h3{
-    font-size: 0.8rem;
-    text-align:right;
-    padding-right: 10%;
-}
+
 
 h4{
     font-size: 0.8rem;
