@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->integer('total_experience')->default(0);
-            $table->integer('certification_key');
+            $table->integer('certification_key')->nullable();
             $table->timestamps();
         });
     }
