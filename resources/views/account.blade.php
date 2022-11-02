@@ -25,9 +25,9 @@
   <h3><a href="account" style="margin-right:18%;">アカウント情報の編集</a></h3>
 
   <div style="background:#FCEDED;margin-left:auto;margin-right:auto; width:700px; padding:150px; border-radius: 10px; border: 2px solid #000000;">
-<p id="id">ユーザーID：<input type="text" name="userid" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
+<p id="id">ユーザーID：<input type="text" name="userid" placeholder="入力してください" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
     border-color: #000000;"></p>
-<p id="pass">パスワード：<input type="text" name="password" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
+<p id="pass">パスワード：<input type="text" name="password" placeholder="入力してください" style="justify-content: center; align-items: center; width: 450px; height:45px; background:white; border: solid;
         border-color: #000000;"></p>
 </div>
 <h4><a href="dalete" style="margin-right:18%;">アカウント削除はこちらから</a></h4>
