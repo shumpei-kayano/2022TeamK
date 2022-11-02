@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class UserMypageController extends Controller
 {
@@ -18,7 +20,8 @@ class UserMypageController extends Controller
     }
     public function account(Request $request)
     {
-        return view('account');
+        $user = Auth::user();
+        return view('account', compact('user'));
     }
     public function accountUpdata(Request $request)
     {
