@@ -35,6 +35,8 @@
 <h4><a href="dalete" style="margin-right:18%;">アカウント削除はこちらから</a></h4>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-5/js/5-1-5.js"></script>
+
+
 </body>
 <style>
     @charset "utf-8";
