@@ -27,14 +27,35 @@
       </form>
     </form>
 
-    <div>
-        <p>エリア：<select name="pref">
+    <div class="pulldown">
+        <span class="pref">
+            <p>エリア：<select name="pref">
             <option value="">▼選択</option>
             <option value="Tokyo">東京</option>
             <option value="Osaka">大阪</option>
             <option value="Fukuoka">福岡</option>
             </select></p>
+        </span>
+
+        <span class="matter">
+            <p>職種：<select name="matter">
+            <option value="">▼選択</option>
+            <option value="Tokyo">漁師</option>
+            <option value="Osaka">農家</option>
+            <option value="Fukuoka">錬金術師</option>
+            </select></p>
+        </span>
+
+        <span class="level">
+            <p>レベル：<select name="level">
+            <option value="">▼選択</option>
+            <option value="Tokyo">1</option>
+            <option value="Osaka">2</option>
+            <option value="Fukuoka">3</option>
+            </select></p>
+        </span>
     </div>
+
 
 
 
@@ -76,6 +97,25 @@ form {
 }
 .b{
   background-color: #fd0000;
+}
+
+.pulldown {
+    display:flex;
+    float: left;
+  list-style: none;
+  margin: 30px;
+}
+
+.pref {
+   
+}
+
+.mattter {
+    
+}
+
+.level {
+    
 }
 </style>
 
