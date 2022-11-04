@@ -37,6 +37,8 @@ Route::get('/listingConfirmation', 'MatterController@listingConfirmation')->name
 
     // ポートフォリオルート
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
+Route::get('/portfolioAdd', 'PortfolioController@add')->name('portfolioAdd');
+Route::post('/create', 'PortfolioController@create')->name('portfolio_create');
 Route::get('/update', 'PortfolioController@update')->name('update');
 
 
