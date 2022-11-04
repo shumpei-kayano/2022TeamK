@@ -22,7 +22,11 @@
   </header>
   <h2>アカウント情報</h2>
   <p id="back"><a href="login">マイページに戻る</a></p>
-  <form method="GET" action="/accountUpdate"><a href="home" name="hensyuu" id="update" style="padding-right:2%;">アカウント情報の編集</a>
+  <form method="GET" action="/accountUpdate">
+    @csrf
+    <input type="submit" name="accountUpdate" value="アカウント編集">
+    </form>
+  {{-- <form method="GET" action="/accountUpdate"><a href="home" name="hensyuu" id="update" style="padding-right:2%;">アカウント情報の編集</a> --}}
     @csrf
   </form>
 

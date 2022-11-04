@@ -33,7 +33,11 @@
                             @csrf
                             <input type="submit" name="portfolio" value="ポートフォリオ">
                         </form>
-                        
+                    
+                    <form method="GET" action="/company">
+                        @csrf
+                        <input type="submit" name="company" value="企業">
+                    </form>
                 </div>
             </div>
         </div>

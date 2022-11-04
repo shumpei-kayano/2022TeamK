@@ -18,33 +18,46 @@ class UserMypageController extends Controller
     {
         return view('mypage.index');
     }
+
     public function account(Request $request)
     {
         $user = Auth::user();
         return view('account', compact('user'));
     }
+
     public function accountUpdata(Request $request)
     {
         return view('accountUpdate');
     }
+
     public function accountDelete(Request $request)
     {
         return view('accountDelete');
     }
+
     public function accountEditComplete(Request $request)
     {
         return view('accountEditComplete');
     }
+
     public function dalateComplete(Request $request)
     {
         return view('dalateComplete');
     }
+
     public function favorite(Request $request)
     {
         return view('favorite');
     }
+
     public function favoriteDelete(Request $request)
     {
         return view('');
     }
+
+    public function company(Request $request)
+    {
+        return view('company');
+    }
+
 }

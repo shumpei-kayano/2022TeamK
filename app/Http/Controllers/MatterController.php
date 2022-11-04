@@ -16,4 +16,20 @@ class MatterController extends Controller
     {
         return view('show');
     }
+
+    public function postingScreen(Request $request)
+    {
+        return view('postingScreen');
+    }
+
+    public function approvalIndex(Request $request)
+    {
+        return view('approvalIndex');
+    }
+
+    public function listingConfirmation(Request $request)
+    {
+        return view('listingConfirmation');
+    }
+
 }

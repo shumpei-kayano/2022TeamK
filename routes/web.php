@@ -26,9 +26,14 @@ Route::middleware(['verified'])->group(function () {
     // マイページルート
 Route::get('/account', 'UserMypageController@account')->name('account');
 Route::get('/favorite', 'UserMypageController@favorite')->name('favorite');
+Route::get('/company', 'UserMypageController@company')->name('company');
+
 
     // 案件ルート
 Route::get('/show', 'MatterController@show')->name('show');
+Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen');
+Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex');
+Route::get('/listingConfirmation', 'MatterController@listingConfirmation')->name('listingConfirmation');
 
     // ポートフォリオルート
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
