@@ -34,6 +34,7 @@ Route::get('/show', 'MatterController@show')->name('show');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen');
 Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex');
 Route::get('/listingConfirmation', 'MatterController@listingConfirmation')->name('listingConfirmation');
+Route::get('/home/matter/create', 'MatterController@create')->name('Matter.create');
 
     // ポートフォリオルート
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
