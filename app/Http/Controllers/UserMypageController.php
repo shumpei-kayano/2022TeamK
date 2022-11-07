@@ -16,38 +16,38 @@ class UserMypageController extends Controller
      */
     public function index(Request $request)
     {
-        return view('mypage.index');
+        return view('./userMypage/mypage.index');
     }
 
     public function account(Request $request)
     {
         $user = Auth::user();
-        return view('account', compact('user'));
+        return view('./userMypage/account', compact('user'));
     }
 
     public function accountUpdata(Request $request)
     {
-        return view('accountUpdate');
+        return view('./userMypage/accountUpdate');
     }
 
     public function accountDelete(Request $request)
     {
-        return view('accountDelete');
+        return view('./userMypage/accountDelete');
     }
 
     public function accountEditComplete(Request $request)
     {
-        return view('accountEditComplete');
+        return view('./userMypage/accountEditComplete');
     }
 
     public function dalateComplete(Request $request)
     {
-        return view('dalateComplete');
+        return view('./userMypage/dalateComplete');
     }
 
     public function favorite(Request $request)
     {
-        return view('favorite');
+        return view('./userMypage/favorite');
     }
 
     public function favoriteDelete(Request $request)
@@ -57,7 +57,7 @@ class UserMypageController extends Controller
 
     public function company(Request $request)
     {
-        return view('company');
+        return view('./userMypage/company');
     }
 
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Portfolio;
+use Illuminate\Support\Facades\Auth;
 
 class PortfolioController extends Controller
 {
@@ -14,25 +15,27 @@ class PortfolioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __construct(Request $request)
-    {
-        $portfolio = new Portfolio;
-    }
+    // public function __construct(Request $request)
+    // {
+    //     $portfolio = new Portfolio;
+    // }
 
      public function portfolio(Request $request)
     {
-        return view('portfolio');
+        return view('./portfolio/portfolio');
     }
 
     public function add(Request $request)
     {
         $items = \DB::table('development_languages') -> get();
         // dd($items);
-        return view('portfolioAdd',compact('items'));
+        return view('./portfolio/portfolioAdd',compact('items'));
     }
 
     public function create(Request $request)
     {
+        $portfolio = new Portfolio;
+        // $user = Auth::user();
         // $languages = \DB::table('development_languages') -> get();
         $portfolio->user_id = $request->user_id;
         $portfolio->name = $request->name;
@@ -53,11 +56,11 @@ class PortfolioController extends Controller
         $portfolio->birthday = $request->birthday;
         $portfolio->save();
         // return redirect('portfolio',compact('languages'));
-        return redirect('portfolio',);
+        return redirect('./portfolio/portfolio', );
     }
 
     public function update(Request $request)
     {
-        return view('portfolioUpdate');
+        return view('./portfolio/portfolioUpdate');
     }
 }
