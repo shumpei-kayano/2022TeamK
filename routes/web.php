@@ -34,7 +34,9 @@ Route::get('/show', 'MatterController@show')->name('show');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen');
 Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex');
 Route::get('/listingConfirmation', 'MatterController@listingConfirmation')->name('listingConfirmation');
-Route::get('/home/matter/create', 'MatterController@create')->name('Matter.create');
+Route::post('/matterCreate', 'MatterController@create')->name('matter.create');
+Route::get('/mattertest', 'MatterController@index')->name('mattertest');
+Route::get('/matter/add', 'MatterController@add')->name('matter.add');
 
     // ポートフォリオルート
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
