@@ -53,7 +53,7 @@ return [
     'gte'                  => [
         'numeric' => ':attributeには、:value以上の値を指定してください。',
         'file'    => ':attributeには、:value kB以上のファイルを指定してください。',
-        'string'  => ':attributeは、:value文字以上で指定してください。',
+        'string'  => ':attributeは、:value文字以上で入力してください。',
         'array'   => ':attributeには、:value個以上のアイテムを指定してください。',
     ],
     'image'                => ':attributeには画像ファイルを指定してください。',
@@ -79,7 +79,7 @@ return [
     'max'                  => [
         'numeric' => ':attributeには、:max以下の数字を指定してください。',
         'file'    => ':attributeには、:max kB以下のファイルを指定してください。',
-        'string'  => ':attributeは、:max文字以下で指定してください。',
+        'string'  => ':attributeは、:max文字以下で入力してください。',
         'array'   => ':attributeは:max個以下指定してください。',
     ],
     'mimes'                => ':attributeには:valuesタイプのファイルを指定してください。',
@@ -87,7 +87,7 @@ return [
     'min'                  => [
         'numeric' => ':attributeには、:min以上の数字を指定してください。',
         'file'    => ':attributeには、:min kB以上のファイルを指定してください。',
-        'string'  => ':attributeは、:min文字以上で指定してください。',
+        'string'  => ':attributeは、:min文字以上で入力してください。',
         'array'   => ':attributeは:min個以上指定してください。',
     ],
     'not_in'               => '選択された:attributeは正しくありません。',
@@ -147,6 +147,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'password' => 'パスワード',
+        'email' => 'メールアドレス'
+    ],
 
 ];
