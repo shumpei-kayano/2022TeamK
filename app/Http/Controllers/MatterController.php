@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Calorie;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Matter;
 
 class MatterController extends Controller
 {
     public function __construct()
     {
-        $this->calorie = new Calorie();
+        $this->matter = new Matter();
     }
 
     /**
@@ -39,12 +40,27 @@ class MatterController extends Controller
         return view('listingConfirmation');
     }
 
+    public function index(Request $request)
+    {
+        return view('./matter/matter');
+    }
+
+    public function add(Request $request)
+    {
+        $occupations = \DB::table('occupations') -> get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
+        // dd($items);
+        return view('./matter/matterAdd',compact('occupations','rank_of_difficulties'));
+    }
+
     public function create(Request $request)
     {
         $matter = new Matter;
+        $occupations = \DB::table('occupations') -> get();
+        
         $form = $request->all();
         unset($form['_token']);
         $matter->fill($form)->save();
-        return view('Matter.create');
+       return redirect('matter');
     }
 }
