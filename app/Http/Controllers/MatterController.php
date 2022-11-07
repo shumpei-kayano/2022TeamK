@@ -42,14 +42,15 @@ class MatterController extends Controller
 
     public function index(Request $request)
     {
-        return view('matter');
+        return view('./matter/matter');
     }
 
     public function add(Request $request)
     {
         $occupations = \DB::table('occupations') -> get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
         // dd($items);
-        return view('matterAdd',compact('occupations'));
+        return view('./matter/matterAdd',compact('occupations','rank_of_difficulties'));
     }
 
     public function create(Request $request)

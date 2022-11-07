@@ -37,12 +37,29 @@
             aria-describedby="basic-addon2" name="matter_">
 <br>
 
-    <input type="text" class="" placeholder="カテゴリー"
-            aria-describedby="basic-addon2" name="category">
+    <input type="text" class="" placeholder="求めるスキル"
+            aria-describedby="basic-addon2" name="skill">
 <br>
 
-    <input type="text" class="" placeholder="カテゴリー"
-            aria-describedby="basic-addon2" name="category">
+    <input type="text" class="" placeholder="期限"
+            aria-describedby="basic-addon2" name="deadline">
+<br>
+
+    <input type="text" class="" placeholder="特記事項"
+            aria-describedby="basic-addon2" name="remark">
+<br>
+
+    <input type="text" class="" placeholder="募集人数"
+            aria-describedby="basic-addon2" name="number_of_person">
+<br>
+
+<label>ランク
+<select name="rank" id="rank">
+        @foreach ($rank_of_difficulties as $item)
+            <option value="{{$item->id}}">{{$item->rank}}</option> 
+        @endforeach
+</select>
+</label>
 <br>
 
 <input type="submit" value="送信">
