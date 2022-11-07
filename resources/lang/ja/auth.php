@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => '正しいメールアドレスを入力してください',
+    'failed' => '正しいメールアドレス、パスワードを入力してください',
     'throttle' => 'Too many login attempts. Please try again in :seconds 秒後にお試しください',
 
 ];
