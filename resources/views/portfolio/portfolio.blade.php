@@ -7,7 +7,7 @@
         <input type="submit" name="portfolioAdd" value="ポートフォリオ作成">
     </form>
 
-    <form method="GET" action="update">
+    <form method="GET" action="portfolioEdit">
         @csrf
         <input type="submit" name="portfolioUpdate" value="ポートフォリオ編集">
     </form>

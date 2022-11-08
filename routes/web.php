@@ -31,9 +31,8 @@ Route::get('/company', 'UserMypageController@company')->name('company');
 
     // 案件ルート
 Route::get('/show', 'MatterController@show')->name('show');
-Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen');
-Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex');
-Route::get('/listingConfirmation', 'MatterController@listingConfirmation')->name('listingConfirmation');
+Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen'); //掲載中案件
+Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex'); //掲載中案件確認
 Route::post('/matterCreate', 'MatterController@create')->name('matter.create');
 Route::get('/mattertest', 'MatterController@index')->name('mattertest');
 Route::get('/matter/add', 'MatterController@add')->name('matter.add');
@@ -42,7 +41,8 @@ Route::get('/matter/add', 'MatterController@add')->name('matter.add');
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
 Route::get('/portfolioAdd', 'PortfolioController@add')->name('portfolioAdd');
 Route::post('/create', 'PortfolioController@create')->name('portfolio_create');
-Route::get('/update', 'PortfolioController@update')->name('update');
+Route::get('/portfolioEdit', 'PortfolioController@edit')->name('portfolioEdit');
+Route::post('/update', 'PortfolioController@update')->name('update');
 
 
 });

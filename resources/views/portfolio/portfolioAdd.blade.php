@@ -3,8 +3,8 @@
 @section('content')
     <form action='{{ route('portfolio_create') }}'method='post'>
         @csrf
-            {{-- <input type="hidden" name="userId" value="{{ $user->id }}"> --}}
-            userId <input type="int" name="user_id">
+            <input type="hidden" name="user_id" value="{{ $user->id }}">
+            {{-- userId <input type="int" name="user_id"> --}}
             名前: <br><input type="text" name='name'><br>
             メールアドレス: <br><input type="text" name='email'><br>
             電話番号: <br><input type="text" name='tel'><br>
