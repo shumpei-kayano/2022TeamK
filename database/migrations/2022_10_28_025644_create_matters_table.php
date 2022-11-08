@@ -17,6 +17,7 @@ class CreateMattersTable extends Migration
             $table->bigIncrements('id');
             $table->integer('company_id');
             $table->integer('prefectures_id');
+            $table->text('matter_name');
             $table->integer('development_language_id1');
             $table->integer('development_language_id2');
             $table->integer('development_language_id3');
@@ -24,7 +25,7 @@ class CreateMattersTable extends Migration
             $table->integer('occupation_id');
             $table->text('remarks');
             $table->integer('success_fee');
-            $table->string('deadline');
+            $table->date('deadline');
             $table->string('rank');
             $table->integer('number_of_person');
         });

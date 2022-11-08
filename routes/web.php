@@ -34,7 +34,9 @@ Route::get('/show', 'MatterController@show')->name('show');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen');
 Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex');
 Route::get('/listingConfirmation', 'MatterController@listingConfirmation')->name('listingConfirmation');
-Route::post('/matterCreate', 'MatterController@create')->name('matter.create');
+Route::get('/matter/confirmation', 'MatterController@matterConfirmation')->name('matter.matterConfirmation');
+// Route::post('/matterCreate', 'MatterController@create')->name('matter.create');
+Route::post('/matter/store', 'MatterController@store')->name('matter.store');
 Route::get('/mattertest', 'MatterController@index')->name('mattertest');
 Route::get('/matter/add', 'MatterController@add')->name('matter.add');
 

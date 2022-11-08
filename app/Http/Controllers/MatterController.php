@@ -47,20 +47,37 @@ class MatterController extends Controller
 
     public function add(Request $request)
     {
+        $prefectures = \DB::table('prefectures') -> get();
         $occupations = \DB::table('occupations') -> get();
         $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
+        $development_languages = \DB::table('development_languages') -> get();
         // dd($items);
-        return view('./matter/matterAdd',compact('occupations','rank_of_difficulties'));
+        return view('./matter/matterAdd',compact('occupations','rank_of_difficulties','development_languages','prefectures'));
     }
 
     public function create(Request $request)
     {
+        //
+    }
+
+    public function store(Request $request)
+    {
+        $input = $request->all();
+
+        // dd($input);
+        $prefectures = Prefectures::find($input->prefectures_id);
         $matter = new Matter;
-        $occupations = \DB::table('occupations') -> get();
-        
-        $form = $request->all();
-        unset($form['_token']);
-        $matter->fill($form)->save();
-       return redirect('matter');
+        unset($input['_token']);
+        // $matter->fill($form)->save();
+        dd($input, $prefectures);
+        return view('./matter/matterConfirmation', ['input'=>$input],compact('prefectures'));
+        // return redirect()->route('matter.matterConfirmation');
+    }
+
+    public function matterConfirmation(Request $request)
+    {
+       $input = $request->all();
+        $user = Auth::user();
+        return view('./matter/matterConfirmation', compact('matters'), compact('users'));
     }
 }
