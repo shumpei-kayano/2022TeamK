@@ -42,7 +42,7 @@ Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
 Route::get('/portfolioAdd', 'PortfolioController@add')->name('portfolioAdd');
 Route::post('/create', 'PortfolioController@create')->name('portfolio_create');
 Route::get('/portfolioEdit', 'PortfolioController@edit')->name('portfolioEdit');
-Route::post('/update', 'PortfolioController@update')->name('update');
+Route::post('/update', 'PortfolioController@update')->name('portfolio_update');
 
 
 });
