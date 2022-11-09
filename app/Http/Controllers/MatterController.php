@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Matter;
+use App\Prefecture;
+use App\Occupation;
+use App\Development_language;
 
 class MatterController extends Controller
 {
@@ -63,14 +66,18 @@ class MatterController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-
-        // dd($input);
-        $prefectures = Prefectures::find($input->prefectures_id);
+        $prefecture = Prefecture::find($input["prefectures_id"]);
+        $occupation = Occupation::find($input["occupation_id"]);
+        $development_language1 = Development_language::find($input["development_language_id1"]);
+        $development_language2 = Development_language::find($input["development_language_id2"]);
+        $development_language3 = Development_language::find($input["development_language_id3"]);
+        $development_language4 = Development_language::find($input["development_language_id4"]);
         $matter = new Matter;
         unset($input['_token']);
         // $matter->fill($form)->save();
-        dd($input, $prefectures);
-        return view('./matter/matterConfirmation', ['input'=>$input],compact('prefectures'));
+        // dd($occupation);
+        return view('./matter/matterConfirmation', ['input'=>$input],compact('prefecture','occupation','development_language1',
+        'development_language2','development_language3','development_language4'));
         // return redirect()->route('matter.matterConfirmation');
     }
 
