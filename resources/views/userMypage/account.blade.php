@@ -1,10 +1,8 @@
+@extends('layouts.ap')
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>アカウント情報</title>
-<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+@section('title')
+    アカウント登録
+@endsection
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
@@ -166,3 +164,9 @@ $(window).on('load', function () {
 });
 </script>
 </html>
+@section('main')
+    <form action="account/comfirm" method="post">
+      <input type="text">
+      <input type="email" name="" id="">
+    </form>
+@endsection
