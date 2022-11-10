@@ -7,7 +7,12 @@
 @section('main')
 
 <h1>アカウント情報</h1>
-    <form action="account/comfirm" method="post">
+{{ $user->name }}
+{{ $user->email }}
+
+    <form action="accountEdit" method="get">
+        @csrf
+        <input type="submit" value="編集">
     </form>
 
 @endsection

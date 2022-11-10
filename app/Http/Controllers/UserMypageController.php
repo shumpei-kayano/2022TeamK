@@ -36,9 +36,10 @@ class UserMypageController extends Controller
 
         return redirect('/');
     }
-    public function accountUpdata(Request $request)
+    public function accountEdit(Request $request)
     {
-        return view('./userMypage/accountUpdate');
+        $user = User::whereUser_id($user->id)->first();
+        return view('./userMypage/accountUpdate',['form' => $user]);
     }
 
     public function accountDelete(Request $request)

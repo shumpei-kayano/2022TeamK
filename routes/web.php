@@ -25,6 +25,7 @@ Route::middleware(['verified'])->group(function () {
 
     // マイページルート
 Route::get('/account', 'UserMypageController@account')->name('account');
+Route::get('/accountEdit', 'UserMypageController@edit')->name('accountEdit');
 Route::get('/favorite', 'UserMypageController@favorite')->name('favorite');
 Route::get('/company', 'UserMypageController@company')->name('company');
 
