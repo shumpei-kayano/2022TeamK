@@ -78,13 +78,23 @@ class MatterController extends Controller
         // dd($occupation);
         return view('./matter/matterConfirmation', ['input'=>$input],compact('prefecture','occupation','development_language1',
         'development_language2','development_language3','development_language4'));
+        
+        $input = $request->session()->get("form_input");
+
+        //セッションに値が無い時はフォームに戻る
+        if (!$input) {
+            return redirect()->action("");
+        }
+
+        return view('auth.register.confirm', ["input" => $input]);
         // return redirect()->route('matter.matterConfirmation');
     }
 
-    public function matterConfirmation(Request $request)
+    public function matterRegistar(Request $request)
     {
        $input = $request->all();
         $user = Auth::user();
-        return view('./matter/matterConfirmation', compact('matters'), compact('users'));
+        dd($input);
+        return view('./matter/matterRegistar');
     }
 }
