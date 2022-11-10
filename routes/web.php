@@ -49,6 +49,8 @@ Route::get('/portfolioAdd', 'PortfolioController@add')->name('portfolioAdd');
 Route::post('/create', 'PortfolioController@create')->name('portfolio_create');
 Route::get('/portfolioEdit', 'PortfolioController@edit')->name('portfolioEdit');
 Route::post('/update', 'PortfolioController@update')->name('portfolio_update');
+Route::get('/portfolioDel', 'PortfolioController@delete')->name('portfolioDel');
+Route::post('/remove', 'PortfolioController@remove')->name('portfolio_remove');
 
 
 });

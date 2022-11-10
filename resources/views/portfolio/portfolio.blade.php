@@ -11,4 +11,9 @@
         @csrf
         <input type="submit" name="portfolioUpdate" value="ポートフォリオ編集">
     </form>
+
+    <form method="GET" action="{{ route('portfolioDel') }}">
+        @csrf
+        <input type="submit" name="portfolioDelete" value="ポートフォリオ削除">
+    </form>
 @endsection
