@@ -23,6 +23,17 @@ class UserMypageController extends Controller
         $user = Auth::user();
         return view('account', compact('user'));
     }
+    // ログアウト
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
     public function accountUpdata(Request $request)
     {
         return view('accountUpdate');

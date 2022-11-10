@@ -7,6 +7,6 @@
     <title>案件検索</title>
 </head>
 <body>
-    
+
 </body>
 </html>
