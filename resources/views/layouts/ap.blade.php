@@ -39,9 +39,9 @@
     
     <footer class="p-footer">
         <ul class="p-footer__ul">
-            <li><a href="./about.html">アカウント情報</a></li>
-            <li><a href="./portfolio">お気に入りリスト</a></li>
-            <li><a href="./portfolio">応募中案件</a></li>
+            <li><a href="./account">アカウント情報</a></li>
+            <li><a href="/favorite">お気に入りリスト</a></li>
+            <li><a href="">応募中案件</a></li>
             <li><a href="./portfolio">ポートフォリオ</a></li>
         </ul>
     </footer>

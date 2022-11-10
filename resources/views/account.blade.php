@@ -1,12 +1,13 @@
 @extends('layouts.ap')
 
 @section('title')
-    お気に入りリスト
+    アカウント登録
 @endsection
 
 @section('main')
+
+<h1>アカウント情報</h1>
     <form action="account/comfirm" method="post">
-      <input type="text">
-      <input type="email" name="" id="">
     </form>
+
 @endsection
