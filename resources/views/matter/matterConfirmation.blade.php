@@ -7,7 +7,8 @@
 <p>※ログインしてません。(<a href="/login">ログイン</a>|
 <a href="/register">登録</a>)</p>
 @endif --}}
-<form action="">
+<form action="{{route('matter.registar')}}" method="post">
+{{-- <form action="" method="post"> --}}
     @csrf     
 
 <p>案件名:{{$input["matter_name"]}}</p>

@@ -32,6 +32,7 @@ class CreatePortfoliosTable extends Migration
             $table->integer('development_year5');
             $table->text('self_pr');
             $table->date('birthday');
+            $table->timestamps();
         });
     }
 
