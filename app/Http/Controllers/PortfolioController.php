@@ -15,10 +15,10 @@ class PortfolioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function __construct(Request $request)
-    // {
-    //     $portfolio = new Portfolio;
-    // }
+    public function __construct()
+    {
+        $this->portfolio = new Portfolio;
+    }
 
      public function portfolio(Request $request)
     {
@@ -75,7 +75,8 @@ class PortfolioController extends Controller
         $user = Auth::user();
         // $portfolio = Portfolio::find($request -> user_id)->delete();
         $portfolio = Portfolio::whereUser_id($user->id)->first();
-        Portfolio::destroy($portfolio -> user_id);
+
+        $portfolio->delete();
 
         // $items = \DB::table('development_languages') -> get();
 
