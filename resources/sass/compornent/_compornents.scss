@@ -30,33 +30,26 @@ img{
 
 // ボタンコンポーネント
 .c-button {
-    color: #fff;
-    background-color: $orange;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 0.3;
-    position: relative;
-    display: inline-block;
-    padding: 0.6rem 1rem;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    color: #212529;
-    border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      text-decoration: none;
+      color: #333333;
+      font-size: 18px;
+      border-radius: 5px;
+      width: 100px;
+      height: 40px;
+      border: 1px solid #333333;
+      position: relative;
+      transition: 0.3s;
+      background-color: #fff;
     &--blue {
         background-color: $blue;
     }
     &:hover {
         color: #fff;
-        background: #f56500;
+        background: #333333;
     }
     &--bigger {
         
