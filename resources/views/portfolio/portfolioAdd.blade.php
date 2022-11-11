@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.ap')
 
 @section('content')
     <form action='{{ route('portfolio_create') }}'method='post'>
