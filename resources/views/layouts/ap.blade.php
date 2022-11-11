@@ -15,7 +15,7 @@
     <header class="p-header">
         <div class="p-header__inner">
             <h1 class="p-header__logo">
-                <a class="" href="./index.html">
+                <a class="" href="./home">
                     <img src="https://3.bp.blogspot.com/-la0WXIEj3Og/VA7mbmBn1UI/AAAAAAAAmQY/FlJynwAD9ro/s800/yuusya_game.png"
                         alt="ロゴ" width="100" height="100">
                 </a>
