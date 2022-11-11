@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 *,
 ::before,
 ::after {
@@ -42,6 +42,7 @@ img {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   transition: all 0.3s;
   text-align: center;
@@ -179,4 +180,4 @@ img {
 .p-form__pr {
   width: 110px;
   height: 25px;
-}
+}/*# sourceMappingURL=app.css.map */
