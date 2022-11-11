@@ -1,3 +1,3 @@
-@extends('layouts.ap')
+@extends('layouts.app')
 
 @section('content')
