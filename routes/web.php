@@ -25,7 +25,8 @@ Route::middleware(['verified'])->group(function () {
 
     // マイページルート
 Route::get('/account', 'UserMypageController@account')->name('account');
-Route::get('/accountEdit', 'UserMypageController@edit')->name('accountEdit');
+Route::get('/accountEdit', 'UserMypageController@edit')->name('account_edit');
+Route::post('/accountUpdate', 'UserMypageController@update')->name('account_update');
 Route::get('/favorite', 'UserMypageController@favorite')->name('favorite');
 Route::get('/company', 'UserMypageController@company')->name('company');
 
@@ -50,7 +51,7 @@ Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
 Route::get('/portfolioAdd', 'PortfolioController@add')->name('portfolioAdd');
 Route::post('/create', 'PortfolioController@create')->name('portfolio_create');
 Route::get('/portfolioEdit', 'PortfolioController@edit')->name('portfolioEdit');
-Route::post('/update', 'PortfolioController@update')->name('portfolio_update');
+Route::post('/portfolioUpdate', 'PortfolioController@update')->name('portfolio_update');
 Route::get('/portfolioDel', 'PortfolioController@delete')->name('portfolioDel');
 Route::post('/remove', 'PortfolioController@remove')->name('portfolio_remove');
 

@@ -10,7 +10,7 @@
 {{ $user->name }}
 {{ $user->email }}
 
-    <form action="accountEdit" method="get">
+    <form action='{{ route('account_edit') }}' method="get">
         @csrf
         <input type="submit" value="編集">
     </form>
