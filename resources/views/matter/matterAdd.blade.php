@@ -8,7 +8,7 @@
 <a href="/register">登録</a>)</p>
 @endif --}}
 
-<form action="{{ route('matter.store')}}" method="post">
+<form action="{{ route('matter.post')}}" method="post">
     @csrf     
 
 

@@ -35,6 +35,7 @@ Route::get('/company', 'UserMypageController@company')->name('company');
 Route::get('/show', 'MatterController@show')->name('show');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen'); //掲載中案件
 Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex'); //掲載中案件確認
+Route::post('matterRegister', 'MatterController@post')->name('matter.post');
 Route::post('/matterCreate', 'MatterController@create')->name('matter.create');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen');
 Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex');
@@ -42,7 +43,7 @@ Route::get('/listingConfirmation', 'MatterController@listingConfirmation')->name
 Route::get('/matter/confirmation', 'MatterController@matterConfirmation')->name('matter.matterConfirmation');
 Route::post('/matter/registar', 'MatterController@matterRegistar')->name('matter.registar');
 // Route::post('/matterCreate', 'MatterController@create')->name('matter.create');
-Route::post('/matter/store', 'MatterController@store')->name('matter.store');
+Route::get('/matter/store', 'MatterController@store')->name('matter.store');
 Route::get('/mattertest', 'MatterController@index')->name('mattertest');
 Route::get('/matter/add', 'MatterController@add')->name('matter.add');
 

@@ -12,6 +12,10 @@ use App\Development_language;
 
 class MatterController extends Controller
 {
+
+    private $formItems = ["prefectures_id", "matter_name", "tel", "development_language_id1", "development_language_id2", "development_language_id3", "development_language_id4",
+        "occupation_id", "remarks", "success_fee", "deadline", "rank", "number_of_person"];
+
     public function __construct()
     {
         $this->matter = new Matter();
@@ -58,6 +62,16 @@ class MatterController extends Controller
         return view('./matter/matterAdd',compact('occupations','rank_of_difficulties','development_languages','prefectures'));
     }
 
+    function post(Request $request)
+    {
+        $input = $request->only($this->formItems);
+        //セッションに書き込む
+        $request->session()->put("matter_post", $input);
+        // dd($input);
+        return redirect()->route('matter.store');
+    }
+
+
     public function create(Request $request)
     {
         //
@@ -65,36 +79,45 @@ class MatterController extends Controller
 
     public function store(Request $request)
     {
-        $input = $request->all();
+        // $input = $request->all();
+        // $prefecture = Prefecture::find($input["prefectures_id"]);
+        // $occupation = Occupation::find($input["occupation_id"]);
+        // $development_language1 = Development_language::find($input["development_language_id1"]);
+        // $development_language2 = Development_language::find($input["development_language_id2"]);
+        // $development_language3 = Development_language::find($input["development_language_id3"]);
+        // $development_language4 = Development_language::find($input["development_language_id4"]);
+        // $matter = new Matter;
+        // unset($input['_token']);
+        // $matter->fill($form)->save();
+        // dd($occupation);
+        // return view('./matter/matterConfirmation', ['input'=>$input],compact('prefecture','occupation','development_language1',
+        // 'development_language2','development_language3','development_language4'));
+        
+        $input = $request->session()->get("matter_post");
+        // dd($input);
+        //セッションに値が無い時はフォームに戻る
+        if (!$input) {
+            return redirect()->route('matter.add');
+        }
         $prefecture = Prefecture::find($input["prefectures_id"]);
         $occupation = Occupation::find($input["occupation_id"]);
         $development_language1 = Development_language::find($input["development_language_id1"]);
         $development_language2 = Development_language::find($input["development_language_id2"]);
         $development_language3 = Development_language::find($input["development_language_id3"]);
         $development_language4 = Development_language::find($input["development_language_id4"]);
-        $matter = new Matter;
-        unset($input['_token']);
-        // $matter->fill($form)->save();
-        // dd($occupation);
-        return view('./matter/matterConfirmation', ['input'=>$input],compact('prefecture','occupation','development_language1',
+
+        return view('./matter/matterConfirmation', ["input" => $input],compact('prefecture','occupation','development_language1',
         'development_language2','development_language3','development_language4'));
-        
-        $input = $request->session()->get("form_input");
-
-        //セッションに値が無い時はフォームに戻る
-        if (!$input) {
-            return redirect()->action("");
-        }
-
-        return view('auth.register.confirm', ["input" => $input]);
-        // return redirect()->route('matter.matterConfirmation');
     }
 
     public function matterRegistar(Request $request)
     {
-       $input = $request->all();
-        $user = Auth::user();
-        dd($input);
+       //セッションから値を取り出す
+       $input = $request->session()->get("matter_post");
+       $matter = new Matter;
+        unset($input['_token']);
+        $matter->fill($input)->save();
+
         return view('./matter/matterRegistar');
     }
 }
