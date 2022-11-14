@@ -122,10 +122,9 @@ img {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 .p-mozi {
   color: rgb(75, 28, 176);
-=======
+}
 .p-midasi {
   text-align: center;
 }
@@ -178,5 +177,4 @@ img {
 .p-form__pr {
   width: 110px;
   height: 25px;
->>>>>>> origin/develop
 }

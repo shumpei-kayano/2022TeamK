@@ -6,10 +6,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('新規登録') }}</div>
-
+                
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+
+                        <div class="form-group row">
+                            <input type="radio" id="check" name="check" value="0" checked>個人
+                            <input type="radio" id="check" name="check" value="1">法人
+                        </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ユーザ') }}</label>
@@ -66,6 +71,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('認証') }}
                                 </button>
+                                
 
                 {{-- <div class="card-body">
                     <div id="app">
