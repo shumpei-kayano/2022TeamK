@@ -21,12 +21,42 @@
         <h1>案件検索</h1>
     </div>
 
-   
-        <form action="" method="GET" class="p-form__key">
-            <div class="p-form__key">
+
+    <form action="{{ route(matter.search)}}" method="POST">
+        <div class="">
+            <label>キーワード</label>
+            <input type="text" name="keyword" id="key" placeholder="キーワードを入力">
+        </div>
+
+        <div class="pldwn">
+                <div class="p-form__eria">
+                    <select class="form-select" aria-label="Default select example"name="prefectures_id" >
+                        <option value="" selected>エリアを選択してください</option>
+                        @foreach ($prefectures as $prefecture)
+                            <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
+                        @endforeach
+                    </select>
+                </div>
+    
+                <div class="p-form__oc">
+                    <select class="form-select" aria-label="Default select example" name="occupation_id">
+                        <option value="" selected>職種を選択してください</option>
+                        @foreach ($occupations as $occupation)
+                            <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+                <button type="submit" class="btn btn-secondary">検索</button>
+            </form>
+
+   {{-- 下の入れてくれてたやつ見た目のいじり方わからんくて、そのまま残してます。 --}}
+        {{-- <form action="" method="GET" class="p-form__key">
+            <div class="p-form__key"> --}}
                 {{-- キーワード：<input type="text" class="p-form__word"name="keyword" id="key" placeholder="キーワードを入力">
                     <input type="submit" class="p-form__btn" name="kensaku" id="kensaku" value="検索">   --}}
-                    <label for="exampleDataList" class="form-label">キーワード</label>
+                    {{-- <label for="exampleDataList" class="form-label">キーワード</label>
                     <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="キーワードを入力してください">
                     <button type="submit" class="btn btn-secondary">検索</button>     
             </div>  
@@ -54,7 +84,7 @@
                   </select>
             </div>
         </form>
-        </div>
+        </div> --}}
    
 
 @endsection

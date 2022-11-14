@@ -29,7 +29,9 @@ class MatterController extends Controller
      */
     public function show(Request $request)
     {
-        return view('show');
+        $prefectures = \DB::table('prefectures') -> get();
+        $occupations = \DB::table('occupations') -> get();
+        return view('show', compact('occupations','prefectures'));
     }
 
     public function postingScreen(Request $request)
@@ -119,5 +121,15 @@ class MatterController extends Controller
         $matter->fill($input)->save();
 
         return view('./matter/matterRegistar');
+    }
+
+    public function search(Request $request)
+    {
+       $form = $request->all();
+       $matter = new Matter;
+        unset($input['_token']);
+        $matter->fill($input)->save();
+
+        return view('./matter/matterfind');
     }
 }
