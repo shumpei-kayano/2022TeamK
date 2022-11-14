@@ -17,7 +17,7 @@
 <br>    
 
     <label>都道府県
-    <select name="occupation_id" >
+    <select name="prefectures_id" >
         @foreach ($prefectures as $prefecture)
             <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
         @endforeach
@@ -29,7 +29,7 @@
             aria-describedby="basic-addon2" name="tel">
 <br>
 
-    <select name="prefectures_id">
+    <select name="occupation_id">
         @foreach ($occupations as $occupation)
             <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
         @endforeach
