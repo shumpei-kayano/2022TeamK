@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    アカウント登録
+    アカウント情報編集
 @endsection
 
 @section('content')
