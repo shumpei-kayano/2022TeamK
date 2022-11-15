@@ -9,7 +9,7 @@
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />    
     {{--  ゲーム風cssのnes.css読み込み  --}}
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <title>{{ config('app.name', 'マッチングRPG') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -76,9 +76,9 @@
             </div>
         </nav>
     </div>
-    <main class="py-4">
+    <div class="c-full">
         @yield('content')
-    </main>
+    </div>
     <script src="{{mix('js/app.js')}}"></script>
 </body>
 </html>
