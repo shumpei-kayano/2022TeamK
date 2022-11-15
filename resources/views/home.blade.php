@@ -1,46 +1,23 @@
 @extends('layouts.ap')
 
-@section('main')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">マイページ</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <form method="GET" action="/account">
-                    @csrf
-                    <input type="submit" name="account" value="アカウント">
-                    </form>
-
-                    <form method="GET" action="/favorite">
-                        @csrf
-                        <input type="submit" name="favorite" value="お気に入り">
-                        </form>
-
-                    <form method="GET" action="/show">
-                            @csrf
-                            <input type="submit" name="show" value="案件検索">
-                        </form>
-
-                    <form method="GET" action="/portfolio">
-                            @csrf
-                            <input type="submit" name="portfolio" value="ポートフォリオ">
-                        </form>
-                    
-                    <form method="GET" action="/company">
-                        @csrf
-                        <input type="submit" name="company" value="企業">
-                    </form>
+@section('content')
+<div class="c-full">
+    <div class="p-mypage">
+        <div class="nes-container is-dark with-title p-mypage__container">
+            <p class="title">マイページ</p>
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
                 </div>
+            @endif
+            <div class="p-mypage__btn-container">
+                <a href="/account"><button type="button" class="nes-btn is-primary p-mypage__btn">アカウント</button></a> 
+                <a href="/favorite"><button type="button" class="nes-btn is-primary p-mypage__btn">お気に入り</button></a> 
+                <a href="/show"><button type="button" class="nes-btn is-primary p-mypage__btn">あんけんけんさく</button></a> 
+                <a href="/portfolio"><button type="button" class="nes-btn is-primary p-mypage__btn">ポートフォリオ</button></a> 
+                <a href="/company"><button type="button" class="nes-btn is-primary p-mypage__btn">きぎょう</button></a> 
             </div>
-        </div>
+        </div>  
     </div>
 </div>
 @endsection
