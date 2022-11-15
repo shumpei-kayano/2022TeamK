@@ -98,6 +98,33 @@
 
 ////////// アカウント情報画面 //////////
 
-.p-midasi {
+.p-info {
+    margin: 0;
+}
+
+.p-acinfo {
     text-align: center;
+    margin-top: 130px;
+    width: 500px;
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__id {
+        text-indent:-167px;
+    }
+    &__btn {
+        width: 110px;
+        padding: 0;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    &__btn-container {
+        text-align: center;
+    }
+}
+
+.p-acinfo__idEdit {
+    text-align: center;
+    text-indent: 29px;
 }
