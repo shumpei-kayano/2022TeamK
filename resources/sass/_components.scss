@@ -1,0 +1,41 @@
+/*  ゲーム風フォントの設定  */
+@font-face {
+    /*   適用させるフォント名 → 間違っていると反映されないので注意  */
+    font-family: "Nu きなこもち";
+    /*   .otf, .ttfの拡張子がついているファイルがフォントファイルである。   */
+    /*   フォントファイルが何処場所にあるのか : パスを書いてあげる   */
+    src: url(/fonts/NuKinakoMochi-Reg.otf);
+}
+
+body {
+    font-family: "Nu きなこもち";
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.c-full {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background: url("/images/8bit.jpg") top center / cover;
+}
+
+.c-nav {
+    &__container {
+        height: 100px;
+        background-color: $skyblue;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 45px;
+            margin: 0;
+        }
+    }
+}
+
