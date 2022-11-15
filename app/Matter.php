@@ -19,4 +19,12 @@ class Matter extends Model
     //         'fat' => $request->fat,
     //     ]);
     // }
+
+    public function prefecture (){
+        return this->belongsTo('App\Prefecture');
+    }
+
+    public function occupation (){
+        return this->belongsTo('App\Occupation');
+    }
 }

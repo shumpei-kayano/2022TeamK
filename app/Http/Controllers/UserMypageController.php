@@ -95,4 +95,10 @@ class UserMypageController extends Controller
         return view('./userMypage/company');
     }
 
+    // メール確認
+    public function confirmation(Request $request)
+    {
+        return view('/confirmation');
+    }
+
 }

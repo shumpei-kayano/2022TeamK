@@ -11,7 +11,7 @@
     </div>
 
 
-    <form action="{{route('matter.search')}}" method="GET">
+    <form action="{{route('show')}}" method="GET">
         <div class="">
             <label>キーワード
             <input type="search" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
@@ -70,6 +70,7 @@
             <td>{{$item->rank}}</td>
             <td>{{$item->prefectures_name}}</td>
             <td>{{$item->remarks}}</td>
+            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="">詳細</a></td>
         </tr>
         @endforeach
     </table>
