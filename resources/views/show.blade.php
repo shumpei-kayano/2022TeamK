@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/toggle-menu.js"></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    @extends('layouts.ap')
+@extends('layouts.ap')
 @section('title')
 @endsection
 
@@ -22,10 +11,11 @@
     </div>
 
 
-    <form action="{{ route(matter.search)}}" method="POST">
+    <form action="{{route('matter.search')}}" method="GET">
         <div class="">
-            <label>キーワード</label>
-            <input type="text" name="keyword" id="key" placeholder="キーワードを入力">
+            <label>キーワード
+            <input type="search" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
+            </label>
         </div>
 
         <div class="pldwn">
@@ -39,17 +29,54 @@
                 </div>
     
                 <div class="p-form__oc">
+                    <label for="">職種
                     <select class="form-select" aria-label="Default select example" name="occupation_id">
-                        <option value="" selected>職種を選択してください</option>
+                        <option value="" selected>全て</option>
                         @foreach ($occupations as $occupation)
                             <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
                         @endforeach
                     </select>
+                </label>
+                </div>
+
+                <div class="p-form__oc">
+                    <label for="">レベル
+                    <select class="form-select" aria-label="Default select example" name="level_id">
+                        <option value="" selected>全て</option>
+                        @foreach ($rank_of_difficulties as $level)
+                            <option value="{{$level->id}}">{{$level->rank}}</option> 
+                        @endforeach
+                    </select>
+                </label>
                 </div>
             </div>
 
                 <button type="submit" class="btn btn-secondary">検索</button>
             </form>
+
+<div>
+    <table>
+        <tr>
+            <th>案件名</th>
+            <th>職種</th>
+            <th>レベル</th>
+            <th>エリア</th>
+            <th>特記事項</th>
+        </tr>
+        @foreach($items as $item)
+        <tr>
+            <td>{{$item->matter_name}}</td>
+            <td>{{$item->occupation_name}}</td>
+            <td>{{$item->rank}}</td>
+            <td>{{$item->prefectures_name}}</td>
+            <td>{{$item->remarks}}</td>
+        </tr>
+        @endforeach
+    </table>
+</div>
+
+</div>
+
 
    {{-- 下の入れてくれてたやつ見た目のいじり方わからんくて、そのまま残してます。 --}}
         {{-- <form action="" method="GET" class="p-form__key">
