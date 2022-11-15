@@ -26,7 +26,7 @@
         <nav class="c-nav">
             <div class="c-nav__container">
                 <h1 class="c-nav__sitetitle">
-                    <a class="nav__text" href="{{ url('/') }}">
+                    <a class="nav__text" href="{{ url('/home') }}">
                         {{ config('app.name', 'マッチングRPG') }}
                     </a>
                 </h1>
@@ -34,10 +34,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>  --}}
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="c-nav__container" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
+                    <ul class="c-nav__ul">
+                        <li class="c-nav__list"><a href="/account">アカウント</a></li>
+                        <li class="c-nav__list"><a href="/favorite">お気に入り</a></li>
+                        <li class="c-nav__list"><a href="/show">あんけん</a></li>
+                        <li class="c-nav__list"><a href="/portfolio">ポートフォリオ</a></li>
+                        <li class="c-nav__list"><a href="/company">きぎょう</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
