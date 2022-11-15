@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,6 +19,9 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// メール確認
+Route::get('/confirmation', 'UserMypageController@confirmation')->name('confirmation');
 
 Route::middleware(['verified'])->group(function () {
 
@@ -29,6 +33,7 @@ Route::get('/accountEdit', 'UserMypageController@edit')->name('account_edit');
 Route::post('/accountUpdate', 'UserMypageController@update')->name('account_update');
 Route::get('/favorite', 'UserMypageController@favorite')->name('favorite');
 Route::get('/company', 'UserMypageController@company')->name('company');
+
 
 
     // 案件ルート
