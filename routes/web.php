@@ -32,7 +32,7 @@ Route::get('/company', 'UserMypageController@company')->name('company');
 
 
     // 案件ルート
-// Route::get('/show', 'MatterController@show')->name('show');
+Route::get('/show', 'MatterController@show')->name('show');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen'); //掲載中案件
 Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex'); //掲載中案件確認
 Route::post('matterRegister', 'MatterController@post')->name('matter.post');
@@ -46,7 +46,7 @@ Route::post('/matter/registar', 'MatterController@matterRegistar')->name('matter
 Route::get('/matter/store', 'MatterController@store')->name('matter.store');
 Route::get('/mattertest', 'MatterController@index')->name('mattertest');
 Route::get('/matter/add', 'MatterController@add')->name('matter.add');
-Route::get('/show', 'MatterController@search')->name('matter.search');
+Route::get('/detail/{id}', 'MatterController@detail')->name('matter.detail');
 
     // ポートフォリオルート
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');

@@ -28,13 +28,6 @@ class MatterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
-    {
-        $prefectures = \DB::table('prefectures') -> get();
-        $occupations = \DB::table('occupations') -> get();
-        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
-        return view('show', compact('occupations','prefectures','rank_of_difficulties'));
-    }
 
     public function postingScreen(Request $request)
     {
@@ -125,7 +118,7 @@ class MatterController extends Controller
         return view('./matter/matterRegistar');
     }
 
-    public function search(Request $request)
+    public function show(Request $request)
     {
         $keyword = $request->input('keyword');
         $prefectures_id = $request->input('prefectures_id');
@@ -158,13 +151,20 @@ class MatterController extends Controller
             $query->where('matter_name', 'LIKE', "%{$keyword}%");
         }
 
-        $items = $query->get();
-
+        $items = $query->select('Matters.id','Matters.matter_name','Occupations.occupation_name',
+        'Matters.rank','Prefectures.prefectures_name','Matters.remarks')->get();
+        // $items = $query->get();
+        
         $prefectures = Prefecture::all();
         $occupations  = Occupation::all();
         $rank_of_difficulties = Rank_of_difficulty::all();
-
         return view('./show',compact('items', 'keyword', 'prefectures_id', 'occupation_id',
     'level_id', 'prefectures', 'occupations', 'rank_of_difficulties'));
+    }
+
+    public function detail($id)
+    {
+        $matter = Matter::find($id);
+        return view('./matter_detail', compact('matter'));
     }
 }
