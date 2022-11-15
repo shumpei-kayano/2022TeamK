@@ -9,6 +9,7 @@ use App\Matter;
 use App\Prefecture;
 use App\Occupation;
 use App\Development_language;
+use App\Rank_of_difficulty;
 
 class MatterController extends Controller
 {
@@ -27,12 +28,6 @@ class MatterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
-    {
-        $prefectures = \DB::table('prefectures') -> get();
-        $occupations = \DB::table('occupations') -> get();
-        return view('show', compact('occupations','prefectures'));
-    }
 
     public function postingScreen(Request $request)
     {
@@ -123,13 +118,53 @@ class MatterController extends Controller
         return view('./matter/matterRegistar');
     }
 
-    public function search(Request $request)
+    public function show(Request $request)
     {
-       $form = $request->all();
-       $matter = new Matter;
-        unset($input['_token']);
-        $matter->fill($input)->save();
+        $keyword = $request->input('keyword');
+        $prefectures_id = $request->input('prefectures_id');
+        $occupation_id = $request->input('occupation_id');
+        $level_id = $request->input('level_id');
+        // dd($keyword,$prefectures_id,$occupation_id,$level_id);
 
-        return view('./matter/matterfind');
+        $query = Matter::query();
+
+        //テーブルの結合
+        $query->join('prefectures', function ($query) use ($request) {
+        $query->on('matters.prefectures_id', '=', 'prefectures.id');
+        })->join('occupations', function ($query) use ($request) {
+        $query->on('matters.occupation_id', '=', 'occupations.id');
+        });
+
+        if(!empty($prefectures_id)) {
+            $query->where('prefectures_id', 'LIKE', $prefectures_id);
+        }
+
+        if(!empty($occupation_id)) {
+            $query->where('occupation_id', 'LIKE', $occupation_id);
+        }
+        
+        if(!empty($level_id)) {
+            $query->where('rank', 'LIKE', $level_id);
+        }
+
+        if(!empty($keyword)) {
+            $query->where('matter_name', 'LIKE', "%{$keyword}%");
+        }
+
+        $items = $query->select('Matters.id','Matters.matter_name','Occupations.occupation_name',
+        'Matters.rank','Prefectures.prefectures_name','Matters.remarks')->get();
+        // $items = $query->get();
+        
+        $prefectures = Prefecture::all();
+        $occupations  = Occupation::all();
+        $rank_of_difficulties = Rank_of_difficulty::all();
+        return view('./show',compact('items', 'keyword', 'prefectures_id', 'occupation_id',
+    'level_id', 'prefectures', 'occupations', 'rank_of_difficulties'));
+    }
+
+    public function detail($id)
+    {
+        $matter = Matter::find($id);
+        return view('./matter_detail', compact('matter'));
     }
 }
