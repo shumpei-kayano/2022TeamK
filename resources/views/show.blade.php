@@ -1,9 +1,9 @@
 
-@extends('layouts.ap')
+@extends('layouts.app')
 @section('title')
 @endsection
 
-@section('main')
+@section('content')
 
     <div class="p-form">
     <div class="p-form__midasi">
