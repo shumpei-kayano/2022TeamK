@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title',"マッチングRPG")
+    
+
 @section('content')
 <div class="p-mypage">
     <div class="nes-container is-dark with-title p-mypage__container">
@@ -12,10 +15,11 @@
         <div class="p-mypage__btn-container">
             <a href="/account"><button type="button" class="nes-btn is-primary p-mypage__btn">アカウント</button></a> 
             <a href="/favorite"><button type="button" class="nes-btn is-primary p-mypage__btn">お気に入り</button></a> 
-            <a href="/show"><button type="button" class="nes-btn is-primary p-mypage__btn">あんけんけんさく</button></a> 
+            <a href="/show"><button type="button" class="nes-btn is-primary p-mypage__btn">あんけん</button></a>
+        </div>
+        <div class="p-mypage__btn-container">
             <a href="/portfolio"><button type="button" class="nes-btn is-primary p-mypage__btn">ポートフォリオ</button></a> 
             <a href="/company"><button type="button" class="nes-btn is-primary p-mypage__btn">きぎょう</button></a> 
-        </div>
-    </div>  
+        </div>  
 </div>
 @endsection
