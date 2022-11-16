@@ -63,6 +63,7 @@ Route::post('/portfolioUpdate', 'PortfolioController@update')->name('portfolio_u
 Route::get('/portfolioDel', 'PortfolioController@delete')->name('portfolioDel');
 Route::post('/remove', 'PortfolioController@remove')->name('portfolio_remove');
 
-
-
+  //お気に入り
+Route::post('/show', 'FavoriteController@store')->name('favorite');
+Route::delete('/show', 'FavoriteController@delete')->name('favorite.del');
 });

@@ -27,4 +27,8 @@ class Matter extends Model
     public function occupation (){
         return this->belongsTo('App\Occupation');
     }
+
+    public function favorits (){
+        return this->hasmany('App\Favorite');
+    }
 }

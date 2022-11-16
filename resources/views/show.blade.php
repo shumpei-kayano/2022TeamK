@@ -12,6 +12,12 @@
 <div class="p-form__container">
 
     <div class="nes-container is-dark with-title p-form__box">
+    <form action="{{route('show')}}" method="GET">
+        <div class="">
+            <label>キーワード
+            <input type="search" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
+            </label>
+        </div>
 
         {{--キーワード検索--}}
         <form action="{{route('show')}}" method="GET">
@@ -20,6 +26,7 @@
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__key" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
             </div>
 
+<<<<<<< HEAD
             {{-- エリア検索 --}}
 
 
@@ -63,6 +70,10 @@
     <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
     </div>
     @endsection
+=======
+                <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button>
+            </form>
+>>>>>>> 5b6b6f2cb3069a667826b786d6d11a3404acd713
 
 <div>
     <table>
@@ -82,6 +93,24 @@
             <td>{{$item->prefectures_name}}</td>
             <td>{{$item->remarks}}</td>
             <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="">詳細</a></td>
+            <td>@if (Auth::check())
+                @if (isset($favorite) && $favorite)
+                    {{-- favoriteがあったら削除ボタン表示 --}}
+                    <form action="{{route('favorite.del', ['id'=>$item->id])}}" method="POST">
+                        <input type="hidden" name="matter_id" value="{{$item->id}}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">お気に入り解除</button>
+                    </form>
+                @else
+                    {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
+                    <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
+                        @csrf
+                        <input type="hidden" name="matter_id" value="{{$item->id}}">
+                        <button type="submit">お気に入り登録</button>
+                    </form>
+                @endif
+              @endif</td>
         </tr>
         @endforeach
     </table>
