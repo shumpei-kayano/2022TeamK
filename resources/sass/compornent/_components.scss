@@ -37,5 +37,22 @@ body {
             margin: 15px 0 0 15px;
         }
     }
+    &__ul {
+        display: flex;
+        margin-right: 50px;
+    }
+    &__list {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 2px solid $black;
+        height: 1.3em;
+        &:first-child {
+            border-left: 2px solid $black;
+            padding-left: 10px;
+        }
+    }
+    &__container {
+        display: flex;
+    }
 }
 
