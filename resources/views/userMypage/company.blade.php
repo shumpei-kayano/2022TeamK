@@ -1,4 +1,7 @@
 @extends('layouts.app')
+
+@section('title','マイページ（企業）')
+
 @section('content')
 
 {{-- @if (Auth::check())
@@ -8,25 +11,26 @@
 <a href="/register">登録</a>)</p>
 @endif --}}
 
-    gennsinnsitai
+<h1 class="p-form">マイページ（企業）</h1>
     <form method="GET" action="/postingScreen">
+        <div class="p-form">
         @csrf
-        <input type="submit" name="postingScreen" value="掲載中案件">
+        <input type="submit" class="nes-btn is-error" name="postingScreen" value="けいさいちゅうあんけん">
         </form>
 
     <form method="GET" action="/approvalIndex">
         @csrf
-        <input type="submit" name="approvalIndex" value="承認待ち">
+        <input type="submit" class="nes-btn is-primary" name="approvalIndex" value="しょうにんまち">
         </form>
     
     <form method="GET" action="/listingConfirmation">
         @csrf
-        <input type="submit" name="listingConfirmation" value="過去契約一覧">
+        <input type="submit" class="nes-btn is-warning" name="listingConfirmation" value="かこけいやくいちらん">
         </form>
         
     <form method="GET" action="{{route('matter.add')}}">
         @csrf
-        <input type="submit" name="matterCreate" value="案件掲載">
+        <input type="submit" class="nes-btn is-success" name="matterCreate" value="あんけんけいさい">
+    </div>
         </form>
-
 @endsection

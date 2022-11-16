@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1 class="p-info">アカウントじょうほう</h1>
+<h1 class="p-form">アカウントじょうほう</h1>
 <div class="p-acinfo__container">
     <div class="nes-container is-rounded is-dark p-acinfo">
         <p class="p-acinfo__id">ユーザーID：{{ $user->name }}</p>

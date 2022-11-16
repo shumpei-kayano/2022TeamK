@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
+<h1 class="p-form">ポートフォリオ作成</h1>
     <form action='{{ route('portfolio_create') }}'method='post'>
+        <div class="p-form">
         @csrf
             <input type="hidden" name="user_id" value="{{ $user->id }}">
             {{-- userId <input type="int" name="user_id"> --}}
@@ -73,6 +76,6 @@
             生年月日:<br> <input type="date" value="yyyy/mm/dd" name="birthday">
 
             <input type="submit" name="portfoliocreate" value="作成">
+        </div>
         </form>
-        
 @endsection
