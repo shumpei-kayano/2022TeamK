@@ -211,3 +211,33 @@
         text-align: center;
     }
 }
+.p-loginpage {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 70px;
+    &__container {
+        // width: ;
+    }
+    .input {
+        margin-bottom: 20px;
+    }
+}
+
+.p-register {
+        width: 600px;
+        margin: 0 auto;
+        padding-top: 40px;
+    .input {
+            margin-bottom: 20px;
+        }
+    .ragio-group {
+        text-align: center;
+        font-size: 20px;
+        input {
+            margin-right: 5px;
+        }
+    }
+    &-btn {
+        text-align: right;
+    }
+}
