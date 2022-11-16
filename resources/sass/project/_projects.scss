@@ -157,3 +157,15 @@
         text-align: center;
     }
 }
+
+.p-loginpage {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 70px;
+    &__container {
+        // width: ;
+    }
+    .input {
+        margin-bottom: 20px;
+    }
+}
