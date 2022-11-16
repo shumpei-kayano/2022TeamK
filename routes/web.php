@@ -39,7 +39,8 @@ Route::get('/company', 'UserMypageController@company')->name('company');
     // 案件ルート
 Route::get('/show', 'MatterController@show')->name('show');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen'); //掲載中案件
-Route::get('/approvalIndex', 'MatterController@approvalIndex')->name('approvalIndex'); //掲載中案件確認
+Route::post('/matterEdit', 'MatterController@matterEdit')->name('matterEdit'); //案件編集画面
+Route::post('/matterUpdate', 'MatterController@matterUpdate')->name('matterUpdate'); //案件編集
 Route::post('matterRegister', 'MatterController@post')->name('matter.post');
 Route::post('/matterCreate', 'MatterController@create')->name('matter.create');
 Route::get('/postingScreen', 'MatterController@postingScreen')->name('postingScreen');
@@ -61,6 +62,7 @@ Route::get('/portfolioEdit', 'PortfolioController@edit')->name('portfolioEdit');
 Route::post('/portfolioUpdate', 'PortfolioController@update')->name('portfolio_update');
 Route::get('/portfolioDel', 'PortfolioController@delete')->name('portfolioDel');
 Route::post('/remove', 'PortfolioController@remove')->name('portfolio_remove');
+
 
 
 });

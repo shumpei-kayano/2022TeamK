@@ -10,61 +10,61 @@
         メールアドレス: <br><input type="text" name='email'value='{{ $form->email }}'><br>
         電話番号: <br><input type="text" name='tel'value='{{ $form->tel }}'><br>
         最終学歴: <br><input type="text" name='educational_background'value='{{ $form->educational_background }}'><br>
-        学習言語1: <br><select name="development_language_id1"value='{{ $form->development_language_id1 }}'>
+        学習言語1: <br><select name="development_language_id1">
             @foreach ($items as $item)
             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
             {{-- <p>{{  $item->language_name  }}</p> --}}
             @endforeach <br>
                 </select><br>
-        学習期間1: <br><select type="number" name="development_year1"value='{{ $form->development_year1 }}'>
+        学習期間1: <br><select type="number" name="development_year1">
         <option value="0">3か月</option>
         <option value="1">6か月</option>
         <option value="2">9か月</option>
         <option value="3">12か月</option>
                  </select><br>
-        学習言語2: <br><select type="number" name="development_language_id2"value='{{ $form->development_language_id2 }}'> 
+        学習言語2: <br><select type="number" name="development_language_id2"> 
             @foreach ($items as $item)
             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
             {{-- <p>{{  $item->language_name  }}</p> --}}
             @endforeach <br>
                 </select><br>
-        学習期間2: <br><select type="number" name="development_year2"value='{{ $form->development_year2 }}'>
+        学習期間2: <br><select type="number" name="development_year2">
         <option value="0">3か月</option>
         <option value="1">6か月</option>
         <option value="2">9か月</option>
         <option value="3">12か月</option>
         </select><br>
-        学習言語3: <br><select type="number" name="development_language_id3"value='{{ $form->development_language_id3 }}'> 
+        学習言語3: <br><select type="number" name="development_language_id3"> 
                 @foreach ($items as $item)
                 <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
                 {{-- <p>{{  $item->language_name  }}</p> --}}
                 @endforeach <br>
                     </select><br>
-        学習期間3: <br><select type="number" name="development_year3"value='{{ $form->development_year3 }}'>
+        学習期間3: <br><select type="number" name="development_year3">
         <option value="0">3か月</option>
         <option value="1">6か月</option>
         <option value="2">9か月</option>
         <option value="3">12か月</option>
         </select><br>
-        学習言語4: <br><select type="number" name="development_language_id4"value='{{ $form->development_language_id4 }}'> 
+        学習言語4: <br><select type="number" name="development_language_id4"> 
             @foreach ($items as $item)
             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
             {{-- <p>{{  $item->language_name  }}</p> --}}
             @endforeach <br>
                 </select><br>
-        学習期間4: <br><select type="number" name="development_year4"value='{{ $form->development_year4 }}'>
+        学習期間4: <br><select type="number" name="development_year4">
         <option value="0">3か月</option>
         <option value="1">6か月</option>
         <option value="2">9か月</option>
         <option value="3">12か月</option>
         </select><br>
-        学習言語5: <br><select type="number" name="development_language_id5"value='{{ $form->development_language_id15 }}'> 
+        学習言語5: <br><select type="number" name="development_language_id5"> 
             @foreach ($items as $item)
             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
             {{-- <p>{{  $item->language_name  }}</p> --}}
             @endforeach <br>
                 </select><br>
-        学習期間5: <br><select type="number" name="development_year5"value='{{ $form->development_year5 }}'>
+        学習期間5: <br><select type="number" name="development_year5">
         <option value="0">3か月</option>
         <option value="1">6か月</option>
         <option value="2">9か月</option>

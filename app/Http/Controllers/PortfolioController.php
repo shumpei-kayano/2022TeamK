@@ -58,7 +58,7 @@ class PortfolioController extends Controller
     {   
         $portfolio = Portfolio::find($request -> user_id);
         $form = $request->all();
-
+        
         unset($form['_token']);
         $portfolio->fill($form)->save();
         return view('./portfolio/portfolio');

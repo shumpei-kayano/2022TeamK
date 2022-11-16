@@ -31,12 +31,19 @@ class MatterController extends Controller
 
     public function postingScreen(Request $request)
     {
-        return view('postingScreen');
+        $user = Auth::user();
+        // $matter = Matter::all();
+        $matters = \App\Matter::where('user_id',$user->id)->get();
+        $prefectures = \DB::table('prefectures') -> get();
+        $occupations = \DB::table('occupations') -> get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
+        $development_languages = \DB::table('development_languages') -> get();
+        return view('postingScreen',compact('user','matters','prefectures','occupations','rank_of_difficulties','development_languages'));
     }
 
-    public function approvalIndex(Request $request)
+    public function matterEdit(Request $request)
     {
-        return view('approvalIndex');
+        return view('matterEdit');
     }
 
     public function listingConfirmation(Request $request)
