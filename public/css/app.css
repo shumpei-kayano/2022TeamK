@@ -693,6 +693,105 @@ textarea,
   text-align: center;
 }
 
+.p-loginpage {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+.p-loginpage .input {
+  margin-bottom: 20px;
+}
+
+.p-register {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.p-register .input {
+  margin-bottom: 20px;
+}
+.p-register .ragio-group {
+  text-align: center;
+  font-size: 20px;
+}
+.p-register .ragio-group input {
+  margin-right: 5px;
+}
+.p-register-btn {
+  text-align: right;
+}
+
+.verify {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.verify__container {
+  margin: 0;
+}
+
+.p-email {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.p-email input {
+  margin-bottom: 15px;
+}
+.p-email__container {
+  margin: 0;
+}
+.p-email__btn-container {
+  text-align: right;
+}
+.p-email__btn {
+  padding: 10px 20px;
+}
+
+.reset {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.reset input {
+  margin-bottom: 15px;
+}
+.reset__btn-container {
+  text-align: right;
+}
+.reset__btn {
+  padding: 10px 20px;
+}
+
+.confirm {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.confirm input {
+  margin-bottom: 15px;
+}
+.confirm__btn-container {
+  text-align: right;
+}
+.confirm__btn {
+  padding: 10px 20px;
+}
+
+.portfolio {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+.portfolio__container {
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio__btn {
+  padding: 10px 0;
+  width: 200px;
+}
+
 /*  ゲーム風フォントの設定  */
 @font-face {
   /*   適用させるフォント名 → 間違っていると反映されないので注意  */
@@ -733,6 +832,7 @@ body {
 .c-nav__ul {
   display: flex;
   margin-right: 50px;
+  padding-top: 10px;
 }
 .c-nav__list {
   margin-right: 10px;
