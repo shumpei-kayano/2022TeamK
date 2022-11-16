@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Occupation extends Model
 {
-    public function Matters (){
+    public function matters (){
         return this->hasmany('App\Matters');
     }
 }

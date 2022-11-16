@@ -10,7 +10,6 @@
         <h1>案件検索</h1>
     </div>
 
-
     <form action="{{route('show')}}" method="GET">
         <div class="">
             <label>キーワード
@@ -51,7 +50,7 @@
                 </div>
             </div>
 
-                <button type="submit" class="btn btn-secondary">検索</button>
+                <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button>
             </form>
 
 <div>
@@ -71,6 +70,24 @@
             <td>{{$item->prefectures_name}}</td>
             <td>{{$item->remarks}}</td>
             <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="">詳細</a></td>
+            <td>@if (Auth::check())
+                @if (isset($favorite) && $favorite)
+                    {{-- favoriteがあったら削除ボタン表示 --}}
+                    <form action="{{route('favorite.del', ['id'=>$item->id])}}" method="POST">
+                        <input type="hidden" name="matter_id" value="{{$item->id}}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">お気に入り解除</button>
+                    </form>
+                @else
+                    {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
+                    <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
+                        @csrf
+                        <input type="hidden" name="matter_id" value="{{$item->id}}">
+                        <button type="submit">お気に入り登録</button>
+                    </form>
+                @endif
+              @endif</td>
         </tr>
         @endforeach
     </table>

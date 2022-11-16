@@ -10,6 +10,7 @@ use App\Prefecture;
 use App\Occupation;
 use App\Development_language;
 use App\Rank_of_difficulty;
+use App\Favorite;
 
 class MatterController extends Controller
 {
@@ -158,8 +159,9 @@ class MatterController extends Controller
         $prefectures = Prefecture::all();
         $occupations  = Occupation::all();
         $rank_of_difficulties = Rank_of_difficulty::all();
+        $favorite = Favorite::where('user_id', auth()->user()->id)->first();
         return view('./show',compact('items', 'keyword', 'prefectures_id', 'occupation_id',
-    'level_id', 'prefectures', 'occupations', 'rank_of_difficulties'));
+    'level_id', 'prefectures', 'occupations', 'rank_of_difficulties', 'favorite'));
     }
 
     public function detail($id)
