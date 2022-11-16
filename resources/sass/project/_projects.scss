@@ -188,3 +188,12 @@
         text-align: right;
     }
 }
+
+.verify {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+    &__container {
+        margin: 0;
+    }
+}
