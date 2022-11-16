@@ -26,7 +26,6 @@
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__key" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
             </div>
 
-<<<<<<< HEAD
             {{-- エリア検索 --}}
 
 
@@ -70,10 +69,8 @@
     <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
     </div>
     @endsection
-=======
                 <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button>
             </form>
->>>>>>> 5b6b6f2cb3069a667826b786d6d11a3404acd713
 
 <div>
     <table>
