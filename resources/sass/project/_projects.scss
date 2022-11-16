@@ -250,3 +250,21 @@
         margin: 0;
     }
 }
+
+.p-email {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+    input{
+        margin-bottom: 15px;
+    }
+    &__container {
+        margin: 0;
+    }
+    &__btn-container {
+        text-align: right;
+    }
+    &__btn {
+        padding: 10px 20px;
+    }
+}
