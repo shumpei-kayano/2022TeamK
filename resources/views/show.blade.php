@@ -1,58 +1,68 @@
 
 @extends('layouts.app')
+
 @section('title')
+案件検索
 @endsection
 
 @section('content')
 
-    <div class="p-form">
-    <div class="p-form__midasi">
-        <h1>案件検索</h1>
-    </div>
+<h1 class="p-form">案件検索</h1>
 
+<div class="p-form__container">
 
-    <form action="{{route('show')}}" method="GET">
-        <div class="">
-            <label>キーワード
-            <input type="search" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
-            </label>
-        </div>
+    <div class="nes-container is-dark with-title p-form__box">
 
-        <div class="pldwn">
-                <div class="p-form__eria">
-                    <select class="form-select" aria-label="Default select example"name="prefectures_id" >
-                        <option value="" selected>エリアを選択してください</option>
-                        @foreach ($prefectures as $prefecture)
-                            <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
-                        @endforeach
-                    </select>
-                </div>
-    
-                <div class="p-form__oc">
-                    <label for="">職種
-                    <select class="form-select" aria-label="Default select example" name="occupation_id">
-                        <option value="" selected>全て</option>
-                        @foreach ($occupations as $occupation)
-                            <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
-                        @endforeach
-                    </select>
-                </label>
-                </div>
-
-                <div class="p-form__oc">
-                    <label for="">レベル
-                    <select class="form-select" aria-label="Default select example" name="level_id">
-                        <option value="" selected>全て</option>
-                        @foreach ($rank_of_difficulties as $level)
-                            <option value="{{$level->id}}">{{$level->rank}}</option> 
-                        @endforeach
-                    </select>
-                </label>
-                </div>
+        {{--キーワード検索--}}
+        <form action="{{route('show')}}" method="GET">
+            <div>
+                <label for="dark_field" style="color:#fff;" >キーワード</label><br>
+                <input type="search" id="dark_field" class="nes-input is-dark p-form__key" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
             </div>
 
-                <button type="submit" class="btn btn-secondary">検索</button>
-            </form>
+            {{-- エリア検索 --}}
+
+
+                    <label for="dark_select" style="color:#fff">エリア</label>
+                        <div class="nes-select is-dark p-form__eria">
+                            <select class="p-form__eriaselect" aria-label="Default select example"name="prefectures_id" required id="dark_select">
+                                <option value="" selected>エリアを選択してください</option>
+                                @foreach ($prefectures as $prefecture)
+                                    <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
+                                @endforeach
+                            </select>
+                        </div>
+
+
+            {{-- 職種検索 --}}
+        
+                    <label for="dark_select" style="color:#fff">しょくしゅ</label>
+                        <div class=" nes-select is-dark p-form__oc">
+                            <select class="p-form__ocselect" aria-label="Default select example" name="occupation_id" required id="dark_select">
+                                <option value="" selected>しょくしゅを選択してください</option>
+                                @foreach ($occupations as $occupation)
+                                    <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
+                                @endforeach
+                            </select>
+                        </div>
+
+            {{-- レベル検索 --}}
+
+                    <label for="dark_select" style="color:#fff">レベル</label>
+                        <div class=" nes-select is-dark p-form__level">
+                            <select class="p-form__levelselect" aria-label="Default select example" name="level_id" required id="dark_select">
+                                <option value="" selected>レベルを選択してください</option>
+                                @foreach ($rank_of_difficulties as $level)
+                                    <option value="{{$level->id}}">{{$level->rank}}</option> 
+                                @endforeach
+                            </select>
+                        </div>
+    </div>
+</div>
+    <div class="p-form__btn-container">
+    <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
+    </div>
+    @endsection
 
 <div>
     <table>
@@ -115,4 +125,3 @@
         </div> --}}
    
 
-@endsection

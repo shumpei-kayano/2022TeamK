@@ -158,6 +158,59 @@
     }
 }
 
+//////////案件検索画面///////////// 
+
+.p-form {
+    margin: 0;
+    text-align: center;
+
+    &__container {
+        width:1000px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__key {
+        height: 100px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    &__eria {
+        height: 45px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    &__oc {
+        height: 45px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    &__level {
+        height: 45px;
+        width: 300px;
+    }
+
+    &__box {
+        display: block;
+    }
+
+    &__btn {
+        width: 110px;
+        padding: 0;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    &__btn-container {
+        text-align: center;
+    }
+}
 .p-loginpage {
     width: 600px;
     margin: 0 auto;
