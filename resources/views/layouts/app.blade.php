@@ -35,14 +35,16 @@
                 </button>  --}}
 
                 <div class="c-nav__container" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="c-nav__ul">
-                        <li class="c-nav__list"><a href="/account">アカウント</a></li>
-                        <li class="c-nav__list"><a href="/favorite">お気に入り</a></li>
-                        <li class="c-nav__list"><a href="/show">あんけん</a></li>
-                        <li class="c-nav__list"><a href="/portfolio">ポートフォリオ</a></li>
-                        <li class="c-nav__list"><a href="/company">きぎょう</a></li>
-                    </ul>
+                    @auth
+                        <!-- グローバルナビゲーション -->
+                        <ul class="c-nav__ul">
+                            <li class="c-nav__list"><a href="/account">アカウント</a></li>
+                            <li class="c-nav__list"><a href="/favorite">お気に入り</a></li>
+                            <li class="c-nav__list"><a href="/show">あんけん</a></li>
+                            <li class="c-nav__list"><a href="/portfolio">ポートフォリオ</a></li>
+                            <li class="c-nav__list"><a href="/company">きぎょう</a></li>
+                        </ul>
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
