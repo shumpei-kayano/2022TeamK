@@ -48,16 +48,16 @@
     <dd>
       <label>
         <input type="radio" name="skill" value="hoge1" onclick="entryChange1();" checked="checked" />
-        一つ目</label>
+        1つ目</label>
       <label>
         <input type="radio" name="skill" value="hoge2" onclick="entryChange1();" />
-        二つ目</label>
+        2つ目</label>
       <label>
         <input type="radio" name="skill" value="hoge3" onclick="entryChange1();" />
-        三つ目</label>
+        3つ目</label>
       <label>
         <input type="radio" name="skill" value="hoge4" onclick="entryChange1();" />
-        四つ目</label>
+        4つ目</label>
     </dd>
   </dl>
 
