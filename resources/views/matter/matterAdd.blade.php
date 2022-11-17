@@ -16,11 +16,10 @@
 <form action="{{ route('matter.post')}}" method="post">
 
     @csrf     
-
-
-    <input type="text" class="" placeholder="あんけんめい" 
-            aria-describedby="basic-addon2" name="matter_name">
-<br>    
+            <!--     <input type="text" class="" placeholder="あんけんめい" 
+            aria-describedby="basic-addon2" name="matter_name"> -->
+            <!-- <label for="dark_field" style="color:#fff;" >あんけんめい<br> -->
+              <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい"name="matter_name"><br>  
 
     <label>とどうふけん
     <select name="prefectures_id" >
@@ -28,12 +27,12 @@
             <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
         @endforeach
     </select>
-</label>
-<br>
+    </label>
+    <br>
 
-    <input type="text" class="" placeholder="れんらくさき" 
-            aria-describedby="basic-addon2" name="tel">
-<br>
+    <!--<input type="text" class="" placeholder="れんらくさき" 
+     aria-describedby="basic-addon2" name="tel"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="tel"><br>  
 
     <select name="occupation_id">
         @foreach ($occupations as $occupation)
@@ -155,16 +154,21 @@
     </label>
 <br>
 
-    <input type="text" class="" placeholder="とっきじこう"
-            aria-describedby="basic-addon2" name="remarks">
+
+    <!--     <input type="text" class="" placeholder="とっきじこう"
+    aria-describedby="basic-addon2" name="remarks"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks">
 <br>
 
-    <input type="number" class="" placeholder="ぼしゅうにんずう"
-            aria-describedby="basic-addon2" name="number_of_person">
+
+    <!--     <input type="number" class="" placeholder="ぼしゅうにんずう"
+            aria-describedby="basic-addon2" name="number_of_person"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="ぼしゅうにんずう"name="number_of_person">
 <br>
 
-    <input type="number" class="" placeholder="せいこうほしゅう"
-            aria-describedby="basic-addon2" name="success_fee">
+    <!--     <input type="number" class="" placeholder="せいこうほしゅう"
+            aria-describedby="basic-addon2" name="success_fee"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="せいこうほうしゅう"name="success_fee">
 <br>
 
 <label>あんけんランク
