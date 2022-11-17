@@ -809,28 +809,11 @@ textarea,
 .p-wel__btn {
   margin-top: 25px;
 }
-
-.p-form {
-  margin: 0;
-  text-align: center;
-}
-.p-form__portfolio {
-  height: 30px;
-  width: 300px;
-  margin-bottom: 20px;
-}
-.p-form__PR {
-  height: 100px;
-  width: 300px;
-  margin-bottom: 20px;
-}
-.p-form__pr1 {
 .p-wel__pr1 {
   font-size: 30px;
   margin-top: 100px;
   color: #333;
 }
-.p-form__pr2 {
 .p-wel__pr2 {
   color: #333;
 }
@@ -862,6 +845,42 @@ textarea,
   padding: 10px 0;
   width: 180px;
   float: left;
+}
+
+.p-form {
+  margin: 0;
+  text-align: center;
+}
+.p-form__portfolio {
+  height: 30px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+.p-form__PR {
+  height: 100px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+.p-form__pr1 {
+  font-size: 30px;
+  margin-top: 100px;
+  color: #333;
+}
+.p-form__pr2 {
+  color: #333;
+}
+
+.p-mail {
+  color: #b5e66a;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 4px 8px 12px #808080;
+  margin-top: 130px;
+}
+.p-mail__messe {
+  text-align: center;
+  font-size: 20px;
 }
 
 /*  ゲーム風フォントの設定  */
