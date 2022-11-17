@@ -99,7 +99,7 @@
     </div>
     </div>
 
-<br><input type="submit" class="nes-btn is-success" value="作成">
+<br><input type="submit" class="nes-btn is-success" value="編集">
 
     </form>
 </div>
