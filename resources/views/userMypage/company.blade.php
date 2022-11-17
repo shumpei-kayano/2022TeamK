@@ -12,15 +12,16 @@
 @endif --}}
 
 <h1 class="p-form">マイページ（企業）</h1>
-    <form method="GET" action="/postingScreen">
+    <form method="GET" action="/postingScreen
+    ">
         <div class="p-form">
         @csrf
         <input type="submit" class="nes-btn is-error" name="postingScreen" value="けいさいちゅうあんけん">
         </form>
 
-    <form method="GET" action="/approvalIndex">
+    <form method="GET" action="">
         @csrf
-        <input type="submit" class="nes-btn is-primary" name="approvalIndex" value="しょうにんまち">
+        <input type="submit" class="nes-btn is-primary" name="" value="しょうにんまち">
         </form>
     
     <form method="GET" action="/listingConfirmation">

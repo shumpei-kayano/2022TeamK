@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title','掲載中案件')
+
 @section('content')
 
 {{-- {{dd($matter)}} --}}
