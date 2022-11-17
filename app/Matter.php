@@ -21,14 +21,18 @@ class Matter extends Model
     // }
 
     public function prefecture (){
-        return this->belongsTo('App\Prefecture');
+        return $this->belongsTo('App\Prefecture','id');
     }
 
     public function occupation (){
-        return this->belongsTo('App\Occupation');
+        return $this->belongsTo('App\Occupation','id');
     }
 
-    public function favorits (){
-        return this->hasmany('App\Favorite');
+    public function favorites (){
+        return $this->hasmany('App\Favorites','id');
+    }
+
+    public function development_language (){
+        return $this->belongsTo('App\Development_language','id');
     }
 }
