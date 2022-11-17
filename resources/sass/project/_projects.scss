@@ -337,3 +337,22 @@
         margin-top: 0;
     }
 }
+
+
+//////////メール送信しました画面//////////
+
+.p-mail {
+    color: $green;
+    text-align: center;
+    font-weight: bold;
+    font-size:50px;      
+    text-shadow: 3px 6px 9px #808080;
+    margin-top: 130px;
+
+    &__messe {
+        text-align: center;
+        font-size: 20px;
+
+        
+        }
+}
