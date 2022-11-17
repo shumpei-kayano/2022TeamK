@@ -337,3 +337,20 @@
         margin-top: 0;
     }
 }
+
+// ポートフォリオ
+.p-form {
+    margin: 0;
+    text-align: center;
+
+    &__portfolio {
+        height: 30px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    &__PR {
+        height: 100px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}

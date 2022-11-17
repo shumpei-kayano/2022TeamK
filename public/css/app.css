@@ -810,6 +810,21 @@ textarea,
   margin-top: 0;
 }
 
+.p-form {
+  margin: 0;
+  text-align: center;
+}
+.p-form__portfolio {
+  height: 30px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+.p-form__PR {
+  height: 100px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
 /*  ゲーム風フォントの設定  */
 @font-face {
   /*   適用させるフォント名 → 間違っていると反映されないので注意  */
