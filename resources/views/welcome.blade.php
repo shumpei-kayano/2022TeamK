@@ -55,7 +55,7 @@
                     <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ url('/home') }}'">ほーむ</button>
                         {{-- <a href="{{ url('/home') }}">Home</a> --}}
                     @else
-                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('login') }}'">ろぐいん</button>
+                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('login') }}'">ログイン</button>
                         {{-- <a href="{{ route('login') }}">Login</a> --}}
 
                         @if (Route::has('register'))
@@ -66,6 +66,13 @@
                 </div>
             @endif
         </div>
+
+    <div class=>
+        <h3 class="p-wel__pr1">実務未経験から、実践で活躍できるエンジニアへ！</h3>
+        <h4 class="p-wel__pr2">「情報系の勉強はしたど、就職する自信がない。」「一緒に働きたくなるような人材が欲しい。」<br>
+                                そんな人たちを助け、IT業界を盛り上げていく新感覚RPG。
+        </h4>
+    </div>
 
 </div>
 
