@@ -210,7 +210,12 @@
     &__btn-container {
         text-align: center;
     }
+
+
 }
+
+
+
 .p-loginpage {
     width: 600px;
     margin: 0 auto;
@@ -365,4 +370,24 @@
 
         
         }
+}
+
+//////////マイページ（企業）//////////
+
+.p-myp {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 150px;
+    text-align: center;
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+
+    }
+    &__btn {
+        padding: 10px 0;
+        width: 180px;
+        float: left;
+    }
 }
