@@ -166,7 +166,8 @@ class MatterController extends Controller
         $prefectures = Prefecture::all();
         $occupations  = Occupation::all();
         $rank_of_difficulties = Rank_of_difficulty::all();
-        $favorite = Favorite::where('user_id', auth()->user()->id)->first();
+        $favorite = Favorite::where('user_id', auth()->user()->id)->orderBy('matter_id','asc')->get();
+        // $favorite = \DB::table('favorites') -> get();
         return view('./show',compact('items', 'keyword', 'prefectures_id', 'occupation_id',
     'level_id', 'prefectures', 'occupations', 'rank_of_difficulties', 'favorite'));
     }
