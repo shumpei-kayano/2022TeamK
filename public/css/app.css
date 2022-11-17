@@ -825,11 +825,13 @@ textarea,
   margin-bottom: 20px;
 }
 .p-form__pr1 {
+.p-wel__pr1 {
   font-size: 30px;
   margin-top: 100px;
   color: #333;
 }
 .p-form__pr2 {
+.p-wel__pr2 {
   color: #333;
 }
 
@@ -844,6 +846,22 @@ textarea,
 .p-mail__messe {
   text-align: center;
   font-size: 20px;
+}
+
+.p-myp {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 150px;
+  text-align: center;
+}
+.p-myp__container {
+  display: flex;
+  justify-content: space-around;
+}
+.p-myp__btn {
+  padding: 10px 0;
+  width: 180px;
+  float: left;
 }
 
 /*  ゲーム風フォントの設定  */
