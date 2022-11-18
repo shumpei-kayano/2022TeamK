@@ -6,4 +6,8 @@
 
 <h1 class="p-info">マンチェスターシティ</h1>
 
+<form action='{{ route('matter_update',) }}'method='post'>
+
+    @csrf
+
 @endsection

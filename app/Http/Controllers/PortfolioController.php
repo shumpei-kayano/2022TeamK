@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Portfolio;
+use App\Development_language;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
@@ -56,20 +57,22 @@ class PortfolioController extends Controller
 
     public function update(Request $request)
     {   
-        $portfolio = Portfolio::find($request -> user_id);
+        // dd($request);
+        $portfolio = Portfolio::find($request -> id);
         $form = $request->all();
-        
+        // dd($portfolio,$form);
         unset($form['_token']);
         $portfolio->fill($form)->save();
+       
         return view('./portfolio/portfolio');
     }
     public function delete(Request $request)
     {
         $user = Auth::user();
         $portfolio = Portfolio::whereUser_id($user->id)->first();
+        $development_languages = \DB::table('development_languages') -> get();
         // $items = \DB::table('development_languages') -> get();
-        
-        return view('./portfolio/portfolioDel',['form' => $portfolio] ,compact('user'));
+        return view('./portfolio/portfolioDel',['form' => $portfolio] ,compact('user','development_languages'));
     }
     public function remove(Request $request)
     {

@@ -26,4 +26,8 @@ class Portfolio extends Model
         'self_pr',
         'birthday'
     ];
+
+    public function development_language (){
+        return $this->hasOne('App\Development_language','id');
+    }
 }

@@ -13,4 +13,5 @@ class Favorite extends Model
     public function matter(){
         return $this->belongsTo('App\Matter');
     }
+    
 }

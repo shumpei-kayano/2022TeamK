@@ -44,7 +44,18 @@ class MatterController extends Controller
 
     public function matterEdit(Request $request)
     {
-        return view('matterEdit');
+        $matters = Matter::with('prefecture','occupation','development_language')->where('matter_id',$matter->id)->get();
+        return view('matterEdit',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages'));
+    }
+
+    public function matterUpdate(Request $request)
+    {
+        $matter = Matter::find($request -> matter_id);
+        $form = $request->all();
+        
+        unset($form['_token']);
+        $matter->fill($form)->save();
+        return view('postingScreen');
     }
 
     public function listingConfirmation(Request $request)

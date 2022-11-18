@@ -11,22 +11,18 @@
 <form action='{{ route('portfolio_update',) }}'method='post'>
 
     @csrf
-        <input type="hidden" name="user_id" value="{{ $user->id }}">
+        <input type="hidden" name="id" value="{{ $form->id }}">
         {{-- userId <input type="int" name="user_id"> --}}
         
-        <!-- 名前: <br><input type="text" name='name' value='{{ $form->name }}'><br> -->
         <label for="dark_field" style="color:#fff;" >名前<br>
         <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="name" value='{{ $form->name }}'><br>
 
-        <!-- メールアドレス: <br><input type="text" name='email'value='{{ $form->email }}'><br> -->
         <label for="dark_field" style="color:#fff;" >メールアドレス<br>
         <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="email" value='{{ $form->email }}'><br>
 
-        <!-- でんわばんごう: <br><input type="text" name='tel'value='{{ $form->tel }}'><br> -->
         <label for="dark_field" style="color:#fff;" >でんわばんごう<br>
         <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="tel" value='{{ $form->tel }}'><br>      
 
-        <!-- さいしゅうがくれき: <br><input type="text" name='educational_background'value='{{ $form->educational_background }}'><br> -->
         <label for="dark_field" style="color:#fff;" >さいしゅうがくれき<br>
         <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background" value='{{ $form->educational_background }}'><br>          
 
@@ -91,7 +87,6 @@
         <option value="3">12か月</option>
         </select><br>
         
-        <!-- 自己PR: <br><input type="text" name="self_pr"value='{{ $form->self_pr }}'> <br> -->
         <label for="dark_field" style="color:#fff;" >自己PR<br>
         <input type="search" id="dark_field" class="nes-input is-dark p-form__PR" name="self_pr" value='{{ $form->self_pr }}'><br>
 
