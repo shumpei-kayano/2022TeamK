@@ -832,10 +832,9 @@ textarea,
 }
 
 .p-myp {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
   padding-top: 150px;
-  text-align: center;
 }
 .p-myp__container {
   display: flex;
@@ -843,8 +842,7 @@ textarea,
 }
 .p-myp__btn {
   padding: 10px 0;
-  width: 180px;
-  float: left;
+  width: 250px;
 }
 
 .p-form {
@@ -868,6 +866,12 @@ textarea,
 }
 .p-form__pr2 {
   color: #333;
+}
+
+.p-port__prdn1 {
+  height: 50px;
+  width: 200px;
+  display: flex;
 }
 
 .p-mail {

@@ -16,17 +16,17 @@
     <div class="nes-container is-dark with-title p-myp__container">
             <form method="GET" action="/postingScreen">
             @csrf
-            <a href="#"><button type="button" class="nes-btn is-error p-myp__btn">けいさいちゅうあんけんを<br>みる</button></a>
+            <a href="#"><button type="button" class="nes-btn is-error p-myp__btn">けいさいちゅうあんけんを<br>かくにんする</button></a>
             </form>
 
         <form method="GET" action="">
             @csrf
-            <a href="#"><button type="button" class="nes-btn is-primary p-myp__btn">しょうにんまちリストを<br>みる</button></a>
+            <a href="#"><button type="button" class="nes-btn is-primary p-myp__btn">しょうにんまちリストを<br>かくにんする</button></a>
             </form>
         
         <form method="GET" action="/listingConfirmation">
             @csrf
-            <a href="#"><button type="button" class="nes-btn is-warning p-myp__btn">かこけいやくいちらんを<br>みる</button></a>
+            <a href="#"><button type="button" class="nes-btn is-warning p-myp__btn">かこけいやくいちらんを<br>かくにんする</button></a>
             </form>
             
         <form method="GET" action="{{route('matter.add')}}">
