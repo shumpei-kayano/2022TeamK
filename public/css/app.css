@@ -597,7 +597,7 @@ textarea,
 .p-acinfo {
   text-align: center;
   margin-top: 130px;
-  width: 500px;
+  width: 550px;
 }
 .p-acinfo__input {
   margin-bottom: 15px;
@@ -877,8 +877,12 @@ textarea,
   color: #333;
 }
 
+.p-port__container {
+  flex-wrap: wrap;
+}
 .p-port__aaa {
   overflow: hidden;
+  margin-right: 20px;
 }
 .p-port__prdn1 {
   float: left;
@@ -888,11 +892,41 @@ textarea,
   float: left;
   margin-left: 20px;
   margin-top: 20px;
+  margin-right: 20px;
 }
 .p-port__bbb {
   overflow: hidden;
+}
+.p-port__ccc {
+  overflow: hidden;
+}
+.p-port__ddd {
+  overflow: hidden;
+}
+.p-port__eee {
+  overflow: hidden;
   margin-bottom: 20px;
 }
+.p-port__btn {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.p-port__container {
+  text-align: center;
+  margin-top: 0px;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.p-port____right {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  float: left;
+  margin-right: 20px;
+}
+
 .p-mail {
   color: #b5e66a;
   text-align: center;
