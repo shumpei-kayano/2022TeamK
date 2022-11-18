@@ -7,7 +7,7 @@
 @section('content')
 
 <h1 class="p-form">アカウントじょうほうへんしゅう</h1>
-<div class="p-acinfoEdit__container">
+<div class="p-acinfoEdit__container2">
     <div class="nes-container is-rounded is-dark p-acinfoEdit">
             ユーザーID<input class="nes-input is-dark p-acinfoEdit__input" type="text" name='name' value='{{ $form->name }}'>
             メールアドレス<input class="nes-input is-dark p-acinfoEdit__input" type="text" name='email'value='{{ $form->email }}'>

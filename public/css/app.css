@@ -709,7 +709,7 @@ textarea,
 .p-acinfo {
   text-align: center;
   margin-top: 130px;
-  width: 500px;
+  width: 550px;
 }
 
 .p-acinfo__input {
@@ -719,6 +719,12 @@ textarea,
 .p-acinfo__container {
   display: flex;
   justify-content: center;
+}
+
+.p-acinfo__container2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .p-acinfo__id {
@@ -744,7 +750,6 @@ textarea,
   text-align: center;
   margin-top: 130px;
   width: 500px;
-  height: 220px;
 }
 
 .p-acinfoEdit__input {
@@ -754,6 +759,12 @@ textarea,
 .p-acinfoEdit__container {
   display: flex;
   justify-content: center;
+}
+
+.p-acinfoEdit__container2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .p-acinfoEdit__id {
@@ -986,9 +997,9 @@ textarea,
 }
 
 .p-myp {
-  width: 900px;
+  width: 630px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 70px;
 }
 
 .p-myp__container {
@@ -1028,10 +1039,64 @@ textarea,
   color: #333;
 }
 
+.p-port__container {
+  flex-wrap: wrap;
+}
+
+.p-port__aaa {
+  overflow: hidden;
+  margin-right: 20px;
+}
+
 .p-port__prdn1 {
-  height: 50px;
-  width: 200px;
+  float: left;
+  margin-top: 20px;
+}
+
+.p-port__prdn2 {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.p-port__bbb {
+  overflow: hidden;
+}
+
+.p-port__ccc {
+  overflow: hidden;
+}
+
+.p-port__ddd {
+  overflow: hidden;
+}
+
+.p-port__eee {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.p-port__btn {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.p-port__container {
+  text-align: center;
+  margin-top: 0px;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.p-port____right {
+  overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  float: left;
+  margin-right: 20px;
 }
 
 .p-mail {

@@ -105,13 +105,18 @@
 .p-acinfo {
     text-align: center;
     margin-top: 130px;
-    width: 500px;
+    width: 550px;
     &__input {
         margin-bottom: 15px;
     }
     &__container {
         display: flex;
         justify-content: center;
+    }
+    &__container2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
     }
     &__id {
         text-indent:-167px;
@@ -136,13 +141,17 @@
     text-align: center;
     margin-top: 130px;
     width: 500px;
-    height: 220px;
     &__input {
         margin-bottom: 15px;
     }
     &__container {
         display: flex;
         justify-content: center;
+    }
+    &__container2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
     }
     &__id {
         text-indent:-167px;
@@ -375,9 +384,9 @@
 //////////マイページ（企業）//////////
 
 .p-myp {
-    width: 900px;
+    width: 630px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 70px;
 
     &__container {
         display: flex;
@@ -421,11 +430,73 @@
 
 .p-port {
 
+    &__container {
+        flex-wrap: wrap;
+
+    }
+
+
+    &__aaa {
+        overflow: hidden;
+        margin-right: 20px;
+    }
     
     &__prdn1 {
-        height: 50px;
-        width: 200px;
+        float: left;
+        margin-top: 20px;
+    }
+
+    &__prdn2 {
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+
+    &__bbb {
+        overflow: hidden;
+    }
+
+
+    &__ccc {
+        overflow: hidden;
+    }
+
+
+    &__ddd {
+        overflow: hidden;
+    }
+
+    &__eee {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    &__PR {
+
+    }
+
+    &__btn {
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        text-align: center;
+        margin-top: 0px;
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &____right {
+        overflow: hidden;
         display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        float: left;
+        margin-right: 20px;
     }
 
 }

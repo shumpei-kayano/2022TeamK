@@ -155,9 +155,8 @@
 <br>
 
 
-    <!--     <input type="text" class="" placeholder="とっきじこう"
-    aria-describedby="basic-addon2" name="remarks"> -->
-    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks">
+    <input type="text" class="" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks">
+    {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
 <br>
 
 
