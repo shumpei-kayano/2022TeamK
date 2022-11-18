@@ -606,6 +606,11 @@ textarea,
   display: flex;
   justify-content: center;
 }
+.p-acinfo__container2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
 .p-acinfo__id {
   text-indent: -167px;
 }
@@ -832,10 +837,9 @@ textarea,
 }
 
 .p-myp {
-  width: 1200px;
-  width: 900px;
+  width: 630px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 70px;
 }
 .p-myp__container {
   display: flex;
@@ -869,12 +873,22 @@ textarea,
   color: #333;
 }
 
-.p-port__prdn1 {
-  height: 50px;
-  width: 200px;
-  display: flex;
+.p-port__aaa {
+  overflow: hidden;
 }
-
+.p-port__prdn1 {
+  float: left;
+  margin-top: 20px;
+}
+.p-port__prdn2 {
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.p-port__bbb {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 .p-mail {
   color: #b5e66a;
   text-align: center;
