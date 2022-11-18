@@ -421,11 +421,28 @@
 
 .p-port {
 
+
+    &__aaa {
+        overflow: hidden;
+    }
     
     &__prdn1 {
-        height: 50px;
-        width: 200px;
-        display: flex;
+        float: left;
+        margin-top: 20px;
+    }
+
+    &__prdn2 {
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    &__bbb {
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    &__PR {
     }
 
 }
