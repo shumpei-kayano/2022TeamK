@@ -68,12 +68,14 @@
     <div class="p-form__btn-container">
     <button type="submit" class="nes-btn is-success p-form__btn">けんさく{{$favorite}}</button>
     </div>
+</form>
     @endsection
                 {{-- <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button> --}}
             </form>
 
+        
 <div>
-    <table>
+    <table style="color:black">
         <!--<tr>
             <th>案件名</th>
             <th>職種</th>
@@ -84,6 +86,7 @@
 
         @foreach($items as $item)
         <tr>
+            <td>{{$item->id}}</td>
             <td>{{$item->matter_name}}</td>
             <td>{{$item->occupation_name}}</td>
             <td>{{$item->rank}}</td>
@@ -91,22 +94,39 @@
             <td>{{$item->remarks}}</td>
             <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="">詳細</a></td>
             <td>@if (Auth::check())
-                @if (isset($favorite) && $favorite)
-                    {{-- favoriteがあったら削除ボタン表示 --}}
-                    <form action="{{route('favorite.del', ['id'=>$item->id])}}" method="POST">
-                        <input type="hidden" name="matter_id" value="{{$item->id}}">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">お気に入り解除</button>
-                    </form>
-                @else
+                {{-- {{dd($favorite)}} --}}
+                @if (count($favorite) == 0)
                     {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
                     <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
                         @csrf
                         <input type="hidden" name="matter_id" value="{{$item->id}}">
                         <button type="submit">お気に入り登録</button>
                     </form>
-                @endif
+                @else
+                    @for ($i = 0; $i < count($favorite); $i++)
+
+                        @if ($favorite[$i]['matter_id'] == $item->id)
+                        
+                            {{-- favoriteがあったら削除ボタン表示 --}}
+                            <form action="{{route('favorite.del', ['id'=>$item->id])}}" method="POST">
+                                <input type="hidden" name="matter_id" value="{{$item->id}}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">お気に入り解除{{$favorite[$i]['matter_id']}}</button>
+                            </form>
+                            @break
+                        @else
+                            {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
+                            <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
+                                @csrf
+                                <input type="hidden" name="matter_id" value="{{$item->id}}">
+                                <button type="submit">お気に入り登録{{$favorite[$i]['matter_id']}}</button>
+                            </form>
+                            @break
+                        @endif
+                                                    
+                    @endfor 
+                @endif      
               @endif</td>
         </tr>
         @endforeach
