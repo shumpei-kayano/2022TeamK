@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title','案件掲載')
+
 @section('content')
 {{-- @if (Auth::check())
 <p>USER: {{$user->name . '(' . $user->email . ')'}}</p>
@@ -7,27 +9,30 @@
 <p>※ログインしてません。(<a href="/login">ログイン</a>|
 <a href="/register">登録</a>)</p>
 @endif --}}
-
+<div class="p-form">
+<h1 class="p-form">あんけんけいさい</h1>
+<div class="p-acinfo__container">
+  <div class="nes-container is-rounded is-dark p-acinfo">
 <form action="{{ route('matter.post')}}" method="post">
+
     @csrf     
+            <!--     <input type="text" class="" placeholder="あんけんめい" 
+            aria-describedby="basic-addon2" name="matter_name"> -->
+            <!-- <label for="dark_field" style="color:#fff;" >あんけんめい<br> -->
+              <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい"name="matter_name"><br>  
 
-
-    <input type="text" class="" placeholder="案件名" 
-            aria-describedby="basic-addon2" name="matter_name">
-<br>    
-
-    <label>都道府県
+    <label>とどうふけん
     <select name="prefectures_id" >
         @foreach ($prefectures as $prefecture)
             <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
         @endforeach
     </select>
-</label>
-<br>
+    </label>
+    <br>
 
-    <input type="text" class="" placeholder="連絡先" 
-            aria-describedby="basic-addon2" name="tel">
-<br>
+    <!--<input type="text" class="" placeholder="れんらくさき" 
+     aria-describedby="basic-addon2" name="tel"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="tel"><br>  
 
     <select name="occupation_id">
         @foreach ($occupations as $occupation)
@@ -42,16 +47,16 @@
     <dd>
       <label>
         <input type="radio" name="skill" value="hoge1" onclick="entryChange1();" checked="checked" />
-        一つ目</label>
+        1つ目</label>
       <label>
         <input type="radio" name="skill" value="hoge2" onclick="entryChange1();" />
-        二つ目</label>
+        2つ目</label>
       <label>
         <input type="radio" name="skill" value="hoge3" onclick="entryChange1();" />
-        三つ目</label>
+        3つ目</label>
       <label>
         <input type="radio" name="skill" value="hoge4" onclick="entryChange1();" />
-        四つ目</label>
+        4つ目</label>
     </dd>
   </dl>
 
@@ -149,29 +154,37 @@
     </label>
 <br>
 
-    <input type="text" class="" placeholder="特記事項"
-            aria-describedby="basic-addon2" name="remarks">
+
+    <!--     <input type="text" class="" placeholder="とっきじこう"
+    aria-describedby="basic-addon2" name="remarks"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks">
 <br>
 
-    <input type="number" class="" placeholder="募集人数"
-            aria-describedby="basic-addon2" name="number_of_person">
+
+    <!--     <input type="number" class="" placeholder="ぼしゅうにんずう"
+            aria-describedby="basic-addon2" name="number_of_person"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="ぼしゅうにんずう"name="number_of_person">
 <br>
 
-    <input type="number" class="" placeholder="成功報酬"
-            aria-describedby="basic-addon2" name="success_fee">
+    <!--     <input type="number" class="" placeholder="せいこうほしゅう"
+            aria-describedby="basic-addon2" name="success_fee"> -->
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="せいこうほうしゅう"name="success_fee">
 <br>
 
-<label>案件ランク
+<label>あんけんランク
 <select name="rank" id="rank">
         @foreach ($rank_of_difficulties as $item)
             <option value="{{$item->id}}">{{$item->rank}}</option> 
         @endforeach
 </select>
 </label>
-<br>
+</div>
+</div>
 
-<input type="submit" value="確認">
+ <br> <input type="submit" class="nes-btn is-success" value="かくにん">
+
 </form>
+</div>
 
 @endsection
 

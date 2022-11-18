@@ -12,25 +12,27 @@
 @endif --}}
 
 <h1 class="p-form">マイページ（企業）</h1>
-    <form method="GET" action="/postingScreen">
-        <div class="p-form">
-        @csrf
-        <input type="submit" class="nes-btn is-error" name="postingScreen" value="けいさいちゅうあんけん">
-        </form>
+<div class="p-myp">
+    <div class="nes-container is-dark with-title p-myp__container">
+            <form method="GET" action="/postingScreen">
+            @csrf
+            <a href="#"><button type="button" class="nes-btn is-error p-myp__btn">けいさいちゅうあんけんを<br>みる</button></a>
+            </form>
 
-    <form method="GET" action="/approvalIndex">
-        @csrf
-        <input type="submit" class="nes-btn is-primary" name="approvalIndex" value="しょうにんまち">
-        </form>
-    
-    <form method="GET" action="/listingConfirmation">
-        @csrf
-        <input type="submit" class="nes-btn is-warning" name="listingConfirmation" value="かこけいやくいちらん">
-        </form>
+        <form method="GET" action="">
+            @csrf
+            <a href="#"><button type="button" class="nes-btn is-primary p-myp__btn">しょうにんまちリストを<br>みる</button></a>
+            </form>
         
-    <form method="GET" action="{{route('matter.add')}}">
-        @csrf
-        <input type="submit" class="nes-btn is-success" name="matterCreate" value="あんけんけいさい">
+        <form method="GET" action="/listingConfirmation">
+            @csrf
+            <a href="#"><button type="button" class="nes-btn is-warning p-myp__btn">かこけいやくいちらんを<br>みる</button></a>
+            </form>
+            
+        <form method="GET" action="{{route('matter.add')}}">
+            @csrf
+            <a href="#"><button type="button" class="nes-btn is-success p-myp__btn">あんけんを<br>けいさいする</button></a>
     </div>
+</div>
         </form>
 @endsection
