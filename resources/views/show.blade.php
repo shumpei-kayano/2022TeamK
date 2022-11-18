@@ -74,6 +74,9 @@
             </form>
 
         
+        
+                {{-- <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button> --}}
+
 <div>
     <table style="color:black">
         <!--<tr>

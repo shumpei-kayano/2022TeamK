@@ -29,30 +29,55 @@
             <!-- さいしゅうがくれき <br><input type="text" name='educational_background'><br> -->
              <label for="dark_field" style="color:#fff;" >さいしゅうがくれき<br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
-            がくしゅうげんご1 <br><select name="development_language_id1">
-                @foreach ($items as $item)
-                <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                {{-- <p>{{  $item->language_name  }}</p> --}}
-                @endforeach <br>
+
+    
+        <!-- ここの下の部分は１つずつdivで囲んで横並びにさせる！！！ -->
+    <div class="p-port">
+        <div class="p-port__prdn1">   
+            <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
+                    <div class="nes-select is-dark">
+                    <select name="development_language_id1" required id="dark_select"  class="p-port__prdn1">
+                        @foreach ($items as $item)
+                        <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
+                        {{-- <p>{{  $item->language_name  }}</p> --}}
+                        @endforeach <br>
                     </select><br>
-            がくしゅうきかん1 <br><select type="number" name="development_year1">
-            <option value="0">3か月</option>
-            <option value="1">6か月</option>
-            <option value="2">9か月</option>
-            <option value="3">12か月</option>
-                     </select><br>
-            がくしゅうげんご2 <br><select type="number" name="development_language_id2"> 
-                @foreach ($items as $item)
-                <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                {{-- <p>{{  $item->language_name  }}</p> --}}
-                @endforeach <br>
+                </div>
+        </div>
+
+        <div class="p-port__prdn2">
+            <label for="dark_select" style="color:#fff;">がくしゅうきかん1 <br>
+                <div class="nes-select is-dark p-port__prdn">
+                    <select type="number" name="development_year1" required id="dark_select"  class="p-port__prdn">
+                        <option value="0">3か月</option>
+                        <option value="1">6か月</option>
+                        <option value="2">9か月</option>
+                        <option value="3">12か月</option>
                     </select><br>
+                </div>
+            </label>
+        </div>
+
+
+        <div class="p-port__prdn"> 
+            <label for="dark_select" style="color:#fff;">がくしゅうげんご２</label><br>
+                <div class="nes-select is-dark">
+                    <select type="number" name="development_language_id2" required id="dark_select"  class="p-port__prdn"> 
+                        @foreach ($items as $item)
+                        <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
+                        {{-- <p>{{  $item->language_name  }}</p> --}}
+                        @endforeach <br>
+                    </select><br>
+                </div>
+
             がくしゅうきかん2 <br><select type="number" name="development_year2">
             <option value="0">3か月</option>
             <option value="1">6か月</option>
             <option value="2">9か月</option>
             <option value="3">12か月</option>
             </select><br>
+        </div>
+
             がくしゅうげんご3 <br><select type="number" name="development_language_id3"> 
                     @foreach ($items as $item)
                     <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
@@ -96,6 +121,7 @@
             生年月日<br> <input type="date" value="yyyy/mm/dd" name="birthday"><br>
         </div>
         </div>
+    </div>
 
         <br><input type="submit" class="nes-btn is-success" value="作成">
 
