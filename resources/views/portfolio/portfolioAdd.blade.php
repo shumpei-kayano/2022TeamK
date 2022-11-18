@@ -29,7 +29,9 @@
             
             <!-- さいしゅうがくれき <br><input type="text" name='educational_background'><br> -->
              <label for="dark_field" style="color:#fff;" >さいしゅうがくれき<br>
-                <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background">
+                <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
+
+                生年月日<br> <input type="date" value="yyyy/mm/dd" name="birthday"><br>
     </div>
 
  
@@ -198,9 +200,6 @@
             <label for="dark_field" style="color:#fff; margin-top: 20px;" >自己PR</label><br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__PR" name="self_pr"><br>
         </div>
-
-
-            生年月日<br> <input type="date" value="yyyy/mm/dd" name="birthday"><br>
         </div>
         </div>
     </div>

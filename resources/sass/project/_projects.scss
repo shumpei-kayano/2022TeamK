@@ -490,23 +490,14 @@
         margin-left: auto;
     }
 
-    // &__left {
-    //     overflow: hidden;
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     justify-content:space-between;
-    //     float: left;
-    //     margin-right: 20px;
+    &____right {
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        float: left;
+        margin-right: 20px;
     }
-
-    // &____under {
-    //     overflow: hidden;
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     justify-content:space-between;
-    //     float: left;
-    //     margin-right: 20px;
-    // }
 
 }
 
