@@ -15,27 +15,15 @@
 <div class="p-myp">
     <div class="nes-container is-dark with-title p-myp__container">
         <div>
-            <form method="GET" action="/postingScreen">
-            @csrf
-            <a href="#"><button type="button" class="nes-btn is-error p-myp__btn">けいさいちゅうあんけんを<br>かくにんする</button></a>
-            </form>
+            <a href="/postingScreen"><button type="button" class="nes-btn is-error p-myp__btn">けいさいちゅうあんけんを<br>かくにんする</button></a>
 
-        <form method="GET" action="">
-            @csrf
             <a href="#"><button type="button" style="margin-top: 20px" class="nes-btn is-primary p-myp__btn">しょうにんまちリストを<br>かくにんする</button></a>
-            </form>
         </div>
         
         <div>
-        <form method="GET" action="/listingConfirmation">
-            @csrf
-            <a href="#"><button type="button" class="nes-btn is-warning p-myp__btn">かこけいやくいちらんを<br>かくにんする</button></a>
-            </form>
+            <a href="listingConfirmation"><button type="button" class="nes-btn is-warning p-myp__btn">かこけいやくいちらんを<br>かくにんする</button></a>
             
-        <form method="GET" action="{{route('matter.add')}}">
-            @csrf
-            <a href="#"><button type="button" style="margin-top: 20px" class="nes-btn is-success p-myp__btn">あんけんを<br>けいさいする</button></a>
-        </form>
+            <a href="./matter/add"><button type="button" style="margin-top: 20px" class="nes-btn is-success p-myp__btn">あんけんを<br>けいさいする</button></a>
     </div>
 
     </div>
