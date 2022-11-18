@@ -105,7 +105,7 @@
 .p-acinfo {
     text-align: center;
     margin-top: 130px;
-    width: 500px;
+    width: 550px;
     &__input {
         margin-bottom: 15px;
     }
@@ -430,9 +430,15 @@
 
 .p-port {
 
+    &__container {
+        flex-wrap: wrap;
+
+    }
+
 
     &__aaa {
         overflow: hidden;
+        margin-right: 20px;
     }
     
     &__prdn1 {
@@ -444,15 +450,63 @@
         float: left;
         margin-left: 20px;
         margin-top: 20px;
+        margin-right: 20px;
     }
 
+
     &__bbb {
+        overflow: hidden;
+    }
+
+
+    &__ccc {
+        overflow: hidden;
+    }
+
+
+    &__ddd {
+        overflow: hidden;
+    }
+
+    &__eee {
         overflow: hidden;
         margin-bottom: 20px;
     }
 
     &__PR {
+
     }
+
+    &__btn {
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        text-align: center;
+        margin-top: 0px;
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    // &__left {
+    //     overflow: hidden;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content:space-between;
+    //     float: left;
+    //     margin-right: 20px;
+    }
+
+    // &____under {
+    //     overflow: hidden;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content:space-between;
+    //     float: left;
+    //     margin-right: 20px;
+    // }
 
 }
 

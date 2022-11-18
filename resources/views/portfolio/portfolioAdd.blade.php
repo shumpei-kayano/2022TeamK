@@ -6,11 +6,12 @@
 
 <div class="p-form">
 <h1 class="p-form">ポートフォリオ作成</h1>
-<div class="p-acinfo__container">
-    <div class="nes-container is-rounded is-dark p-acinfo">
+<div class="p-port__container">
+    <div class="nes-container is-rounded is-dark">
     <form action='{{ route('portfolio_create') }}'method='post'>
+    @csrf
 
-        @csrf
+    <div class="p-port__left">
             <input type="hidden" name="user_id" value="{{ $user->id }}">
             {{-- userId <input type="int" name="user_id"> --}}
 
@@ -28,25 +29,28 @@
             
             <!-- さいしゅうがくれき <br><input type="text" name='educational_background'><br> -->
              <label for="dark_field" style="color:#fff;" >さいしゅうがくれき<br>
-                <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
+                <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background">
+    </div>
 
  
                 
 
 
         <!-- ここの下の部分は１つずつdivで囲んで横並びにさせる！！！ -->
+<div class="p-port__right">
     <div class="p-port">
+
         <div class="p-fort__aaa">
             <div class="p-port__prdn1">   
                 <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
                         <div class="nes-select is-dark p-port__prdn">
-                        <select name="development_language_id1" required id="dark_select">
-                            @foreach ($items as $item)
-                            <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                            {{-- <p>{{  $item->language_name  }}</p> --}}
-                            @endforeach <br>
-                        </select><br>
-                    </div>
+                            <select name="development_language_id1" required id="dark_select">
+                                @foreach ($items as $item)
+                                <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
+                                {{-- <p>{{  $item->language_name  }}</p> --}}
+                                @endforeach <br>
+                            </select><br>
+                        </div>
             </div>
 
             <div class="p-port__prdn2">
@@ -66,7 +70,7 @@
 {{----------------------------------------------------------------------------------------------------}}
 
 
-        <div class="p-fort__aaa">
+        <div class="p-fort__bbb">
             <div class="p-port__prdn1"> 
                 <label for="dark_select" style="color:#fff;">がくしゅうげんご２</label><br>
                     <div class="nes-select is-dark p-port__prdn">
@@ -96,7 +100,7 @@
 {{----------------------------------------------------------------------------------------------------}}
 
 
-        <div class="p-fort__aaa">
+        <div class="p-fort__ccc">
             <div class="p-port__prdn1"> 
                 <label for="dark_select" style="color:#fff;">がくしゅうげんご３</label><br>
                     <div class="nes-select is-dark p-port__prdn">
@@ -126,7 +130,7 @@
 {{----------------------------------------------------------------------------------------------------}}
 
         
-        <div class="p-fort__aaa">
+        <div class="p-fort__ddd">
             <div class="p-port__prdn1">              
                 <label for="dark_select" style="color:#fff;">がくしゅうげんご４</label><br>
                     <div class="nes-select is-dark p-port__prdn">
@@ -156,7 +160,7 @@
 {{----------------------------------------------------------------------------------------------------}}
 
 
-        <div class="p-fort__bbb">
+        <div class="p-fort__eee">
             <div class="p-port__prdn1">  
                 <label for="dark_select" style="color:#fff;">がくしゅうげんご５</label><br>
                     <div class="nes-select is-dark p-port__prdn">
@@ -181,12 +185,14 @@
                     </div>
             </div>
         </div>
+</div>
+<br>
 
 
 {{----------------------------------------------------------------------------------------------------}}
             
 
-
+<div class="p-port__under">
             <!-- 自己PR <br><input type="text" name="self_pr"> <br> -->
         <div class="p-port__PR">
             <label for="dark_field" style="color:#fff; margin-top: 20px;" >自己PR</label><br>
@@ -198,11 +204,13 @@
         </div>
         </div>
     </div>
+</div>
 
 
-
-
-        <br><input type="submit" class="nes-btn is-success" value="作成">
+        <br>
+        <div class="p-acinfo__btn-container p-port__btn">
+        <button type="submit" class="nes-btn is-success p-acinfo__btn">さくせい</button>
+        <div>
 
         </form>
         </div> 
