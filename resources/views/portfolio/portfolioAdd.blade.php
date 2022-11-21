@@ -15,19 +15,19 @@
             <input type="hidden" name="user_id" value="{{ $user->id }}">
             {{-- userId <input type="int" name="user_id"> --}}
 
-            <!-- 名前 <br><input type="text" name='name'><br> -->        
+            <!-- 名前 -->        
             <label for="dark_field" style="color:#fff;" >名前<br>
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="name"><br>
 
-            <!-- メールアドレス <br><input type="text" name='email'><br> -->
+            <!-- メールアドレス -->
             <label for="dark_field" style="color:#fff;" >メールアドレス<br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="email"><br>
 
-            <!-- でんわばんごう <br><input type="text" name='tel'><br> -->
+            <!-- 電話番号 -->
             <label for="dark_field" style="color:#fff;" >でんわばんごう<br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="tel"><br>
             
-            <!-- さいしゅうがくれき <br><input type="text" name='educational_background'><br> -->
+            <!-- 最終学歴 -->
              <label for="dark_field" style="color:#fff;" >さいしゅうがくれき<br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
 
@@ -195,18 +195,17 @@
             
 
 <div class="p-port__under">
-            <!-- 自己PR <br><input type="text" name="self_pr"> <br> -->
+            <!-- 自己PR -->
         <div class="p-port__PR">
             <label for="dark_field" style="color:#fff; margin-top: 20px;" >自己PR</label><br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__PR" name="self_pr"><br>
         </div>
         </div>
+        
         </div>
     </div>
 </div>
-
-
-        <br>
+        <!-- 作成ボタン -->
         <div class="p-acinfo__btn-container p-port__btn">
         <button type="submit" class="nes-btn is-success p-acinfo__btn">さくせい</button>
         <div>
