@@ -435,7 +435,6 @@
 
     }
 
-
     &__aaa {
         overflow: hidden;
         margin-right: 20px;
@@ -499,6 +498,15 @@
         margin-right: 20px;
     }
 
+}
+
+//ポートフォリオ削除画面
+.p-portDel {
+    &__port {
+        height: 30px;
+        width: 300px;
+        margin-bottom: 20px;
+    }
 }
 
 
