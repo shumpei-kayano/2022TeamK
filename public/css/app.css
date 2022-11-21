@@ -926,6 +926,14 @@ textarea,
   float: left;
   margin-right: 20px;
 }
+.p-port__left {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  float: left;
+  margin-right: 20px;
+}
 
 .p-portDel {
   margin: 0;
