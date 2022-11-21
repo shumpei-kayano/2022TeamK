@@ -877,8 +877,13 @@ textarea,
   color: #333;
 }
 
+.p-port {
+  width: 1350px;
+  margin: 0 auto;
+}
 .p-port__container {
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
 }
 .p-port__aaa {
   overflow: hidden;
@@ -908,8 +913,9 @@ textarea,
   margin-bottom: 20px;
 }
 .p-port__btn {
-  margin-top: 5px;
-  margin-bottom: 30px;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
 }
 .p-port__container {
   text-align: center;
@@ -924,15 +930,17 @@ textarea,
   flex-wrap: wrap;
   justify-content: space-between;
   float: left;
-  margin-right: 20px;
 }
 .p-port__left {
+  margin-top: 27px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   float: left;
-  margin-right: 20px;
+}
+.p-port__form {
+  position: relative;
 }
 
 .p-portDel {
