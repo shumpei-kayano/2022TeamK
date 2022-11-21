@@ -16,7 +16,7 @@ class MatterController extends Controller
 {
 
     private $formItems = ["prefectures_id", "matter_name", "tel", "development_language_id1", "development_language_id2", "development_language_id3", "development_language_id4",
-        "occupation_id", "remarks", "success_fee", "deadline", "rank", "number_of_person"];
+        "occupation_id", "remarks", "success_fee", "deadline", "rank", "number_of_person", "user_id"];
 
     public function __construct()
     {
@@ -76,12 +76,13 @@ class MatterController extends Controller
 
     public function add(Request $request)
     {
+        $user = Auth::user();
         $prefectures = \DB::table('prefectures') -> get();
         $occupations = \DB::table('occupations') -> get();
         $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
         $development_languages = \DB::table('development_languages') -> get();
         // dd($items);
-        return view('./matter/matterAdd',compact('occupations','rank_of_difficulties','development_languages','prefectures'));
+        return view('./matter/matterAdd',compact('user','occupations','rank_of_difficulties','development_languages','prefectures'));
     }
 
     function post(Request $request)
@@ -136,6 +137,7 @@ class MatterController extends Controller
     {
        //セッションから値を取り出す
        $input = $request->session()->get("matter_post");
+    //    dd($input);
        $matter = new Matter;
         unset($input['_token']);
         $matter->fill($input)->save();

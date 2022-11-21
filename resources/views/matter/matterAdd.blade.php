@@ -21,6 +21,8 @@
             <!-- <label for="dark_field" style="color:#fff;" >あんけんめい<br> -->
               <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい"name="matter_name"><br>  
 
+    <input type="hidden" name="user_id" value="{{$user->id}}">
+
     <label>とどうふけん
     <select name="prefectures_id" >
         @foreach ($prefectures as $prefecture)
