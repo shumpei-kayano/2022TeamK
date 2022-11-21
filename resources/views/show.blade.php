@@ -66,7 +66,7 @@
     </div>
 </div>
     <div class="p-form__btn-container">
-    <button type="submit" class="nes-btn is-success p-form__btn">けんさく+</button>
+    <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
     </div>
 </form>
     @endsection
@@ -82,7 +82,7 @@
         <!--<tr>
             <th>案件名</th>
             <th>職種</th>
-            <th>レベル</th>+
+            <th>レベル</th>
             <th>エリア</th>
             <th>特記事項</th>
             </tr> -->
