@@ -63,6 +63,18 @@ class MatterController extends Controller
         $matters->fill($form)->save();
         return redirect()->action('MatterController@postingScreen');
     }
+    public function remove(Request $request)
+    {
+        $user = Auth::user();
+        // $portfolio = Portfolio::find($request -> user_id)->delete();
+        $matter = Matter::whereUser_id($user->id)->first();
+
+        $matter->delete();
+
+        // $items = \DB::table('development_languages') -> get();
+
+        return redirect()->action('MatterController@postingScreen');
+    }
 
     public function listingConfirmation(Request $request)
     {

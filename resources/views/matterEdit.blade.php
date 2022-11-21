@@ -184,5 +184,12 @@
 
 </form>
 </div>
+<form action="{{ route('matter_remove') }}" method="post">
+    <div class="p-form">
+@csrf
+<input type="submit" class="nes-btn is-success" value='削除'>
+</div>
+
+</form>
 
 @endsection
