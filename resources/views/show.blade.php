@@ -96,11 +96,10 @@
             <td>{{$item->prefectures_name}}</td>
             <td>{{$item->remarks}}</td>
             <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="">詳細</a></td>
-            <td>@if (Auth::check())
-                {{-- {{dd($favorite)}} --}}
-                @if (count($favorite) == 0)
+            {{-- <td>@if (Auth::check())
+                @if (count($favorite) == 0) --}}
                     {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
-                    <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
+                    {{-- <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
                         @csrf
                         <input type="hidden" name="matter_id" value="{{$item->id}}">
                         <button type="submit">お気に入り登録</button>
@@ -109,18 +108,18 @@
                     @for ($i = 0; $i < count($favorite); $i++)
 
                         @if ($favorite[$i]['matter_id'] == $item->id)
-                        
+                         --}}
                             {{-- favoriteがあったら削除ボタン表示 --}}
-                            <form action="{{route('favorite.del', ['id'=>$item->id])}}" method="POST">
+                            {{-- <form action="{{route('favorite.del', ['id'=>$item->id])}}" method="POST">
                                 <input type="hidden" name="matter_id" value="{{$item->id}}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit">お気に入り解除{{$favorite[$i]['matter_id']}}</button>
                             </form>
                             @break
-                        @else
+                        @else --}}
                             {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
-                            <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
+                            {{-- <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
                                 @csrf
                                 <input type="hidden" name="matter_id" value="{{$item->id}}">
                                 <button type="submit">お気に入り登録{{$favorite[$i]['matter_id']}}</button>
@@ -130,7 +129,7 @@
                                                     
                     @endfor 
                 @endif      
-              @endif</td>
+              @endif</td> --}}
         </tr>
         @endforeach
     </table>
