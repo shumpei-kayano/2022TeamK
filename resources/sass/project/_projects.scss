@@ -502,10 +502,12 @@
 
 //ポートフォリオ削除画面
 .p-portDel {
+    margin: 0;
+    text-align: center;
     &__port {
-        height: 30px;
+        height: 35px;
         width: 300px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 

@@ -40,16 +40,15 @@
     <!-- 生年月日 -->
     <label for="dark_field" style="color:#fff;" >生年月日<br>
         <p id="dark_field" class="nes-input is-dark p-form__portfolio" name="name" >{{ $form->birtday }}</p><br>
+</div>
+</div>
 
     <!-- 削除ボタン -->
     <form action="{{ route('portfolio_remove') }}" method="post">
         <div class="p-form">
     @csrf
-    <input type="submit" value='削除'>
+    <input type="submit" class="nes-btn is-success" value='削除'>
     </div>
-
-</div>
-</div>
 
 </form>
 </div>

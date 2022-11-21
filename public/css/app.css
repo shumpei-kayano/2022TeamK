@@ -927,10 +927,14 @@ textarea,
   margin-right: 20px;
 }
 
+.p-portDel {
+  margin: 0;
+  text-align: center;
+}
 .p-portDel__port {
-  height: 30px;
+  height: 35px;
   width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .p-mail {
