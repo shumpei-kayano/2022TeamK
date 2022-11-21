@@ -11,12 +11,21 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="ragio-group">
+                        <!--                             
                             <input type="radio" id="kojin" name="check" value="0" checked>
                             <label for="kojin">個人</label>
                             <input type="radio" id="hojin" name="check" value="1">
-                            <label for="hojin">法人</label>
-                        </div>
+                            <label for="hojin">法人</label> -->
+                <div class="ragio-group">
+                    <label for="kojin">
+                         <input type="radio" id="kojin" class="nes-radio is-dark" name="check" value="0" checked />
+                         <span>個人</span>
+                    </label>
+                    <label for="hojin">
+                         <input type="radio" id="hojin" class="nes-radio is-dark" name="check" value="1">
+                         <span>法人</span>
+                     </label>
+                </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ユーザ名') }}</label>
