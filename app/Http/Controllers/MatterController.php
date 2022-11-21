@@ -186,6 +186,7 @@ class MatterController extends Controller
     public function detail($id)
     {
         $matter = Matter::find($id);
-        return view('./matter_detail', compact('matter'));
+        $favorite = Favorite::where('user_id', auth()->user()->id)->where('matter_id', $id)->first();
+        return view('./matter_detail', compact('matter', 'favorite'));
     }
 }
