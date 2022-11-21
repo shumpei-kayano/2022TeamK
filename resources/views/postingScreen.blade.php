@@ -20,7 +20,7 @@
 <p>案件ランク:{{$matter->rank}}</p> --}}
 {{-- {{ dd($matters)}} --}}
 @foreach($matters as $matter)
-    <form action='{{ route('matterEdit',) }}'method='post'>
+    <form action='{{ route('matterEdit',['id'=>$matter->id]) }}'method='post'>
         @csrf
     <p>案件名:{{$matter->matter_name}}</p>
     <p>都道府県:{{$matter->prefecture->prefectures_name}}</p>

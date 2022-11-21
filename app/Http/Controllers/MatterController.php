@@ -42,20 +42,26 @@ class MatterController extends Controller
         return view('postingScreen',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages'));
     }
 
-    public function matterEdit(Request $request)
+    public function matterEdit(Request $request,$id)
     {
-        $matters = Matter::with('prefecture','occupation','development_language')->where('matter_id',$matter->id)->get();
+        $user = Auth::user();
+        $matters = Matter::with('prefecture','occupation','development_language')->find($id)->first();
+        $prefectures = \DB::table('prefectures') -> get();
+        $occupations = \DB::table('occupations') -> get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
+        $development_languages = \DB::table('development_languages') -> get();
         return view('matterEdit',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages'));
     }
 
-    public function matterUpdate(Request $request)
+    public function matterUpdate(Request $request,$id)
     {
-        $matter = Matter::find($request -> matter_id);
+        $user = Auth::user();
+        $matters = Matter::find($id)->first();
         $form = $request->all();
         
         unset($form['_token']);
-        $matter->fill($form)->save();
-        return view('postingScreen');
+        $matters->fill($form)->save();
+        return redirect()->action('MatterController@postingScreen');
     }
 
     public function listingConfirmation(Request $request)
