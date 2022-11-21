@@ -4,6 +4,6 @@
 
 @section('content')
 
-<h1 class="p-info">アーセナル</h1>
+<h1 class="p-info">マンチェスターシティとは。。。</h1>
 
 @endsection
