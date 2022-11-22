@@ -20,7 +20,7 @@
         </div> --}} 
 
         {{--キーワード検索--}}
-        <form action="{{route('show')}}" method="GET">
+
             <div>
                 <label for="dark_field" style="color:#fff;" >キーワード</label><br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__key" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
@@ -68,6 +68,7 @@
     <div class="p-form__btn-container">
     <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
     </div>
+    <form action="{{route('show')}}" method="GET">
 </form>
     @endsection
                 {{-- <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button> --}}

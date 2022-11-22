@@ -6,4 +6,7 @@
 
 <h1 class="p-info">お気に入りリスト</h1>
 
+
+  
+
 @endsection
