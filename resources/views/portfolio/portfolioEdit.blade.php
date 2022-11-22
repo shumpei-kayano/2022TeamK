@@ -16,18 +16,30 @@
         
         <!-- 名前 -->
         <label for="dark_field" style="color:#fff;" >名前<br>
+            @if($errors->has('name'))
+                {{ $errors->first('name') }}
+            @endif
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="name" value='{{ $form->name }}'><br>
 
         <!-- メールアドレス -->
         <label for="dark_field" style="color:#fff;" >メールアドレス<br>
+            @if($errors->has('email'))
+                {{ $errors->first('email') }}
+            @endif
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="email" value='{{ $form->email }}'><br>
 
         <!-- 電話番号 -->
         <label for="dark_field" style="color:#fff;" >でんわばんごう<br>
+            @if($errors->has('tel'))
+                {{ $errors->first('tel') }}
+            @endif
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="tel" value='{{ $form->tel }}'><br>      
 
         <!-- 最終学歴 -->
         <label for="dark_field" style="color:#fff;" >さいしゅうがくれき<br>
+            @if($errors->has('educational_background'))
+                {{ $errors->first('educational_background') }}
+            @endif
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" name="educational_background" value='{{ $form->educational_background }}'><br>          
 
         <!-- 学習言語1 -->
@@ -107,9 +119,15 @@
         
         <!-- 自己pR -->
         <label for="dark_field" style="color:#fff;" >自己PR<br>
+            @if($errors->has('self_pr'))
+                {{ $errors->first('self_pr') }}
+            @endif
             <input type="search" id="dark_field" class="nes-input is-dark p-form__PR" name="self_pr" value='{{ $form->self_pr }}'><br>
 
         <!-- 生年月日 -->
+        @if($errors->has('birthday'))
+            {{ $errors->first('birthday') }}
+        @endif
         生年月日:<br> <input type="date" value="yyyy/mm/dd" name="birthday"value='{{ $form->birtday }}'>    
     </div>
     </div>

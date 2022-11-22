@@ -17,21 +17,36 @@
 
                             <!-- 名前 <br><input type="text" name='name'><br> -->        
                             <label for="name" style="color:#fff;" >名前<br>
+                            @if($errors->has('name'))
+                                {{ $errors->first('name') }}
+                            @endif
                             <input type="text" id="name" class="nes-input is-dark p-form__portfolio" name="name"><br>
-
+                            
                             <!-- メールアドレス <br><input type="text" name='email'><br> -->
                             <label for="mail" style="color:#fff;" >メールアドレス<br>
+                            @if($errors->has('email'))
+                                {{ $errors->first('email') }}
+                            @endif
                                 <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email"><br>
 
                             <!-- でんわばんごう <br><input type="text" name='tel'><br> -->
                             <label for="tel" style="color:#fff;" >でんわばんごう<br>
+                            @if($errors->has('tel'))
+                                {{ $errors->first('tel') }}
+                            @endif
                                 <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel"><br>
                             
                             <!-- さいしゅうがくれき <br><input type="text" name='educational_background'><br> -->
                             <label for="gakureki" style="color:#fff;" >さいしゅうがくれき<br>
+                            @if($errors->has('educational_background'))
+                                {{ $errors->first('educational_background') }}
+                            @endif
                                 <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
                             
                             <label for="birthday" style="color:#fff;" >生年月日<br>
+                            @if($errors->has('birthday'))
+                                {{ $errors->first('birthday') }}
+                            @endif
                                 <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday">
 
                     </div>
@@ -174,6 +189,9 @@
                     <!-- 自己PR -->
                     <div class="p-port__PR">
                         <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>
+                        @if($errors->has('self_pr'))
+                                {{ $errors->first('self_pr') }}
+                        @endif
                             <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark"></textarea>
                     </div>
                 </div>
