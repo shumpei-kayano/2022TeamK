@@ -24,6 +24,7 @@
     <div class="p-acinfo__container">
         <div class="nes-container is-rounded is-dark p-acinfo">
 
+            {{-- {{ dd($matters)}} --}}
 @foreach($matters as $matter)
     <form action='{{ route('matterEdit',['id'=>$matter->id]) }}'method='post'>
         @csrf
@@ -85,6 +86,7 @@
 </div>
     <input type="submit" class="nes-btn is-success" value=へんしゅう>
     </div>
+</form>
 @endforeach
 
 

@@ -107,7 +107,6 @@
                             </div>
                         </div>
 
-<<<<<<< HEAD
                         <!-- 
                             がくしゅうきかん1: <br><select type="number" name="development_year1">
                             <option value="0">3か月</option>
@@ -130,15 +129,6 @@
                                         </select><br>
                                     </div>
                             </div>
-
-                            <!-- 
-                                がくしゅうげんご2: <br><select type="number" name="development_language_id2"> 
-                                @foreach ($items as $item)
-                                <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                                {{-- <p>{{  $item->language_name  }}</p> --}}
-                                @endforeach <br>
-                                    </select><br>
-                             -->
 
                              <!-- 学習期間2 -->
                             <div class="p-port__prdn2">
@@ -177,15 +167,6 @@
                                     </div>
                             </div>
 
-                            <!-- 
-                                がくしゅうげんご3: <br><select type="number" name="development_language_id3"> 
-                                @foreach ($items as $item)
-                                <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                                {{-- <p>{{  $item->language_name  }}</p> --}}
-                                @endforeach <br>
-                                    </select><br>
-                             -->
-
                              <!-- 学習期間3 -->
                             <div class="p-port__prdn2">
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん3</label><br>
@@ -222,15 +203,6 @@
                                         </select><br>
                                     </div>
                             </div>
-
-                            <!-- 
-                                がくしゅうげんご4: <br><select type="number" name="development_language_id4"> 
-                                @foreach ($items as $item)
-                                <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                                {{-- <p>{{  $item->language_name  }}</p> --}}
-                                @endforeach <br>
-                                    </select><br>
-                             -->
 
                              <!-- 学習期間4 -->
                             <div class="p-port__prdn2">
@@ -269,14 +241,6 @@
                                     </div>
                             </div>
 
-                            <!-- 
-                                がくしゅうげんご5: <br><select type="number" name="development_language_id5"> 
-                                @foreach ($items as $item)
-                                <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                                {{-- <p>{{  $item->language_name  }}</p> --}}
-                                @endforeach <br>
-                                    </select><br>
-                             -->
 
                              <!-- 学習期間5 -->
                             <div class="p-port__prdn2">
@@ -320,34 +284,4 @@
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
             </form>
         </div>
-=======
-        <!-- 学習言語5 -->
-        がくしゅうげんご5: <br><select type="number" name="development_language_id5"> 
-            @foreach ($items as $item)
-            <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-            {{-- <p>{{  $item->language_name  }}</p> --}}
-            @endforeach <br>
-                </select><br>
-        <!-- 学習期間5 -->
-        がくしゅうきかん5: <br><select type="number" name="development_year5">
-        <option value="0">3か月</option>
-        <option value="1">6か月</option>
-        <option value="2">9か月</option>
-        <option value="3">12か月</option>
-        </select><br>
-        
-        <!-- 自己pR -->
-        <label for="dark_field" style="color:#fff;" >自己PR<br>
-            @if($errors->has('self_pr'))
-                {{ $errors->first('self_pr') }}
-            @endif
-            <input type="search" id="dark_field" class="nes-input is-dark p-form__PR" name="self_pr" value='{{ $form->self_pr }}'><br>
-
-        <!-- 生年月日 -->
-        @if($errors->has('birthday'))
-            {{ $errors->first('birthday') }}
-        @endif
-        生年月日:<br> <input type="date" value="yyyy/mm/dd" name="birthday"value='{{ $form->birtday }}'>    
->>>>>>> 83e4dc0505137314e6a4e0f03b330ba38f7cd4fe
-    </div>
 @endsection

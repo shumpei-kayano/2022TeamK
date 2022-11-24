@@ -10,7 +10,7 @@
 <a href="/register">登録</a>)</p>
 @endif --}}
 <div class="p-form">
-<h1 class="p-form">あんけんけいさい</h1>
+<h1 class="p-form">あんけんへんしゅう</h1>
 <div class="p-acinfo__container">
   <div class="nes-container is-rounded is-dark p-acinfo">
     <form action='{{ route('matter_update',['id'=>$matters->id]) }}'method='post'>
@@ -19,6 +19,11 @@
             <!--     <input type="text" class="" placeholder="あんけんめい" 
             aria-describedby="basic-addon2" name="matter_name"> -->
             <!-- <label for="dark_field" style="color:#fff;" >あんけんめい<br> -->
+
+              {{-- バリデーション --}}
+            {{-- @if($errors->has('matter_name'))
+              {{ $errors->first('matter_name') }}
+            @endif --}}
               <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>  
 
     <label>とどうふけん
@@ -184,7 +189,7 @@
 
 </form>
 </div>
-<form action="{{ route('matter_remove') }}" method="post">
+<form action="{{ route('matter_remove',['id'=>$matters->id]) }}" method="post">
     <div class="p-form">
 @csrf
 <input type="submit" class="nes-btn is-success" value='削除'>

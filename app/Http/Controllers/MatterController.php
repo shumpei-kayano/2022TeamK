@@ -45,7 +45,8 @@ class MatterController extends Controller
     public function matterEdit(Request $request,$id)
     {
         $user = Auth::user();
-        $matters = Matter::with('prefecture','occupation','development_language')->find($id)->first();
+        $matters = Matter::with('prefecture','occupation','development_language')->where('id',$id)->first();
+        // dd($matters, $id);
         $prefectures = \DB::table('prefectures') -> get();
         $occupations = \DB::table('occupations') -> get();
         $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
@@ -55,21 +56,29 @@ class MatterController extends Controller
 
     public function matterUpdate(Request $request,$id)
     {
+        // $request->validate([
+        //     'matter_name' => 'required',
+        //     'remarks' => 'required',
+        //     'tel' => 'numeric',
+        //     'success_fee' => 'numeric',
+        //     'rank' => 'numeric',
+        //     'number_of_person' => 'numeric',
+        // ]);
         $user = Auth::user();
-        $matters = Matter::find($id)->first();
+        $matters = Matter::where('id',$id)->first();
         $form = $request->all();
         
         unset($form['_token']);
         $matters->fill($form)->save();
         return redirect()->action('MatterController@postingScreen');
     }
-    public function remove(Request $request)
+    public function remove(Request $request,$id)
     {
         $user = Auth::user();
         // $portfolio = Portfolio::find($request -> user_id)->delete();
-        $matter = Matter::whereUser_id($user->id)->first();
+        $matters = Matter::where('id',$id)->first();
 
-        $matter->delete();
+        $matters->delete();
 
         // $items = \DB::table('development_languages') -> get();
 
