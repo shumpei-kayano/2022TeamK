@@ -37,6 +37,14 @@ class PortfolioController extends Controller
 
     public function create(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'email',
+            'tel' => 'numeric',
+            'educational_background' => 'required',
+            'self_pr' => 'required',
+            'birthday' => 'required',
+        ]);
         $portfolio = new Portfolio;
         $form = $request->all();
 
@@ -57,6 +65,14 @@ class PortfolioController extends Controller
 
     public function update(Request $request)
     {   
+        $request->validate([
+            'name' => 'required',
+            'email' => 'email',
+            'tel' => 'numeric',
+            'educational_background' => 'required',
+            'self_pr' => 'required',
+            'birthday' => 'required',
+        ]);
         // dd($request);
         $portfolio = Portfolio::find($request -> id);
         $form = $request->all();

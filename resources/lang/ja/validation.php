@@ -149,7 +149,12 @@ return [
 
     'attributes' => [
         'password' => 'パスワード',
-        'email' => 'メールアドレス'
+        'email' => 'メールアドレス',
+        'name' => '名前',
+        'tel' => '電話番号',
+        'educational_background' => '最終学歴',
+        'birthday' => '生年月日',
+        'self_pr' => '自己PR',
     ],
 
 ];
