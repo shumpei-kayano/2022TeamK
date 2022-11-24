@@ -51,6 +51,11 @@ class UserMypageController extends Controller
 
     public function update(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'email',
+        ]);
+        
         $user_form = $request->all();
         $user = Auth::user();
         //不要な「_token」の削除

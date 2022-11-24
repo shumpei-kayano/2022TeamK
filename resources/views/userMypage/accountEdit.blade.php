@@ -11,7 +11,13 @@
     @csrf
 <div class="p-acinfoEdit__container2">
     <div class="nes-container is-rounded is-dark p-acinfoEdit">
+        @if($errors->has('name'))
+            {{ $errors->first('name') }}
+        @endif
             ユーザーID<input class="nes-input is-dark p-acinfoEdit__input" type="text" name='name' value='{{ $form->name }}'>
+        @if($errors->has('email'))
+            {{ $errors->first('email') }}
+        @endif
             メールアドレス<input class="nes-input is-dark p-acinfoEdit__input" type="text" name='email'value='{{ $form->email }}'>
     </div>
 </div>
