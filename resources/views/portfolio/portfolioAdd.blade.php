@@ -15,19 +15,19 @@
                             <input type="hidden" name="user_id" value="{{ $user->id }}">
                             {{-- userId <input type="int" name="user_id"> --}}
 
-                            <!-- 名前 <br><input type="text" name='name'><br> -->        
+                            <!-- 名前 -->        
                             <label for="name" style="color:#fff;" >名前<br>
                             <input type="text" id="name" class="nes-input is-dark p-form__portfolio" name="name"><br>
 
-                            <!-- メールアドレス <br><input type="text" name='email'><br> -->
+                            <!-- メールアドレス -->
                             <label for="mail" style="color:#fff;" >メールアドレス<br>
                                 <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email"><br>
 
-                            <!-- でんわばんごう <br><input type="text" name='tel'><br> -->
+                            <!-- 電話番号 -->
                             <label for="tel" style="color:#fff;" >でんわばんごう<br>
                                 <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel"><br>
                             
-                            <!-- さいしゅうがくれき <br><input type="text" name='educational_background'><br> -->
+                            <!-- 最終学歴 -->
                             <label for="gakureki" style="color:#fff;" >さいしゅうがくれき<br>
                                 <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
                             
@@ -40,6 +40,7 @@
                     {{-- <div class="p-port__right"> --}}
                     <div class="p-port__right">
 
+                        <!-- 学習言語1 -->
                         <div class="p-fort__aaa">
                             <div class="p-port__prdn1">   
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
@@ -53,6 +54,7 @@
                                         </div>
                             </div>
 
+                            <!-- 学習期間1 -->
                             <div class="p-port__prdn2">
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん1 </label><br>
                                     <div class="nes-select is-dark p-port__prdn">
@@ -66,6 +68,7 @@
                             </div>
                         </div>
 
+                        <!-- 学習言語2 -->
                         <div class="p-fort__bbb">
                             <div class="p-port__prdn1"> 
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご２</label><br>
@@ -79,6 +82,7 @@
                                     </div>
                             </div>
 
+                            <!-- 学習期間2 -->
                             <div class="p-port__prdn2">
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん2</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
@@ -92,6 +96,7 @@
                             </div>
                         </div>
 
+                        <!-- 学習言語3 -->
                         <div class="p-fort__ccc">
                             <div class="p-port__prdn1"> 
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご３</label><br>
@@ -105,6 +110,7 @@
                                     </div>
                             </div>
 
+                            <!-- 学習期間3 -->
                             <div class="p-port__prdn2">
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん3</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
@@ -118,7 +124,7 @@
                             </div>
                         </div>
 
-                        
+                        <!-- 学習言語4 -->
                         <div class="p-fort__ddd">
                             <div class="p-port__prdn1">              
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご４</label><br>
@@ -132,6 +138,7 @@
                                     </div>
                             </div>
 
+                            <!-- 学習期間4 -->
                             <div class="p-port__prdn2">
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
@@ -145,6 +152,7 @@
                             </div>
                         </div>
 
+                        <!-- 学習言語5 -->
                         <div class="p-fort__eee">
                             <div class="p-port__prdn1">  
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご５</label><br>
@@ -158,6 +166,7 @@
                                     </div>
                             </div>
 
+                            <!-- 学習期間5 -->
                             <div class="p-port__prdn2">
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
@@ -171,6 +180,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- 自己PR -->
                     <div class="p-port__PR">
                         <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>
