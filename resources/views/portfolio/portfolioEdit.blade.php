@@ -16,24 +16,59 @@
                     
                     <!-- 名前 -->
                     <label for="name" style="color:#fff;" >名前<br>
+                        @if($errors->has('name'))
+                            {{ $errors->first('name') }}
+                        @endif
+                        <input type="text" id="name" class="nes-input is-dark p-form__portfolio" name="name" value='{{ $form->name }}'><br>
+                    <!--  
+                    <label for="name" style="color:#fff;" >名前<br>
                         <input type="search" id="name" class="nes-input is-dark p-form__portfolio" name="name" value='{{ $form->name }}'><br>
+                    -->
+                        
 
                     <!-- メールアドレス -->
                     <label for="mail" style="color:#fff;" >メールアドレス<br>
+                        @if($errors->has('email'))
+                            {{ $errors->first('email') }}
+                        @endif
+                            <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email" value='{{ $form->email }}'><br>
+                    <!--  
+                    <label for="mail" style="color:#fff;" >メールアドレス<br>
                         <input type="search" id="mail" class="nes-input is-dark p-form__portfolio" name="email" value='{{ $form->email }}'><br>
+                        -->
 
                     <!-- 電話番号 -->
                     <label for="tel" style="color:#fff;" >でんわばんごう<br>
-                        <input type="tel" id="dark_field" class="nes-input is-dark p-form__portfolio" name="tel" value='{{ $form->tel }}'><br>      
+                        @if($errors->has('tel'))
+                            {{ $errors->first('tel') }}
+                        @endif
+                            <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel" value='{{ $form->tel }}'><br>
+                    <!--  
+                    <label for="tel" style="color:#fff;" >でんわばんごう<br>
+                        <input type="tel" id="dark_field" class="nes-input is-dark p-form__portfolio" name="tel" value='{{ $form->tel }}'><br>
+                           -->
 
                     <!-- 最終学歴 -->
                     <label for="gakureki" style="color:#fff;" >さいしゅうがくれき<br>
+                        @if($errors->has('educational_background'))
+                            {{ $errors->first('educational_background') }}
+                        @endif
+                            <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background" value='{{ $form->educational_background }}'><br>
+                    <!--  
+                    <label for="gakureki" style="color:#fff;" >さいしゅうがくれき<br>
                         <input type="search" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background" value='{{ $form->educational_background }}'><br>
+                        -->
                         
                     <!--生年月日 -->
                     <label for="birthday" style="color:#fff;" >生年月日<br>
+                        @if($errors->has('birthday'))
+                            {{ $errors->first('birthday') }}
+                        @endif
+                            <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday">
+                    <!--  
+                    <label for="birthday" style="color:#fff;" >生年月日<br>
                         <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday" value='{{ $form->birtday }}'><br>
-                        <!-- 生年月日:<br> <input type="date" value="yyyy/mm/dd" name="birthday"value='{{ $form->birtday }}'> -->
+                        -->
                     </div>
                     
 
