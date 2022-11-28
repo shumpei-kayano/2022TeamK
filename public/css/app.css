@@ -943,16 +943,6 @@ textarea,
   position: relative;
 }
 
-.p-portDel {
-  margin: 0;
-  text-align: center;
-}
-.p-portDel__port {
-  height: 35px;
-  width: 300px;
-  margin-bottom: 10px;
-}
-
 .p-mail {
   color: #b5e66a;
   text-align: center;
