@@ -66,6 +66,7 @@ Route::post('/remove', 'PortfolioController@remove')->name('portfolio_remove');
   //お気に入り
 // Route::post('/show', 'FavoriteController@store')->name('favorite');
 // Route::delete('/show', 'FavoriteController@delete')->name('favorite.del');
+Route::get('/favorite_list', 'FavoriteController@show')->name('favorite_list');
 Route::post('/detail', 'FavoriteController@store')->name('favorite2');
 Route::delete('/detail', 'FavoriteController@delete')->name('favorite.del2');
 });

@@ -28,8 +28,12 @@ class Matter extends Model
         return $this->belongsTo('App\Occupation','id');
     }
 
+    public function rank_of_diffculty (){
+        return $this->belongsTo('App\Rank_of_difficulty','id');
+    }
+
     public function favorites (){
-        return $this->hasmany('App\Favorites','id');
+        return $this->hasmany('App\Favorites');
     }
 
     public function development_language (){

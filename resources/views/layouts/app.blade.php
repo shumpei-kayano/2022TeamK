@@ -39,7 +39,8 @@
                         <!-- グローバルナビゲーション -->
                         <ul class="c-nav__ul">
                             <li class="c-nav__list"><a href="/account">アカウント</a></li>
-                            <li class="c-nav__list"><a href="/favorite">お気に入り</a></li>
+                            {{-- <li class="c-nav__list"><a href="/favorite">お気に入り</a></li> --}}
+                            <li class="c-nav__list"><a href="{{ route('favorite_list')}}">お気に入り</a></li>
                             <li class="c-nav__list"><a href="/show">あんけん</a></li>
                             <li class="c-nav__list"><a href="/portfolio">ポートフォリオ</a></li>
                             <li class="c-nav__list"><a href="/company">きぎょう</a></li>
