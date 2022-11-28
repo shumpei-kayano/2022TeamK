@@ -87,8 +87,9 @@ class PortfolioController extends Controller
         $user = Auth::user();
         $portfolio = Portfolio::whereUser_id($user->id)->first();
         $development_languages = \DB::table('development_languages') -> get();
+        $items = \DB::table('development_languages') -> get();
         // $items = \DB::table('development_languages') -> get();
-        return view('./portfolio/portfolioDel',['form' => $portfolio] ,compact('user','development_languages'));
+        return view('./portfolio/portfolioDel',['form' => $portfolio] ,compact('user','development_languages','items'));
     }
     public function remove(Request $request)
     {

@@ -25,7 +25,6 @@
     <label for="dark_field" style="color:#fff;" >さいしゅうがくれき<br>
         <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $form->educational_background }}</p><br>
 
-    <!-- 学習言語1 -->
     <label for="dark_field" style="color:#fff;" >がくしゅうげんご1<br>
         <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $form->development_language->language_name }}</p><br>
 
