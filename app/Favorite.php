@@ -14,4 +14,15 @@ class Favorite extends Model
         return $this->belongsTo('App\Matter');
     }
     
+    public function prefecture(){
+    return $this->hasManyThrough('App\Prefecture', 'App\Matter');
+    }
+
+    public function occupation(){
+    return $this->hasManyThrough('App\Occupation', 'App\Matter');
+    }
+
+    public function development_language(){
+    return $this->hasManyThrough('App\Development_language', 'App\Matter');
+    }
 }
