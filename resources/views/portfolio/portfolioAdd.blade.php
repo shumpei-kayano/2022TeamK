@@ -61,6 +61,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
                                         <div class="nes-select is-dark p-port__prdn">
                                             <select name="development_language_id1" required id="dark_select">
+                                                <option hidden>選択してください</option>
                                                 @foreach ($items as $item)
                                                 <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
                                                 {{-- <p>{{  $item->language_name  }}</p> --}}
@@ -74,6 +75,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん1 </label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year1" required id="dark_select"  class="p-port__prdn">
+                                            <option hidden>選択してください</option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
@@ -89,6 +91,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご２</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                     <select type="number" name="development_language_id2" required id="dark_select">
+                                        <option hidden>選択してください</option>
                                             @foreach ($items as $item)
                                             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
                                             {{-- <p>{{  $item->language_name  }}</p> --}}
@@ -102,6 +105,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん2</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year2" required id="dark_select"  class="p-port__prdn">
+                                            <option hidden>選択してください</option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
@@ -117,6 +121,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご３</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id3" required id="dark_select"> 
+                                            <option hidden>選択してください</option>
                                             @foreach ($items as $item)
                                             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
                                             {{-- <p>{{  $item->language_name  }}</p> --}}
@@ -130,6 +135,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん3</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year3" required id="dark_select"  class="p-port__prdn">
+                                            <option hidden>選択してください</option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
@@ -144,7 +150,8 @@
                             <div class="p-port__prdn1">              
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
-                                        <select type="number" name="development_language_id4" required id="dark_select"> 
+                                        <select type="number" name="development_language_id4" required id="dark_select">
+                                            <option hidden>選択してください</option>
                                             @foreach ($items as $item)
                                             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
                                             {{-- <p>{{  $item->language_name  }}</p> --}}
@@ -158,6 +165,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year4" required id="dark_select"  class="p-port__prdn">
+                                            <option hidden>選択してください</option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
@@ -172,7 +180,8 @@
                             <div class="p-port__prdn1">  
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
-                                        <select type="number" name="development_language_id5" required id="dark_select"> 
+                                        <select type="number" name="development_language_id5" required id="dark_select">
+                                            <option hidden>選択してください</option>
                                             @foreach ($items as $item)
                                             <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
                                             {{-- <p>{{  $item->language_name  }}</p> --}}
@@ -186,6 +195,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year5" required id="dark_select"  class="p-port__prdn">
+                                            <option hidden>選択してください</option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
@@ -202,7 +212,7 @@
                         @if($errors->has('self_pr'))
                                 {{ $errors->first('self_pr') }}
                         @endif
-                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark"></textarea>
+                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark" placeholder="自分をアピールしまくろう！"></textarea>
                     </div>
                 </div>
                 {{-- 作成ボタン --}}
