@@ -9,8 +9,8 @@
 <div class="favorite">
     <div class="nes-container is-dark with-title favorite__container">
         <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
-            <i class="fab fa-instagram"></i><div>Follow Me</div>
-          </a>
+            <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
+        </a>
     </div>
 </div>
   
