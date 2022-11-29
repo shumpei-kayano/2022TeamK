@@ -14,5 +14,27 @@
     </div>
 </div>
   
+<table class="">
+    <thead>
+    <tr>
+        <th>案件名</th>
+        <th>案件名</th>
+        <th>案件名</th>
+        <th>案件名</th>
+    </tr>
+    </thead>
+@foreach($favorites as $favorite)
+
+        <tbody>
+        <tr>
+            <td>{{ $favorite->matter_name }}</td>
+            <td>{{ $favorite->language_name }}</td>
+            <td>{{ $favorite->prefectures_name }}</td>
+            <td>{{ $favorite->remarks }}</td>
+            <td><a href="{{ route('matter.detail', ['id'=>$favorite->matter_id]) }}" class="">詳細</a></td>
+        </tr>
+        </tbody>
+@endforeach
+    </table>
 
 @endsection

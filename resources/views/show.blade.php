@@ -80,17 +80,16 @@
 
 <div>
     <table style="color:black">
-        <!--<tr>
+        <tr>
             <th>案件名</th>
             <th>職種</th>
             <th>レベル</th>
             <th>エリア</th>
             <th>特記事項</th>
-            </tr> -->
+        </tr>
 
         @foreach($items as $item)
         <tr>
-            <td>{{$item->id}}</td>
             <td>{{$item->matter_name}}</td>
             <td>{{$item->occupation_name}}</td>
             <td>{{$item->rank}}</td>
