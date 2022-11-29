@@ -43,6 +43,7 @@
                             @endif
                                 <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
                             
+                            <!-- 生年月日 -->
                             <label for="birthday" style="color:#fff;" >生年月日<br>
                             @if($errors->has('birthday'))
                                 {{ $errors->first('birthday') }}
