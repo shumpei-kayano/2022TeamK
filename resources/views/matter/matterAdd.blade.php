@@ -151,26 +151,28 @@
       </dd>
     </dl>
   </dl>
-</table><br>
-
+</table>
 
     <!-- 期限 -->
-    <label>期限
+    <label for="dark_select" style="color:#fff;">きげん</label><br>
     <input type="date" class=""
             aria-describedby="basic-addon2" name="deadline">
     </label><br><br>
 
     <!-- 特記事項 -->
+    <label for="dark_select" style="color:#fff;">とっきじこう</label><br>
     <input type="text" class="nes-input is-dark p-form__portfolio" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks">
     {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
     <br>
 
     <!-- 募集人数 -->
+    <label for="dark_select" style="color:#fff;">ぼしゅうにんずう</label><br>
     <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="ぼしゅうにんずう"name="number_of_person">
     <br>
     <!-- <input type="number" class="" placeholder="ぼしゅうにんずう"aria-describedby="basic-addon2" name="number_of_person"> -->
 
     <!-- 成功報酬 -->
+    <label for="dark_select" style="color:#fff;">せいこうほうしゅう</label><br>
     <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="せいこうほうしゅう"name="success_fee">
     <br>
     <!-- <input type="number" class="" placeholder="せいこうほしゅう"aria-describedby="basic-addon2" name="success_fee"> --> 
