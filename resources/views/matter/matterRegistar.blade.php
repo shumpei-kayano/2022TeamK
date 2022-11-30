@@ -1,5 +1,5 @@
 @extends('layouts.app')
 @section('content')
-登録できた。
+登録できたよ。
 
 @endsection
