@@ -70,7 +70,7 @@
     </div>
     <form action="{{route('show')}}" method="GET">
 </form>
-    @endsection
+
                 {{-- <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button> --}}
             </form>
 
@@ -136,6 +136,7 @@
 </div>
 
 </div>
+@endsection
 
 
    {{-- 下の入れてくれてたやつ見た目のいじり方わからんくて、そのまま残してます。 --}}
