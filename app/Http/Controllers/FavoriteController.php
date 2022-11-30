@@ -46,12 +46,13 @@ class FavoriteController extends Controller
         $favorites = DB::table('favorites')->join('matters','favorites.matter_id', '=', 'matters.id')
         ->join('prefectures', 'matters.prefectures_id', '=', 'prefectures.id')
         ->join('occupations', 'matters.occupation_id', '=', 'occupations.id')
-        // ->join('development_languages', 'development_language_id1', '=', 'development_languages.id')
-        // ->join('development_languages', 'development_language_id2', '=', 'development_languages.id')
-        // ->join('development_languages', 'development_language_id3', '=', 'development_languages.id')
-        // ->join('development_languages', 'development_language_id4', '=', 'development_languages.id')
+        ->leftJoin('development_languages as t1', 'development_language_id1', '=', 't1.id')
+        ->leftJoin('development_languages as t2', 'development_language_id2', '=', 't2.id')
+        ->leftJoin('development_languages as t3', 'development_language_id3', '=', 't3.id')
+        ->leftJoin('development_languages as t4', 'development_language_id4', '=', 't4.id')
         ->get();
 
+        //無理やりjoin実行して、でかいテーブル作成
         // $favorites = DB::table('matters')->select('id','prefectures_id', 'matter_name', 'occupation_id','remarks','success_fee','deadline', 'rank', 'number_of_person','created_at','updated_at')
         // ->join('favorites', 'matters.id', '=', 'favorites.matter_id')
         // // ->join('prefectures', 'matters.prefectures_id', '=', 'prefectures.id')
