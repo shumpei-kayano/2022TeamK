@@ -78,7 +78,7 @@
         
                 {{-- <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button> --}}
 
-<div>
+<div class="p-show">
     <table style="color:black">
         <tr>
             <th>案件名</th>
