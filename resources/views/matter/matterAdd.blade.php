@@ -223,3 +223,4 @@
     }
     window.onload = entryChange1;
     </script>
+    {{-- 頑張った --}}
