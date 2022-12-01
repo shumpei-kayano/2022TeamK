@@ -4,6 +4,6 @@
 
 @section('content')
 
-<h1 class="p-form">がんばれ！ 日本⚽️🎌</h1>
+<h1 class="p-form">がんばれ！! 日本⚽️🎌</h1>
 
 @endsection
