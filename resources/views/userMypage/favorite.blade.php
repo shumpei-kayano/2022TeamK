@@ -18,9 +18,9 @@
     <thead>
     <tr>
         <th>案件名</th>
-        <th>案件名</th>
-        <th>案件名</th>
-        <th>案件名</th>
+        <th>必要言語</th>
+        <th>エリア</th>
+        <th>特記事項</th>
     </tr>
     </thead>
 @foreach($favorites as $favorite)
