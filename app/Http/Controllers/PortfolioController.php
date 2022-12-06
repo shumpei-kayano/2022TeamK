@@ -157,3 +157,5 @@ class PortfolioController extends Controller
         // // return redirect('portfolio',compact('languages'));
         // return view('./portfolio/portfolio', );
         // $this->middleware('auth', ['except' => ['user_id', 'update_at', 'created_at']]);
+
+        // 気合
