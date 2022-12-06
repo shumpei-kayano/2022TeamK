@@ -12,14 +12,9 @@
 <div class="p-form__container">
 
      <div class="nes-container is-dark with-title p-form__box">
-    {{-- <form action="{{route('show')}}" method="GET">
-        <div class="">
-            <label>キーワード
-            <input type="search" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
-            </label>
-        </div> --}} 
+    <form action="{{route('show')}}" method="GET">
 
-        {{--キーワード検索--}}
+            {{--キーワード検索--}}
 
             <div>
                 <label for="dark_field" style="color:#fff;" >キーワード</label><br>
@@ -66,17 +61,10 @@
     </div>
 </div>
     <div class="p-form__btn-container">
-    <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
+    {{-- <form action="{{route('show')}}" method="GET"> --}}
+        <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
+    </form>
     </div>
-    <form action="{{route('show')}}" method="GET">
-</form>
-
-                {{-- <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button> --}}
-            </form>
-
-        
-        
-                {{-- <button type="submit" class="btn btn-secondary">検索{{$favorite}}</button> --}}
 
 <div class="p-show">
     <table style="color:black">
