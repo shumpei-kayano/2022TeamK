@@ -8,11 +8,35 @@
 
 <div class="favorite">
     <div class="nes-container is-dark with-title favorite__container">
-        <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
+        {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
-        </a>
+        </a> --}}
+        <table class="">
+            <thead>
+            <tr>
+                <th>案件名</th>
+                <th>言語</th>
+                <th>エリア</th>
+                <th>特記事項</th>
+            </tr>
+            </thead>
+        @foreach($favorites as $favorite)
+        
+                <tbody>
+                <tr>
+                    <td>{{ $favorite->matter_name }}</td>
+                    <td>{{ $favorite->language_name }}</td>
+                    <td>{{ $favorite->prefectures_name }}</td>
+                    <td>{{ $favorite->remarks }}</td>
+                    <td><a href="{{ route('matter.detail', ['id'=>$favorite->matter_id]) }}" class="">詳細</a></td>
+                </tr>
+                </tbody>
+        @endforeach
+            </table>
     </div>
 </div>
+<<<<<<< HEAD
+=======
   
 <table class="">
     <thead>
@@ -36,5 +60,6 @@
         </tbody>
 @endforeach
     </table>
+>>>>>>> f4ed7078a90c2defae88fbc531b0a77d2dea5162
 
 @endsection
