@@ -9,6 +9,7 @@
     <div class="p-port">
         <div class="nes-container is-rounded is-dark" style="height: 600px;">
             @if ($form === null)
+            {{-- ポートフォリオがなかった場合の処理 --}}
             <form action='{{ route('portfolio_create') }}'method='post' class="p-form__form">
                 @csrf
                 <div class="p-port__container">
@@ -223,6 +224,7 @@
                 <div>
             </form>
             @else
+            {{-- ポートフォリオがあった場合の処理 --}}
             作成済み
             @endif
         </div>
