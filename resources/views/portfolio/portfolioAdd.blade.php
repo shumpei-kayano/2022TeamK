@@ -223,10 +223,15 @@
                     <button type="submit" class="nes-btn is-success p-acinfo__btn">さくせい</button>
                 <div>
             </form>
-            @else
-            {{-- ポートフォリオがあった場合の処理 --}}
-            作成済み
-            @endif
+
         </div>
     </div>
+            @else
+            {{-- ポートフォリオがあった場合の処理 --}}
+
+                <div class="nes-container is-rounded is-dark p-acinfo">
+                    作成済み
+                </div>
+
+            @endif
 @endsection
