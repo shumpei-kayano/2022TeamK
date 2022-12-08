@@ -10,6 +10,8 @@
         <th>案件名</th>
         <th>ランク</th>
         <th>特記事項</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -37,6 +39,14 @@
                       </form>
                   @endif
           @endif
+        </td>
+        <td>
+          {{--  応募するボタン  --}}
+          <form action="{{route('submission')}}" method="POST">
+            @csrf
+            <input type="hidden" name="matter_id" value="{{$matter->id}}">
+            <button type="submit">おうぼする</button>
+        </form>
         </td>
       </tr>
     </tbody>
