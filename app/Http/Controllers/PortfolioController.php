@@ -31,6 +31,7 @@ class PortfolioController extends Controller
     {
         $items = \DB::table('development_languages') -> get();
         $user = Auth::user();
+        // ポートフォリオが存在するかどうかのために取ってる
         $portfolio = Portfolio::whereUser_id($user->id)->first();
         // dd($items);
         return view('./portfolio/portfolioAdd',['form' => $portfolio],compact('items','user'));
