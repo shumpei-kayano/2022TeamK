@@ -220,9 +220,11 @@
                     <button type="submit" class="nes-btn is-success p-acinfo__btn">さくじょ</button>
                 </div>
             </form>
+    </div>
+</div>
             @else
             {{-- ポートフォリオがない場合 --}}
-            ポートフォリオがありません
+            <h1 style="font-size: 100px; text-align: center;">まだつくられてないよ〜ん! つくってからまたきてね</h1>
             @endif
-</div>
+
 @endsection

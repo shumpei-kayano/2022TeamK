@@ -228,10 +228,6 @@
     </div>
             @else
             {{-- ポートフォリオがあった場合の処理 --}}
-
-                <div class="nes-container is-rounded is-dark p-acinfo">
-                    作成済み
-                </div>
-
+            <h1 style="font-size: 200px; text-align: center;">作成済み</h1>
             @endif
 @endsection
