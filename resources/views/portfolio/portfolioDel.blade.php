@@ -7,6 +7,8 @@
 <h1 class="p-form">ポートフォリオさくじょ</h1>
 <div class="p-port">
     <div class="nes-container is-rounded is-dark" style="height: 600px;">
+        @if ($form != null)
+        {{-- ポートフォリオがあった場合の処理 --}}
 
         <div class="p-port__container">
             <div class="p-port__left">
@@ -218,5 +220,11 @@
                     <button type="submit" class="nes-btn is-success p-acinfo__btn">さくじょ</button>
                 </div>
             </form>
+    </div>
 </div>
+            @else
+            {{-- ポートフォリオがない場合 --}}
+            <h1 style="font-size: 100px; text-align: center;">まだつくられてないよ〜ん! つくってからまたきてね</h1>
+            @endif
+
 @endsection

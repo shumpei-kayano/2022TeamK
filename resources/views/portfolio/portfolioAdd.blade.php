@@ -8,6 +8,8 @@
     <h1 class="p-form">ポートフォリオ作成</h1>
     <div class="p-port">
         <div class="nes-container is-rounded is-dark" style="height: 600px;">
+            @if ($form === null)
+            {{-- ポートフォリオがなかった場合の処理 --}}
             <form action='{{ route('portfolio_create') }}'method='post' class="p-form__form">
                 @csrf
                 <div class="p-port__container">
@@ -20,35 +22,35 @@
                             @if($errors->has('name'))
                                 {{ $errors->first('name') }}
                             @endif
-                            <input type="text" id="name" class="nes-input is-dark p-form__portfolio" name="name"><br>
+                            <input type="text" id="name" class="nes-input is-dark p-form__portfolio" name="name" value="{{ old('name') }}"><br>
 
                             <!-- メールアドレス -->
                             <label for="mail" style="color:#fff;" >メールアドレス<br>
                             @if($errors->has('email'))
                                 {{ $errors->first('email') }}
                             @endif
-                                <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email"><br>
+                                <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email" value="{{ old('email') }}"><br>
 
                             <!-- 電話番号 -->
                             <label for="tel" style="color:#fff;" >でんわばんごう<br>
                             @if($errors->has('tel'))
                                 {{ $errors->first('tel') }}
                             @endif
-                                <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel"><br>
+                                <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel" value="{{ old('tel') }}"><br>
                             
                             <!-- 最終学歴 -->
                             <label for="gakureki" style="color:#fff;" >さいしゅうがくれき<br>
                             @if($errors->has('educational_background'))
                                 {{ $errors->first('educational_background') }}
                             @endif
-                                <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background"><br>
+                                <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background" value="{{ old('educational_background') }}"><br>
                             
                             <!-- 生年月日 -->
                             <label for="birthday" style="color:#fff;" >生年月日<br>
                             @if($errors->has('birthday'))
                                 {{ $errors->first('birthday') }}
                             @endif
-                                <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday">
+                                <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday" value="{{ old('birthday') }}">
 
                     </div>
 
@@ -213,7 +215,7 @@
                         @if($errors->has('self_pr'))
                                 {{ $errors->first('self_pr') }}
                         @endif
-                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark" placeholder="自分をアピールしまくろう！"></textarea>
+                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark" placeholder="自分をアピールしまくろう！">{{ old('self_pr') }}</textarea>
                     </div>
                 </div>
                 {{-- 作成ボタン --}}
@@ -221,6 +223,11 @@
                     <button type="submit" class="nes-btn is-success p-acinfo__btn">さくせい</button>
                 <div>
             </form>
+
         </div>
     </div>
+            @else
+            {{-- ポートフォリオがあった場合の処理 --}}
+            <h1 style="font-size: 200px; text-align: center;">作成済み</h1>
+            @endif
 @endsection

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title')
+案件検索
+@endsection
 
 @section('content')
 

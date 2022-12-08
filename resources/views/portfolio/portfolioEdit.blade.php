@@ -7,6 +7,8 @@
 <h1 class="p-form">ポートフォリオかくにん・へんしゅう</h1>
 <div class="p-port">
     <div class="nes-container is-rounded is-dark" style="height: 600px;">
+        @if ($form != null)
+        {{-- ポートフォリオがあった場合の処理 --}}
         <form action='{{ route('portfolio_update',) }}'method='post'>
             @csrf
             <div class="p-port__container">
@@ -299,6 +301,10 @@
                 <div>
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
             </form>
+            @else
+            {{-- ポートフォリオがなかった場合の処理 --}}
+                なし
+            @endif
         </div>
     </div>
 
