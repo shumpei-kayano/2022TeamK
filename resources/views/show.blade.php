@@ -7,7 +7,7 @@
 
 @section('content')
 
-<h1 class="p-form">案件検索</h1>
+<h1 class="p-form">案件検索！</h1>
 
 <div class="p-form__container">
 
