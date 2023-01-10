@@ -23,8 +23,7 @@
 
             {{-- エリア検索 --}}
 
-
-                    <label for="dark_select" style="color:#fff">エリア</label>
+                    <!--<label for="dark_select" style="color:#fff">エリア</label>-->
                         <div class="nes-select is-dark p-form__eria">
                             <select class="p-form__eriaselect" aria-label="Default select example"name="prefectures_id" required id="dark_select">
                                 <option value="" selected>エリアを選択してください</option>
@@ -37,7 +36,7 @@
 
             {{-- 職種検索 --}}
         
-                    <label for="dark_select" style="color:#fff">しょくしゅ</label>
+                    <!-- <label for="dark_select" style="color:#fff">しょくしゅ</label>-->
                         <div class=" nes-select is-dark p-form__oc">
                             <select class="p-form__ocselect" aria-label="Default select example" name="occupation_id" required id="dark_select">
                                 <option value="" selected>しょくしゅを選択してください</option>
@@ -48,8 +47,8 @@
                         </div>
 
             {{-- レベル検索 --}}
-
-                    <label for="dark_select" style="color:#fff">レベル</label>
+            
+                    <!--<label for="dark_select" style="color:#fff">レベル</label>-->
                         <div class=" nes-select is-dark p-form__level">
                             <select class="p-form__levelselect" aria-label="Default select example" name="level_id" required id="dark_select">
                                 <option value="" selected>レベルを選択してください</option>
