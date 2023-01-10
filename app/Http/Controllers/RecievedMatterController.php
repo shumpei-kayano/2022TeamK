@@ -32,6 +32,7 @@ class RecievedMatterController extends Controller
         $recievedMatter->order_date = date('Y/m/d');
         // $recievedMatter->achievement_date = '';
         $recievedMatter->adoption_flg = 0;
+        $recievedMatter->achievement_date = date('Y/m/d');
         $recievedMatter->save();
 
         return redirect('/favorite_list');
