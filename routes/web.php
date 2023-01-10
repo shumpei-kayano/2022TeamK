@@ -57,7 +57,7 @@ Route::get('/detail/{id}', 'MatterController@detail')->name('matter.detail');
 
     //案件に応募する
 Route::post('/submission', 'RecievedMatterController@matterSubmission')->name('submission');
-Route::post('/list', 'MatterController@list')->name('list');
+Route::get('/list', 'MatterController@list')->name('list');
 
     // ポートフォリオルート
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
