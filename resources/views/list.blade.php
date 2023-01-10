@@ -36,4 +36,24 @@
     </div>
 </div>
 
+<table>
+    <thead>
+        <th>商品名</th>
+        <th>登録ユーザー</th>
+    </thead>
+    <tbody>
+        @foreach ($order_received_matters as $order_received_matter)
+            <tr>
+                <!-- 商品名 -->
+                <td class="table-text">
+                    <div>{{ $order_received_matter->matter->matter_name }}</div>
+                </td>
+                <!-- 登録ユーザー -->
+                <td class="table-text">
+                    <div>{{ $order_received_matter->user->name }}</div>
+                </td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
 @endsection

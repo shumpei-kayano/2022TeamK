@@ -11,6 +11,8 @@ use App\Occupation;
 use App\Development_language;
 use App\Rank_of_difficulty;
 use App\Favorite;
+use App\User;   //Userモデルを使用
+use App\Order_received_matter;
 
 class MatterController extends Controller
 {
@@ -220,13 +222,7 @@ class MatterController extends Controller
     }
     public function list()
     {
-        $user = Auth::user();
-        // $matter = Matter::all();
-        $matters = Matter::with('prefecture','occupation','development_language')->where('user_id',$user->id)->get();
-        $prefectures = \DB::table('prefectures') -> get();
-        $occupations = \DB::table('occupations') -> get();
-        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
-        $development_languages = \DB::table('development_languages') -> get();
-        return view('./list',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages'));
+        $order_received_matters = Order_received_matter::with('user:id,name','matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        return view('./list',['order_received_matters' => $order_received_matters,]);
     }
 }
