@@ -17,7 +17,7 @@
         <div>
             <a href="/postingScreen"><button type="button" class="nes-btn is-error p-myp__btn">けいさいちゅうあんけんを<br>かくにんする</button></a>
 
-            <a href="#"><button type="button" style="margin-top: 20px" class="nes-btn is-primary p-myp__btn">しょうにんまちリストを<br>かくにんする</button></a>
+            <a href="/list"><button type="button" style="margin-top: 20px" class="nes-btn is-primary p-myp__btn">しょうにんまちリストを<br>かくにんする</button></a>
         </div>
         
         <div>
