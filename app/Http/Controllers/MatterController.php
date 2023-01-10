@@ -218,4 +218,15 @@ class MatterController extends Controller
         $favorite = Favorite::where('user_id', auth()->user()->id)->where('matter_id', $id)->first();
         return view('./matter_detail', compact('matter', 'favorite'));
     }
+    public function list()
+    {
+        $user = Auth::user();
+        // $matter = Matter::all();
+        $matters = Matter::with('prefecture','occupation','development_language')->where('user_id',$user->id)->get();
+        $prefectures = \DB::table('prefectures') -> get();
+        $occupations = \DB::table('occupations') -> get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
+        $development_languages = \DB::table('development_languages') -> get();
+        return view('./list',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages'));
+    }
 }
