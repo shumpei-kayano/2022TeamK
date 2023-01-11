@@ -232,4 +232,20 @@ class MatterController extends Controller
         $portfolio = Portfolio::whereUser_id($id)->first();
         return view('./user_detail', compact('portfolio'));
     }
+
+    public function approval()
+    {
+        $order_received_matter = new Order_received_matter;
+        $order_received_matter->adoption_flg = 1;
+        $order_received_matter->save();
+        return view('/list');
+    }
+
+    public function rejected()
+    {
+        $order_received_matter = new Order_received_matter;
+        $order_received_matter->adoption_flg = 2;
+        $order_received_matter->save();
+        return view('/list');
+    }
 }

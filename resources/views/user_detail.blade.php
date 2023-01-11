@@ -56,5 +56,13 @@
                 </div>
                 </div>
     </div>
+    <form method="POST" action="{{ route('approval') }}">
+        @csrf
+        <button type="submit">承認</button>
+    </form>
+        <form method="POST" action="{{ route('rejected') }}">
+            @csrf
+        <button type="submit">却下</button>
+    </form>
 </div>
 @endsection
