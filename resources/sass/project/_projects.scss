@@ -183,26 +183,32 @@
     }
 
     &__key {
-        height: 100px;
-        width: 300px;
+        height: 50px;
+        width: 880px;
         margin-bottom: 20px;
     }
 
     &__eria {
         height: 45px;
-        width: 300px;
+        width: 270px;
         margin-bottom: 20px;
+        float: left;
     }
 
     &__oc {
         height: 45px;
-        width: 300px;
+        width: 290px;
         margin-bottom: 20px;
+        float: left;
+        margin-left: 20px;
     }
 
     &__level {
         height: 45px;
-        width: 300px;
+        width: 270px;
+        float: right;
+        margin-left: 20px;
+
     }
 
     &__box {
@@ -219,7 +225,6 @@
     &__btn-container {
         text-align: center;
     }
-
 
 }
 

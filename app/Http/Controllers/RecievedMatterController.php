@@ -22,6 +22,7 @@ class RecievedMatterController extends Controller
        $recievedMatter = new Order_received_matter();
         $recievedMatter->matter_id = $request->matter_id;
         $recievedMatter->user_id = auth()->user()->id;
+        $recievedMatter->create_user_id = $matter->user_id;
         $recievedMatter->occupation_id = $matter->occupation_id;
         // 後でモデルにcalcReward()を作成する
         $recievedMatter->reward = 10000;

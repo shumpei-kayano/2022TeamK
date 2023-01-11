@@ -10,6 +10,7 @@ use App\Prefecture;
 use App\Occupation;
 use App\Development_language;
 use App\Rank_of_difficulty;
+use App\Portfolio;
 use App\Favorite;
 use App\User;   //Userモデルを使用
 use App\Order_received_matter;
@@ -222,7 +223,29 @@ class MatterController extends Controller
     }
     public function list()
     {
-        $order_received_matters = Order_received_matter::where('user_id', auth()->user()->id)->with('user:id,name','matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->with('user:id,name','matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
         return view('./list',['order_received_matters' => $order_received_matters,]);
+    }
+    
+    public function userdetail($id)
+    {
+        $portfolio = Portfolio::whereUser_id($id)->first();
+        return view('./user_detail', compact('portfolio'));
+    }
+
+    public function approval()
+    {
+        $order_received_matter = new Order_received_matter;
+        $order_received_matter->adoption_flg = 1;
+        $order_received_matter->save();
+        return view('/list');
+    }
+
+    public function rejected()
+    {
+        $order_received_matter = new Order_received_matter;
+        $order_received_matter->adoption_flg = 2;
+        $order_received_matter->save();
+        return view('/list');
     }
 }

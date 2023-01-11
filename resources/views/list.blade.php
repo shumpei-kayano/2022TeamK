@@ -52,6 +52,8 @@
                 <td class="table-text">
                     <div>{{ $order_received_matter->user->name }}</div>
                 </td>
+
+                <td><a href="{{ route('user.detail', ['id'=>$order_received_matter->user_id]) }}" class="">詳細</a></td>
             </tr>
         @endforeach
     </tbody>
