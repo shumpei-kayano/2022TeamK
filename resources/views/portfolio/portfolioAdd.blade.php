@@ -19,31 +19,39 @@
 
                             <!-- 名前 -->        
                             <label for="name" style="color:#fff;" >名前<br>
-                            @if($errors->has('name'))
+                            {{-- @if($errors->has('name'))
                                 {{ $errors->first('name') }}
-                            @endif
-                            <input type="text" id="name" class="nes-input is-dark p-form__portfolio" name="name" value="{{ old('name') }}"><br>
+                            @endif --}}
+                            <input type="text" id="name" class="nes-input is-dark p-form__portfolio" name="name" value="{{ old('name') }}" placeholder="@if($errors->has('name')){{ $errors->first('name') }}
+                            @endif">
+                            <br>
 
                             <!-- メールアドレス -->
                             <label for="mail" style="color:#fff;" >メールアドレス<br>
-                            @if($errors->has('email'))
+                            {{-- @if($errors->has('email'))
                                 {{ $errors->first('email') }}
-                            @endif
-                                <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email" value="{{ old('email') }}"><br>
+                            @endif --}}
+                                <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email" value="{{ old('email') }}" placeholder="@if($errors->has('email')){{ $errors->first('email') }}
+                            @endif">
+                                <br>
 
                             <!-- 電話番号 -->
                             <label for="tel" style="color:#fff;" >でんわばんごう<br>
-                            @if($errors->has('tel'))
+                            {{-- @if($errors->has('tel'))
                                 {{ $errors->first('tel') }}
-                            @endif
-                                <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel" value="{{ old('tel') }}"><br>
+                            @endif --}}
+                                <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel" value="{{ old('tel') }}" placeholder=" @if($errors->has('tel')){{ $errors->first('tel') }}
+                            @endif">
+                                <br>
                             
                             <!-- 最終学歴 -->
                             <label for="gakureki" style="color:#fff;" >さいしゅうがくれき<br>
-                            @if($errors->has('educational_background'))
+                            {{-- @if($errors->has('educational_background'))
                                 {{ $errors->first('educational_background') }}
-                            @endif
-                                <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background" value="{{ old('educational_background') }}"><br>
+                            @endif --}}
+                                <input type="text" id="gakureki" class="nes-input is-dark p-form__portfolio" name="educational_background" value="{{ old('educational_background') }}" placeholder="@if($errors->has('educational_background')){{ $errors->first('educational_background') }}
+                            @endif">
+                                <br>
                             
                             <!-- 生年月日 -->
                             <label for="birthday" style="color:#fff;" >生年月日<br>
@@ -212,10 +220,12 @@
                     <!-- 自己PR -->
                     <div class="p-port__PR">
                         <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>
-                        @if($errors->has('self_pr'))
+                        {{-- @if($errors->has('self_pr'))
                                 {{ $errors->first('self_pr') }}
-                        @endif
-                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark" placeholder="自分をアピールしまくろう！">{{ old('self_pr') }}</textarea>
+                        @endif --}}
+                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark" placeholder="自分をアピールしまくろう！"  @if($errors->has('self_pr'))
+                                {{ $errors->first('self_pr') }}
+                        @endif>{{ old('self_pr') }}</textarea>
                     </div>
                 </div>
                 {{-- 作成ボタン --}}
