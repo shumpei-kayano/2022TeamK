@@ -54,13 +54,13 @@
                                 
                             
                             <!-- 生年月日 -->
-                            <label for="birthday" style="color:#fff;" >生年月日
+                            <label for="birthday" style="color:#fff;" >生年月日 <br>
                             @if($errors->has('birthday'))
                                 {{ $errors->first('birthday') }}
                             @endif
                                 <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday" value="{{ old('birthday') }}">
 
-                    </div>
+                            </div>
 
                     <!-- ここの下の部分は１つずつdivで囲んで横並びにさせる！！！ -->
                     {{-- <div class="p-port__right"> --}}
@@ -240,4 +240,10 @@
             {{-- ポートフォリオがあった場合の処理 --}}
             <h1 style="font-size: 200px; text-align: center;">作成済み</h1>
             @endif
+
+<style>
+    input::placeholder {
+        color: #FFFF00;
+    }
+</style>
 @endsection
