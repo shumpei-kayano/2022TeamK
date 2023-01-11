@@ -227,23 +227,24 @@ class MatterController extends Controller
         return view('./list',['order_received_matters' => $order_received_matters,]);
     }
     
-    public function userdetail($id)
+    public function userdetail(Request $request, $id)
     {
+        $form = $request->input('form');
         $portfolio = Portfolio::whereUser_id($id)->first();
-        return view('./user_detail', compact('portfolio'));
+        return view('./user_detail', compact('portfolio','form'));
     }
 
-    public function approval()
+    public function approval(Request $request, $id)
     {
-        $order_received_matter = new Order_received_matter;
+        $order_received_matter = Order_received_matter::find($id);
         $order_received_matter->adoption_flg = 1;
         $order_received_matter->save();
-        return view('/list');
+        return redirect()->route('matter.add');
     }
 
-    public function rejected()
+    public function rejected(Request $request)
     {
-        $order_received_matter = new Order_received_matter;
+        $order_received_matter = Order_received_matter::find();
         $order_received_matter->adoption_flg = 2;
         $order_received_matter->save();
         return view('/list');

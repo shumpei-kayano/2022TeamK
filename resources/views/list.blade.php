@@ -53,7 +53,12 @@
                     <div>{{ $order_received_matter->user->name }}</div>
                 </td>
 
-                <td><a href="{{ route('user.detail', ['id'=>$order_received_matter->user_id]) }}" class="">詳細</a></td>
+                <td>
+                    <form method="POST" action="{{ route('user.detail', ['id'=>$order_received_matter->user_id]) }}">
+                        @csrf
+                        <input type="hidden" name="form" value="{{ $order_received_matter->id }}">
+                        <button type="submit">詳細</button>
+                    </form>
             </tr>
         @endforeach
     </tbody>

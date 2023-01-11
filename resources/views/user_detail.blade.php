@@ -56,12 +56,15 @@
                 </div>
                 </div>
     </div>
-    <form method="POST" action="{{ route('approval') }}">
+
+    {{-- <a href="{{ route('approval', ['id'=>$order_received_matter->user_id]) }}" class="">承認</a>
+    <a href="{{ route('rejected', ['id'=>$order_received_matter->user_id]) }}" class="">却下</a> --}}
+    <form method="POST" action="{{ route('approval', ['id'=>$form]) }}">
         @csrf
         <button type="submit">承認</button>
     </form>
-        <form method="POST" action="{{ route('rejected') }}">
-            @csrf
+    <form method="POST" action="{{ route('rejected') }}">
+        @csrf
         <button type="submit">却下</button>
     </form>
 </div>
