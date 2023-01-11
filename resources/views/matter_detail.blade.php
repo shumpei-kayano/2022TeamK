@@ -6,7 +6,8 @@
 
 @section('content')
 
-<h1>詳細</h1>
+<h1 class="p-form">詳細</h1>
+<div class="nes-container is-dark with-title p-mypage__container">
 <table class="">
     <thead>
       <tr>
@@ -44,6 +45,7 @@
           @endif
         </td>
         <td>
+
           {{--  応募するボタン  --}}
           <form action="{{route('submission')}}" method="POST">
             @csrf
@@ -54,5 +56,5 @@
       </tr>
     </tbody>
   </table>
-
+          </div>
 @endsection
