@@ -19,12 +19,6 @@
             <button type="submit" class="nes-btn is-success p-acinfo__btn">へんしゅう</button>
         </form>
     </div>
-<br>
-    <h1 class="p-form">ステータス</h1>
-    <div class="p-acinfo__container2">
-        <div class="nes-container is-rounded is-dark p-acinfo">
-        </div>
-    </div>
 {{-- <div class="p-acinfo">
     <p class="p-acinfo__id">ユーザーID：{{ $user->name }}<br></p>
     メールアドレス：{{ $user->email }}
