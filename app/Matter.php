@@ -39,4 +39,20 @@ class Matter extends Model
     public function development_language (){
         return $this->belongsTo('App\Development_language','id');
     }
+
+    public function development_language2 (){
+        return $this->hasOne('App\Development_language2','id');
+    }
+
+    public function development_language3 (){
+        return $this->hasOne('App\Development_language3','id');
+    }
+
+    public function development_language4 (){
+        return $this->hasOne('App\Development_language4','id');
+    }
+
+    public function development_language5 (){
+        return $this->hasOne('App\Development_language5','id');
+    }
 }

@@ -9,6 +9,10 @@ use App\Matter;
 use App\Prefecture;
 use App\Occupation;
 use App\Development_language;
+use App\Development_language2;
+use App\Development_language3;
+use App\Development_language4;
+use App\Development_language5;
 use App\Rank_of_difficulty;
 use App\Portfolio;
 use App\Favorite;
@@ -37,24 +41,34 @@ class MatterController extends Controller
     {
         $user = Auth::user();
         // $matter = Matter::all();
-        $matters = Matter::with('prefecture','occupation','development_language')->where('user_id',$user->id)->get();
+        $matters = Matter::with('prefecture','occupation','development_language','development_language2','development_language3','development_language4','development_language5','development_language2')->where('user_id',$user->id)->get();
         $prefectures = \DB::table('prefectures') -> get();
         $occupations = \DB::table('occupations') -> get();
         $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
         $development_languages = \DB::table('development_languages') -> get();
-        return view('postingScreen',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages'));
+        $development_language2s = \DB::table('development_language2s') -> get();
+        $development_language3s = \DB::table('development_language3s') -> get();
+        $development_language4s = \DB::table('development_language4s') -> get();
+        $development_language5s = \DB::table('development_language5s') -> get();
+        return view('postingScreen',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages','development_language2s','development_language3s','development_language4s','development_language5s'));
     }
 
     public function matterEdit(Request $request,$id)
     {
         $user = Auth::user();
-        $matters = Matter::with('prefecture','occupation','development_language')->where('id',$id)->first();
+        $matters = Matter::with('prefecture','occupation','development_language','development_language2','development_language3','development_language4','development_language5')
+        ->where('id',$id)->first();
         // dd($matters, $id);
         $prefectures = \DB::table('prefectures') -> get();
         $occupations = \DB::table('occupations') -> get();
         $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
         $development_languages = \DB::table('development_languages') -> get();
-        return view('matterEdit',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages'));
+        $development_language2s = \DB::table('development_language2s') -> get();
+        $development_language3s = \DB::table('development_language3s') -> get();
+        $development_language4s = \DB::table('development_language4s') -> get();
+        $development_language5s = \DB::table('development_language5s') -> get();
+        return view('matterEdit',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages','development_language2s','development_language3s','development_language4s','development_language5s'));
+        
     }
 
     public function matterUpdate(Request $request,$id)

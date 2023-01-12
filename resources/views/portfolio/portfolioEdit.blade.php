@@ -84,7 +84,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
                                         <div class="nes-select is-dark p-port__prdn">
                                             <select name="development_language_id1" required id="dark_select">
-                                                <option hidden>選択してください</option>
+                                                <option hidden>{{ $form->language_name }}</option>
                                                 @foreach ($items as $item)
                                                 <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
                                                 {{-- <p>{{  $item->language_name  }}</p> --}}
