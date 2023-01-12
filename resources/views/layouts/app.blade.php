@@ -62,7 +62,17 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}さん<span class="level">Lv:23</span>
+                                    {{ Auth::user()->name }}さん
+                                    <span class="level">
+                                        @php
+                                            $id = Auth::user()->id;
+                                            $users = DB::table('users')->find($id);
+                                            $total_exe = $users->total_experience;
+                                            $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+                                            $rank = $ranks->rank;
+                                        @endphp
+                                        ランク{{$rank}}
+                                    </span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

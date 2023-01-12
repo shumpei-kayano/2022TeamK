@@ -14,37 +14,37 @@ class RanksTableSeeder extends Seeder
             DB::table('ranks')->insert([
                 [
                     'id' => 1,
-                    'rank' => 1,
+                    'rank' => 'E',
                     'requirement_experience' => 100,
                 ],
                 [
                     'id' => 2,
-                    'rank' => 2,
+                    'rank' => 'D',
                     'requirement_experience' => 1000,
                 ],
                 [
                     'id' => 3,
-                    'rank' => 3,
+                    'rank' => 'C',
                     'requirement_experience' => 10000,
                 ],
                 [
                     'id' => 4,
-                    'rank' => 4,
+                    'rank' => 'B',
                     'requirement_experience' => 100000,
                 ],
                 [
                     'id' => 5,
-                    'rank' => 5,
+                    'rank' => 'A',
                     'requirement_experience' => 1000000,
                 ],
                 [
                     'id' => 6,
-                    'rank' => 6,
+                    'rank' => 'S',
                     'requirement_experience' => 10000000,
                 ],
                 [
                     'id' => 7,                    
-                    'rank' => 7,
+                    'rank' => 'SS',
                     'requirement_experience' => 100000000,
                 ],
             ]);
