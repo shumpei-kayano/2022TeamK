@@ -67,7 +67,7 @@
 
 <div class="p-show">
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-mypage__container">
+        <div class="nes-container is-dark with-title p-mypage__container" style=" width: 1200px;">
     <table style="color:white">
         <tr>
             <th>案件名</th>
@@ -83,7 +83,7 @@
             <td>{{$item->occupation_name}}</td>
             <td>{{$item->rank}}</td>
             <td>{{$item->prefectures_name}}</td>
-            <td>{{$item->remarks}}</td>
+            <td style="width:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{$item->remarks}}</td>
             <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary">しょうさい</a></td>
             {{-- <td>@if (Auth::check())
                 @if (count($favorite) == 0) --}}
