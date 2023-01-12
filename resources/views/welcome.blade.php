@@ -38,6 +38,10 @@
     <style>
         body {
             background: url("/images/8bit.jpg") top center/cover;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+
         }
     </style>
 
