@@ -298,15 +298,17 @@
                 <!-- 編集ボタン -->
                 <div class="p-acinfo__btn-container p-port__btn">
                     <button type="submit" class="nes-btn is-success p-acinfo__btn">へんしゅう</button>
-                <div>
+            <div>
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
-            </form>
+        </form>
+    </div>
+</div>
             @else
             {{-- ポートフォリオがなかった場合の処理 --}}
-                なし
+                    {{-- <div class="nes-container is-rounded is-dark" style="height: 100px!important;"> --}}
+                    
             @endif
-        </div>
-    </div>
+
 
 @endsection
 
