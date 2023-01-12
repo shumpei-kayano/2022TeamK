@@ -66,7 +66,9 @@
     </div>
 
 <div class="p-show">
-    <table style="color:black">
+    <div class="p-acinfo__container2">
+        <div class="nes-container is-dark with-title p-mypage__container">
+    <table style="color:white">
         <tr>
             <th>案件名</th>
             <th>職種</th>
@@ -82,7 +84,7 @@
             <td>{{$item->rank}}</td>
             <td>{{$item->prefectures_name}}</td>
             <td>{{$item->remarks}}</td>
-            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="">詳細</a></td>
+            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary">しょうさい</a></td>
             {{-- <td>@if (Auth::check())
                 @if (count($favorite) == 0) --}}
                     {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
@@ -120,9 +122,10 @@
         </tr>
         @endforeach
     </table>
-</div>
 
 </div>
+    </div>
+        </div>
 @endsection
 
 

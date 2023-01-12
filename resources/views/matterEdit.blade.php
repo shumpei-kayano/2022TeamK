@@ -15,7 +15,7 @@
   <div class="nes-container is-rounded is-dark p-acinfo">
     <form action='{{ route('matter_update',['id'=>$matters->id]) }}'method='post'>
 
-    @csrf     
+    @csrf
             <!--     <input type="text" class="" placeholder="あんけんめい" 
             aria-describedby="basic-addon2" name="matter_name"> -->
             <!-- <label for="dark_field" style="color:#fff;" >あんけんめい<br> -->
@@ -64,16 +64,26 @@
         4つ目</label>
     </dd>
   </dl>
+{{-- {{ $id1 = $matters->development_language->language_name }} --}}
+{{-- {{ dd($id1) }} --}}
 
+
+                @php
+                    $devLan1 = DB::table('development_languages')->find($matters->development_language_id1);
+                    $devLan2 = DB::table('development_languages')->find($matters->development_language_id2);
+                    $devLan3 = DB::table('development_languages')->find($matters->development_language_id3);
+                    $devLan4 = DB::table('development_languages')->find($matters->development_language_id4);
+                @endphp
   <!-- 表示切り替えfirstBox -->
   <dl id="firstBox">
     <dl class="mailform">
       <dt>スキル</dt>
       <dd>
     <select name="development_language_id1">
+        <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
         @foreach ($development_languages as $language)
         <option value="{{$language->id}}">{{$language->language_name}}</option> 
-        @endforeach    
+        @endforeach
     </select>
      </dd>
     </dl>
@@ -85,13 +95,15 @@
       <dt>スキル</dt>
       <dd>
         <select name="development_language_id1">
+          <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
             @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
+            <option value="{{$language->id}}">{{$language->language_name}}</option>
+            @endforeach
         </select>
         <select name="development_language_id2">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
+          <option value="" selected>{{ $devLan2->language_name }}</p><br></option>
+            @foreach ($development_language2s as $language2)
+            <option value="{{$language2->id}}">{{$language2->language_name}}</option> 
             @endforeach    
         </select>
       </dd>
@@ -104,18 +116,21 @@
       <dt>スキル</dt>
       <dd>
         <select name="development_language_id1">
+          <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id2">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
+          <option value="" selected>{{ $devLan2->language_name }}</p><br></option>
+            @foreach ($development_language2s as $language2)
+            <option value="{{$language2->id}}">{{$language2->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id3">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
+          <option value="" selected>{{ $devLan3->language_name }}</p><br></option>
+            @foreach ($development_language3s as $language3)
+            <option value="{{$language3->id}}">{{$language3->language_name}}</option> 
             @endforeach    
         </select>
       </dd>
@@ -128,23 +143,27 @@
       <dt>スキル</dt>
       <dd>
         <select name="development_language_id1">
+          <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id2">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
+          <option value="" selected>{{ $devLan2->language_name }}</p><br></option>
+            @foreach ($development_language2s as $language2)
+            <option value="{{$language2->id}}">{{$language2->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id3">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
+          <option value="" selected>{{ $devLan3->language_name }}</p><br></option>
+          @foreach ($development_language3s as $language3)
+          <option value="{{$language3->id}}">{{$language3->language_name}}</option> 
+          @endforeach   
         </select>
         <select name="development_language_id4">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
+          <option value="" selected>{{ $devLan4->language_name }}</p><br></option>
+            @foreach ($development_language4s as $language4)
+            <option value="{{$language4->id}}">{{$language4->language_name}}</option> 
             @endforeach    
         </select>
       </dd>
@@ -198,3 +217,31 @@
 </form>
 
 @endsection
+
+<script type="text/javascript">
+  function entryChange1(){
+  radio = document.getElementsByName('skill') 
+  if(radio[0].checked) {
+  document.getElementById('firstBox').style.display = "";
+  document.getElementById('secondBox').style.display = "none";
+  document.getElementById('thirdBox').style.display = "none";
+  document.getElementById('fourthBox').style.display = "none";
+  }else if(radio[1].checked) {
+  document.getElementById('firstBox').style.display = "none";
+  document.getElementById('secondBox').style.display = "";
+  document.getElementById('thirdBox').style.display = "none";
+  document.getElementById('fourthBox').style.display = "none";
+  }else if(radio[2].checked) {
+  document.getElementById('firstBox').style.display = "none";
+  document.getElementById('secondBox').style.display = "none";
+  document.getElementById('thirdBox').style.display = "";
+  document.getElementById('fourthBox').style.display = "none";
+  }else if(radio[3].checked) {
+  document.getElementById('firstBox').style.display = "none";
+  document.getElementById('secondBox').style.display = "none";
+  document.getElementById('thirdBox').style.display = "none";
+  document.getElementById('fourthBox').style.display = "";
+  }
+  }
+  window.onload = entryChange1;
+  </script>

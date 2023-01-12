@@ -30,4 +30,20 @@ class Portfolio extends Model
     public function development_language (){
         return $this->hasOne('App\Development_language','id');
     }
+
+    public function development_language2 (){
+        return $this->hasOne('App\Development_language','id');
+    }
+
+    public function development_language3 (){
+        return $this->hasOne('App\Development_language','id');
+    }
+
+    public function development_language4 (){
+        return $this->hasOne('App\Development_language','id');
+    }
+
+    public function development_language5 (){
+        return $this->hasOne('App\Development_language','id');
+    }
 }

@@ -50,8 +50,22 @@
 
         <!-- 求めるスキル -->
         <label for="dark_field" style="color:#fff;" >求めるスキル<br>
-            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->development_language->language_name }}</p><br>
-            <!-- <p>求めるスキル：{{$matter->development_language->language_name}}</p> -->
+            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >
+                @php
+                    $devLan1 = DB::table('development_languages')->find($matter->development_language_id1);
+                    $devLan2 = DB::table('development_languages')->find($matter->development_language_id2);
+                    $devLan3 = DB::table('development_languages')->find($matter->development_language_id3);
+                    $devLan4 = DB::table('development_languages')->find($matter->development_language_id4);
+                @endphp
+                {{ $devLan1->language_name }}</p><br>
+            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >
+                {{ $devLan2->language_name }}</p><br>
+            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >
+                {{ $devLan3->language_name }}</p><br>
+            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >
+                {{ $devLan4->language_name }}</p><br>
+            {{-- {{ dd($matter->development_language) }} --}}
+            {{-- <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->development_language2->language_name }}</p><br> --}}
 
         <!-- 期限 -->
         <label for="dark_field" style="color:#fff;" >きげん<br>
@@ -88,6 +102,7 @@
     </div>
 </form>
 @endforeach
+{{-- {{ dd($development_languages) }} --}}
 
 
 @endsection
