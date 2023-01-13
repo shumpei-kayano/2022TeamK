@@ -32,6 +32,7 @@ Route::get('/account', 'UserMypageController@account')->name('account');
 Route::get('/accountEdit', 'UserMypageController@edit')->name('account_edit');
 Route::post('/accountUpdate', 'UserMypageController@update')->name('account_update');
 Route::get('/favorite', 'UserMypageController@favorite')->name('favorite');
+Route::get('/kakunin', 'UserMypageController@kakunin')->name('');
 Route::get('/company', 'UserMypageController@company')->name('company');
 
 
