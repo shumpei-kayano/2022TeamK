@@ -19,6 +19,7 @@
         </div>
         <div class="p-mypage__btn-container">
             <a href="/portfolio"><button type="button" class="nes-btn is-primary p-mypage__btn">ポートフォリオ</button></a> 
+            <a href="/kakunin"><button type="button" class="nes-btn is-primary p-mypage__btn">かくにん</button></a> 
             <a href="/company"><button type="button" class="nes-btn is-primary p-mypage__btn">きぎょう</button></a> 
         </div>  
 </div>

@@ -95,6 +95,11 @@ class UserMypageController extends Controller
         return view('');
     }
 
+    public function kakunin(Request $request)
+    {
+        return view('./userMypage/kakunin');
+    }
+
     public function company(Request $request)
     {
         return view('./userMypage/company');
