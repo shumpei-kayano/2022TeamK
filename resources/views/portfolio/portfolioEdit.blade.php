@@ -84,15 +84,15 @@
                         $devLan3 = DB::table('development_languages')->find($form->development_language_id3);
                         $devLan4 = DB::table('development_languages')->find($form->development_language_id4);
 
-                        if(development_year1 == 0){
-                            $year1 = "3か月"
-                        }elseif(development_year1 == 1){
-                            $year1 = "6か月"
-                        }elseif(development_year1 == 2){
-                            $year1 = "9か月"
-                        }else{
-                            $year1 = "12か月"
-                        }
+                        // if(development_year1 == 0){
+                        //     $year1 = "3か月"
+                        // }elseif(development_year1 == 1){
+                        //     $year1 = "6か月"
+                        // }elseif(development_year1 == 2){
+                        //     $year1 = "9か月"
+                        // }else{
+                        //     $year1 = "12か月"
+                        // }
                     @endphp
 
                         <!-- 学習言語1 -->
