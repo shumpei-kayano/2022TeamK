@@ -49,7 +49,8 @@
 
 <div class="p-wel">
     <div class="p-wel__midasi">
-        <h2>マッチングRPG<i class="nes-pokeball"></i></h2>
+        <h2>マッチングRPG</h2>
+        {{-- <i class="nes-pokeball"></i> --}}
     </div>
 
         <div class="flex-center position-ref full-height p-wel__home">
