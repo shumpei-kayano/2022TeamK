@@ -24,12 +24,17 @@
             {{-- @if($errors->has('matter_name'))
               {{ $errors->first('matter_name') }}
             @endif --}}
+
+        @php
+          $prefectures1 = DB::table('prefectures')->find($matters->prefectures_id);
+        @endphp
               <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>  
 
     <label>とどうふけん
     <select name="prefectures_id" >
+      <option value="{{ $matters->prefectures_id }}" selected>{{ $prefectures1->prefectures_name }}</p><br></option>
         @foreach ($prefectures as $prefecture)
-            <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
+            <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option>
         @endforeach
     </select>
     </label>
@@ -38,8 +43,12 @@
     <!--<input type="text" class="" placeholder="れんらくさき" 
      aria-describedby="basic-addon2" name="tel"> -->
     <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="tel" value="{{ $matters->tel }}"><br>  
+      @php
+        $occupation1 = DB::table('occupations')->find($matters->occupation_id);
+      @endphp
 
     <select name="occupation_id">
+      <option value="{{ $matters->occupation_id }}" selected>{{ $occupation1->occupation_name }}</p><br></option>
         @foreach ($occupations as $occupation)
             <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
         @endforeach
@@ -80,7 +89,7 @@
       <dt>スキル</dt>
       <dd>
     <select name="development_language_id1">
-        <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
+        <option value="{{ $matters->development_language_id1 }}" selected>{{ $devLan1->language_name }}</p><br></option>
         @foreach ($development_languages as $language)
         <option value="{{$language->id}}">{{$language->language_name}}</option> 
         @endforeach
@@ -95,13 +104,13 @@
       <dt>スキル</dt>
       <dd>
         <select name="development_language_id1">
-          <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id1 }}" selected>{{ $devLan1->language_name }}</p><br></option>
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option>
             @endforeach
         </select>
         <select name="development_language_id2">
-          <option value="" selected>{{ $devLan2->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id2 }}" selected>{{ $devLan2->language_name }}</p><br></option>
             @foreach ($development_language2s as $language2)
             <option value="{{$language2->id}}">{{$language2->language_name}}</option> 
             @endforeach    
@@ -116,19 +125,19 @@
       <dt>スキル</dt>
       <dd>
         <select name="development_language_id1">
-          <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id1 }}" selected>{{ $devLan1->language_name }}</p><br></option>
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id2">
-          <option value="" selected>{{ $devLan2->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id2 }}" selected>{{ $devLan2->language_name }}</p><br></option>
             @foreach ($development_language2s as $language2)
             <option value="{{$language2->id}}">{{$language2->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id3">
-          <option value="" selected>{{ $devLan3->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id3 }}" selected>{{ $devLan3->language_name }}</p><br></option>
             @foreach ($development_language3s as $language3)
             <option value="{{$language3->id}}">{{$language3->language_name}}</option> 
             @endforeach    
@@ -143,25 +152,25 @@
       <dt>スキル</dt>
       <dd>
         <select name="development_language_id1">
-          <option value="" selected>{{ $devLan1->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id1 }}" selected>{{ $devLan1->language_name }}</p><br></option>
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id2">
-          <option value="" selected>{{ $devLan2->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id2 }}" selected>{{ $devLan2->language_name }}</p><br></option>
             @foreach ($development_language2s as $language2)
             <option value="{{$language2->id}}">{{$language2->language_name}}</option> 
             @endforeach    
         </select>
         <select name="development_language_id3">
-          <option value="" selected>{{ $devLan3->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id3 }}" selected>{{ $devLan3->language_name }}</p><br></option>
           @foreach ($development_language3s as $language3)
           <option value="{{$language3->id}}">{{$language3->language_name}}</option> 
           @endforeach   
         </select>
         <select name="development_language_id4">
-          <option value="" selected>{{ $devLan4->language_name }}</p><br></option>
+          <option value="{{ $matters->development_language_id4 }}" selected>{{ $devLan4->language_name }}</p><br></option>
             @foreach ($development_language4s as $language4)
             <option value="{{$language4->id}}">{{$language4->language_name}}</option> 
             @endforeach    

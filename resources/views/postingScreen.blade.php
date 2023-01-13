@@ -31,22 +31,24 @@
         <!-- 案件名 -->
         <label for="dark_field" style="color:#fff;" >あんけんめい<br>
             <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->matter_name }}</p><br>
-            <!-- <p>案件名：{{$matter->matter_name}}</p> -->
     
         <!-- 都道府県 -->
+        @php
+          $prefectures1 = DB::table('prefectures')->find($matter->prefectures_id);
+        @endphp
         <label for="dark_field" style="color:#fff;" >とどうふけん<br>
-            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->prefecture->prefectures_name }}</p><br>
-            <!-- <p>都道府県：{{$matter->prefecture->prefectures_name}}</p> -->
+            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $prefectures1->prefectures_name }}</p><br>
     
         <!-- 連絡先 -->
         <label for="dark_field" style="color:#fff;" >れんらくさき<br>
             <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->tel }}</p><br>
-            <!-- <p>連絡先：{{$matter->tel}}</p> -->
 
         <!-- 職種 -->
+        @php
+            $occupation1 = DB::table('occupations')->find($matter->occupation_id);
+        @endphp
         <label for="dark_field" style="color:#fff;" >しょくしゅ<br>
-            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->occupation->occupation_name }}</p><br>
-            <!-- <p>職種：{{$matter->occupation->occupation_name}}</p> -->
+            <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $occupation1->occupation_name }}</p><br>
 
         <!-- 求めるスキル -->
         <label for="dark_field" style="color:#fff;" >求めるスキル<br>
@@ -85,12 +87,10 @@
         <!-- 成功報酬 -->
         <label for="dark_field" style="color:#fff;" >せいこうほうしゅう<br>
             <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->success_fee }}</p><br>
-            <!-- <p>成功報酬：{{$matter->success_fee}}</p> -->
 
         <!-- 案件ランク -->
         <label for="dark_field" style="color:#fff;" >あんけんランク<br>
             <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $matter->rank }}</p>
-            <!-- <p>案件ランク：{{$matter->rank}}</p> -->
     
     {{-- <p>求めるスキル{{$matter->development_language->language_name}}</p> --}}
     {{-- <p>求めるスキル{{$matter->development_languages->language_name}}</p>
