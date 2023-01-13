@@ -76,7 +76,6 @@
 
                     
                     <div class="p-port__right">
-                        development_year1
 
                     @php
                         $devLan1 = DB::table('development_languages')->find($form->development_language_id1);
@@ -116,7 +115,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん1 </label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year1" required id="dark_select"  class="p-port__prdn">
-                                            <option hidden>{{ $year1 }}</option>
+                                            {{-- <option hidden>{{ $year1 }}</option> --}}
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
