@@ -28,7 +28,8 @@
         @php
           $prefectures1 = DB::table('prefectures')->find($matters->prefectures_id);
         @endphp
-              <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>  
+              <label>あんけんめい<br>
+              <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>  
 
     <label>とどうふけん
     <select name="prefectures_id" >
@@ -42,7 +43,8 @@
 
     <!--<input type="text" class="" placeholder="れんらくさき" 
      aria-describedby="basic-addon2" name="tel"> -->
-    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="tel" value="{{ $matters->tel }}"><br>  
+    <label>れんらくさき<br>
+    <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="れんらくさき"name="tel" value="{{ $matters->tel }}"><br>  
       @php
         $occupation1 = DB::table('occupations')->find($matters->occupation_id);
       @endphp
@@ -187,20 +189,23 @@
     </label>
 <br>
 
-
-    <input type="text" class="" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks" value="{{ $matters->remarks }}">
+    <label>とっきじこう<br>
+      <textarea name="remarks" id="" cols="15" rows="15" class="nes-textarea is-dark" aria-describedby="basic-addon2" value="{{ $matters->remarks }}" placeholder="とっきじこう"></textarea>
+      <!-- <input type="text" class="nes-input is-dark p-posting__Edit" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks" value="{{ $matters->remarks }}"> -->
+    
     {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
 <br>
 
-
+    <label>ぼしゅうにんずう<br>
     <!--     <input type="number" class="" placeholder="ぼしゅうにんずう"
             aria-describedby="basic-addon2" name="number_of_person"> -->
-    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="ぼしゅうにんずう"name="number_of_person" value="{{ $matters->number_of_person }}">
+    <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="ぼしゅうにんずう"name="number_of_person" value="{{ $matters->number_of_person }}">
 <br>
 
+    <label>せいこうほうしゅう<br>
     <!--     <input type="number" class="" placeholder="せいこうほしゅう"
             aria-describedby="basic-addon2" name="success_fee"> -->
-    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="せいこうほうしゅう"name="success_fee" value="{{ $matters->success_fee }}">
+    <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="せいこうほうしゅう"name="success_fee" value="{{ $matters->success_fee }}">
 <br>
 
 <label>あんけんランク
@@ -220,7 +225,7 @@
 <form action="{{ route('matter_remove',['id'=>$matters->id]) }}" method="post">
     <div class="p-form">
 @csrf
-<input type="submit" class="nes-btn is-success" value='削除'>
+<input type="submit" class="nes-btn is-success" value='さくじょ'>
 </div>
 
 </form>

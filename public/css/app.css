@@ -960,11 +960,17 @@ textarea,
 .p-posting {
   margin: 0;
   text-align: center;
+  height: auto;
 }
 .p-posting__matter {
   height: auto;
   width: 300px;
   margin-bottom: 10px;
+}
+.p-posting__Edit {
+  height: 35px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 
 .p-mail {

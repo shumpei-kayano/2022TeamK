@@ -161,7 +161,8 @@
 
     <!-- 特記事項 -->
     <label for="dark_select" style="color:#fff;">とっきじこう</label><br>
-    <input type="text" class="nes-input is-dark p-form__portfolio" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks">
+    <textarea name="remarks" id="" cols="15" rows="15" class="nes-textarea is-dark" aria-describedby="basic-addon2" placeholder="とっきじこう"></textarea>
+    <!-- <input type="text" class="nes-input is-dark p-form__portfolio" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks"> -->
     {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
     <br>
 
