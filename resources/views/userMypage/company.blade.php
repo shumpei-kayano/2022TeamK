@@ -21,7 +21,7 @@
         </div>
         
         <div>
-            <a href="listingConfirmation"><button type="button" class="nes-btn is-warning p-myp__btn">かこけいやくいちらんを<br>かくにんする</button></a>
+            <a href="/contract"><button type="button" class="nes-btn is-warning p-myp__btn">かこけいやくいちらんを<br>かくにんする</button></a>
             
             <a href="./matter/add"><button type="button" style="margin-top: 20px" class="nes-btn is-success p-myp__btn">あんけんを<br>けいさいする</button></a>
     </div>
