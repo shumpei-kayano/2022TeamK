@@ -82,17 +82,47 @@
                         $devLan2 = DB::table('development_languages')->find($form->development_language_id2);
                         $devLan3 = DB::table('development_languages')->find($form->development_language_id3);
                         $devLan4 = DB::table('development_languages')->find($form->development_language_id4);
-
-                        // if(development_year1 == 0){
-                        //     $year1 = "3か月"
-                        // }elseif(development_year1 == 1){
-                        //     $year1 = "6か月"
-                        // }elseif(development_year1 == 2){
-                        //     $year1 = "9か月"
-                        // }else{
-                        //     $year1 = "12か月"
-                        // }
                     @endphp
+
+                    @if($form->development_year1 == 0)
+                        {{ $year1 = "3か月" }}
+                    @elseif ($form->development_year1 == 1)
+                        {{ $year1 = "6か月" }}
+                    @elseif ($form->development_year1 == 2)
+                        {{ $year1 = "9か月" }}
+                    @else
+                        {{ $year1 = "12か月" }}
+                    @endif
+
+                    @if($form->development_year2 == 0)
+                        {{ $year2 = "3か月" }}
+                    @elseif ($form->development_year2 == 1)
+                        {{ $year2 = "6か月" }}
+                    @elseif ($form->development_year2 == 2)
+                        {{ $year2 = "9か月" }}
+                    @else
+                        {{ $year2 = "12か月" }}
+                    @endif
+
+                    @if($form->development_year3 == 0)
+                        {{ $year3 = "3か月" }}
+                    @elseif ($form->development_year3 == 1)
+                        {{ $year3 = "6か月" }}
+                    @elseif ($form->development_year3 == 2)
+                        {{ $year3 = "9か月" }}
+                    @else
+                        {{ $year3 = "12か月" }}
+                    @endif
+
+                    @if($form->development_year4 == 0)
+                        {{ $year4 = "3か月" }}
+                    @elseif ($form->development_year4 == 1)
+                        {{ $year4 = "6か月" }}
+                    @elseif ($form->development_year4 == 2)
+                        {{ $year4 = "9か月" }}
+                    @else
+                        {{ $year4 = "12か月" }}
+                    @endif
 
                         <!-- 学習言語1 -->
                         <div class="p-fort__aaa">
@@ -115,6 +145,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん1 </label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year1" required id="dark_select"  class="p-port__prdn">
+                                            <option value="{{ $form->development_year1 }}" selected>{{ $year1 }}</p><br></option>
                                             {{-- <option hidden>{{ $year1 }}</option> --}}
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
@@ -146,7 +177,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん2</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year2" required id="dark_select"  class="p-port__prdn">
-                                            <option hidden>選択してください</option>
+                                            <option value="{{ $form->development_year2 }}" selected>{{ $year2 }}</p><br></option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
@@ -186,7 +217,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん3</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year3" required id="dark_select"  class="p-port__prdn">
-                                            <option hidden>選択してください</option>
+                                            <option value="{{ $form->development_year3 }}" selected>{{ $year3 }}</p><br></option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
@@ -226,7 +257,7 @@
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year4" required id="dark_select"  class="p-port__prdn">
-                                            <option hidden>選択してください</option>
+                                            <option value="{{ $form->development_year4 }}" selected>{{ $year4 }}</p><br></option>
                                             <option value="0">3か月</option>
                                             <option value="1">6か月</option>
                                             <option value="2">9か月</option>
