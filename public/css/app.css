@@ -957,6 +957,16 @@ textarea,
   margin-bottom: 10px;
 }
 
+.p-posting {
+  margin: 0;
+  text-align: center;
+}
+.p-posting__matter {
+  height: auto;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
 .p-mail {
   color: #b5e66a;
   text-align: center;
