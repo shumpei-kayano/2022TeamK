@@ -22,9 +22,9 @@
         
                 <tbody>
                 <tr>
-                    <td>かいと</td>
-                    <td>おかま</td>
-                    <td>だめ</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td><a href="{{}}" class="">詳細</a></td>
                 </tr>
                 </tbody>
