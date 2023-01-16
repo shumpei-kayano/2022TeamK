@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Order_received_matter;
+use App\Matter;
 
 
 class UserMypageController extends Controller
@@ -97,7 +100,11 @@ class UserMypageController extends Controller
 
     public function kakunin(Request $request)
     {
-        return view('./userMypage/kakunin');
+        $user = Auth::user();
+        // dd($user->id);
+        $order_received_matters = Order_received_matter::where('user_id', $user->id)->get();
+        // dd($order_received_matter);
+        return view('./userMypage/kakunin', compact('order_received_matters'));
     }
 
     public function company(Request $request)
