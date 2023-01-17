@@ -540,7 +540,7 @@
     }
 }
 
-//掲載中案件（確認）
+//掲載中案件
 .p-posting {
     margin: 0;
     text-align: center;
@@ -555,6 +555,12 @@
         height: 35px;
         width: 250px;
         margin-bottom: 20px;   
+    }
+    
+    /*テキストボックス*/
+    &__textarea {
+        height: 380px; /* 高さ */
+        width: 250px;  /* 横幅 */
     }
 }
 

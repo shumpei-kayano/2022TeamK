@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','案件掲載')
+@section('title','案件掲載(編集)')
 
 @section('content')
 {{-- @if (Auth::check())
@@ -190,7 +190,7 @@
 <br>
 
     <label>とっきじこう<br>
-      <textarea name="remarks" id="" cols="15" rows="15" class="nes-textarea is-dark" aria-describedby="basic-addon2" value="{{ $matters->remarks }}" placeholder="とっきじこう"></textarea>
+      <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" value="{{ $matters->remarks }}" placeholder="とっきじこう"></textarea>
       <!-- <input type="text" class="nes-input is-dark p-posting__Edit" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks" value="{{ $matters->remarks }}"> -->
     
     {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
