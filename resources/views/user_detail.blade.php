@@ -63,7 +63,7 @@
         @csrf
         <button type="submit">承認</button>
     </form>
-    <form method="POST" action="{{ route('rejected') }}">
+    <form method="POST" action="{{ route('rejected', ['id'=>$form]) }}">
         @csrf
         <button type="submit">却下</button>
     </form>

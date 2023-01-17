@@ -62,15 +62,11 @@
                         -->
                         
                     <!--生年月日 -->
-                    <label for="birthday" style="color:#fff;" >生年月日
+                    {{-- <label for="birthday" style="color:#fff;" >生年月日
                         @if($errors->has('birthday'))
                             {{ $errors->first('birthday') }}
                         @endif
-                            <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday">
-                    <!--  
-                    <label for="birthday" style="color:#fff;" >生年月日<br>
-                        <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="yyyy/mm/dd" name="birthday" value='{{ $form->birtday }}'><br>
-                        -->
+                            <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="{{ $form->birtday }}" name="birthday"> --}}
                     </div>
                     
 
@@ -85,43 +81,43 @@
                     @endphp
 
                     @if($form->development_year1 == 0)
-                        {{ $year1 = "3か月" }}
+                        <option hidden>{{ $year1 = "3か月" }}</option>
                     @elseif ($form->development_year1 == 1)
-                        {{ $year1 = "6か月" }}
+                        <option hidden>{{ $year1 = "6か月" }}</option>
                     @elseif ($form->development_year1 == 2)
-                        {{ $year1 = "9か月" }}
+                        <option hidden>{{ $year1 = "9か月" }}</option>
                     @else
-                        {{ $year1 = "12か月" }}
+                        <option hidden>{{ $year1 = "12か月" }}</option>
                     @endif
 
                     @if($form->development_year2 == 0)
-                        {{ $year2 = "3か月" }}
+                        <option hidden>{{ $year2 = "3か月" }}</option>
                     @elseif ($form->development_year2 == 1)
-                        {{ $year2 = "6か月" }}
+                        <option hidden>{{ $year2 = "6か月" }}</option>
                     @elseif ($form->development_year2 == 2)
-                        {{ $year2 = "9か月" }}
+                        <option hidden>{{ $year2 = "9か月" }}</option>
                     @else
-                        {{ $year2 = "12か月" }}
+                        <option hidden>{{ $year2 = "12か月" }}</option>
                     @endif
 
                     @if($form->development_year3 == 0)
-                        {{ $year3 = "3か月" }}
+                        <option hidden>{{ $year3 = "3か月" }}</option>
                     @elseif ($form->development_year3 == 1)
-                        {{ $year3 = "6か月" }}
+                        <option hidden>{{ $year3 = "6か月" }}</option>
                     @elseif ($form->development_year3 == 2)
-                        {{ $year3 = "9か月" }}
+                        <option hidden>{{ $year3 = "9か月" }}</option>
                     @else
-                        {{ $year3 = "12か月" }}
+                        <option hidden>{{ $year3 = "12か月" }}</option>
                     @endif
 
                     @if($form->development_year4 == 0)
-                        {{ $year4 = "3か月" }}
+                        <option hidden>{{ $year4 = "3か月" }}</option>
                     @elseif ($form->development_year4 == 1)
-                        {{ $year4 = "6か月" }}
+                        <option hidden>{{ $year4 = "6か月" }}</option>
                     @elseif ($form->development_year4 == 2)
-                        {{ $year4 = "9か月" }}
+                        <option hidden>{{ $year4 = "9か月" }}</option>
                     @else
-                        {{ $year4 = "12か月" }}
+                        <option hidden>{{ $year4 = "12か月" }}</option>
                     @endif
 
                         <!-- 学習言語1 -->

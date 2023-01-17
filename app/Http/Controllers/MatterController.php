@@ -256,11 +256,24 @@ class MatterController extends Controller
         return redirect()->route('matter.add');
     }
 
-    public function rejected(Request $request)
+    public function rejected(Request $request, $id)
     {
-        $order_received_matter = Order_received_matter::find();
+        $order_received_matter = Order_received_matter::find($id);
         $order_received_matter->adoption_flg = 2;
         $order_received_matter->save();
-        return view('/list');
+        return redirect()->route('matter.add');
+    }
+
+    public function contract()
+    {
+        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->where('adoption_flg','=','1')->with('user:id,name','matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        return view('./contract',['order_received_matters' => $order_received_matters,]);
+    }
+
+    public function evaluation(Request $request, $id)
+    {
+        $form = $request->input('form');
+        
+        return view('./evaluation', compact('form','id'));
     }
 }

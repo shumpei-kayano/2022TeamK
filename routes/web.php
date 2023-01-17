@@ -56,7 +56,9 @@ Route::get('/mattertest', 'MatterController@index')->name('mattertest');
 Route::get('/matter/add', 'MatterController@add')->name('matter.add');
 Route::get('/detail/{id}', 'MatterController@detail')->name('matter.detail');
 Route::post('/approval/{id}', 'MatterController@approval')->name('approval');
-Route::post('/rejected', 'MatterController@rejected')->name('rejected');
+Route::post('/rejected/{id}', 'MatterController@rejected')->name('rejected');
+Route::get('/contract', 'MatterController@contract')->name('contract');
+Route::post('/evaluation/{id}', 'MatterController@evaluation')->name('evaluation');
 
     //案件に応募する
 Route::post('/submission', 'RecievedMatterController@matterSubmission')->name('submission');
