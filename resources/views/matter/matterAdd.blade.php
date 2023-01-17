@@ -26,6 +26,8 @@
           <!-- 都道府県 -->
           <label>とどうふけん
           <select name="prefectures_id" >
+            <option value="" selected>エリア選択</option>
+
               @foreach ($prefectures as $prefecture)
                   <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
               @endforeach
@@ -86,6 +88,7 @@
       <dt>スキル</dt>
       <dd>
         <select name="development_language_id1">
+          <option value="" selected>選択</option>
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
