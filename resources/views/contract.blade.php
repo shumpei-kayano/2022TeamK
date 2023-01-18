@@ -40,6 +40,7 @@
     <thead>
         <th>案件名</th>
         <th>応募ユーザー</th>
+        <th></th>
     </thead>
     <tbody>
         @foreach ($order_received_matters as $order_received_matter)
@@ -52,14 +53,41 @@
                 <td class="table-text">
                     <div>{{ $order_received_matter->user->name }}</div>
                 </td>
-
+                <td>
                 <form method="POST" action="{{ route('evaluation', ['id'=>$order_received_matter->user_id]) }}">
                     @csrf
-                    <input type="hidden" name="form" value="{{ $order_received_matter->id }}">
+                    <input type="hidden" name="rank" value="{{$order_received_matter->rank}}">
+                    <div>
+                        <input type="radio" name="form" value="1" checked>
+                        <label>1</label>
+                      </div>
+                  
+                      <div>
+                        <input type="radio" name="form" value="2">
+                        <label>2</label>
+                      </div>
+                  
+                      <div>
+                        <input type="radio" name="form" value="3">
+                        <label>3</label>
+                      </div>
+                  
+                      <div>
+                        <input type="radio" name="form" value="4">
+                        <label>4</label>
+                      </div>
+                  
+                      <div>
+                        <input type="radio" name="form" value="5">
+                        <label>5</label>
+                      </div>
+                    </td>
+                    <td>
                     <button type="submit">評価</button>
                 </form>
-
-                <td>
+            </td>
+                
+                
             </tr>
         @endforeach
     </tbody>
