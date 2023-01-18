@@ -274,7 +274,32 @@ class MatterController extends Controller
     public function evaluation(Request $request, $id)
     {
         $form = $request->input('form');
+        $rank = $request->input('rank');
+        $max_exe = DB::table('rank_of_difficulties')->where('rank', $rank)->first();
+        $exe = 0;
+        $user_db = User::find($id);
         
+        
+        if ($form == 1) {
+            $exe = $max_exe->max_experience *0.5;
+        }
+        else if ($form == 2) {
+            $exe = $max_exe->max_experience *0.7;
+        }
+        else if ($form == 3) {
+            $exe = $max_exe->max_experience *0.8;
+        }
+        else if ($form == 4) {
+            $exe = $max_exe->max_experience *0.9;
+        }
+        else {
+            $exe = $max_exe->max_experience;
+        }
+
+        $user_db->total_experience = $user_db->total_experience + $exe;
+        // dd($user_db->total_experience);
+        $user_db->save();
+
         return view('./evaluation', compact('form','id'));
     }
 }

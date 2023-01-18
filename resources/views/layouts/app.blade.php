@@ -44,6 +44,7 @@
                             <li class="c-nav__list"><a href="/show">あんけん</a></li>
                             <li class="c-nav__list"><a href="/portfolio">ポートフォリオ</a></li>
                             <li class="c-nav__list"><a href="/company">きぎょう</a></li>
+                            <li class="c-nav__list"><a href="/kakunin">かくにん</a></li>
                         </ul>
                     @endauth
 

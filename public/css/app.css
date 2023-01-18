@@ -597,7 +597,7 @@ textarea,
 .p-acinfo {
   text-align: center;
   margin-top: 130px;
-  width: 550px;
+  width: 1000px;
 }
 .p-acinfo__input {
   margin-bottom: 15px;
@@ -622,6 +622,9 @@ textarea,
 }
 .p-acinfo__btn-container {
   text-align: center;
+}
+.p-acinfo__left {
+  float: left;
 }
 
 .p-info {
