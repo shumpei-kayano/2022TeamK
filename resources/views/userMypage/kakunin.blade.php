@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1>かくにん</h1>
+<h1 class="p-form" style="padding-top:55px">かくにん</h1>
 
 <div class="favorite">
     <div class="nes-container is-dark with-title favorite__container">
