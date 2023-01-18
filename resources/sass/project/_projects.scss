@@ -105,7 +105,7 @@
 .p-acinfo {
     text-align: center;
     margin-top: 130px;
-    width: 550px;
+    width: 1000px;
     &__input {
         margin-bottom: 15px;
     }
@@ -129,6 +129,9 @@
     }
     &__btn-container {
         text-align: center;
+    }
+    &__left {
+        float: left;
     }
 }
 

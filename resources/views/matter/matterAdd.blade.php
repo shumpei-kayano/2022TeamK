@@ -15,7 +15,8 @@
       <div class="nes-container is-rounded is-dark p-acinfo">
         <form action="{{ route('matter.post')}}" method="post">
 
-      @csrf     
+      @csrf
+          <div class="p-acinfo__left">
           <!-- 案件名 -->
           <label for="dark_select" style="color:#fff;">あんけんめい</label><br>
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい" name="matter_name"><br> 
@@ -161,7 +162,10 @@
     <input type="date" class=""
             aria-describedby="basic-addon2" name="deadline">
     </label><br><br>
+          </div>
 
+
+          <div class="p-acinfo__right">
     <!-- 特記事項 -->
     <label for="dark_select" style="color:#fff;">とっきじこう</label><br>
     <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" placeholder="とっきじこう"></textarea>
@@ -189,11 +193,13 @@
               @endforeach
       </select>
     </label><br> 
+          </div>
     
     <!-- 確認ボタン -->
     <input type="submit" class="nes-btn is-success p-acinfo__btn" value="かくにん">
+    
 </div>
-</div>
+    </div>
 
 </form>
 </div>
