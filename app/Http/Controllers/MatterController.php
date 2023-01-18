@@ -231,9 +231,10 @@ class MatterController extends Controller
 
     public function detail($id)
     {
+        $user = Auth::user();
         $matter = Matter::find($id);
         $favorite = Favorite::where('user_id', auth()->user()->id)->where('matter_id', $id)->first();
-        return view('./matter_detail', compact('matter', 'favorite'));
+        return view('./matter_detail', compact('matter', 'favorite','user'));
     }
     public function list()
     {

@@ -19,7 +19,7 @@ class RecievedMatterController extends Controller
     public function matterSubmission(Request $request)
     {
         $matter = Matter::find($request->matter_id);
-       $recievedMatter = new Order_received_matter();
+        $recievedMatter = new Order_received_matter();
         $recievedMatter->matter_id = $request->matter_id;
         $recievedMatter->user_id = auth()->user()->id;
         $recievedMatter->create_user_id = $matter->user_id;
@@ -36,6 +36,6 @@ class RecievedMatterController extends Controller
         $recievedMatter->achievement_date = date('Y/m/d');
         $recievedMatter->save();
 
-        return redirect('/favorite_list');
+        return redirect('home');
     }
 }
