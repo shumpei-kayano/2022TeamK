@@ -53,6 +53,7 @@
                         <form method="POST" action="{{ route('evaluation', ['id'=>$order_received_matter->user_id]) }}">
                             @csrf
                             <input type="hidden" name="rank" value="{{$order_received_matter->rank}}">
+                          <div style="float: left">
                             <div>
                                 <input type="radio" name="form" value="1" checked>
                                 <label>1</label>
@@ -79,6 +80,7 @@
                               </div>
                             </td>
                             <td>
+                            </div>
                             <button type="submit">評価</button>
                         </form>
                     </td>
