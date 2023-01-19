@@ -43,6 +43,7 @@
         <th></th>
     </thead>
     <tbody>
+ 
         @foreach ($order_received_matters as $order_received_matter)
             <tr>
                 <!-- 商品名 -->
@@ -53,10 +54,12 @@
                 <td class="table-text">
                     <div>{{ $order_received_matter->user->name }}</div>
                 </td>
+                @if ($order_received_matter->evaluation == 0)  
                 <td>
                 <form method="POST" action="{{ route('evaluation', ['id'=>$order_received_matter->user_id]) }}">
                     @csrf
                     <input type="hidden" name="rank" value="{{$order_received_matter->rank}}">
+                    <input type="hidden" name="order_id" value="{{$order_received_matter->id}}">
                     <div>
                         <input type="radio" name="form" value="1" checked>
                         <label>1</label>
@@ -82,10 +85,14 @@
                         <label>5</label>
                       </div>
                     </td>
-                    <td>
+                    <td>  
                     <button type="submit">評価</button>
                 </form>
             </td>
+            @else 
+            <td></td>
+            <td>評価しました。</td>
+            @endif
                 
                 
             </tr>
