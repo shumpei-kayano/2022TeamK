@@ -71,7 +71,7 @@
                             <div class="p-port__prdn1">   
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
                                         <div class="nes-select is-dark p-port__prdn">
-                                            <select name="development_language_id1" required id="dark_select">
+                                            <select name="development_language_id1" required id="dark_select" placeholder="@if($errors->has('development_language_id1')){{ $errors->first('development_language_id1') }}@endif">
                                                 <option hidden>選択してください</option>
                                                 @foreach ($items as $item)
                                                 <option value="{{ $item->id }}">{{  $item->language_name  }}</option>

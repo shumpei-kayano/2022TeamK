@@ -47,8 +47,6 @@
                         <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" disabled value="yyyy/mm/dd" name="birthday">
              </div>
 
-
-
             <!-- 自己PR -->
             <div class="p-port__PR">
                 <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>

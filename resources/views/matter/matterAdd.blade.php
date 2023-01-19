@@ -19,6 +19,9 @@
           <div class="p-acinfo__left">
           <!-- 案件名 -->
           <label for="dark_select" style="color:#fff;">あんけんめい</label><br>
+              @if($errors->has('matter_name'))
+                {{ $errors->first('matter_name') }}
+              @endif
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい" name="matter_name"><br> 
             <!--     <input type="text" class="" placeholder="あんけんめい" aria-describedby="basic-addon2" name="matter_name"> -->
 
@@ -27,6 +30,9 @@
           <!-- 都道府県 -->
           <label>とどうふけん
           <select name="prefectures_id" >
+            @if($errors->has('matter_name'))
+                {{ $errors->first('matter_name') }}
+              @endif
             <option value="" selected>エリア選択</option>
 
               @foreach ($prefectures as $prefecture)

@@ -155,6 +155,12 @@ return [
         'educational_background' => 'さいしゅうがくれき',
         'birthday' => '生年月日',
         'self_pr' => '自己PR',
+        'development_language_id1' => '学習言語',
+        'matter_name' => '案件名',
+        'remarks' => '特記事項',
+        'success_fee' => '成功報酬',
+        'rank' => 'ランク',
+        'number_of_person' => '応募者数'
     ],
 
 ];

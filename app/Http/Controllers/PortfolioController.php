@@ -46,6 +46,7 @@ class PortfolioController extends Controller
             'educational_background' => 'required',
             'self_pr' => 'required',
             'birthday' => 'required',
+            'development_language_id1' => 'required'
         ]);
         $portfolio = new Portfolio;
         $form = $request->all();

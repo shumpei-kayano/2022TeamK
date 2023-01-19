@@ -73,14 +73,14 @@ class MatterController extends Controller
 
     public function matterUpdate(Request $request,$id)
     {
-        // $request->validate([
-        //     'matter_name' => 'required',
-        //     'remarks' => 'required',
-        //     'tel' => 'numeric',
-        //     'success_fee' => 'numeric',
-        //     'rank' => 'numeric',
-        //     'number_of_person' => 'numeric',
-        // ]);
+        $request->validate([
+            'matter_name' => 'required',
+            'remarks' => 'required',
+            'tel' => 'numeric',
+            'success_fee' => 'numeric',
+            'rank' => 'numeric',
+            'number_of_person' => 'numeric',
+        ]);
         $user = Auth::user();
         $matters = Matter::where('id',$id)->first();
         $form = $request->all();
