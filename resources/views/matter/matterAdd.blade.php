@@ -187,7 +187,7 @@
 
     <!-- 成功報酬 -->
     <label for="dark_select" style="color:#fff;">せいこうほうしゅう</label><br>
-    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="せいこうほうしゅう"name="success_fee">
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="きんがく"name="success_fee">
     <br>
     <!-- <input type="number" class="" placeholder="せいこうほしゅう"aria-describedby="basic-addon2" name="success_fee"> --> 
 

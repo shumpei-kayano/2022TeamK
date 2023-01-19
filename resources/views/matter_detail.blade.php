@@ -48,7 +48,14 @@
                 @endif
               </td>
               <td>
+                @php
+                $user_id = Auth::user()->id;
+                $matters = DB::table('order_received_matters')->where('matter_id', $matter->id)->get();
+                $e = $matters->where('user_id', $user_id)->first();
+                // dd($e);
 
+                @endphp
+                @if (!isset($e))
                 {{--  応募するボタン  --}}
                 @if($user->total_experience < 100 && $matter->rank > 2)
                   応募できません
@@ -65,10 +72,13 @@
                 @else
                   <form action="{{route('submission')}}" method="POST">
                     @csrf
-                    <input type="hidden" name="matter_id" value="{{$matter->id}}">
-                    <button type="submit">おうぼする</button>
-                </form>
+                  <input type="hidden" name="matter_id" value="{{$matter->id}}">
+                  <button type="submit">おうぼする</button>
+              </form>
                 @endif
+              @else
+              おうぼずみ
+              @endif
               </td>
             </tr>
 
