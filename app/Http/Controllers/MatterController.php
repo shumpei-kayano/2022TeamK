@@ -275,9 +275,11 @@ class MatterController extends Controller
     {
         $form = $request->input('form');
         $rank = $request->input('rank');
+        $order_id = $request->input('order_id');
         $max_exe = DB::table('rank_of_difficulties')->where('rank', $rank)->first();
         $exe = 0;
         $user_db = User::find($id);
+        $matter = Order_received_matter::find($order_id);
         
         
         if ($form == 1) {
@@ -299,6 +301,10 @@ class MatterController extends Controller
         $user_db->total_experience = $user_db->total_experience + $exe;
         // dd($user_db->total_experience);
         $user_db->save();
+
+        $matter->evaluation = 1;
+        $matter->save();
+        // dd($matter->evaluation);
 
         return view('./evaluation', compact('form','id'));
     }
