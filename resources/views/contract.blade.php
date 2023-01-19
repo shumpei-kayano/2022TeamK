@@ -80,7 +80,7 @@
                               </div>
                             </td>
                             <td>
-                            </div>
+                             </div>
                             <button type="submit">評価</button>
                         </form>
                     </td>
