@@ -1,14 +1,14 @@
 /*  ゲーム風フォントの設定  */
-@font-face {
-    /*   適用させるフォント名 → 間違っていると反映されないので注意  */
-    font-family: "Nu きなこもち";
-    /*   .otf, .ttfの拡張子がついているファイルがフォントファイルである。   */
-    /*   フォントファイルが何処場所にあるのか : パスを書いてあげる   */
-    src: url(/fonts/NuKinakoMochi-Reg.otf);
-}
+// @font-face {
+//     /*   適用させるフォント名 → 間違っていると反映されないので注意  */
+//     font-family: "Nu きなこもち";
+//     /*   .otf, .ttfの拡張子がついているファイルがフォントファイルである。   */
+//     /*   フォントファイルが何処場所にあるのか : パスを書いてあげる   */
+//     src: url(/fonts/NuKinakoMochi-Reg.otf);
+// }
 
 body {
-    font-family: "Nu きなこもち";
+    font-family: "Noto Sans JP";
     color: white;
     font-size: 16px;
     line-height: 1.5;

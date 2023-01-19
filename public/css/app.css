@@ -597,7 +597,7 @@ textarea,
 .p-acinfo {
   text-align: center;
   margin-top: 130px;
-  width: 1000px;
+  width: 500px;
 }
 .p-acinfo__input {
   margin-bottom: 15px;
@@ -1050,15 +1050,8 @@ textarea,
 }
 
 /*  ゲーム風フォントの設定  */
-@font-face {
-  /*   適用させるフォント名 → 間違っていると反映されないので注意  */
-  font-family: "Nu きなこもち";
-  /*   .otf, .ttfの拡張子がついているファイルがフォントファイルである。   */
-  /*   フォントファイルが何処場所にあるのか : パスを書いてあげる   */
-  src: url(/fonts/NuKinakoMochi-Reg.otf);
-}
 body {
-  font-family: "Nu きなこもち";
+  font-family: "Noto Sans JP";
   color: white;
   font-size: 16px;
   line-height: 1.5;
