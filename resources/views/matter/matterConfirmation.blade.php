@@ -30,6 +30,9 @@
               @endif
 <p>れんらくさき:{{$input["tel"]}}</p>
 
+<p>案件名:{{$input["matter_name"]}}</p>
+<p>都道府県:{{$prefecture->prefectures_name}}</p>
+<p>連絡先:{{$input["tel"]}}</p>
 <p>職種:{{$occupation->occupation_name}}</p>
 <p>求めるスキル:{{$development_language1->language_name}}</p>
 <p>求めるスキル:{{$development_language2->language_name}}</p>
@@ -56,10 +59,14 @@
 @endif
 <p>あんけんランク:{{$input["rank"]}}</p>
 
+<p>特記事項:{{$input["remarks"]}}</p>
+<p>募集人数:{{$input["number_of_person"]}}</p>
+<p>成功報酬:{{$input["success_fee"]}}</p>
+<p>案件ランク:{{$input["rank"]}}</p>
 </div>
 </div>
 
-<input type="submit" class="nes-btn is-success" value="とうろく">
+<input type="submit" class="nes-btn is-success" value="登録">
 
 </form>
 </div>

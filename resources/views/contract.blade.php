@@ -33,8 +33,7 @@
                 </tbody>
         @endforeach --}}
             </table>
-    </div>
-</div>
+
 
 <table>
     <thead>
@@ -93,7 +92,8 @@
             <td></td>
             <td>評価しました。</td>
             @endif
-                
+    </div>
+</div>                
                 
             </tr>
         @endforeach

@@ -41,10 +41,10 @@
                             <li class="c-nav__list"><a href="/account">アカウント</a></li>
                             {{-- <li class="c-nav__list"><a href="/favorite">お気に入り</a></li> --}}
                             <li class="c-nav__list"><a href="{{ route('favorite_list')}}">お気に入り</a></li>
-                            <li class="c-nav__list"><a href="/show">あんけん</a></li>
+                            <li class="c-nav__list"><a href="/show">案件検索</a></li>
                             <li class="c-nav__list"><a href="/portfolio">ポートフォリオ</a></li>
-                            <li class="c-nav__list"><a href="/company">きぎょう</a></li>
-                            <li class="c-nav__list"><a href="/kakunin">かくにん</a></li>
+                            <li class="c-nav__list"><a href="/company">企業</a></li>
+                            <li class="c-nav__list"><a href="/kakunin">確認</a></li>
                         </ul>
                     @endauth
 

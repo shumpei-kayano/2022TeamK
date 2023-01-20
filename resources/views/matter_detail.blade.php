@@ -35,14 +35,14 @@
                                 <input type="hidden" name="matter_id" value="{{$matter->id}}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">お気に入りかいじょ</button>
+                                <button type="submit">お気に入り解除</button>
                             </form>
                         @else
                             {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
                             <form action="{{route('favorite2', ['id'=>$matter->id])}}" method="POST">
                                 @csrf
                                 <input type="hidden" name="matter_id" value="{{$matter->id}}">
-                                <button type="submit">お気に入りとうろく</button>
+                                <button type="submit">お気に入り登録</button>
                             </form>
                         @endif
                 @endif
@@ -73,11 +73,11 @@
                   <form action="{{route('submission')}}" method="POST">
                     @csrf
                   <input type="hidden" name="matter_id" value="{{$matter->id}}">
-                  <button type="submit">おうぼする</button>
+                  <button type="submit">応募する</button>
               </form>
                 @endif
               @else
-              おうぼずみ
+              応募済み
               @endif
               </td>
             </tr>

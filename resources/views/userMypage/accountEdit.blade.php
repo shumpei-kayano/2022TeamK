@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1 class="p-form">アカウントじょうほうへんしゅう</h1>
+<h1 class="p-form">アカウント情報編集</h1>
 <form action="{{ route('account_update') }}" method="post">
     @csrf
 <div class="p-acinfoEdit__container2">

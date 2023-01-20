@@ -10,19 +10,19 @@
 <a href="/register">登録</a>)</p>
 @endif --}}
 <div class="p-form">
-  <h1 class="p-form">あんけんけいさい</h1>
+  <h1 class="p-form">案件掲載</h1>
     <div class="p-acinfo__container">
-      <div class="nes-container is-rounded is-dark p-acinfo">
+      <div class="nes-container is-rounded is-dark p-anken">
         <form action="{{ route('matter.post')}}" method="post">
 
       @csrf
           <div class="p-acinfo__left">
           <!-- 案件名 -->
-          <label for="dark_select" style="color:#fff;">あんけんめい</label><br>
+          <label for="dark_select" style="color:#fff;">案件名</label><br>
               @if($errors->has('matter_name'))
                 {{ $errors->first('matter_name') }}
               @endif
-            <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="あんけんめい" name="matter_name"><br> 
+            <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="案件名を入力してください" name="matter_name"><br> 
             <!--     <input type="text" class="" placeholder="あんけんめい" aria-describedby="basic-addon2" name="matter_name"> -->
 
           <input type="hidden" name="user_id" value="{{$user->id}}">
@@ -30,6 +30,11 @@
           <!-- 都道府県 -->
           <label>とどうふけん
             <select name="prefectures_id" >
+          <label>都道府県
+          <select name="prefectures_id" >
+            @if($errors->has('matter_name'))
+                {{ $errors->first('matter_name') }}
+              @endif
             <option value="" selected>エリア選択</option>
               @if($errors->has('prefectures_id'))
                   {{ $errors->first('prefectures_id') }}
@@ -47,10 +52,12 @@
                 {{ $errors->first('tel') }}
               @endif
             <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="tel"><br>  
+          <label for="dark_select" style="color:#fff;">連絡先</label><br>
+            <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="連絡先を入力してください"name="tel"><br>  
             <!--<input type="text" class="" placeholder="れんらくさき" aria-describedby="basic-addon2" name="tel"> -->
 
           <!-- 職業 -->
-          <label for="dark_select" style="color:#fff;">しょくぎょう</label><br>
+          <label for="dark_select" style="color:#fff;">職業</label><br>
             <select name="occupation_id">
                 @foreach ($occupations as $occupation)
                     <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
@@ -170,6 +177,7 @@
         @if($errors->has('deadline'))
           {{ $errors->first('deadline') }}
         @endif
+    <label for="dark_select" style="color:#fff;">期限</label><br>
     <input type="date" class=""
             aria-describedby="basic-addon2" name="deadline">
     </label><br><br>
@@ -183,6 +191,8 @@
         {{ $errors->first('remarks') }}
       @endif
     <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" placeholder="とっきじこう"></textarea>
+    <label for="dark_select" style="color:#fff;">特記事項</label><br>
+    <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" placeholder="特記事項があれば入力してください"></textarea>
     <!-- <input type="text" class="nes-input is-dark p-form__portfolio" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks"> -->
     {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
     <br>
@@ -193,6 +203,8 @@
         {{ $errors->first('number_of_person') }}
       @endif
     <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="ぼしゅうにんずう"name="number_of_person">
+    <label for="dark_select" style="color:#fff;">募集人数</label><br>
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="募集人数を入力してください"name="number_of_person">
     <br>
     <!-- <input type="number" class="" placeholder="ぼしゅうにんずう"aria-describedby="basic-addon2" name="number_of_person"> -->
 
@@ -202,6 +214,8 @@
         {{ $errors->first('success_fee') }}
       @endif
     <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="きんがく"name="success_fee">
+    <label for="dark_select" style="color:#fff;">成功報酬</label><br>
+    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="金額を入力してください"name="success_fee">
     <br>
     <!-- <input type="number" class="" placeholder="せいこうほしゅう"aria-describedby="basic-addon2" name="success_fee"> --> 
 
@@ -210,6 +224,7 @@
       @if($errors->has('rank'))
         {{ $errors->first('rank') }}
       @endif
+    <label>案件ランク
       <select name="rank" id="rank">
               @foreach ($rank_of_difficulties as $item)
                   <option value="{{$item->id}}">{{$item->rank}}</option> 
@@ -219,7 +234,7 @@
           </div>
     
     <!-- 確認ボタン -->
-    <input type="submit" class="nes-btn is-success p-acinfo__btn" value="かくにん">
+    <input type="submit" class="nes-btn is-success p-acinfo__btn" value="確認">
     
 </div>
     </div>
