@@ -175,7 +175,7 @@
                         </div>
 
 
-                         <!-- 学習言語5 -->
+                         <!-- 学習言語5 
                         <div class="p-fort__eee">
                             <div class="p-port__prdn1">  
                                 <label for="dark_select" style="color:#fff;">がくしゅうげんご５</label><br>
@@ -187,10 +187,10 @@
                                             @endforeach <br>
                                         </select><br>
                                     </div>
-                            </div>
+                            </div>-->
 
 
-                             <!-- 学習期間5 -->
+                             <!-- 学習期間5 
                             <div class="p-port__prdn2">
                                 <label for="dark_select" style="color:#fff;">がくしゅうきかん５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
@@ -202,7 +202,7 @@
                                         </select><br>
                                     </div>
                             </div>
-                        </div>
+                        </div>-->
 
                     </div>
 

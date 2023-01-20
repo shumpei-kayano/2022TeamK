@@ -12,7 +12,7 @@
 <div class="p-form">
   <h1 class="p-form">あんけんけいさい</h1>
     <div class="p-acinfo__container">
-      <div class="nes-container is-rounded is-dark p-acinfo">
+      <div class="nes-container is-rounded is-dark p-anken">
         <form action="{{ route('matter.post')}}" method="post">
 
       @csrf

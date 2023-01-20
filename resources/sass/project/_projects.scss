@@ -105,7 +105,7 @@
 .p-acinfo {
     text-align: center;
     margin-top: 130px;
-    width: 1000px;
+    width: 600px;
     &__input {
         margin-bottom: 15px;
     }
@@ -119,7 +119,7 @@
         margin-top: 30px;
     }
     &__id {
-        text-indent:-167px;
+        text-indent:-290px;
     }
     &__btn {
         width: 110px;
@@ -144,6 +144,7 @@
     text-align: center;
     margin-top: 130px;
     width: 500px;
+    height: 220px;
     &__input {
         margin-bottom: 15px;
     }
@@ -541,6 +542,13 @@
         width: 300px;
         margin-bottom: 10px;
     }
+}
+
+//掲載中案件（黒い部分のサイズ）
+.p-anken {
+    text-align: center;
+    margin-top: 130px;
+    width: 700px;
 }
 
 //掲載中案件
