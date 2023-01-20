@@ -254,7 +254,7 @@ class MatterController extends Controller
         $order_received_matter = Order_received_matter::find($id);
         $order_received_matter->adoption_flg = 1;
         $order_received_matter->save();
-        return redirect()->route('matter.add');
+        return view('/home');
     }
 
     public function rejected(Request $request, $id)
@@ -262,7 +262,7 @@ class MatterController extends Controller
         $order_received_matter = Order_received_matter::find($id);
         $order_received_matter->adoption_flg = 2;
         $order_received_matter->save();
-        return redirect()->route('matter.add');
+        return view('/home');
     }
 
     public function contract()

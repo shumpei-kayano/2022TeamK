@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1 class="p-form">かこけいやくいちらん</h1>
+<h1 class="p-form">評価</h1></h1>
 
 <div class="favorite">
     <div class="nes-container is-dark with-title favorite__container">

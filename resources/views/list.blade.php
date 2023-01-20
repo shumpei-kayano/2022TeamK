@@ -38,7 +38,7 @@
 
 <table>
     <thead>
-        <th>商品名</th>
+        <th>案件名</th>
         <th>登録ユーザー</th>
     </thead>
     <tbody>
