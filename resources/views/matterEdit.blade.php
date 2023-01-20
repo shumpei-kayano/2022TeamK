@@ -29,10 +29,16 @@
           $prefectures1 = DB::table('prefectures')->find($matters->prefectures_id);
         @endphp
               <label>あんけんめい<br>
+                @if($errors->has('matter_name'))
+                {{ $errors->first('matter_name') }}
+              @endif
               <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>  
 
     <label>とどうふけん
     <select name="prefectures_id" >
+       @if($errors->has('prefectures_id'))
+                  {{ $errors->first('prefectures_id') }}
+                @endif
       <option value="{{ $matters->prefectures_id }}" selected>{{ $prefectures1->prefectures_name }}</p><br></option>
         @foreach ($prefectures as $prefecture)
             <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option>
@@ -44,6 +50,9 @@
     <!--<input type="text" class="" placeholder="れんらくさき" 
      aria-describedby="basic-addon2" name="tel"> -->
     <label>れんらくさき<br>
+      @if($errors->has('tel'))
+                {{ $errors->first('tel') }}
+              @endif
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="れんらくさき"name="tel" value="{{ $matters->tel }}"><br>  
       @php
         $occupation1 = DB::table('occupations')->find($matters->occupation_id);
@@ -184,12 +193,18 @@
 
 <br>
     <label>期限
+      @if($errors->has('deadline'))
+          {{ $errors->first('deadline') }}
+        @endif
     <input type="date" class=""
             aria-describedby="basic-addon2" name="deadline" value="{{ $matters->deadline }}">
     </label>
 <br>
 
     <label>とっきじこう<br>
+      @if($errors->has('remarks'))
+        {{ $errors->first('remarks') }}
+      @endif
       <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" value="{{ $matters->remarks }}" placeholder="とっきじこう"></textarea>
       <!-- <input type="text" class="nes-input is-dark p-posting__Edit" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks" value="{{ $matters->remarks }}"> -->
     
@@ -197,12 +212,18 @@
 <br>
 
     <label>ぼしゅうにんずう<br>
+      @if($errors->has('number_of_person'))
+        {{ $errors->first('number_of_person') }}
+      @endif
     <!--     <input type="number" class="" placeholder="ぼしゅうにんずう"
             aria-describedby="basic-addon2" name="number_of_person"> -->
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="ぼしゅうにんずう"name="number_of_person" value="{{ $matters->number_of_person }}">
 <br>
 
     <label>せいこうほうしゅう<br>
+      @if($errors->has('success_fee'))
+        {{ $errors->first('success_fee') }}
+      @endif
     <!--     <input type="number" class="" placeholder="せいこうほしゅう"
             aria-describedby="basic-addon2" name="success_fee"> -->
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="せいこうほうしゅう"name="success_fee" value="{{ $matters->success_fee }}">
@@ -210,6 +231,9 @@
 
 <label>あんけんランク
 <select name="rank" id="rank">
+  @if($errors->has('rank'))
+        {{ $errors->first('rank') }}
+      @endif
         @foreach ($rank_of_difficulties as $item)
             <option value="{{$item->id}}">{{$item->rank}}</option> 
         @endforeach

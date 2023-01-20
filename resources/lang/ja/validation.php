@@ -160,7 +160,9 @@ return [
         'remarks' => '特記事項',
         'success_fee' => '成功報酬',
         'rank' => 'ランク',
-        'number_of_person' => '応募者数'
+        'number_of_person' => '応募者数',
+        'deadline' => '期限',
+        'prefectures_id' => '都道府県'
     ],
 
 ];

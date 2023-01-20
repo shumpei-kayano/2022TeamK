@@ -55,6 +55,7 @@ class MatterController extends Controller
 
     public function matterEdit(Request $request,$id)
     {
+        
         $user = Auth::user();
         $matters = Matter::with('prefecture','occupation','development_language','development_language2','development_language3','development_language4','development_language5')
         ->where('id',$id)->first();
@@ -80,6 +81,8 @@ class MatterController extends Controller
             'success_fee' => 'numeric',
             'rank' => 'numeric',
             'number_of_person' => 'numeric',
+            'deadline' => 'numeric',
+            'prefectures_id' => 'required'
         ]);
         $user = Auth::user();
         $matters = Matter::where('id',$id)->first();
@@ -114,6 +117,7 @@ class MatterController extends Controller
 
     public function add(Request $request)
     {
+        
         $user = Auth::user();
         $prefectures = \DB::table('prefectures') -> get();
         $occupations = \DB::table('occupations') -> get();
@@ -125,6 +129,16 @@ class MatterController extends Controller
 
     function post(Request $request)
     {
+        $request->validate([
+            'matter_name' => 'required',
+            'remarks' => 'required',
+            'tel' => 'numeric',
+            'success_fee' => 'numeric',
+            'rank' => 'numeric',
+            'number_of_person' => 'numeric',
+            'deadline' => 'numeric',
+            'prefectures_id' => 'required'
+        ]);
         $input = $request->only($this->formItems);
         //セッションに書き込む
         $request->session()->put("matter_post", $input);
