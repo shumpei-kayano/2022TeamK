@@ -27,14 +27,14 @@
                             <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email" disabled value='{{ $form->email }}'>
 
                     <!-- 電話番号 -->
-                    <label for="tel" style="color:#fff;" >でんわばんごう
+                    <label for="tel" style="color:#fff;" >電話番号
                         @if($errors->has('tel'))
                             {{ $errors->first('tel') }}
                         @endif
                             <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel" disabled value='{{ $form->tel }}'>
 
                 <!-- 最終学歴 -->
-                <label for="gakureki" style="color:#fff;" >さいしゅうがくれき
+                <label for="gakureki" style="color:#fff;" >最終学歴
                     @if($errors->has('educational_background'))
                         {{ $errors->first('educational_background') }}
                     @endif
@@ -53,16 +53,16 @@
 
                 <!-- 学習言語1 -->
                 <!--  
-                <label for="dark_field" style="color:#fff;" >がくしゅうげんご1<br>
+                <label for="dark_field" style="color:#fff;" >学習言語1<br>
                     <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $form->development_language->language_name }}</p><br>-->
 
-                    <!-- <label for="dark_field" style="color:#fff;" >がくしゅうきかん1<br>
+                    <!-- <label for="dark_field" style="color:#fff;" >学習期間1<br>
                     <p id="dark_field" class="nes-input is-dark p-portDel__port" name="name" >{{ $form->development_year1 }}</p><br> -->
 
                         <!-- 学習言語1 -->
                         <div class="p-fort__aaa">
                             <div class="p-port__prdn1">   
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語１</label><br>
                                         <div class="nes-select is-dark p-port__prdn">
                                             <select name="development_language_id1" required id="dark_select" disabled>
                                                 @foreach ($items as $item)
@@ -75,7 +75,7 @@
 
                              <!-- 学習期間1 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん1 </label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間1 </label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year1" required id="dark_select" class="p-port__prdn" disabled>
                                             <option value="0">3か月</option>
@@ -91,7 +91,7 @@
                          <!-- 学習言語2 -->
                         <div class="p-fort__bbb">
                             <div class="p-port__prdn1"> 
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご２</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語２</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                     <select type="number" name="development_language_id2" required id="dark_select" disabled>
                                             @foreach ($items as $item)
@@ -104,7 +104,7 @@
 
                              <!-- 学習期間2 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん2</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間2</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year2" required id="dark_select" class="p-port__prdn" disabled>
                                             <option value="0">3か月</option>
@@ -120,7 +120,7 @@
                          <!-- 学習言語3 -->
                         <div class="p-fort__ccc">
                             <div class="p-port__prdn1"> 
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご３</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語３</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id3" required id="dark_select" disabled> 
                                             @foreach ($items as $item)
@@ -133,7 +133,7 @@
 
                              <!-- 学習期間3 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん3</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間3</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year3" required id="dark_select" class="p-port__prdn" disabled>
                                             <option value="0">3か月</option>
@@ -149,7 +149,7 @@
                          <!-- 学習言語4 -->
                         <div class="p-fort__ddd">
                             <div class="p-port__prdn1">              
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご４</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id4" required id="dark_select" disabled> 
                                             @foreach ($items as $item)
@@ -162,7 +162,7 @@
 
                              <!-- 学習期間4 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん４</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year4" required id="dark_select" class="p-port__prdn" disabled>
                                             <option value="0">3か月</option>
@@ -178,7 +178,7 @@
                          <!-- 学習言語5 
                         <div class="p-fort__eee">
                             <div class="p-port__prdn1">  
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご５</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id5" required id="dark_select" disabled> 
                                             @foreach ($items as $item)
@@ -192,7 +192,7 @@
 
                              <!-- 学習期間5 
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん５</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year5" required id="dark_select" class="p-port__prdn" disabled>
                                             <option value="0">3か月</option>
@@ -217,14 +217,14 @@
             <form action="{{ route('portfolio_remove') }}" method="post">
                 <div class="p-acinfo__btn-container p-port__btn">
                     @csrf
-                    <button type="submit" class="nes-btn is-success p-acinfo__btn">さくじょ</button>
+                    <button type="submit" class="nes-btn is-success p-acinfo__btn">削除</button>
                 </div>
             </form>
     </div>
 </div>
             @else
             {{-- ポートフォリオがない場合 --}}
-            <h1 style="font-size: 100px; text-align: center;">まだつくられてない<div class=""></div> つくってからまたきてね</h1>
+            <h1 style="font-size: 100px; text-align: center;">まだ作られてない<div class=""></div> 作ってからまたきてね</h1>
             @endif
 
 @endsection

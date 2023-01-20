@@ -26,14 +26,14 @@
                             <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email" disabled value='{{ $portfolio->email }}'><br>
 
                     <!-- 電話番号 -->
-                    <label for="tel" style="color:#fff;" >でんわばんごう<br>
+                    <label for="tel" style="color:#fff;" >電話番号<br>
                         @if($errors->has('tel'))
                             {{ $errors->first('tel') }}
                         @endif
                             <input type="tel" id="tel" class="nes-input is-dark p-form__portfolio" name="tel" disabled value='{{ $portfolio->tel }}'><br>
 
                 <!-- 最終学歴 -->
-                <label for="gakureki" style="color:#fff;" >さいしゅうがくれき<br>
+                <label for="gakureki" style="color:#fff;" >最終学歴<br>
                     @if($errors->has('educational_background'))
                         {{ $errors->first('educational_background') }}
                     @endif

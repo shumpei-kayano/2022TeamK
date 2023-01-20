@@ -15,12 +15,12 @@
         <div class="p-mypage__btn-container">
             <a href="/account"><button type="button" class="nes-btn is-primary p-mypage__btn">アカウント</button></a> 
             <a href="/favorite"><button type="button" class="nes-btn is-primary p-mypage__btn">お気に入り</button></a> 
-            <a href="/show"><button type="button" class="nes-btn is-primary p-mypage__btn">あんけん</button></a>
+            <a href="/show"><button type="button" class="nes-btn is-primary p-mypage__btn">案件</button></a>
         </div>
         <div class="p-mypage__btn-container">
             <a href="/portfolio"><button type="button" class="nes-btn is-primary p-mypage__btn">ポートフォリオ</button></a> 
-            <a href="/kakunin"><button type="button" class="nes-btn is-primary p-mypage__btn">かくにん</button></a> 
-            <a href="/company"><button type="button" class="nes-btn is-primary p-mypage__btn">きぎょう</button></a> 
+            <a href="/kakunin"><button type="button" class="nes-btn is-primary p-mypage__btn">確認</button></a> 
+            <a href="/company"><button type="button" class="nes-btn is-primary p-mypage__btn">企業</button></a> 
         </div>  
 </div>
 @endsection

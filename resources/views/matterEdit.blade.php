@@ -10,7 +10,7 @@
 <a href="/register">登録</a>)</p>
 @endif --}}
 <div class="p-form">
-<h1 class="p-form">あんけんへんしゅう</h1>
+<h1 class="p-form">案件編集</h1>
 <div class="p-acinfo__container">
   <div class="nes-container is-rounded is-dark p-acinfo">
     <form action='{{ route('matter_update',['id'=>$matters->id]) }}'method='post'>
@@ -28,10 +28,10 @@
         @php
           $prefectures1 = DB::table('prefectures')->find($matters->prefectures_id);
         @endphp
-              <label>あんけんめい<br>
+              <label>案件名<br>
               <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>  
 
-    <label>とどうふけん
+    <label>都道府県
     <select name="prefectures_id" >
       <option value="{{ $matters->prefectures_id }}" selected>{{ $prefectures1->prefectures_name }}</p><br></option>
         @foreach ($prefectures as $prefecture)
@@ -43,7 +43,7 @@
 
     <!--<input type="text" class="" placeholder="れんらくさき" 
      aria-describedby="basic-addon2" name="tel"> -->
-    <label>れんらくさき<br>
+    <label>連絡先<br>
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="れんらくさき"name="tel" value="{{ $matters->tel }}"><br>  
       @php
         $occupation1 = DB::table('occupations')->find($matters->occupation_id);
@@ -189,26 +189,26 @@
     </label>
 <br>
 
-    <label>とっきじこう<br>
+    <label>特記事項<br>
       <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" value="{{ $matters->remarks }}" placeholder="とっきじこう"></textarea>
       <!-- <input type="text" class="nes-input is-dark p-posting__Edit" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks" value="{{ $matters->remarks }}"> -->
     
     {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
 <br>
 
-    <label>ぼしゅうにんずう<br>
+    <label>募集人数<br>
     <!--     <input type="number" class="" placeholder="ぼしゅうにんずう"
             aria-describedby="basic-addon2" name="number_of_person"> -->
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="ぼしゅうにんずう"name="number_of_person" value="{{ $matters->number_of_person }}">
 <br>
 
-    <label>せいこうほうしゅう<br>
+    <label>成功報酬<br>
     <!--     <input type="number" class="" placeholder="せいこうほしゅう"
             aria-describedby="basic-addon2" name="success_fee"> -->
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="せいこうほうしゅう"name="success_fee" value="{{ $matters->success_fee }}">
 <br>
 
-<label>あんけんランク
+<label>案件ランク
 <select name="rank" id="rank">
         @foreach ($rank_of_difficulties as $item)
             <option value="{{$item->id}}">{{$item->rank}}</option> 
@@ -218,14 +218,14 @@
 </div>
 </div>
 
- <br> <input type="submit" class="nes-btn is-success" value="かくにん">
+ <br> <input type="submit" class="nes-btn is-success" value="確認">
 
 </form>
 </div>
 <form action="{{ route('matter_remove',['id'=>$matters->id]) }}" method="post">
     <div class="p-form">
 @csrf
-<input type="submit" class="nes-btn is-success" value='さくじょ'>
+<input type="submit" class="nes-btn is-success" value='削除'>
 </div>
 
 </form>

@@ -7,7 +7,7 @@
 
 @section('content')
 
-<h1 class="p-form">案件検索！</h1>
+<h1 class="p-form">案件検索</h1>
 
 <div class="p-form__container">
 
@@ -39,7 +39,7 @@
                     <!-- <label for="dark_select" style="color:#fff">しょくしゅ</label>-->
                         <div class=" nes-select is-dark p-form__oc">
                             <select class="p-form__ocselect" aria-label="Default select example" name="occupation_id" required id="dark_select">
-                                <option value="" selected>しょくしゅを選択してください</option>
+                                <option value="" selected>職種を選択してください</option>
                                 @foreach ($occupations as $occupation)
                                     <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
                                 @endforeach
@@ -61,7 +61,7 @@
 </div>
     <div class="p-form__btn-container">
     {{-- <form action="{{route('show')}}" method="GET"> --}}
-        <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
+        <button type="submit" class="nes-btn is-success p-form__btn">検索</button>
     </form>
     </div>
 
@@ -84,7 +84,7 @@
             <td>{{$item->rank}}</td>
             <td>{{$item->prefectures_name}}</td>
             <td style="width:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{$item->remarks}}</td>
-            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary">しょうさい</a></td>
+            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary">詳細</a></td>
             {{-- <td>@if (Auth::check())
                 @if (count($favorite) == 0) --}}
                     {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
