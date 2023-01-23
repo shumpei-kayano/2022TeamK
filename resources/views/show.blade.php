@@ -79,7 +79,7 @@
 
         @foreach($items as $item)
         <tr>
-            <td>{{$item->matter_name}}</td>
+            <td class="p-show__tokki">{{$item->matter_name}}</td>
             <td>{{$item->occupation_name}}</td>
             <td>{{$item->rank}}</td>
             <td>{{$item->prefectures_name}}</td>

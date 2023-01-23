@@ -22,8 +22,10 @@ use App\Order_received_matter;
 class MatterController extends Controller
 {
 
-    private $formItems = ["prefectures_id", "matter_name", "tel", "development_language_id1", "development_language_id2", "development_language_id3", "development_language_id4",
-        "occupation_id", "remarks", "success_fee", "deadline", "rank", "number_of_person", "user_id"];
+    private $formItems = [
+        "prefectures_id", "matter_name", "tel", "development_language_id1", "development_language_id2", "development_language_id3", "development_language_id4",
+        "occupation_id", "remarks", "success_fee", "deadline", "rank", "number_of_person", "user_id"
+    ];
 
     public function __construct()
     {
@@ -41,38 +43,37 @@ class MatterController extends Controller
     {
         $user = Auth::user();
         // $matter = Matter::all();
-        $matters = Matter::with('prefecture','occupation','development_language','development_language2','development_language3','development_language4','development_language5','development_language2')->where('user_id',$user->id)->get();
-        $prefectures = \DB::table('prefectures') -> get();
-        $occupations = \DB::table('occupations') -> get();
-        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
-        $development_languages = \DB::table('development_languages') -> get();
-        $development_language2s = \DB::table('development_language2s') -> get();
-        $development_language3s = \DB::table('development_language3s') -> get();
-        $development_language4s = \DB::table('development_language4s') -> get();
-        $development_language5s = \DB::table('development_language5s') -> get();
-        return view('postingScreen',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages','development_language2s','development_language3s','development_language4s','development_language5s'));
+        $matters = Matter::with('prefecture', 'occupation', 'development_language', 'development_language2', 'development_language3', 'development_language4', 'development_language5', 'development_language2')->where('user_id', $user->id)->get();
+        $prefectures = \DB::table('prefectures')->get();
+        $occupations = \DB::table('occupations')->get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties')->get();
+        $development_languages = \DB::table('development_languages')->get();
+        $development_language2s = \DB::table('development_language2s')->get();
+        $development_language3s = \DB::table('development_language3s')->get();
+        $development_language4s = \DB::table('development_language4s')->get();
+        $development_language5s = \DB::table('development_language5s')->get();
+        return view('postingScreen', ['matters' => $matters], compact('user', 'prefectures', 'occupations', 'rank_of_difficulties', 'development_languages', 'development_language2s', 'development_language3s', 'development_language4s', 'development_language5s'));
     }
 
-    public function matterEdit(Request $request,$id)
+    public function matterEdit(Request $request, $id)
     {
-        
+
         $user = Auth::user();
-        $matters = Matter::with('prefecture','occupation','development_language','development_language2','development_language3','development_language4','development_language5')
-        ->where('id',$id)->first();
+        $matters = Matter::with('prefecture', 'occupation', 'development_language', 'development_language2', 'development_language3', 'development_language4', 'development_language5')
+            ->where('id', $id)->first();
         // dd($matters, $id);
-        $prefectures = \DB::table('prefectures') -> get();
-        $occupations = \DB::table('occupations') -> get();
-        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
-        $development_languages = \DB::table('development_languages') -> get();
-        $development_language2s = \DB::table('development_language2s') -> get();
-        $development_language3s = \DB::table('development_language3s') -> get();
-        $development_language4s = \DB::table('development_language4s') -> get();
-        $development_language5s = \DB::table('development_language5s') -> get();
-        return view('matterEdit',['matters'=>$matters],compact('user','prefectures','occupations','rank_of_difficulties','development_languages','development_language2s','development_language3s','development_language4s','development_language5s'));
-        
+        $prefectures = \DB::table('prefectures')->get();
+        $occupations = \DB::table('occupations')->get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties')->get();
+        $development_languages = \DB::table('development_languages')->get();
+        $development_language2s = \DB::table('development_language2s')->get();
+        $development_language3s = \DB::table('development_language3s')->get();
+        $development_language4s = \DB::table('development_language4s')->get();
+        $development_language5s = \DB::table('development_language5s')->get();
+        return view('matterEdit', ['matters' => $matters], compact('user', 'prefectures', 'occupations', 'rank_of_difficulties', 'development_languages', 'development_language2s', 'development_language3s', 'development_language4s', 'development_language5s'));
     }
 
-    public function matterUpdate(Request $request,$id)
+    public function matterUpdate(Request $request, $id)
     {
         $request->validate([
             'matter_name' => 'required',
@@ -85,18 +86,18 @@ class MatterController extends Controller
             'prefectures_id' => 'required'
         ]);
         $user = Auth::user();
-        $matters = Matter::where('id',$id)->first();
+        $matters = Matter::where('id', $id)->first();
         $form = $request->all();
-        
+
         unset($form['_token']);
         $matters->fill($form)->save();
         return redirect()->action('MatterController@postingScreen');
     }
-    public function remove(Request $request,$id)
+    public function remove(Request $request, $id)
     {
         $user = Auth::user();
         // $portfolio = Portfolio::find($request -> user_id)->delete();
-        $matters = Matter::where('id',$id)->first();
+        $matters = Matter::where('id', $id)->first();
 
         $matters->delete();
 
@@ -117,14 +118,14 @@ class MatterController extends Controller
 
     public function add(Request $request)
     {
-        
+
         $user = Auth::user();
-        $prefectures = \DB::table('prefectures') -> get();
-        $occupations = \DB::table('occupations') -> get();
-        $rank_of_difficulties = \DB::table('rank_of_difficulties') -> get();
-        $development_languages = \DB::table('development_languages') -> get();
+        $prefectures = \DB::table('prefectures')->get();
+        $occupations = \DB::table('occupations')->get();
+        $rank_of_difficulties = \DB::table('rank_of_difficulties')->get();
+        $development_languages = \DB::table('development_languages')->get();
         // dd($items);
-        return view('./matter/matterAdd',compact('user','occupations','rank_of_difficulties','development_languages','prefectures'));
+        return view('./matter/matterAdd', compact('user', 'occupations', 'rank_of_difficulties', 'development_languages', 'prefectures'));
     }
 
     function post(Request $request)
@@ -136,7 +137,7 @@ class MatterController extends Controller
             'success_fee' => 'numeric',
             'rank' => 'numeric',
             'number_of_person' => 'numeric',
-            'deadline' => 'numeric',
+            'deadline' => 'required',
             'prefectures_id' => 'required'
         ]);
         $input = $request->only($this->formItems);
@@ -167,7 +168,7 @@ class MatterController extends Controller
         // dd($occupation);
         // return view('./matter/matterConfirmation', ['input'=>$input],compact('prefecture','occupation','development_language1',
         // 'development_language2','development_language3','development_language4'));
-        
+
         $input = $request->session()->get("matter_post");
         // dd($input);
         //セッションに値が無い時はフォームに戻る
@@ -181,16 +182,22 @@ class MatterController extends Controller
         $development_language3 = Development_language::find($input["development_language_id3"]);
         $development_language4 = Development_language::find($input["development_language_id4"]);
 
-        return view('./matter/matterConfirmation', ["input" => $input],compact('prefecture','occupation','development_language1',
-        'development_language2','development_language3','development_language4'));
+        return view('./matter/matterConfirmation', ["input" => $input], compact(
+            'prefecture',
+            'occupation',
+            'development_language1',
+            'development_language2',
+            'development_language3',
+            'development_language4'
+        ));
     }
 
     public function matterRegistar(Request $request)
     {
-       //セッションから値を取り出す
-       $input = $request->session()->get("matter_post");
-    //    dd($input);
-       $matter = new Matter;
+        //セッションから値を取り出す
+        $input = $request->session()->get("matter_post");
+        //    dd($input);
+        $matter = new Matter;
         unset($input['_token']);
         $matter->fill($input)->save();
 
@@ -209,38 +216,53 @@ class MatterController extends Controller
 
         //テーブルの結合
         $query->join('prefectures', function ($query) use ($request) {
-        $query->on('matters.prefectures_id', '=', 'prefectures.id');
+            $query->on('matters.prefectures_id', '=', 'prefectures.id');
         })->join('occupations', function ($query) use ($request) {
-        $query->on('matters.occupation_id', '=', 'occupations.id');
+            $query->on('matters.occupation_id', '=', 'occupations.id');
         });
 
-        if(!empty($prefectures_id)) {
+        if (!empty($prefectures_id)) {
             $query->where('prefectures_id', 'LIKE', $prefectures_id);
         }
 
-        if(!empty($occupation_id)) {
+        if (!empty($occupation_id)) {
             $query->where('occupation_id', 'LIKE', $occupation_id);
         }
-        
-        if(!empty($level_id)) {
+
+        if (!empty($level_id)) {
             $query->where('rank', 'LIKE', $level_id);
         }
 
-        if(!empty($keyword)) {
+        if (!empty($keyword)) {
             $query->where('matter_name', 'LIKE', "%{$keyword}%");
         }
 
-        $items = $query->select('Matters.id','Matters.matter_name','Occupations.occupation_name',
-        'Matters.rank','Prefectures.prefectures_name','Matters.remarks')->get();
+        $items = $query->select(
+            'Matters.id',
+            'Matters.matter_name',
+            'Occupations.occupation_name',
+            'Matters.rank',
+            'Prefectures.prefectures_name',
+            'Matters.remarks'
+        )->get();
         // $items = $query->get();
-        
+
         $prefectures = Prefecture::all();
         $occupations  = Occupation::all();
         $rank_of_difficulties = Rank_of_difficulty::all();
-        $favorite = Favorite::where('user_id', auth()->user()->id)->orderBy('matter_id','asc')->get();
+        $favorite = Favorite::where('user_id', auth()->user()->id)->orderBy('matter_id', 'asc')->get();
         // $favorite = \DB::table('favorites') -> get();
-        return view('./show',compact('items', 'keyword', 'prefectures_id', 'occupation_id',
-    'level_id', 'prefectures', 'occupations', 'rank_of_difficulties', 'favorite'));
+        return view('./show', compact(
+            'items',
+            'keyword',
+            'prefectures_id',
+            'occupation_id',
+            'level_id',
+            'prefectures',
+            'occupations',
+            'rank_of_difficulties',
+            'favorite'
+        ));
     }
 
     public function detail($id)
@@ -248,19 +270,19 @@ class MatterController extends Controller
         $user = Auth::user();
         $matter = Matter::find($id);
         $favorite = Favorite::where('user_id', auth()->user()->id)->where('matter_id', $id)->first();
-        return view('./matter_detail', compact('matter', 'favorite','user'));
+        return view('./matter_detail', compact('matter', 'favorite', 'user'));
     }
     public function list()
     {
-        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->with('user:id,name','matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
-        return view('./list',['order_received_matters' => $order_received_matters,]);
+        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        return view('./list', ['order_received_matters' => $order_received_matters,]);
     }
-    
+
     public function userdetail(Request $request, $id)
     {
         $form = $request->input('form');
         $portfolio = Portfolio::whereUser_id($id)->first();
-        return view('./user_detail', compact('portfolio','form'));
+        return view('./user_detail', compact('portfolio', 'form'));
     }
 
     public function approval(Request $request, $id)
@@ -281,8 +303,8 @@ class MatterController extends Controller
 
     public function contract()
     {
-        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->where('adoption_flg','=','1')->with('user:id,name','matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
-        return view('./contract',['order_received_matters' => $order_received_matters,]);
+        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->where('adoption_flg', '=', '1')->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        return view('./contract', ['order_received_matters' => $order_received_matters,]);
     }
 
     public function evaluation(Request $request, $id)
@@ -294,21 +316,17 @@ class MatterController extends Controller
         $exe = 0;
         $user_db = User::find($id);
         $matter = Order_received_matter::find($order_id);
-        
-        
+
+
         if ($form == 1) {
-            $exe = $max_exe->max_experience *0.5;
-        }
-        else if ($form == 2) {
-            $exe = $max_exe->max_experience *0.7;
-        }
-        else if ($form == 3) {
-            $exe = $max_exe->max_experience *0.8;
-        }
-        else if ($form == 4) {
-            $exe = $max_exe->max_experience *0.9;
-        }
-        else {
+            $exe = $max_exe->max_experience * 0.5;
+        } else if ($form == 2) {
+            $exe = $max_exe->max_experience * 0.7;
+        } else if ($form == 3) {
+            $exe = $max_exe->max_experience * 0.8;
+        } else if ($form == 4) {
+            $exe = $max_exe->max_experience * 0.9;
+        } else {
             $exe = $max_exe->max_experience;
         }
 
@@ -320,6 +338,6 @@ class MatterController extends Controller
         $matter->save();
         // dd($matter->evaluation);
 
-        return view('./evaluation', compact('form','id'));
+        return view('./evaluation', compact('form', 'id'));
     }
 }
