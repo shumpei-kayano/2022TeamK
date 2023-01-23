@@ -26,7 +26,7 @@
                     <!--<label for="dark_select" style="color:#fff">エリア</label>-->
                         <div class="nes-select is-dark p-form__eria">
                             <select class="p-form__eriaselect" aria-label="Default select example"name="prefectures_id" required id="dark_select">
-                                <option value="" selected>エリアを選択してください</option>
+                                <option hidden>エリアを選択してください</option>
                                 @foreach ($prefectures as $prefecture)
                                     <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
                                 @endforeach
@@ -39,7 +39,7 @@
                     <!-- <label for="dark_select" style="color:#fff">しょくしゅ</label>-->
                         <div class=" nes-select is-dark p-form__oc">
                             <select class="p-form__ocselect" aria-label="Default select example" name="occupation_id" required id="dark_select">
-                                <option value="" selected>職種を選択してください</option>
+                                <option hidden>職種を選択してください</option>
                                 @foreach ($occupations as $occupation)
                                     <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
                                 @endforeach
@@ -51,7 +51,7 @@
                     <!--<label for="dark_select" style="color:#fff">レベル</label>-->
                         <div class=" nes-select is-dark p-form__level">
                             <select class="p-form__levelselect" aria-label="Default select example" name="level_id" required id="dark_select">
-                                <option value="" selected>レベルを選択してください</option>
+                                <option hidden>レベルを選択してください</option>
                                 @foreach ($rank_of_difficulties as $level)
                                     <option value="{{$level->id}}">{{$level->rank}}</option> 
                                 @endforeach
