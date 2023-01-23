@@ -612,7 +612,7 @@ textarea,
   margin-top: 30px;
 }
 .p-acinfo__id {
-  text-indent: -290px;
+  text-indent: -220px;
 }
 .p-acinfo__btn {
   width: 110px;
@@ -993,7 +993,7 @@ table.p-show td {
 .p-anken {
   text-align: center;
   margin-top: 130px;
-  width: 700px;
+  width: 500px;
 }
 
 .p-posting {
@@ -1083,8 +1083,17 @@ table.p-show td {
 }
 
 /*  ゲーム風フォントの設定  */
+@font-face {
+  font-family: PixelMplus12 Regular;
+  src: url(/fonts/PixelMplus12-Regular.ttf);
+  /*   適用させるフォント名 → 間違っていると反映されないので注意  */
+  /* font-family: "Nu \304D\306A\3053\3082\3061"; */
+  /*   .otf, .ttfの拡張子がついているファイルがフォントファイルである。   */
+  /*   フォントファイルが何処場所にあるのか : パスを書いてあげる   */
+  /* src: url(/fonts/NuKinakoMochi-Reg.otf); */
+}
 body {
-  font-family: "Noto Sans JP";
+  font-family: "PixelMplus12 Regular";
   color: white;
   font-size: 16px;
   line-height: 1.5;

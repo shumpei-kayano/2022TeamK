@@ -16,7 +16,7 @@
                             <label for="kojin">個人</label>
                             <input type="radio" id="hojin" name="check" value="1">
                             <label for="hojin">法人</label> -->
-                <div class="ragio-group">
+        <div class="ragio-group">        
                     <label for="kojin">
                          <input type="radio" id="kojin" class="nes-radio is-dark" name="check" value="0" checked />
                          <span>個人</span>

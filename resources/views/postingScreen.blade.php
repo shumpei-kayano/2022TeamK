@@ -51,7 +51,7 @@
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $occupation1->occupation_name }}</p><br>
 
         <!-- 求めるスキル -->
-        <label for="dark_field" style="color:#fff;" >求めるスキル<br>
+        <label for="dark_field" style="color:#fff;" >求めるスキル1<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >
                 @php
                     $devLan1 = DB::table('development_languages')->find($matter->development_language_id1);
@@ -60,11 +60,14 @@
                     $devLan4 = DB::table('development_languages')->find($matter->development_language_id4);
                 @endphp
                 {{ $devLan1->language_name }}</p><br>
-            <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >
+            <label for="dark_field" style="color:#fff;">求めるスキル2</label>
+                <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >
                 {{ $devLan2->language_name }}</p><br>
-            <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >
+            <label for="dark_field" style="color:#fff;">求めるスキル3</label>
+                <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >
                 {{ $devLan3->language_name }}</p><br>
-            <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >
+            <label for="dark_field" style="color:#fff;">求めるスキル4</label>
+                <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >
                 {{ $devLan4->language_name }}</p><br>
             {{-- {{ dd($matter->development_language) }} --}}
             {{-- <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->development_language2->language_name }}</p><br> --}}
