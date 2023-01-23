@@ -46,6 +46,14 @@ class PortfolioController extends Controller
             'educational_background' => 'required',
             'self_pr' => 'required',
             'birthday' => 'required',
+            'development_language_id1' => 'required',
+            'development_language_id2' => 'required',
+            'development_language_id3' => 'required',
+            'development_language_id4' => 'required',
+            'development_year1' => 'required',
+            'development_year2' => 'required',
+            'development_year3' => 'required',
+            'development_year4' => 'required'
         ]);
         $portfolio = new Portfolio;
         $form = $request->all();
@@ -74,6 +82,14 @@ class PortfolioController extends Controller
             'educational_background' => 'required',
             'self_pr' => 'required',
             'birthday' => 'required',
+            'development_language_id1' => 'required',
+            'development_language_id2' => 'required',
+            'development_language_id3' => 'required',
+            'development_language_id4' => 'required',
+            'development_year1' => 'required',
+            'development_year2' => 'required',
+            'development_year3' => 'required',
+            'development_year4' => 'required'
         ]);
         // dd($request);
         $portfolio = Portfolio::find($request -> id);

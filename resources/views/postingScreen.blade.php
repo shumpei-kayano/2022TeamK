@@ -20,7 +20,7 @@
 <p>案件ランク:{{$matter->rank}}</p> --}}
 {{-- {{ dd($matters)}} --}}
 <div class="p-form">
-    <h1 class="p-form">けいさいちゅうあんけん</h1>
+    <h1 class="p-form">掲載中案件</h1>
     <div class="p-acinfo__container">
         <div class="nes-container is-rounded is-dark p-acinfo">
 
@@ -29,25 +29,25 @@
     <form action='{{ route('matterEdit',['id'=>$matter->id]) }}'method='post'>
         @csrf
         <!-- 案件名 -->
-        <label for="dark_field" style="color:#fff;" >あんけんめい<br>
+        <label for="dark_field" style="color:#fff;" >案件名<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->matter_name }}</p><br>
     
         <!-- 都道府県 -->
         @php
           $prefectures1 = DB::table('prefectures')->find($matter->prefectures_id);
         @endphp
-        <label for="dark_field" style="color:#fff;" >とどうふけん<br>
+        <label for="dark_field" style="color:#fff;" >都道府県<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $prefectures1->prefectures_name }}</p><br>
     
         <!-- 連絡先 -->
-        <label for="dark_field" style="color:#fff;" >れんらくさき<br>
+        <label for="dark_field" style="color:#fff;" >連絡先<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->tel }}</p><br>
 
         <!-- 職種 -->
         @php
             $occupation1 = DB::table('occupations')->find($matter->occupation_id);
         @endphp
-        <label for="dark_field" style="color:#fff;" >しょくしゅ<br>
+        <label for="dark_field" style="color:#fff;" >職種<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $occupation1->occupation_name }}</p><br>
 
         <!-- 求めるスキル -->
@@ -70,26 +70,26 @@
             {{-- <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->development_language2->language_name }}</p><br> --}}
 
         <!-- 期限 -->
-        <label for="dark_field" style="color:#fff;" >きげん<br>
+        <label for="dark_field" style="color:#fff;" >期限<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->deadline }}</p><br>
             <!-- <p>期限：{{$matter->deadline}}</p> -->
 
         <!-- 特記事項 -->
-        <label for="dark_field" style="color:#fff;" >とっきじこう<br>
+        <label for="dark_field" style="color:#fff;" >特記事項<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->remarks }}</p><br>
             <!-- <p>特記事項：{{$matter->remarks}}</p> -->
 
         <!-- 募集人数 -->
-        <label for="dark_field" style="color:#fff;" >ぼしゅうにんずう<br>
+        <label for="dark_field" style="color:#fff;" >募集人数<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->number_of_person }}</p><br>
             <!-- <p>募集人数：{{$matter->number_of_person}}</p> -->
 
         <!-- 成功報酬 -->
-        <label for="dark_field" style="color:#fff;" >せいこうほうしゅう<br>
+        <label for="dark_field" style="color:#fff;" >成功報酬<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->success_fee }}</p><br>
 
         <!-- 案件ランク -->
-        <label for="dark_field" style="color:#fff;" >あんけんランク<br>
+        <label for="dark_field" style="color:#fff;" >案件ランク<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->rank }}</p>
     
     {{-- <p>求めるスキル{{$matter->development_language->language_name}}</p> --}}
@@ -98,7 +98,7 @@
 
 </div>
 </div>
-    <input type="submit" class="nes-btn is-success" value=へんしゅう>
+    <input type="submit" class="nes-btn is-success" value=編集>
     </div>
 </form>
 @endforeach

@@ -10,7 +10,7 @@
 <a href="/register">登録</a>)</p>
 @endif --}}
 <div class="p-form">
-<h1 class="p-form">あんけんへんしゅう</h1>
+<h1 class="p-form">案件編集</h1>
 <div class="p-acinfo__container">
   <div class="nes-container is-rounded is-dark p-acinfo">
     <form action='{{ route('matter_update',['id'=>$matters->id]) }}'method='post'>
@@ -28,11 +28,18 @@
         @php
           $prefectures1 = DB::table('prefectures')->find($matters->prefectures_id);
         @endphp
-              <label>あんけんめい<br>
+              <label>案件名<br>
+                @if($errors->has('matter_name'))
+                {{ $errors->first('matter_name') }}
+              @endif
+              
               <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>  
 
-    <label>とどうふけん
+    <label>都道府県
     <select name="prefectures_id" >
+       @if($errors->has('prefectures_id'))
+                  {{ $errors->first('prefectures_id') }}
+                @endif
       <option value="{{ $matters->prefectures_id }}" selected>{{ $prefectures1->prefectures_name }}</p><br></option>
         @foreach ($prefectures as $prefecture)
             <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option>
@@ -43,13 +50,17 @@
 
     <!--<input type="text" class="" placeholder="れんらくさき" 
      aria-describedby="basic-addon2" name="tel"> -->
-    <label>れんらくさき<br>
+     <label>連絡先<br>
+      @if($errors->has('tel'))
+        {{ $errors->first('tel') }}
+      @endif
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="れんらくさき"name="tel" value="{{ $matters->tel }}"><br>  
       @php
         $occupation1 = DB::table('occupations')->find($matters->occupation_id);
       @endphp
 
-    <select name="occupation_id">
+    <label>職種<br>
+    <select name="occupation_id">     
       <option value="{{ $matters->occupation_id }}" selected>{{ $occupation1->occupation_name }}</p><br></option>
         @foreach ($occupations as $occupation)
             <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
@@ -115,7 +126,7 @@
           <option value="{{ $matters->development_language_id2 }}" selected>{{ $devLan2->language_name }}</p><br></option>
             @foreach ($development_language2s as $language2)
             <option value="{{$language2->id}}">{{$language2->language_name}}</option> 
-            @endforeach    
+            @endforeach
         </select>
       </dd>
     </dl>
@@ -184,32 +195,41 @@
 
 <br>
     <label>期限
+      @if($errors->has('deadline'))
+          {{ $errors->first('deadline') }}
+        @endif
     <input type="date" class=""
             aria-describedby="basic-addon2" name="deadline" value="{{ $matters->deadline }}">
     </label>
 <br>
-
-    <label>とっきじこう<br>
-      <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" value="{{ $matters->remarks }}" placeholder="とっきじこう"></textarea>
-      <!-- <input type="text" class="nes-input is-dark p-posting__Edit" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks" value="{{ $matters->remarks }}"> -->
-    
-    {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
+    <label>特記事項<br>
+      @if($errors->has('remarks'))
+        {{ $errors->first('remarks') }}
+      @endif
+      <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" placeholder="とっきじこう">
+        {{ $matters->remarks }}
+      </textarea>
 <br>
-
-    <label>ぼしゅうにんずう<br>
-    <!--     <input type="number" class="" placeholder="ぼしゅうにんずう"
-            aria-describedby="basic-addon2" name="number_of_person"> -->
+    <label>募集人数<br>
+      @if($errors->has('number_of_person'))
+        {{ $errors->first('number_of_person') }}
+      @endif
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="ぼしゅうにんずう"name="number_of_person" value="{{ $matters->number_of_person }}">
 <br>
-
-    <label>せいこうほうしゅう<br>
+    <label>成功報酬<br>
+      @if($errors->has('success_fee'))
+        {{ $errors->first('success_fee') }}
+      @endif
     <!--     <input type="number" class="" placeholder="せいこうほしゅう"
             aria-describedby="basic-addon2" name="success_fee"> -->
     <input type="search" id="dark_field" class="nes-input is-dark p-posting__Edit" placeholder="せいこうほうしゅう"name="success_fee" value="{{ $matters->success_fee }}">
 <br>
 
-<label>あんけんランク
+<label>案件ランク
 <select name="rank" id="rank">
+  @if($errors->has('rank'))
+        {{ $errors->first('rank') }}
+      @endif
         @foreach ($rank_of_difficulties as $item)
             <option value="{{$item->id}}">{{$item->rank}}</option> 
         @endforeach
@@ -218,14 +238,14 @@
 </div>
 </div>
 
- <br> <input type="submit" class="nes-btn is-success" value="かくにん">
+ <br> <input type="submit" class="nes-btn is-success" value="確認">
 
 </form>
 </div>
 <form action="{{ route('matter_remove',['id'=>$matters->id]) }}" method="post">
     <div class="p-form">
 @csrf
-<input type="submit" class="nes-btn is-success" value='さくじょ'>
+<input type="submit" class="nes-btn is-success" value='削除'>
 </div>
 
 </form>

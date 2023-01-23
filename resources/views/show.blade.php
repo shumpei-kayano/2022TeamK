@@ -7,7 +7,7 @@
 
 @section('content')
 
-<h1 class="p-form">案件検索！</h1>
+<h1 class="p-form">案件検索</h1>
 
 <div class="p-form__container">
 
@@ -26,7 +26,7 @@
                     <!--<label for="dark_select" style="color:#fff">エリア</label>-->
                         <div class="nes-select is-dark p-form__eria">
                             <select class="p-form__eriaselect" aria-label="Default select example"name="prefectures_id" required id="dark_select">
-                                <option value="" selected>エリアを選択してください</option>
+                                <option hidden>エリアを選択してください</option>
                                 @foreach ($prefectures as $prefecture)
                                     <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
                                 @endforeach
@@ -61,7 +61,7 @@
 </div>
     <div class="p-form__btn-container">
     {{-- <form action="{{route('show')}}" method="GET"> --}}
-        <button type="submit" class="nes-btn is-success p-form__btn">けんさく</button>
+        <button type="submit" class="nes-btn is-success p-form__btn">検索</button>
     </form>
     </div>
 

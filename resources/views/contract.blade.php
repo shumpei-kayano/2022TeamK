@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1 class="p-form">かこけいやくいちらん</h1>
+<h1 class="p-form">評価</h1></h1>
 
 <div class="favorite">
     <div class="nes-container is-dark with-title favorite__container">
@@ -93,6 +93,8 @@
     </div>
 </div>
 @endsection
+            </table>
+
 
 {{-- <table>
     <thead>
@@ -151,7 +153,8 @@
             <td></td>
             <td>評価しました。</td>
             @endif
-                
+    </div>
+</div>                
                 
             </tr>
         @endforeach

@@ -123,7 +123,7 @@
                         <!-- 学習言語1 -->
                         <div class="p-fort__aaa">
                             <div class="p-port__prdn1">   
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご１</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語１</label><br>
                                         <div class="nes-select is-dark p-port__prdn">
                                             <select name="development_language_id1" required id="dark_select">
                                                 <option value="{{ $form->development_language_id1 }}" selected>{{ $devLan1->language_name }}</p><br></option>
@@ -138,7 +138,7 @@
 
                              <!-- 学習期間1 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん1 </label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間1 </label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year1" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year1 }}" selected>{{ $year1 }}</p><br></option>
@@ -155,7 +155,7 @@
                          <!-- 学習言語2 -->
                         <div class="p-fort__bbb">
                             <div class="p-port__prdn1"> 
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご２</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語２</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                     <select type="number" name="development_language_id2" required id="dark_select">
                                         <option value="{{ $form->development_language_id2 }}" selected>{{ $devLan2->language_name }}</p><br></option>
@@ -170,7 +170,7 @@
 
                              <!-- 学習期間2 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん2</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間2</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year2" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year2 }}" selected>{{ $year2 }}</p><br></option>
@@ -184,7 +184,7 @@
                         </div>
 
                         <!-- 
-                            がくしゅうきかん2: <br><select type="number" name="development_year2">
+                            学習期間2: <br><select type="number" name="development_year2">
                             <option value="0">3か月</option>
                             <option value="1">6か月</option>
                             <option value="2">9か月</option>
@@ -195,7 +195,7 @@
                          <!-- 学習言語3 -->
                         <div class="p-fort__ccc">
                             <div class="p-port__prdn1"> 
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご３</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語３</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id3" required id="dark_select">
                                             <option value="{{ $form->development_language_id1 }}" selected>{{ $devLan1->language_name }}</p><br></option>
@@ -210,7 +210,7 @@
 
                              <!-- 学習期間3 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん3</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間3</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year3" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year3 }}" selected>{{ $year3 }}</p><br></option>
@@ -224,7 +224,7 @@
                         </div>
 
                         <!-- 
-                            がくしゅうきかん3: <br><select type="number" name="development_year3">
+                            学習期間3: <br><select type="number" name="development_year3">
                             <option value="0">3か月</option>
                             <option value="1">6か月</option>
                             <option value="2">9か月</option>
@@ -235,7 +235,7 @@
                          <!-- 学習言語4 -->
                         <div class="p-fort__ddd">
                             <div class="p-port__prdn1">              
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご４</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id4" required id="dark_select">
                                             <option value="{{ $form->development_language_id1 }}" selected>{{ $devLan1->language_name }}</p><br></option>
@@ -250,7 +250,7 @@
 
                              <!-- 学習期間4 -->
                             <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん４</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year4" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year4 }}" selected>{{ $year4 }}</p><br></option>
@@ -264,7 +264,7 @@
                         </div>
 
                         <!-- 
-                            がくしゅうきかん4: <br><select type="number" name="development_year4">
+                            学習期間4: <br><select type="number" name="development_year4">
                             <option value="0">3か月</option>
                             <option value="1">6か月</option>
                             <option value="2">9か月</option>
@@ -275,7 +275,7 @@
                          <!-- 学習言語5 -->
                         {{-- <div class="p-fort__eee">
                             <div class="p-port__prdn1">  
-                                <label for="dark_select" style="color:#fff;">がくしゅうげんご５</label><br>
+                                <label for="dark_select" style="color:#fff;">学習言語５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id5" required id="dark_select">
                                             <option hidden>選択してください</option> 
@@ -289,7 +289,7 @@
 
                              <!-- 学習期間5 -->
                             {{-- <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">がくしゅうきかん５</label><br>
+                                <label for="dark_select" style="color:#fff;">学習期間５</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year5" required id="dark_select"  class="p-port__prdn">
                                             <option hidden>選択してください</option>
@@ -303,7 +303,7 @@
                         </div> --}}
 
                         <!-- 
-                            がくしゅうきかん5: <br><select type="number" name="development_year5">
+                            学習期間5: <br><select type="number" name="development_year5">
                             <option value="0">3か月</option>
                             <option value="1">6か月</option>
                             <option value="2">9か月</option>
@@ -325,7 +325,7 @@
 
                 <!-- 編集ボタン -->
                 <div class="p-acinfo__btn-container p-port__btn">
-                    <button type="submit" class="nes-btn is-success p-acinfo__btn">へんしゅう</button>
+                    <button type="submit" class="nes-btn is-success p-acinfo__btn">編集</button>
             <div>
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
         </form>

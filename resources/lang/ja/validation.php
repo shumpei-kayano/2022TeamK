@@ -155,6 +155,21 @@ return [
         'educational_background' => 'さいしゅうがくれき',
         'birthday' => '生年月日',
         'self_pr' => '自己PR',
+        'development_language_id1' => '学習言語1',
+        'development_language_id2' => '学習言語2',
+        'development_language_id3' => '学習言語3',
+        'development_language_id4' => '学習言語4',
+        'development_year1' => '学習期間1',
+        'development_year2' => '学習期間2',
+        'development_year3' => '学習期間3',
+        'development_year4' => '学習期間4',
+        'matter_name' => '案件名',
+        'remarks' => '特記事項',
+        'success_fee' => '成功報酬',
+        'rank' => 'ランク',
+        'number_of_person' => '応募者数',
+        'deadline' => '期限',
+        'prefectures_id' => '都道府県'
     ],
 
 ];

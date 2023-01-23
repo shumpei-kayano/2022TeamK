@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1 class="p-form">しょうにんまちリスト</h1>
+<h1 class="p-form">承認待ちリスト</h1>
 
 <div class="favorite">
     <div class="nes-container is-dark with-title favorite__container">
@@ -38,7 +38,7 @@
 
 <table>
     <thead>
-        <th>商品名</th>
+        <th>案件名</th>
         <th>登録ユーザー</th>
     </thead>
     <tbody>
