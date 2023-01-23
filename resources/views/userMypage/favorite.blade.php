@@ -24,7 +24,7 @@
         
                 <tbody>
                 <tr>
-                    <td>{{ $favorite->matter_name }}</td>
+                    <td class="p-show__tokki">{{ $favorite->matter_name }}</td>
                     <td>{{ $favorite->language_name }}</td>
                     <td>{{ $favorite->prefectures_name }}</td>
                     <td class="p-show__tokki">{{ $favorite->remarks }}</td>
