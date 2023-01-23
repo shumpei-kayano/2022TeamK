@@ -586,12 +586,18 @@ table.p-show td {
         margin-bottom: 10px;
     }
 }
-
 //掲載中案件（黒い部分のサイズ）
+.p-keisaianken {
+    text-align: center;
+    margin-top: 130px;
+    width: 500px; //横幅
+}
+
+//案件掲載（黒い部分のサイズ）
 .p-anken {
     text-align: center;
     margin-top: 130px;
-    width: 500px;
+    width: 500px; //横幅
 }
 
 //掲載中案件

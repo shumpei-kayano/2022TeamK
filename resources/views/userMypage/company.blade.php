@@ -15,7 +15,7 @@
 <div class="p-myp">
     <div class="nes-container is-dark with-title p-myp__container">
         <div>
-            <a href="/postingScreen"><button type="button" class="nes-btn is-error p-myp__btn">掲載案件を<br>確認する</button></a>
+            <a href="/postingScreen"><button type="button" class="nes-btn is-error p-myp__btn">掲載中案件を<br>確認する</button></a>
 
             <a href="/list"><button type="button" style="margin-top: 20px" class="nes-btn is-primary p-myp__btn">承認待ちリストを<br>確認する</button></a>
         </div>

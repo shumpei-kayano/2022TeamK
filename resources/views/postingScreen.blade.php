@@ -22,7 +22,7 @@
 <div class="p-form">
     <h1 class="p-form">掲載中案件</h1>
     <div class="p-acinfo__container">
-        <div class="nes-container is-rounded is-dark p-acinfo">
+        <div class="nes-container is-rounded is-dark p-keisaianken">
 
             {{-- {{ dd($matters)}} --}}
 @foreach($matters as $matter)
