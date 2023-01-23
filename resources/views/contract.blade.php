@@ -53,6 +53,7 @@
                         <form method="POST" action="{{ route('evaluation', ['id'=>$order_received_matter->user_id]) }}">
                             @csrf
                             <input type="hidden" name="rank" value="{{$order_received_matter->rank}}">
+                            <input type="hidden" name="order_id" value="{{$order_received_matter->id}}">
                           <div style="float: left">
                             <div>
                                 <input type="radio" name="form" value="1" checked>
