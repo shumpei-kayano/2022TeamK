@@ -241,6 +241,7 @@
 
 }
 
+/////////お気に入りリストも兼用中///////////////
 .p-show {
     margin-left: auto;
     margin-right: auto;
@@ -648,19 +649,18 @@ table.p-show td {
 
 
 .favorite {
-    width: 600px;
-    margin: 0 auto;
+    width: 700px;
     padding-top: 30px;
 
     &__container {
+        text-align: center;
         display: flex;
-        justify-content: space-around;
-    }
-
-    &__kakutei {
-        color: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783);
+        justify-content: center;
     }
 }
+
+
+
 
 ////////インスタ//////////
 
