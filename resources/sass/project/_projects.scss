@@ -5,7 +5,7 @@
     &__container {
         height: 250px;
         // margin-top: 200px;
-        width: 700px;
+        width: 550px;
         margin: 0 auto;
     }
     &__btn-container {
@@ -185,6 +185,15 @@
         justify-content: center;
     }
 
+    &__container2 {
+        width:965px;
+        // margin-left: auto;
+        // margin-right: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
     &__key {
         height: 50px;
         width: 880px;
@@ -230,6 +239,40 @@
     }
 
 }
+
+.p-show {
+    margin-left: auto;
+    margin-right: auto;
+
+     &__tokki {
+        max-width: 0;              //省略せずに表示するサイズを、任意の数字で指定
+        overflow: hidden;           //上述で指定したサイズからはみ出る部分を非表示にするため
+        text-overflow: ellipsis;    //はみ出して非表示になった要素がある場合に、三点リーダーを表示するための記述
+    }
+
+}
+
+table.p-show th {
+    width:300px;				/*見出しセルの幅*/
+	padding:10px;				/*パディング*/
+	text-align:center;				/*センター揃えにする*/
+	white-space:nowrap;				/*セル内の改行を禁止する*/
+}
+
+table.p-show td {
+    width: 100px;               //省略せずに表示するサイズを、任意の数字で指定
+    padding:10px;
+    white-space: nowrap;        //改行をしないという意味
+    // overflow: hidden;           //上述で指定したサイズからはみ出る部分を非表示にするため
+    // text-overflow: ellipsis;    //はみ出して非表示になった要素がある場合に、三点リーダーを表示するための記述
+}	
+
+
+
+
+
+
+///////////////////////////////////////
 
 
 

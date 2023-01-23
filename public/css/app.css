@@ -506,7 +506,7 @@ textarea,
 }
 .p-mypage__container {
   height: 250px;
-  width: 700px;
+  width: 550px;
   margin: 0 auto;
 }
 .p-mypage__btn-container {
@@ -673,6 +673,12 @@ textarea,
   display: flex;
   justify-content: center;
 }
+.p-form__container2 {
+  width: 965px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 .p-form__key {
   height: 50px;
   width: 880px;
@@ -708,6 +714,29 @@ textarea,
 }
 .p-form__btn-container {
   text-align: center;
+}
+
+.p-show {
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-show__tokki {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table.p-show th {
+  width: 300px; /*見出しセルの幅*/
+  padding: 10px; /*パディング*/
+  text-align: center; /*センター揃えにする*/
+  white-space: nowrap; /*セル内の改行を禁止する*/
+}
+
+table.p-show td {
+  width: 100px;
+  padding: 10px;
+  white-space: nowrap;
 }
 
 .p-loginpage {

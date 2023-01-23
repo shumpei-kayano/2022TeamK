@@ -39,7 +39,7 @@
                     <!-- <label for="dark_select" style="color:#fff">しょくしゅ</label>-->
                         <div class=" nes-select is-dark p-form__oc">
                             <select class="p-form__ocselect" aria-label="Default select example" name="occupation_id" required id="dark_select">
-                                <option value="" selected>しょくしゅを選択してください</option>
+                                <option value="" selected>職種を選択してください</option>
                                 @foreach ($occupations as $occupation)
                                     <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
                                 @endforeach
@@ -51,7 +51,7 @@
                     <!--<label for="dark_select" style="color:#fff">レベル</label>-->
                         <div class=" nes-select is-dark p-form__level">
                             <select class="p-form__levelselect" aria-label="Default select example" name="level_id" required id="dark_select">
-                                <option value="" selected>レベルを選択してください</option>
+                                <option value="" selected>ランクを選択してください</option>
                                 @foreach ($rank_of_difficulties as $level)
                                     <option value="{{$level->id}}">{{$level->rank}}</option> 
                                 @endforeach
@@ -67,8 +67,8 @@
 
 <div class="p-show">
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-mypage__container" style=" width: 1200px;">
-    <table style="color:white">
+        <div class="nes-container is-dark with-title p-form__container2">
+    <table class="p-show"style="color:white">
         <tr>
             <th>案件名</th>
             <th>職種</th>
@@ -83,8 +83,8 @@
             <td>{{$item->occupation_name}}</td>
             <td>{{$item->rank}}</td>
             <td>{{$item->prefectures_name}}</td>
-            <td style="width:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{$item->remarks}}</td>
-            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary">しょうさい</a></td>
+            <td class="p-show__tokki">{{$item->remarks}}</td>
+            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px;">詳細</a></td>
             {{-- <td>@if (Auth::check())
                 @if (count($favorite) == 0) --}}
                     {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
