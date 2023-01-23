@@ -1,3 +1,4 @@
+{{-- 掲載中案件の前のやつ --}}
 @foreach($matters as $matter)
     <form action='{{ route('matterEdit',['id'=>$matter->id]) }}'method='post'>
         @csrf
