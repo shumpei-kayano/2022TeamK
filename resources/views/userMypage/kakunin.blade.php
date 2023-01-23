@@ -25,20 +25,23 @@
                 $ado = 0;
                 if ($item->adoption_flg == 0) {
                     $ado = "待ち";
+                    $color = "color:white;";
                 }
                 else if ($item->adoption_flg == 1) {
                     $ado = "採用";
+                    $color = "color:blue;";
                 }
                 else {
                     $ado = "不採用";
+                    $color = "color:red;";
                 }
             @endphp
                 <tbody>
                 <tr>
                     <td>{{ $matter->matter_name }}</td>
                     <td>{{ $com->name }}</td>
-                    <td>{{ $ado }}</td>
-                    <td><a href="{{}}" class="">詳細</a></td>
+                    <td style="{{$color}}">{{ $ado }}</td>
+                    
                 </tr>
                 </tbody>
         @endforeach
