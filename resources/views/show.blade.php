@@ -65,7 +65,7 @@
     </form>
     </div>
 
-<div class="p-show">
+{{-- <div class="p-show"> --}}
     <div class="p-acinfo__container2">
         <div class="nes-container is-dark with-title p-form__container2">
     <table class="p-show"style="color:white">

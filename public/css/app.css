@@ -1031,16 +1031,13 @@ table.p-show td {
 }
 
 .favorite {
-  width: 600px;
-  margin: 0 auto;
+  width: 700px;
   padding-top: 30px;
 }
 .favorite__container {
+  text-align: center;
   display: flex;
-  justify-content: space-around;
-}
-.favorite__kakutei {
-  color: linear-gradient(to right, #e60000, #f39800, #fff100, #009944, #0068b7, #1d2088, #920783);
+  justify-content: center;
 }
 
 .insta_btn3 { /*ボタンの下地*/
