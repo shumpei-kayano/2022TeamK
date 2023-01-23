@@ -247,6 +247,7 @@ class MatterController extends Controller
         )->get();
         // $items = $query->get();
 
+        // dd($items);
         $prefectures = Prefecture::all();
         $occupations  = Occupation::all();
         $rank_of_difficulties = Rank_of_difficulty::all();
