@@ -233,7 +233,7 @@ class MatterController extends Controller
         $items = $query->select('Matters.id','Matters.matter_name','Occupations.occupation_name',
         'Matters.rank','Prefectures.prefectures_name','Matters.remarks')->get();
         // $items = $query->get();
-        
+        // dd($items);
         $prefectures = Prefecture::all();
         $occupations  = Occupation::all();
         $rank_of_difficulties = Rank_of_difficulty::all();
