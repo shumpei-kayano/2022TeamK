@@ -206,7 +206,9 @@
       @if($errors->has('remarks'))
         {{ $errors->first('remarks') }}
       @endif
-      <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" value="{{ $matters->remarks }}" placeholder="とっきじこう"></textarea>
+      <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" placeholder="とっきじこう">
+        {{ $matters->remarks }}
+      </textarea>
 <br>
     <label>募集人数<br>
       @if($errors->has('number_of_person'))
