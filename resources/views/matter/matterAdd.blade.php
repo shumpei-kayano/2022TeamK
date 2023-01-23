@@ -16,7 +16,6 @@
         <form action="{{ route('matter.post')}}" method="post">
 
       @csrf
-          <div class="p-acinfo__left">
           <!-- 案件名 -->
           <label for="dark_select" style="color:#fff;">案件名</label><br>
               @if($errors->has('matter_name'))
@@ -174,10 +173,10 @@
     <input type="date" class=""
             aria-describedby="basic-addon2" name="deadline">
     </label><br><br>
-          </div>
+          
 
 
-          <div class="p-acinfo__right">
+    <div class="p-acinfo__right">
     <!-- 特記事項 -->
     <label for="dark_select" style="color:#fff;">特記事項</label><br>
       @if($errors->has('remarks'))
