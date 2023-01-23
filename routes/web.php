@@ -41,6 +41,7 @@ Route::get('/company', 'UserMypageController@company')->name('company');
 Route::get('/show', 'MatterController@show')->name('show');
 Route::post('/postingScreen', 'MatterController@postingScreen')->name('postingScreen'); //掲載中案件
 Route::post('/matterEdit/{id}', 'MatterController@matterEdit')->name('matterEdit'); //案件編集画面
+Route::get('/matterEdit/{id}', 'MatterController@matterEdit')->name('matterEdit'); //バリデーション案件編集画面
 Route::post('/matterUpdate/{id}', 'MatterController@matterUpdate')->name('matter_update'); //案件編集
 Route::post('/matterRemove/{id}', 'MatterController@remove')->name('matter_remove'); //案件削除
 Route::post('matterRegister', 'MatterController@post')->name('matter.post');

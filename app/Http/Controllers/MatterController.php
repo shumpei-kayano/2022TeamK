@@ -81,7 +81,7 @@ class MatterController extends Controller
             'success_fee' => 'numeric',
             'rank' => 'numeric',
             'number_of_person' => 'numeric',
-            'deadline' => 'numeric',
+            'deadline' => 'required',
             'prefectures_id' => 'required'
         ]);
         $user = Auth::user();
