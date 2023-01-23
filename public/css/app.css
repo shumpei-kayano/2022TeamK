@@ -597,7 +597,7 @@ textarea,
 .p-acinfo {
   text-align: center;
   margin-top: 130px;
-  width: 500px;
+  width: 600px;
 }
 .p-acinfo__input {
   margin-bottom: 15px;
@@ -612,7 +612,7 @@ textarea,
   margin-top: 30px;
 }
 .p-acinfo__id {
-  text-indent: -167px;
+  text-indent: -290px;
 }
 .p-acinfo__btn {
   width: 110px;
@@ -635,6 +635,7 @@ textarea,
   text-align: center;
   margin-top: 130px;
   width: 500px;
+  height: 220px;
 }
 .p-acinfoEdit__input {
   margin-bottom: 15px;
@@ -987,6 +988,12 @@ table.p-show td {
   height: 35px;
   width: 300px;
   margin-bottom: 10px;
+}
+
+.p-anken {
+  text-align: center;
+  margin-top: 130px;
+  width: 700px;
 }
 
 .p-posting {
