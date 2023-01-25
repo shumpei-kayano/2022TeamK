@@ -247,6 +247,7 @@ class MatterController extends Controller
         )->get();
         // $items = $query->get();
 
+        // dd($items);
         $prefectures = Prefecture::all();
         $occupations  = Occupation::all();
         $rank_of_difficulties = Rank_of_difficulty::all();
@@ -333,7 +334,7 @@ class MatterController extends Controller
         $user_db->total_experience = $user_db->total_experience + $exe;
         // dd($user_db->total_experience);
         $user_db->save();
-
+        // dd($matter);
         $matter->evaluation = 1;
         $matter->save();
         // dd($matter->evaluation);
