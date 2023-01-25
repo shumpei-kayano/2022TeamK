@@ -1030,6 +1030,7 @@ table.p-show td {
 .p-posting__textarea {
   height: 380px;
   width: 290px;
+  margin-bottom: 20px;
 }
 .p-posting__prdn {
   margin-top: 10px;
@@ -1039,7 +1040,7 @@ table.p-show td {
 .p-posting__prdn2 {
   margin: auto;
   width: 290px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .p-posting__prdn3 {
   margin: auto;

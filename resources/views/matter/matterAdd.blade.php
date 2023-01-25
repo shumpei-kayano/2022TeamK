@@ -43,7 +43,7 @@
           <br>
 
           <!-- 連絡先 -->
-          <label for="dark_select" style="color:#fff;">連絡先</label><br>
+          <label for="dark_select" style="color:#fff;">連絡先（電話番号・メールアドレスなど）</label><br>
             @if($errors->has('tel'))
               {{ $errors->first('tel') }}
             @endif
@@ -66,17 +66,25 @@
             <dt>求めるスキル</dt>
             <dd>
               <label>
-                <input type="radio" name="skill" value="hoge1" onclick="entryChange1();" checked="checked" />
-                1つ目</label>
+                <input type="radio" name="skill" class="nes-radio is-dark" value="hoge1" onclick="entryChange1();" checked="checked" />
+                <span>1つ目</span>
+              </label>
+                <!-- 1つ目</label> -->
               <label>
-                <input type="radio" name="skill" value="hoge2" onclick="entryChange1();" />
-                2つ目</label>
+                <input type="radio" name="skill" class="nes-radio is-dark" value="hoge2" onclick="entryChange1();" />
+                <span>2つ目</span>
+                <!-- 2つ目</label> -->
+              </label>
               <label>
-                <input type="radio" name="skill" value="hoge3" onclick="entryChange1();" />
-                3つ目</label>
+                <input type="radio" name="skill" class="nes-radio is-dark" value="hoge3" onclick="entryChange1();" />
+                <span>3つ目</span>
+                <!-- 3つ目</label> -->
+              </label>
               <label>
-                <input type="radio" name="skill" value="hoge4" onclick="entryChange1();" />
-                4つ目</label>
+                <input type="radio" name="skill" class="nes-radio is-dark" value="hoge4" onclick="entryChange1();" />
+                <span>4つ目</span>
+                <!-- 4つ目</label> -->
+              </label>
             </dd>
           </dl>
 
@@ -195,7 +203,7 @@
 </table>
 
     <!-- 期限 -->
-    <label for="dark_select" style="color:#fff;">期限</label><br>
+    <label for="dark_select" style="color:#fff;" >期限</label><br>
         @if($errors->has('deadline'))
           {{ $errors->first('deadline') }}
         @endif

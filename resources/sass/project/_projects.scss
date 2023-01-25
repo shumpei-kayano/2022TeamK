@@ -636,6 +636,7 @@ table.p-show td {
     &__textarea {
         height: 380px;  //高さ
         width: 290px;   //横幅
+        margin-bottom: 20px //下の余白
     }
 
     //プルダウン（都道府県）
@@ -651,7 +652,7 @@ table.p-show td {
         margin: auto;       //中央に配置
         //margin-top: 10px; //上の余白
         width: 290px;       //横幅
-        margin-bottom: 15px //下の余白
+        margin-bottom: 20px //下の余白
     }
 
     //プルダウン（ランク）
