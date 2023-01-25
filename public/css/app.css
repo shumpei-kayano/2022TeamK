@@ -914,6 +914,10 @@ table.p-show td {
 .p-form__pr2 {
   color: #333;
 }
+.p-form__Textarea {
+  height: 450px;
+  width: 350px;
+}
 
 .p-port {
   width: 1350px;
@@ -1002,63 +1006,68 @@ table.p-show td {
   width: 500px;
 }
 
-.p-posting {
-  margin: 0;
-  text-align: center;
-  height: auto;
-}
-.p-posting__matter {
-  height: auto;
-  width: 300px;
-  margin-bottom: 10px;
-}
-.p-posting__Edit {
-  height: 35px;
-  width: 250px;
-  margin-bottom: 20px;
-}
-.p-posting__Inputs {
+.p-anken2__Inputs {
   height: 30px;
   width: 290px;
   margin-bottom: 20px;
 }
-.p-posting__Inputs2 {
+.p-anken2__Inputs2 {
   height: 30px;
   width: 270px;
   margin-bottom: 20px;
 }
-.p-posting__textarea {
+.p-anken2__deadline {
+  height: 30px;
+  width: 290px;
+}
+.p-anken2__textarea {
   height: 380px;
   width: 290px;
   margin-bottom: 20px;
 }
-.p-posting__prdn {
+.p-anken2__prdn {
   margin-top: 10px;
   width: 290px;
   margin-bottom: 10px;
 }
-.p-posting__prdn2 {
+.p-anken2__prdn2 {
   margin: auto;
   width: 290px;
   margin-bottom: 20px;
 }
-.p-posting__prdn3 {
+.p-anken2__prdn3 {
   margin: auto;
   margin-top: 10px;
   width: 130px;
   margin-bottom: 15px;
 }
-.p-posting__prdn4 {
+.p-anken2__prdn4 {
   margin: auto;
   margin-top: 10px;
   width: 290px;
   margin-bottom: 15px;
 }
-.p-posting__prdn5 {
+.p-anken2__prdn5 {
   margin: auto;
   margin-top: 10px;
   width: 290px;
   margin-bottom: 15px;
+}
+
+.p-anken2 {
+  margin: 0;
+  text-align: center;
+  height: auto;
+}
+.p-anken2__matter {
+  height: auto;
+  width: 300px;
+  margin-bottom: 10px;
+}
+.p-anken2__Edit {
+  height: 35px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 
 .p-mail {

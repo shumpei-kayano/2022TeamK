@@ -194,7 +194,7 @@
                         {{-- @if($errors->has('self_pr'))
                                 {{ $errors->first('self_pr') }}
                         @endif --}}
-                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark" placeholder="自分をアピールしまくろう！"  @if($errors->has('self_pr'))
+                            <textarea name="self_pr" id="" class="nes-textarea is-dark p-form__Textarea" placeholder="自分をアピールしまくろう！"  @if($errors->has('self_pr'))
                                 {{ $errors->first('self_pr') }}
                         @endif>{{ old('self_pr') }}</textarea>
                     </div>

@@ -462,6 +462,7 @@ table.p-show td {
         width: 250px;
         margin-bottom: 20px;   
     }
+
     &__PR {
         height: 100px;
         width: 300px;
@@ -476,6 +477,12 @@ table.p-show td {
 
     &__pr2 {
         color:$black;
+    }
+
+    //自己PRのテキストボックス
+    &__Textarea {
+        height: 450px; //高さ
+        width: 350px;  //横幅
     }
 }
 
@@ -601,23 +608,8 @@ table.p-show td {
     width: 500px; //横幅
 }
 
-//掲載中案件
-.p-posting {
-    margin: 0;
-    text-align: center;
-    height: auto;
-    &__matter {
-        height: auto;
-        width: 300px;
-        margin-bottom: 10px;
-    }
-
-    &__Edit {
-        height: 35px;
-        width: 250px;
-        margin-bottom: 20px;   
-    }
-
+//案件掲載
+.p-anken2{
     //入力枠
     &__Inputs {
         height: 30px;        //高さ
@@ -630,6 +622,12 @@ table.p-show td {
         height: 30px;        //高さ
         width: 270px;        //横幅
         margin-bottom: 20px; //下の余白
+    }
+
+    //期限
+    &__deadline {
+        height: 30px;        //高さ
+        width: 290px;        //横幅
     }
     
     //テキストボックス
@@ -679,6 +677,26 @@ table.p-show td {
         margin-bottom: 15px //下の余白
 
     }
+}
+
+
+//掲載中案件
+.p-anken2 {
+    margin: 0;
+    text-align: center;
+    height: auto;
+    &__matter {
+        height: auto;
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+    &__Edit {
+        height: 35px;
+        width: 250px;
+        margin-bottom: 20px;   
+    }
+
 }
 
 

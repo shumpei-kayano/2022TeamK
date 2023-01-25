@@ -317,7 +317,7 @@
                     <!-- 自己PR -->
                     <div class="p-port__PR">
                         <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>
-                            <textarea name="self_pr" id="" cols="27" rows="19" class="nes-textarea is-dark">{{ $form->self_pr }}</textarea>
+                            <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea">{{ $form->self_pr }}</textarea>
                     </div>
                 </div>
                 <!-- <label for="dark_field" style="color:#fff;" >自己PR<br> 
