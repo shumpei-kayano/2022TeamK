@@ -617,11 +617,66 @@ table.p-show td {
         width: 250px;
         margin-bottom: 20px;   
     }
+
+    //入力枠
+    &__Inputs {
+        height: 30px;        //高さ
+        width: 290px;        //横幅
+        margin-bottom: 20px; //下の余白 
+    }
+
+    //入力枠
+    &__Inputs2 {
+        height: 30px;        //高さ
+        width: 270px;        //横幅
+        margin-bottom: 20px; //下の余白
+    }
     
-    /*テキストボックス*/
+    //テキストボックス
     &__textarea {
-        height: 380px; /* 高さ */
-        width: 250px;  /* 横幅 */
+        height: 380px;  //高さ
+        width: 290px;   //横幅
+    }
+
+    //プルダウン（都道府県）
+    &__prdn {
+        //float: left;
+        margin-top: 10px;   //上の余白
+        width: 290px;       //横幅
+        margin-bottom: 10px //下の余白
+    }
+
+    //プルダウン（職業）
+    &__prdn2 {
+        margin: auto;       //中央に配置
+        //margin-top: 10px; //上の余白
+        width: 290px;       //横幅
+        margin-bottom: 15px //下の余白
+    }
+
+    //プルダウン（ランク）
+    &__prdn3 {
+        margin: auto;       //中央に配置
+        margin-top: 10px;   //上の余白
+        width: 130px;       //横幅
+        margin-bottom: 15px //下の余白
+    }
+
+    //プルダウン（スキル）
+    &__prdn4 {
+        margin: auto;       //中央に配置
+        margin-top: 10px;   //上の余白
+        width: 290px;       //横幅
+        margin-bottom: 15px //下の余白
+    }
+
+    //プルダウン（スキル2）
+    &__prdn5 {
+        margin: auto;       //中央に配置
+        margin-top: 10px; //上の余白
+        width: 290px;       //横幅
+        margin-bottom: 15px //下の余白
+
     }
 }
 

@@ -1006,7 +1006,6 @@ table.p-show td {
   margin: 0;
   text-align: center;
   height: auto;
-  /*テキストボックス*/
 }
 .p-posting__matter {
   height: auto;
@@ -1018,9 +1017,47 @@ table.p-show td {
   width: 250px;
   margin-bottom: 20px;
 }
+.p-posting__Inputs {
+  height: 30px;
+  width: 290px;
+  margin-bottom: 20px;
+}
+.p-posting__Inputs2 {
+  height: 30px;
+  width: 270px;
+  margin-bottom: 20px;
+}
 .p-posting__textarea {
-  height: 380px; /* 高さ */
-  width: 250px; /* 横幅 */
+  height: 380px;
+  width: 290px;
+}
+.p-posting__prdn {
+  margin-top: 10px;
+  width: 290px;
+  margin-bottom: 10px;
+}
+.p-posting__prdn2 {
+  margin: auto;
+  width: 290px;
+  margin-bottom: 15px;
+}
+.p-posting__prdn3 {
+  margin: auto;
+  margin-top: 10px;
+  width: 130px;
+  margin-bottom: 15px;
+}
+.p-posting__prdn4 {
+  margin: auto;
+  margin-top: 10px;
+  width: 290px;
+  margin-bottom: 15px;
+}
+.p-posting__prdn5 {
+  margin: auto;
+  margin-top: 10px;
+  width: 290px;
+  margin-bottom: 15px;
 }
 
 .p-mail {

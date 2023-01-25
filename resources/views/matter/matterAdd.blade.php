@@ -21,13 +21,14 @@
               @if($errors->has('matter_name'))
                 {{ $errors->first('matter_name') }}
               @endif
-            <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="案件名を入力してください" name="matter_name"><br> 
+            <input type="search" id="dark_field" class="nes-input is-dark p-posting__Inputs" placeholder="案件名を入力してください" name="matter_name" value="{{ old('matter_name') }}"><br> 
             <!--     <input type="text" class="" placeholder="あんけんめい" aria-describedby="basic-addon2" name="matter_name"> -->
 
           <input type="hidden" name="user_id" value="{{$user->id}}">
 
           <!-- 都道府県 -->
           <label>都道府県
+            <div class="nes-select is-dark p-posting__prdn">
             @if($errors->has('prefectures_id'))
               {{ $errors->first('prefectures_id') }}
             @endif
@@ -37,6 +38,7 @@
                   <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
               @endforeach
           </select>
+            </div>
           </label>
           <br>
 
@@ -45,16 +47,18 @@
             @if($errors->has('tel'))
               {{ $errors->first('tel') }}
             @endif
-          <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="連絡先を入力してください"name="tel"><br>  
+          <input type="search" id="dark_field" class="nes-input is-dark p-posting__Inputs" placeholder="連絡先を入力してください" name="tel" value="{{ old('tel') }}"><br>  
             <!--<input type="text" class="" placeholder="れんらくさき" aria-describedby="basic-addon2" name="tel"> -->
 
           <!-- 職業 -->
           <label for="dark_select" style="color:#fff;">職業</label><br>
+          <div class="nes-select is-dark p-posting__prdn2">
             <select name="occupation_id">
                 @foreach ($occupations as $occupation)
                     <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
                 @endforeach
-            </select><br><br>
+            </select><br>
+          </div>
         
         <!-- 求めるスキル -->
         <table border="0" cellspacing="0" cellpadding="0">
@@ -79,13 +83,15 @@
   <!-- 表示切り替えfirstBox -->
   <dl id="firstBox">
     <dl class="mailform">
-      <dt>スキル</dt>
+      <dt>スキル1</dt>
       <dd>
+        <div class="nes-select is-dark p-posting__prdn4">
     <select name="development_language_id1">
         @foreach ($development_languages as $language)
         <option value="{{$language->id}}">{{$language->language_name}}</option> 
         @endforeach    
     </select>
+    </div>
      </dd>
     </dl>
   </dl>
@@ -93,19 +99,24 @@
   <!-- 表示切り替えsecondBox -->
   <dl id="secondBox">
     <dl class="mailform">
-      <dt>スキル</dt>
+      <dt>スキル1</dt>
       <dd>
+        <div class="nes-select is-dark p-posting__prdn5">
         <select name="development_language_id1">
-          <option value="" selected>選択</option>
+          <!--<option value="" selected>選択</option>-->
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
+        <dt>スキル2</dt>
+        <div class="nes-select is-dark p-posting__prdn5">
         <select name="development_language_id2">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
       </dd>
     </dl>
   </dl>
@@ -113,23 +124,31 @@
   <!-- 表示切り替えthirdBox -->
   <dl id="thirdBox">
     <dl class="mailform">
-      <dt>スキル</dt>
+      <dt>スキル1</dt>
       <dd>
+        <div class="nes-select is-dark p-posting__prdn4">
         <select name="development_language_id1">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
+        <dt>スキル2</dt>
+        <div class="nes-select is-dark p-posting__prdn4">
         <select name="development_language_id2">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
+        <dt>スキル3</dt>
+        <div class="nes-select is-dark p-posting__prdn4">
         <select name="development_language_id3">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
       </dd>
     </dl>
   </dl>
@@ -137,41 +156,51 @@
   <!-- 表示切り替えfourthbox -->
   <dl id="fourthBox">
     <dl class="mailform">
-      <dt>スキル</dt>
+      <dt>スキル1</dt>
       <dd>
+        <div class="nes-select is-dark p-posting__prdn4">
         <select name="development_language_id1">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
+        <dt>スキル2</dt>
+        <div class="nes-select is-dark p-posting__prdn4">
         <select name="development_language_id2">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
+        <dt>スキル3</dt>
+        <div class="nes-select is-dark p-posting__prdn4">
         <select name="development_language_id3">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
+        <dt>スキル4</dt>
+        <div class="nes-select is-dark p-posting__prdn4">
         <select name="development_language_id4">
             @foreach ($development_languages as $language)
             <option value="{{$language->id}}">{{$language->language_name}}</option> 
             @endforeach    
         </select>
+        </div>
       </dd>
     </dl>
   </dl>
 </table>
 
     <!-- 期限 -->
-    <label for="dark_select" style="color:#fff;">きげん</label><br>
+    <label for="dark_select" style="color:#fff;">期限</label><br>
         @if($errors->has('deadline'))
           {{ $errors->first('deadline') }}
         @endif
-    <label for="dark_select" style="color:#fff;">期限</label><br>
     <input type="date" class=""
-            aria-describedby="basic-addon2" name="deadline">
+            aria-describedby="basic-addon2" name="deadline" value="{{ old('deadline') }}">
     </label><br><br>
           
 
@@ -182,7 +211,7 @@
       @if($errors->has('remarks'))
         {{ $errors->first('remarks') }}
       @endif
-    <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" placeholder="特記事項があれば入力してください"></textarea>
+    <textarea name="remarks" id="" class="nes-textarea is-dark p-posting__textarea" aria-describedby="basic-addon2" placeholder="特記事項があれば入力してください">{{ old('remarks') }}</textarea>
     <!-- <input type="text" class="nes-input is-dark p-form__portfolio" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks"> -->
     {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
     <br>
@@ -192,7 +221,7 @@
       @if($errors->has('number_of_person'))
         {{ $errors->first('number_of_person') }}
       @endif
-    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="募集人数を入力してください"name="number_of_person">
+    <input type="search" id="dark_field" class="nes-input is-dark p-posting__Inputs2" placeholder="募集人数を入力してください" name="number_of_person" value="{{ old('number_of_person') }}"> 人
     <br>
     <!-- <input type="number" class="" placeholder="ぼしゅうにんずう"aria-describedby="basic-addon2" name="number_of_person"> -->
 
@@ -201,12 +230,13 @@
       @if($errors->has('success_fee'))
         {{ $errors->first('success_fee') }}
       @endif
-    <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="金額を入力してください"name="success_fee">
+    <input type="search" id="dark_field" class="nes-input is-dark p-posting__Inputs2" placeholder="金額を入力してください" name="success_fee" value="{{ old('success_fee') }}"> 円
     <br>
     <!-- <input type="number" class="" placeholder="せいこうほしゅう"aria-describedby="basic-addon2" name="success_fee"> --> 
 
     <!-- 案件ランク -->
     <label>案件ランク
+      <div class="nes-select is-dark p-posting__prdn3">
       @if($errors->has('rank'))
         {{ $errors->first('rank') }}
       @endif
@@ -215,8 +245,9 @@
                   <option value="{{$item->id}}">{{$item->rank}}</option> 
               @endforeach
       </select>
+      </div>
     </label><br> 
-          </div>
+
     
     <!-- 確認ボタン -->
     <input type="submit" class="nes-btn is-success p-acinfo__btn" value="確認">

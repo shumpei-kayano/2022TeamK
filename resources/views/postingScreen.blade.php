@@ -79,7 +79,7 @@
 
         <!-- 特記事項 -->
         <label for="dark_field" style="color:#fff;" >特記事項<br>
-            <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->remarks }}</p><br>
+            <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ old($matter->remarks) }}</p><br>
             <!-- <p>特記事項：{{$matter->remarks}}</p> -->
 
         <!-- 募集人数 -->
