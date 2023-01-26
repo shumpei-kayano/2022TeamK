@@ -4,12 +4,13 @@
 
 @section('content')
 
-<h1 class="p-form">ポートフォリオさくじょ</h1>
 <div class="p-port">
-    <div class="nes-container is-rounded is-dark" style="height: 600px;">
-        @if ($form != null)
-        {{-- ポートフォリオがあった場合の処理 --}}
 
+    
+        @if ($form != null)
+{{-- ポートフォリオがあった場合の処理 --}}
+<h1 class="p-form">ポートフォリオ削除</h1>
+    <div class="nes-container is-rounded is-dark" style="height: 600px;">
         <div class="p-port__container">
             <div class="p-port__left">
                     <!-- 名前 -->
@@ -214,7 +215,7 @@
                 </div>
 
             <!-- 削除ボタン -->
-            <form action="{{ route('portfolio_remove') }}" method="post">
+            <form action="{{ route('portfolio_remove') }}" method="post" onclick='return confirm("本当に削除しますか？");'>
                 <div class="p-acinfo__btn-container p-port__btn">
                     @csrf
                     <button type="submit" class="nes-btn is-success p-acinfo__btn">削除</button>
@@ -224,7 +225,12 @@
 </div>
             @else
             {{-- ポートフォリオがない場合 --}}
-            <h1 style="font-size: 100px; text-align: center;">まだ作られてない<div class=""></div> 作ってからまたきてね</h1>
+            <div class="p-acinfo__container">
+            <div class="nes-container is-rounded is-dark p-portEdit__win">
+                <p>まだポートフォリオが作成されてません。</p>
+                <a href="/portfolioAdd">作成画面へ</a>
+            </div>
+            </div>
             @endif
 
 @endsection

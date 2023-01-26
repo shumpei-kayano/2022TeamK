@@ -634,8 +634,12 @@ textarea,
 .p-acinfoEdit {
   text-align: center;
   margin-top: 130px;
+  width: 600px;
+  height: 230px;
+  /*text-align: center;
+  margin-top: 130px;
   width: 500px;
-  height: 220px;
+  height: 220px;*/
 }
 .p-acinfoEdit__input {
   margin-bottom: 15px;
@@ -984,6 +988,11 @@ table.p-show td {
   font-size: 0.8rem;
 }
 
+.p-portEdit__win {
+  height: 140px;
+  width: 300px;
+}
+
 .p-portDel {
   margin: 0;
   text-align: center;
@@ -1009,49 +1018,50 @@ table.p-show td {
 .p-anken2__Inputs {
   height: 30px;
   width: 290px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .p-anken2__Inputs2 {
   height: 30px;
   width: 270px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .p-anken2__deadline {
   height: 30px;
   width: 290px;
+  margin-bottom: 30px;
 }
 .p-anken2__textarea {
   height: 380px;
   width: 290px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .p-anken2__prdn {
   margin-top: 10px;
   width: 290px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .p-anken2__prdn2 {
   margin: auto;
   width: 290px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .p-anken2__prdn3 {
   margin: auto;
   margin-top: 10px;
   width: 130px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .p-anken2__prdn4 {
   margin: auto;
   margin-top: 10px;
   width: 290px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .p-anken2__prdn5 {
   margin: auto;
   margin-top: 10px;
   width: 290px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .p-anken2 {

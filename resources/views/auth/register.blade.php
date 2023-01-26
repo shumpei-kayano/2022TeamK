@@ -5,7 +5,7 @@
 @section('content')
 <div class="p-register">
         <div class="nes-container is-dark with-title p-register__container">
-            <p class="title">しんきとうろく</p>
+            <p class="title">新規登録</p>
             <div class="card">
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -70,15 +70,15 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('パスワード（再度）') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('パスワード（確認）') }}</label>
 
                             <div class="col-md-6">
-                                <input placeholder="もう一度入力" id="password-confirm" type="password" class="input nes-input is-dark form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input placeholder="もう一度入力してください。" id="password-confirm" type="password" class="input nes-input is-dark form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
                         <div class="p-register-btn">
                             <button type="submit" class="nes-btn is-primary">
-                                {{ __('にんしょう') }}
+                                {{ __('認証') }}
                             </button>
                         </div>
                     </form>
