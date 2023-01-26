@@ -258,6 +258,13 @@
         text-overflow: ellipsis;    //はみ出して非表示になった要素がある場合に、三点リーダーを表示するための記述
     }
 
+    //詳細の入力枠（ランク）
+    &__search {
+        height: 30px;        //高さ
+        width: 241px;        //横幅
+        margin-bottom: 30px; //下の余白
+    }
+
 }
 
 table.p-show th {
@@ -752,7 +759,6 @@ table.p-show td {
 
     }
 }
-
 
 
 

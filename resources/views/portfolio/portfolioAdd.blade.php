@@ -5,7 +5,7 @@
 @section('content')
 
 
- <div class="p-port">
+<div class="p-port">
             @if ($form === null)
             {{-- ポートフォリオがなかった場合の処理 --}}
     <h1 class="p-form">ポートフォリオ作成</h1>

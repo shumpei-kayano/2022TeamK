@@ -33,8 +33,6 @@
                 </tbody>
         @endforeach --}}
             </table>
-    </div>
-</div>
 
 <table>
     <thead>
@@ -63,4 +61,7 @@
         @endforeach
     </tbody>
 </table>
+</div>
+</div>
+
 @endsection
