@@ -16,16 +16,25 @@
               <th>案件名</th>
               <th>ランク</th>
               <th>特記事項</th>
+              <th>職種</th>
+              <th>勤務地</th>
               <th></th>
               <th></th>
             </tr>
           </thead>
 
+
+          @php
+            $occupation1 = DB::table('occupations')->find($matter->occupation_id);
+            $prefectures1 = DB::table('prefectures')->find($matter->prefectures_id);
+          @endphp
           <tbody>
             <tr>
               <td>{{ $matter->matter_name }}</td>
               <td>{{ $matter->rank }}</td>
               <td>{{ $matter->remarks }}</td>
+              <td>{{ $occupation1->occupation_name }}</td>
+              <td>{{ $prefectures1->prefectures_name }}</td>
               {{-- <td>{{ dd($favorite) }}</td> --}}
               <td>@if (Auth::check())
                         @if (isset($favorite))
