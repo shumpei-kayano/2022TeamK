@@ -4,8 +4,8 @@
 
 @section('content')
 
+<div class="p-port">
 
-<div class="p-acinfo__container">
     
         @if ($form != null)
 {{-- ポートフォリオがあった場合の処理 --}}
@@ -225,9 +225,11 @@
 </div>
             @else
             {{-- ポートフォリオがない場合 --}}
+            <div class="p-acinfo__container">
             <div class="nes-container is-rounded is-dark p-portEdit__win">
                 <p>まだポートフォリオが作成されてません。</p>
                 <a href="/portfolioAdd">作成画面へ</a>
+            </div>
             </div>
             @endif
 
