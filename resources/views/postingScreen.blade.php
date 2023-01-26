@@ -144,6 +144,3 @@
 </form>
 @endforeach
 {{-- {{ dd($development_languages) }} --}}
-
-
-@endsection
