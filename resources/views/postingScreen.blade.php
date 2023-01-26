@@ -63,7 +63,7 @@
         <div class="nes-container is-rounded is-dark p-keisaianken">
 
             {{-- {{ dd($matters)}} --}}
-@foreach($matters as $matter)
+{{-- @foreach($matters as $matter)
     <form action='{{ route('matterEdit',['id'=>$matter->id]) }}'method='post'>
         @csrf
         <!-- 案件名 -->
@@ -111,12 +111,12 @@
             {{-- <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->development_language2->language_name }}</p><br> --}}
 
         <!-- 期限 -->
-        <label for="dark_field" style="color:#fff;" >期限<br>
+        {{-- <label for="dark_field" style="color:#fff;" >期限<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->deadline }}</p><br>
-            <!-- <p>期限：{{$matter->deadline}}</p> -->
+            <!-- <p>期限：{{$matter->deadline}}</p> --> --}}
 
         <!-- 特記事項 -->
-        <label for="dark_field" style="color:#fff;" >特記事項<br>
+        {{-- <label for="dark_field" style="color:#fff;" >特記事項<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ old($matter->remarks) }}</p><br>
             <!-- <p>特記事項：{{$matter->remarks}}</p> -->
 
@@ -131,16 +131,16 @@
 
         <!-- 案件ランク -->
         <label for="dark_field" style="color:#fff;" >案件ランク<br>
-            <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->rank }}</p>
+            <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->rank }}</p> --}}
     
     {{-- <p>求めるスキル{{$matter->development_language->language_name}}</p> --}}
     {{-- <p>求めるスキル{{$matter->development_languages->language_name}}</p>
     <p>求めるスキル{{$matter->development_languages->language_name}}</p> --}}
 
-</div>
+{{-- </div>
 </div>
     <input type="submit" class="nes-btn is-success" value=編集>
     </div>
 </form>
 @endforeach
-{{-- {{ dd($development_languages) }} --}}
+{{ dd($development_languages) }} --}} --}}
