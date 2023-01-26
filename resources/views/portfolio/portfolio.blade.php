@@ -3,7 +3,7 @@
 @section('title','ポートフォリオ')
 
 @section('content')
-<h1 class="p-form">ポートフォリオ</h1>
+<h1 class="p-form" style="padding-top: 30px;">ポートフォリオ</h1>
     <div class="portfolio">
         <div class="nes-container is-dark with-title portfolio__container">
             <a href="portfolioAdd"><button type="button" class="nes-btn is-primary portfolio__btn">ポートフォリオを<br>作成する</button></a>

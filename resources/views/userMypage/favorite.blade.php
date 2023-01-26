@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1 class="p-form">お気に入りリスト</h1>
+<h1 class="p-form" style="padding-top: 45px;">お気に入りリスト</h1>
 
 <div class="p-acinfo__container2">
     <div class="nes-container is-dark with-title p-form__container2" style="width:600px; height:150px;">

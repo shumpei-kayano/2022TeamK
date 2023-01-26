@@ -22,7 +22,7 @@
 
 <!-- とらくんが編集したところ？ -->
 <div class="p-form">
-    <h1 class="p-form" style="">掲載中案件</h1>
+    <h1 class="p-form" style="padding-top:45px;">掲載中案件</h1>
     <div class="p-acinfo__container">
         <div class="nes-container is-rounded is-dark p-keisaianken" style="">
 

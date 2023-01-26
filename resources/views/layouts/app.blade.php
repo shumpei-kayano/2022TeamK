@@ -22,7 +22,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body style="background-size:auto;">
+<body>
     <div id="app">
         <nav class="c-nav">
             <div class="c-nav__container">
