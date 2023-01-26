@@ -142,9 +142,13 @@
 
 .p-acinfoEdit {
     text-align: center;
+    margin-top: 130px;     //上の余白
+    width: 600px;          //横幅
+    height: 230px;         //高さ
+    /*text-align: center;
     margin-top: 130px;
     width: 500px;
-    height: 220px;
+    height: 220px;*/
     &__input {
         margin-bottom: 15px;
     }
@@ -169,6 +173,8 @@
     &__btn-container {
         text-align: center;
     }
+
+    
 }
 
 //////////案件検索画面///////////// 
@@ -584,6 +590,16 @@ table.p-show td {
     }
 }
 
+//ポートフォリオ編集画面
+.p-portEdit {
+    //ポートフォリオがない場合の黒いウィンドウ（編集・削除）
+    &__win {
+        height: 140px;   //高さ
+        width: 300px;   //横幅
+        //margin-top: 100px;
+    }
+}
+
 //ポートフォリオ削除画面
 .p-portDel {
     margin: 0;
@@ -614,27 +630,28 @@ table.p-show td {
     &__Inputs {
         height: 30px;        //高さ
         width: 290px;        //横幅
-        margin-bottom: 20px; //下の余白 
+        margin-bottom: 30px; //下の余白 
     }
 
     //入力枠
     &__Inputs2 {
         height: 30px;        //高さ
         width: 270px;        //横幅
-        margin-bottom: 20px; //下の余白
+        margin-bottom: 30px; //下の余白
     }
 
     //期限
     &__deadline {
         height: 30px;        //高さ
         width: 290px;        //横幅
+        margin-bottom: 30px //下の余白
     }
     
     //テキストボックス
     &__textarea {
         height: 380px;  //高さ
         width: 290px;   //横幅
-        margin-bottom: 20px //下の余白
+        margin-bottom: 30px //下の余白
     }
 
     //プルダウン（都道府県）
@@ -642,7 +659,7 @@ table.p-show td {
         //float: left;
         margin-top: 10px;   //上の余白
         width: 290px;       //横幅
-        margin-bottom: 10px //下の余白
+        margin-bottom: 30px //下の余白
     }
 
     //プルダウン（職業）
@@ -650,7 +667,7 @@ table.p-show td {
         margin: auto;       //中央に配置
         //margin-top: 10px; //上の余白
         width: 290px;       //横幅
-        margin-bottom: 20px //下の余白
+        margin-bottom: 30px //下の余白
     }
 
     //プルダウン（ランク）
@@ -658,7 +675,7 @@ table.p-show td {
         margin: auto;       //中央に配置
         margin-top: 10px;   //上の余白
         width: 130px;       //横幅
-        margin-bottom: 15px //下の余白
+        margin-bottom: 30px //下の余白
     }
 
     //プルダウン（スキル）
@@ -666,7 +683,7 @@ table.p-show td {
         margin: auto;       //中央に配置
         margin-top: 10px;   //上の余白
         width: 290px;       //横幅
-        margin-bottom: 15px //下の余白
+        margin-bottom: 30px //下の余白
     }
 
     //プルダウン（スキル2）
@@ -674,7 +691,7 @@ table.p-show td {
         margin: auto;       //中央に配置
         margin-top: 10px; //上の余白
         width: 290px;       //横幅
-        margin-bottom: 15px //下の余白
+        margin-bottom: 30px //下の余白
 
     }
 }

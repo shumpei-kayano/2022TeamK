@@ -4,11 +4,12 @@
 
 @section('content')
 
-<h1 class="p-form">ポートフォリオかくにん・へんしゅう</h1>
-<div class="p-port">
-    <div class="nes-container is-rounded is-dark" style="height: 600px;">
+<div class="p-acinfo__container">
         @if ($form != null)
+
         {{-- ポートフォリオがあった場合の処理 --}}
+        <h1 class="p-form">ポートフォリオかくにん・へんしゅう</h1>
+            <div class="nes-container is-rounded is-dark" style="height: 600px;">
         <form action='{{ route('portfolio_update',) }}'method='post'>
             @csrf
             <div class="p-port__container">
@@ -333,8 +334,10 @@
 </div>
             @else
             {{-- ポートフォリオがなかった場合の処理 --}}
-                    {{-- <div class="nes-container is-rounded is-dark" style="height: 100px!important;"> --}}
-                    
+                    <div class="nes-container is-rounded is-dark p-portEdit__win">
+                        <p>まだポートフォリオが作成されてません。</p>
+                        <a href="/portfolioAdd">作成画面へ</a>
+                    </div>
             @endif
 
 

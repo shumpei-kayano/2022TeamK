@@ -43,13 +43,13 @@
                 <div class="col-md-6 offset-md-4">
                         <label class="form-check-label" for="remember">
                             <input type="checkbox" name="remember" id="remember" class="nes-checkbox is-dark" {{ old('remember') ? 'checked' : '' }}>
-                            <span>{{ __('じょうほうを保存する') }}</span>
+                            <span>{{ __('パスワードを保存する') }}</span>
                           </label> 
                         <!-- <div class="form-check">
                         <input class="" type="checkbox" name="remember" id="remember"{{ old('remember') ? 'checked' : '' }} style="color: white">
 
                         <label class="form-check-label" for="remember">
-                            {{ __('じょうほうを保存する') }}  
+                            {{ __('パスワードを保存する') }}  
                         </label>--> 
                     </div>
                 </div>
