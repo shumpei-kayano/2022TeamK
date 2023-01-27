@@ -218,7 +218,7 @@
             <form action="{{ route('portfolio_remove') }}" method="post" onclick='return confirm("本当に削除しますか？");'>
                 <div class="p-acinfo__btn-container p-port__btn">
                     @csrf
-                    <button type="submit" class="nes-btn is-success p-acinfo__btn">削除</button>
+                    <button type="submit" class="nes-btn is-success p-acinfo__btn">削除する</button>
                 </div>
             </form>
     </div>

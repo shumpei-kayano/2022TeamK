@@ -4,7 +4,7 @@
     
 
 @section('content')
-<div class="p-mypage">
+<div class="p-mypage" style="padding-top: 75px;">
     <div class="nes-container is-dark with-title p-mypage__container">
         <p class="title">マイページ</p>
         @if (session('status'))

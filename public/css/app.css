@@ -730,6 +730,11 @@ textarea,
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.p-show__search {
+  height: 30px;
+  width: 241px;
+  margin-bottom: 30px;
+}
 
 table.p-show th {
   width: 300px; /*見出しセルの幅*/
@@ -1096,11 +1101,19 @@ table.p-show td {
 .favorite {
   width: 700px;
   padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
 .favorite__container {
   text-align: center;
   display: flex;
   justify-content: center;
+}
+.favorite__tokki {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .insta_btn3 { /*ボタンの下地*/

@@ -5,7 +5,7 @@
 @section('content')
 
 
- <div class="p-port">
+<div class="p-port">
             @if ($form === null)
             {{-- ポートフォリオがなかった場合の処理 --}}
     <h1 class="p-form">ポートフォリオ作成</h1>
@@ -201,7 +201,7 @@
                 </div>
                 {{-- 作成ボタン --}}
                 <div class="p-acinfo__btn-container p-port__btn">
-                    <button type="submit" class="nes-btn is-success p-acinfo__btn">作成</button>
+                    <button type="submit" class="nes-btn is-success p-acinfo__btn">作成する</button>
                 <div>
             </form>
 

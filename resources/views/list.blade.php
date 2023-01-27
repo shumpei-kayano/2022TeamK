@@ -6,11 +6,12 @@
 
 <h1 class="p-form">承認待ちリスト</h1>
 
-<div class="favorite">
-    <div class="nes-container is-dark with-title favorite__container">
+<div class="p-acinfo__container2">
+    <div class="nes-container is-dark with-title p-form__container2" style="width:600px; height:150px; text-overflow: ellipsis;">
         {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
         </a> --}}
+        {{-- <div>
         <table class="">
             <thead>
             <tr>
@@ -19,7 +20,7 @@
                 <th>エリア</th>
                 <th>特記事項</th>
             </tr>
-            </thead>
+            </thead> --}}
         {{-- @foreach($favorites as $favorite)
         
                 <tbody>
@@ -32,35 +33,40 @@
                 </tr>
                 </tbody>
         @endforeach --}}
-            </table>
-    </div>
-</div>
+            {{-- </table> --}}
 
-<table>
+<table class="p-show">
     <thead>
-        <th>案件名</th>
-        <th>登録ユーザー</th>
+        <tr>
+            <th>案件名</th>
+            <th>登録ユーザー</th>
+        </tr>
     </thead>
-    <tbody>
+
         @foreach ($order_received_matters as $order_received_matter)
+        <tbody>
             <tr>
-                <!-- 商品名 -->
-                <td class="table-text">
-                    <div>{{ $order_received_matter->matter->matter_name }}</div>
+                <!-- 案件名 -->
+                <td class="p-show__tokki">
+                    {{ $order_received_matter->matter->matter_name }}
                 </td>
                 <!-- 登録ユーザー -->
-                <td class="table-text">
-                    <div>{{ $order_received_matter->user->name }}</div>
+                <td class="p-show__tokki">
+                    {{ $order_received_matter->user->name }}
                 </td>
 
                 <td>
                     <form method="POST" action="{{ route('user.detail', ['id'=>$order_received_matter->user_id]) }}">
                         @csrf
                         <input type="hidden" name="form" value="{{ $order_received_matter->id }}">
-                        <button type="submit">詳細</button>
+                        <button type="submit" class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px;">詳細</button>
                     </form>
             </tr>
         @endforeach
     </tbody>
 </table>
+        </div>
+</div>
+</div>
+
 @endsection

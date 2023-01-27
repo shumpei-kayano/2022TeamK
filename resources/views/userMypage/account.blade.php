@@ -9,7 +9,7 @@
 <h1 class="p-form">アカウント情報</h1>
 <div class="p-acinfo__container2">
     <div class="nes-container is-rounded is-dark p-acinfo">
-        <p class="p-acinfo__id">ユーザーID：{{ $user->name }}</p>
+        <p>ユーザーID：{{ $user->name }}</p>
         <p> メールアドレス：{{ $user->email }}</p>
     </div>
 </div>

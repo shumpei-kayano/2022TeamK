@@ -8,9 +8,9 @@
 
 <h1 class="p-form" style="padding-top:55px">確認</h1>
 
-<div class="favorite">
-    <div class="nes-container is-dark with-title favorite__container">
-        <table class="">
+<div class="p-acinfo__container2">
+    <div class="nes-container is-dark with-titlep-form__container2" style="width:600px; height:150px;">
+        <table class="p-show" style="">
             <thead>
             <tr>
                 <th>案件名</th>
@@ -37,8 +37,8 @@
                 }
             @endphp
                 <tbody>
-                <tr>
-                    <td>{{ $matter->matter_name }}</td>
+                <tr style="text-align: center">
+                    <td class="p-show__tokki">{{ $matter->matter_name }}</td>
                     <td>{{ $com->name }}</td>
                     <td style="{{$color}}">{{ $ado }}</td>
                     
