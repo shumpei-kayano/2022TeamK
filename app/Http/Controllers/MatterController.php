@@ -283,7 +283,8 @@ class MatterController extends Controller
     {
         $form = $request->input('form');
         $portfolio = Portfolio::whereUser_id($id)->first();
-        return view('./user_detail', compact('portfolio', 'form'));
+        $items = \DB::table('development_languages') -> get();
+        return view('./user_detail', compact('portfolio', 'form','items'));
     }
 
     public function approval(Request $request, $id)
