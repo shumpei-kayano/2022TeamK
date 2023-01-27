@@ -47,8 +47,8 @@
              </div>
 
         <div class="p-port__right">
-            <!-- 学習言語1 -->
 
+            <!-- 学習言語1 -->
              <div class="p-fort__aaa">
                 <div class="p-port__prdn1">   
                     <label for="dark_select" style="color:#fff;">学習言語１</label><br>

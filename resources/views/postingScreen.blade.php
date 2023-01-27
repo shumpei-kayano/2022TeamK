@@ -20,13 +20,12 @@
 <p>案件ランク:{{$matter->rank}}</p> --}}
 {{-- {{ dd($matters)}} --}}
 
-<!-- とらくんが編集したところ？ -->
 <div class="p-form">
     <h1 class="p-form" style="padding-top:45px;">掲載中案件</h1>
     <div class="p-acinfo__container">
         <div class="nes-container is-rounded is-dark p-keisaianken" style="">
 
-            <table class="p-show"style="color:red">
+            <table class="p-show"style="color:fff">
                 <tr>
                     <th>案件名</th>
                     <th>職種</th>
@@ -143,4 +142,4 @@
     </div>
 </form>
 @endforeach
-{{ dd($development_languages) }} --}} --}}
+{{ dd($development_languages) }} --}}
