@@ -47,6 +47,13 @@
                         <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" disabled value="yyyy/mm/dd" name="birthday">
              </div>
 
+            @php
+                $devLan1 = DB::table('development_languages')->find($portfolio->development_language_id1);
+                $devLan2 = DB::table('development_languages')->find($portfolio->development_language_id2);
+                $devLan3 = DB::table('development_languages')->find($form->development_language_id3);
+                $devLan4 = DB::table('development_languages')->find($form->development_language_id4);
+            @endphp
+
              <div class="p-fort__aaa">
                 <div class="p-port__prdn1">   
                     <label for="dark_select" style="color:#fff;">学習言語１</label><br>
