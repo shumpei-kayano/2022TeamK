@@ -6,9 +6,9 @@ use App\Portfolio;
 use Faker\Generator as Faker;
 
 $factory->define(Portfolio::class, function (Faker $faker) {
-    $int = 1;
+    // $int = 1;
     return [
-        'user_id' => $int++,
+        'user_id' => $faker->unique()->numberBetween($int1 = 1, $int2 = 10),
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'tel' => $faker->phoneNumber(),
