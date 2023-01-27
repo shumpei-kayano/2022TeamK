@@ -326,7 +326,7 @@
 
                 <!-- 編集ボタン -->
                 <div class="p-acinfo__btn-container p-port__btn">
-                    <button type="submit" class="nes-btn is-success p-acinfo__btn">編集</button>
+                    <button type="submit" class="nes-btn is-success p-acinfo__btn">編集する</button>
             <div>
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
         </form>

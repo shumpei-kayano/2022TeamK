@@ -201,7 +201,7 @@
                 </div>
                 {{-- 作成ボタン --}}
                 <div class="p-acinfo__btn-container p-port__btn">
-                    <button type="submit" class="nes-btn is-success p-acinfo__btn">作成</button>
+                    <button type="submit" class="nes-btn is-success p-acinfo__btn">作成する</button>
                 <div>
             </form>
 

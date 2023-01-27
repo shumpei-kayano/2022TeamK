@@ -75,14 +75,28 @@
                                 <input type="hidden" name="matter_id" value="{{$matter->id}}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">お気に入り解除</button>
+                                <button type="submit" id="btn1" class="nes-btn is-primary">お気に入り解除</button>
+                                <!--<script> //ダイアログの表示
+                                  const btn1 = document.getElementById('btn1');
+            
+                                  btn1.addEventListener('click', () => {
+                                  alert('お気に入り解除しました。');
+                                  });
+                              </script>-->
                             </form>
                         @else
                             {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
                             <form action="{{route('favorite2', ['id'=>$matter->id])}}" method="POST">
                                 @csrf
                                 <input type="hidden" name="matter_id" value="{{$matter->id}}">
-                                <button type="submit">お気に入り登録</button>
+                                <button type="submit" id="btn2" class="nes-btn is-primary">お気に入り登録</button>
+                                <!--<script> //ダイアログの表示
+                                  const btn2 = document.getElementById('btn2');
+            
+                                  btn2.addEventListener('click', () => {
+                                  alert('お気に入り登録しました。');
+                                  });
+                              </script>-->
                             </form>
                         @endif
                 @endif
@@ -98,26 +112,26 @@
                 @if (!isset($e))
                 {{--  応募するボタン  --}}
                 @if($user->total_experience < 100 && $matter->rank > 2)
-                  応募できません
+                  <label for="" style="color: #ff0000">※ランクが足りない為、応募できません</label>
                 @elseif($user->total_experience < 1000 && $matter->rank > 3)
-                  応募できません
+                  <label for="" style="color: #ff0000">※ランクが足りない為、応募できません</label>
                 @elseif($user->total_experience < 10000 && $matter->rank > 4)
-                  応募できません
+                  <label for="" style="color: #ff0000">※ランクが足りない為、応募できません</label>
                 @elseif($user->total_experience < 100000 && $matter->rank > 5)
-                  応募できません
+                  <label for="" style="color: #ff0000">※ランクが足りない為、応募できません</label>
                 @elseif($user->total_experience < 1000000 && $matter->rank > 6)
-                  応募できません
+                  <label for="" style="color: #ff0000">※ランクが足りない為、応募できません</label>
                 @elseif($user->total_experience < 10000000 && $matter->rank > 7)
-                  応募できません
+                  <label for="" style="color: #ff0000">※ランクが足りない為、応募できません</label>
                 @else
                   <form action="{{route('submission')}}" method="POST">
                     @csrf
                   <input type="hidden" name="matter_id" value="{{$matter->id}}">
-                  <button type="submit">応募する</button>
+                  <button type="submit" class="nes-btn is-primary">応募する</button>
               </form>
                 @endif
               @else
-              応募済み
+              <button type="button" class="nes-btn is-disabled">応募済み</button>
               @endif
               </td>
             </tr>
