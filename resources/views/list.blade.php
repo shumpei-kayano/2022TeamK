@@ -7,10 +7,11 @@
 <h1 class="p-form">承認待ちリスト</h1>
 
 <div class="favorite">
-    <div class="nes-container is-dark with-title favorite__container">
+    <div class="nes-container is-dark with-title favorite__container" style="float: left; display:flex;">
         {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
         </a> --}}
+        <div>
         <table class="">
             <thead>
             <tr>
@@ -33,7 +34,9 @@
                 </tbody>
         @endforeach --}}
             </table>
+        </div>
 
+        <div>
 <table>
     <thead>
         <th>案件名</th>
@@ -61,6 +64,7 @@
         @endforeach
     </tbody>
 </table>
+        </div>
 </div>
 </div>
 

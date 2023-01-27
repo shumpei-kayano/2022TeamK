@@ -751,12 +751,21 @@ table.p-show td {
     padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    padding: 20px;
 
     &__container {
         text-align: center;
         display: flex;
         justify-content: center;
+        // max-width: 0;              //省略せずに表示するサイズを、任意の数字で指定
+        // overflow: hidden;           //上述で指定したサイズからはみ出る部分を非表示にするため
+        // text-overflow: ellipsis;    //はみ出して非表示になった要素がある場合に、三点リーダーを表示するための記述
+    }
 
+    &__tokki {
+        max-width: 0;              //省略せずに表示するサイズを、任意の数字で指定
+        overflow: hidden;           //上述で指定したサイズからはみ出る部分を非表示にするため
+        text-overflow: ellipsis;    //はみ出して非表示になった要素がある場合に、三点リーダーを表示するための記述
     }
 }
 
