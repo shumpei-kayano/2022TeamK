@@ -258,7 +258,7 @@
 
     
     <!-- 確認ボタン -->
-    <input type="submit" class="nes-btn is-success p-acinfo__btn" value="確認">
+    <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="確認">
     
 </div>
     </div>

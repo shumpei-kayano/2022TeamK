@@ -201,7 +201,7 @@
                 </div>
                 {{-- 作成ボタン --}}
                 <div class="p-acinfo__btn-container p-port__btn">
-                    <button type="submit" class="nes-btn is-success p-acinfo__btn">作成する</button>
+                    <button type="submit" class="nes-btn is-primary p-acinfo__btn">作成する</button>
                 <div>
             </form>
 
@@ -211,7 +211,7 @@
             {{-- ポートフォリオがあった場合の処理 --}}
             <div class="p-acinfo__container">
                 <div class="nes-container is-rounded is-dark p-portEdit__win">
-                    <p>もう既に作成されてます。</p>
+                    <p>作成済みです。</p>
                     <a href="/portfolio">戻る</a>
                 </div>
             </div>

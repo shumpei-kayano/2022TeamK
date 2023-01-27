@@ -11,7 +11,7 @@
 <div class="p-acinfo__container2">
     <div class="nes-container is-rounded is-dark p-acinfo" style="width: 200px;">
 <p>評価しました。</p>
-<a href="/company">ホームへ</a>
+<a href="/company">マイページへ</a>
     </div>
 </div>
 

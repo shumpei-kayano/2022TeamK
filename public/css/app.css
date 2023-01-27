@@ -1085,6 +1085,17 @@ table.p-show td {
   margin-bottom: 20px;
 }
 
+.p-syounin__btn {
+  position: absolute;
+  left: 110px;
+  bottom: 70px;
+}
+.p-syounin__btn2 {
+  position: absolute;
+  left: 260px;
+  bottom: 70px;
+}
+
 .p-mail {
   color: #b5e66a;
   text-align: center;

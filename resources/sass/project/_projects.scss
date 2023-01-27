@@ -723,6 +723,23 @@ table.p-show td {
 
 }
 
+//承認待ちリスト
+
+.p-syounin {
+    //承認・却下のボタン
+    &__btn {
+        position: absolute;
+        left: 110px;
+        bottom: 70px;
+    }
+    &__btn2 {
+        position: absolute;
+        left: 260px;
+        //right: 185px;
+        bottom: 70px;
+    }
+}
+
 
 //////////メール送信しました画面//////////
 

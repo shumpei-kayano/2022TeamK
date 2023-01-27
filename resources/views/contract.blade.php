@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','お気に入りリスト')
+@section('title','評価')
 
 @section('content')
 
@@ -36,7 +36,7 @@
             <thead>
                 <th>案件名</th>
                 <th>応募ユーザー</th>
-                <th></th>
+                <th>評価</th>
             </thead>
             <tbody>
                 @foreach ($order_received_matters as $order_received_matter)
@@ -55,34 +55,35 @@
                             <input type="hidden" name="rank" value="{{$order_received_matter->rank}}">
                             <input type="hidden" name="order_id" value="{{$order_received_matter->id}}">
                           <div style="float: left">
-                            <div>
-                                <input type="radio" name="form" value="1" checked>
-                                <label>1</label>
-                              </div>
+                            <label>
+                                <input type="radio" name="form" class="nes-radio is-dark" value="1" checked>
+                                <span>1</span>
+                              </label>
                           
-                              <div>
-                                <input type="radio" name="form" value="2">
-                                <label>2</label>
-                              </div>
+                              <label>
+                                <input type="radio" name="form" class="nes-radio is-dark" value="2">
+                                <span>2</span>
+                              </label>
                           
-                              <div>
-                                <input type="radio" name="form" value="3">
-                                <label>3</label>
-                              </div>
+                              <label>
+                                <input type="radio" name="form" class="nes-radio is-dark" value="3">
+                                <span>3</span>
+                              </label>
                           
-                              <div>
-                                <input type="radio" name="form" value="4">
-                                <label>4</label>
-                              </div>
+                              <label>
+                                <input type="radio" name="form" class="nes-radio is-dark" value="4">
+                                <span>4</span>
+                              </label>
                           
-                              <div>
-                                <input type="radio" name="form" value="5">
-                                <label>5</label>
-                              </div>
+                              <label>
+                                <input type="radio" name="form" class="nes-radio is-dark" value="5">
+                                <span>5</span>
+                              </label>
                             </td>
                             <td>
                              </div>
-                             <button type="submit" class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px;">詳細</button>
+                             <button type="submit" class="nes-btn is-primary" 
+                             style="height:35px; width:60px; text-align:center; padding-top:0px;" onclick='return confirm("評価してもよろしいでしょうか？");'>評価</button>
                         </form>
                     </td>
                         
