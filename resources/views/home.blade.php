@@ -14,7 +14,7 @@
         @endif
         <div class="p-mypage__btn-container">
             <a href="/account"><button type="button" class="nes-btn is-primary p-mypage__btn">アカウント</button></a> 
-            <a href="/favorite"><button type="button" class="nes-btn is-primary p-mypage__btn">お気に入り</button></a> 
+            <a href="{{ route('favorite_list')}}"><button type="button" class="nes-btn is-primary p-mypage__btn">お気に入り</button></a> 
             <a href="/show"><button type="button" class="nes-btn is-primary p-mypage__btn">案件</button></a>
         </div>
         <div class="p-mypage__btn-container">
