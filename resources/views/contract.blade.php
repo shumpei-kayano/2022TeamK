@@ -6,8 +6,8 @@
 
 <h1 class="p-form">評価</h1></h1>
 
-<div class="favorite">
-    <div class="nes-container is-dark with-title favorite__container">
+<div class="p-acinfo__container2">
+    <div class="nes-container is-dark with-title  p-form__container2" style="width:600px; height:200px; text-overflow: ellipsis;">
         {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
         </a> --}}
@@ -32,7 +32,7 @@
                 </tr>
                 </tbody>
         @endforeach --}}
-        <table>
+        <table class="p-show">
             <thead>
                 <th>案件名</th>
                 <th>応募ユーザー</th>
@@ -42,12 +42,12 @@
                 @foreach ($order_received_matters as $order_received_matter)
                     <tr>
                         <!-- 商品名 -->
-                        <td class="table-text">
-                            <div>{{ $order_received_matter->matter->matter_name }}</div>
+                        <td class="p-show__tokki">
+                           {{ $order_received_matter->matter->matter_name }}
                         </td>
                         <!-- 登録ユーザー -->
-                        <td class="table-text">
-                            <div>{{ $order_received_matter->user->name }}</div>
+                        <td class="p-show__tokki">
+                            {{ $order_received_matter->user->name }}
                         </td>
                         <td>
                         <form method="POST" action="{{ route('evaluation', ['id'=>$order_received_matter->user_id]) }}">
@@ -82,7 +82,7 @@
                             </td>
                             <td>
                              </div>
-                            <button type="submit">評価</button>
+                             <button type="submit" class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px;">詳細</button>
                         </form>
                     </td>
                         
