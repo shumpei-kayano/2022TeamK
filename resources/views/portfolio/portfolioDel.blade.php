@@ -28,7 +28,7 @@
                             <input type="mail" id="mail" class="nes-input is-dark p-form__portfolio" name="email" disabled value='{{ $form->email }}'>
 
                     <!-- 電話番号 -->
-                    <label for="tel" style="color:#fff;" >電話番号
+                    <label for="tel" style="color:#fff;" >電話番号（ハイフンなし）
                         @if($errors->has('tel'))
                             {{ $errors->first('tel') }}
                         @endif
