@@ -335,8 +335,8 @@
             @else
             {{-- ポートフォリオがなかった場合の処理 --}}
             <div class="p-acinfo__container">
-                    <div class="nes-container is-rounded is-dark p-portEdit__win">
-                        <p>まだポートフォリオが作成されてません。</p>
+                    <div class="nes-container is-rounded is-dark p-portEdit__win" style="margin-top: 70px; text-align:center; padding-top:20px;">
+                        <p>まだポートフォリオが<br>作成されてません。</p>
                         <a href="/portfolioAdd">作成画面へ</a>
                     </div>
                 </div>
