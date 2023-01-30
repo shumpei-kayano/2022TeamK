@@ -29,21 +29,21 @@
           <!-- 都道府県 -->
           <label>都道府県
             <div class="nes-select is-dark p-anken2__prdn">
-            @if($errors->has('prefectures_id'))
-              {{ $errors->first('prefectures_id') }}
-            @endif
-          <select name="prefectures_id" >
-            <option value="" selected>エリア選択</option>
-              @foreach ($prefectures as $prefecture)
-                  <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
-              @endforeach
-          </select>
+                @if($errors->has('prefectures_id'))
+                  {{ $errors->first('prefectures_id') }}
+                @endif
+              <select name="prefectures_id" >
+                <option value="" selected>エリア選択</option>
+                  @foreach ($prefectures as $prefecture)
+                      <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
+                  @endforeach
+              </select>
             </div>
           </label>
           <br>
 
-          <!-- 連絡先 -->
-          <label for="dark_select" style="color:#fff;">連絡先（電話番号・メールアドレスなど）</label><br>
+          <!-- 電話番号 -->
+          <label for="dark_select" style="color:#fff;">電話番号（ハイフンなし）</label><br>
             @if($errors->has('tel'))
               {{ $errors->first('tel') }}
             @endif
@@ -51,14 +51,15 @@
             <!--<input type="text" class="" placeholder="れんらくさき" aria-describedby="basic-addon2" name="tel"> -->
 
           <!-- 職業 -->
-          <label for="dark_select" style="color:#fff;">職業</label><br>
-          <div class="nes-select is-dark p-anken2__prdn2">
-            <select name="occupation_id">
-                @foreach ($occupations as $occupation)
-                    <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
-                @endforeach
-            </select><br>
-          </div>
+          <label for="dark_select" style="color:#fff;">職種<br>
+            <div class="nes-select is-dark p-anken2__prdn2">
+                <select name="occupation_id">
+                    @foreach ($occupations as $occupation)
+                        <option value="{{$occupation->id}}">{{$occupation->occupation_name}}</option> 
+                    @endforeach
+                </select><br>
+            </div>
+          </label>
         
         <!-- 求めるスキル -->
         <table border="0" cellspacing="0" cellpadding="0">
@@ -88,183 +89,183 @@
             </dd>
           </dl>
 
-  <!-- 表示切り替えfirstBox -->
-  <dl id="firstBox">
-    <dl class="mailform">
-      <dt>スキル1</dt>
-      <dd>
-        <div class="nes-select is-dark p-anken2__prdn4">
-    <select name="development_language_id1">
-        @foreach ($development_languages as $language)
-        <option value="{{$language->id}}">{{$language->language_name}}</option> 
-        @endforeach    
-    </select>
-    </div>
-     </dd>
-    </dl>
-  </dl>
-  
-  <!-- 表示切り替えsecondBox -->
-  <dl id="secondBox">
-    <dl class="mailform">
-      <dt>スキル1</dt>
-      <dd>
-        <div class="nes-select is-dark p-anken2__prdn5">
-        <select name="development_language_id1">
-          <!--<option value="" selected>選択</option>-->
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-        <dt>スキル2</dt>
-        <div class="nes-select is-dark p-anken2__prdn5">
-        <select name="development_language_id2">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-      </dd>
-    </dl>
-  </dl>
+          <!-- 表示切り替えfirstBox -->
+          <dl id="firstBox">
+            <dl class="mailform">
+              <dt>スキル1</dt>
+              <dd>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                  <select name="development_language_id1">
+                      @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                      @endforeach    
+                  </select>
+                </div>
+              </dd>
+            </dl>
+          </dl>
 
-  <!-- 表示切り替えthirdBox -->
-  <dl id="thirdBox">
-    <dl class="mailform">
-      <dt>スキル1</dt>
-      <dd>
-        <div class="nes-select is-dark p-anken2__prdn4">
-        <select name="development_language_id1">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-        <dt>スキル2</dt>
-        <div class="nes-select is-dark p-anken2__prdn4">
-        <select name="development_language_id2">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-        <dt>スキル3</dt>
-        <div class="nes-select is-dark p-anken2__prdn4">
-        <select name="development_language_id3">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-      </dd>
-    </dl>
-  </dl>
+          <!-- 表示切り替えsecondBox -->
+          <dl id="secondBox">
+            <dl class="mailform">
+              <dt>スキル1</dt>
+              <dd>
+                <div class="nes-select is-dark p-anken2__prdn5">
+                <select name="development_language_id1">
+                  <!--<option value="" selected>選択</option>-->
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
+                
+                <dt>スキル2</dt>
+                <div class="nes-select is-dark p-anken2__prdn5">
+                <select name="development_language_id2">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
+              </dd>
+            </dl>
+          </dl>
 
-  <!-- 表示切り替えfourthbox -->
-  <dl id="fourthBox">
-    <dl class="mailform">
-      <dt>スキル1</dt>
-      <dd>
-        <div class="nes-select is-dark p-anken2__prdn4">
-        <select name="development_language_id1">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-        <dt>スキル2</dt>
-        <div class="nes-select is-dark p-anken2__prdn4">
-        <select name="development_language_id2">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-        <dt>スキル3</dt>
-        <div class="nes-select is-dark p-anken2__prdn4">
-        <select name="development_language_id3">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-        <dt>スキル4</dt>
-        <div class="nes-select is-dark p-anken2__prdn4">
-        <select name="development_language_id4">
-            @foreach ($development_languages as $language)
-            <option value="{{$language->id}}">{{$language->language_name}}</option> 
-            @endforeach    
-        </select>
-        </div>
-      </dd>
-    </dl>
-  </dl>
-</table>
+          <!-- 表示切り替えthirdBox -->
+          <dl id="thirdBox">
+            <dl class="mailform">
+              <dt>スキル1</dt>
+              <dd>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                <select name="development_language_id1">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
+                
+                <dt>スキル2</dt>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                <select name="development_language_id2">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
 
-    <!-- 期限 -->
-    <label for="dark_select" style="color:#fff;" >期限</label><br>
-        @if($errors->has('deadline'))
-          {{ $errors->first('deadline') }}
-        @endif
-    <input type="date" class="nes-input is-dark p-anken2__deadline"
-            aria-describedby="basic-addon2" name="deadline" value="{{ old('deadline') }}">
-    </label><br><br>
-          
+                <dt>スキル3</dt>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                <select name="development_language_id3">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
+              </dd>
+            </dl>
+          </dl>
 
+          <!-- 表示切り替えfourthbox -->
+          <dl id="fourthBox">
+            <dl class="mailform">
+              <dt>スキル1</dt>
+              <dd>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                <select name="development_language_id1">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
+                
+                <dt>スキル2</dt>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                <select name="development_language_id2">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
 
-    <div class="p-acinfo__right">
-    <!-- 特記事項 -->
-    <label for="dark_select" style="color:#fff;">特記事項</label><br>
-      @if($errors->has('remarks'))
-        {{ $errors->first('remarks') }}
-      @endif
-    <textarea name="remarks" id="" class="nes-textarea is-dark p-anken2__textarea" aria-describedby="basic-addon2" placeholder="特記事項があれば入力してください">{{ old('remarks') }}</textarea>
-    <!-- <input type="text" class="nes-input is-dark p-form__portfolio" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks"> -->
-    {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
-    <br>
+                <dt>スキル3</dt>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                <select name="development_language_id3">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
 
-    <!-- 募集人数 -->
-    <label for="dark_select" style="color:#fff;">募集人数</label><br>
-      @if($errors->has('number_of_person'))
-        {{ $errors->first('number_of_person') }}
-      @endif
-    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="募集人数を入力してください" name="number_of_person" value="{{ old('number_of_person') }}"> 人
-    <br>
-    <!-- <input type="number" class="" placeholder="ぼしゅうにんずう"aria-describedby="basic-addon2" name="number_of_person"> -->
+                <dt>スキル4</dt>
+                <div class="nes-select is-dark p-anken2__prdn4">
+                <select name="development_language_id4">
+                    @foreach ($development_languages as $language)
+                    <option value="{{$language->id}}">{{$language->language_name}}</option> 
+                    @endforeach    
+                </select>
+                </div>
+              </dd>
+            </dl>
+          </dl>
+        </table>
 
-    <!-- 成功報酬 -->
-    <label for="dark_select" style="color:#fff;">成功報酬</label><br>
-      @if($errors->has('success_fee'))
-        {{ $errors->first('success_fee') }}
-      @endif
-    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="金額を入力してください" name="success_fee" value="{{ old('success_fee') }}"> 円
-    <br>
-    <!-- <input type="number" class="" placeholder="せいこうほしゅう"aria-describedby="basic-addon2" name="success_fee"> --> 
+              <!-- 期限 -->
+              <label for="dark_select" style="color:#fff;" >期限</label><br>
+                  @if($errors->has('deadline'))
+                    {{ $errors->first('deadline') }}
+                  @endif
+              <input type="date" class="nes-input is-dark p-anken2__deadline"
+                      aria-describedby="basic-addon2" name="deadline" value="{{ old('deadline') }}">
+              </label><br>
+                  
+              <!-- 特記事項 -->
+              <label for="dark_select" style="color:#fff;">特記事項</label><br>
+                @if($errors->has('remarks'))
+                  {{ $errors->first('remarks') }}
+                @endif
+              <textarea name="remarks" id="" class="nes-textarea is-dark p-anken2__textarea" aria-describedby="basic-addon2" placeholder="特記事項があれば入力してください">{{ old('remarks') }}</textarea>
+              <!-- <input type="text" class="nes-input is-dark p-form__portfolio" placeholder="とっきじこう" aria-describedby="basic-addon2" name="remarks"> -->
+              {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
+              <br>
 
-    <!-- 案件ランク -->
-    <label>案件ランク
-      <div class="nes-select is-dark p-anken2__prdn3">
-      @if($errors->has('rank'))
-        {{ $errors->first('rank') }}
-      @endif
-      <select name="rank" id="rank">
-              @foreach ($rank_of_difficulties as $item)
-                  <option value="{{$item->id}}">{{$item->rank}}</option> 
-              @endforeach
-      </select>
-      </div>
-    </label><br> 
+              <!-- 募集人数 -->
+              <label for="dark_select" style="color:#fff;">募集人数</label><br>
+                @if($errors->has('number_of_person'))
+                  {{ $errors->first('number_of_person') }}
+                @endif
+              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="募集人数を入力してください" name="number_of_person" value="{{ old('number_of_person') }}"> 人
+              <br>
+              <!-- <input type="number" class="" placeholder="ぼしゅうにんずう"aria-describedby="basic-addon2" name="number_of_person"> -->
 
-    
-    <!-- 確認ボタン -->
-    <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="確認">
-    
+              <!-- 成功報酬 -->
+              <label for="dark_select" style="color:#fff;">成功報酬</label><br>
+                @if($errors->has('success_fee'))
+                  {{ $errors->first('success_fee') }}
+                @endif
+              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="金額を入力してください" name="success_fee" value="{{ old('success_fee') }}"> 円
+              <br>
+              <!-- <input type="number" class="" placeholder="せいこうほしゅう"aria-describedby="basic-addon2" name="success_fee"> --> 
+
+              <!-- 案件ランク -->
+              <label>案件ランク
+                <div class="nes-select is-dark p-anken2__prdn3">
+                @if($errors->has('rank'))
+                  {{ $errors->first('rank') }}
+                @endif
+                <select name="rank" id="rank">
+                        @foreach ($rank_of_difficulties as $item)
+                            <option value="{{$item->id}}">{{$item->rank}}</option> 
+                        @endforeach
+                </select>
+                </div>
+              </label><br> 
+
+              
+              <!-- 確認ボタン -->
+              <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="確認">
+
 </div>
-    </div>
-
-</form>
-</div>
+      </form>
 
 @endsection
 

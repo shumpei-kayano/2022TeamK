@@ -1084,6 +1084,14 @@ table.p-show td {
   width: 250px;
   margin-bottom: 20px;
 }
+.p-anken2__btn {
+  position: absolute;
+  left: 110px;
+}
+.p-anken2__btn2 {
+  position: absolute;
+  left: 260px;
+}
 
 .p-syounin__btn {
   position: absolute;

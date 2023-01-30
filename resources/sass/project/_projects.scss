@@ -721,6 +721,19 @@ table.p-show td {
         margin-bottom: 20px;   
     }
 
+    //編集ボタン
+    &__btn {
+        position: absolute;
+        left: 110px;
+        // bottom: 10px;
+    }
+    &__btn2 {
+        position: absolute;
+        left: 260px;
+        //right: 185px;
+        // bottom: 10px;
+    }
+
 }
 
 //承認待ちリスト
