@@ -23,7 +23,7 @@
 <div class="p-form">
     <h1 class="p-form" style="padding-top:45px;">掲載中案件</h1>
     <div class="p-acinfo__container">
-        <div class="nes-container is-rounded is-dark p-keisaianken" style="">
+        <div class="nes-container is-rounded is-dark p-keisaianken" style="overflow: scroll; max-height: 400px; border: 5px solid #fff; border-radius: 10px;">
 
             <table class="p-show"style="color:fff">
                 <tr>

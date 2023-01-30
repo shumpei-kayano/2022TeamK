@@ -9,7 +9,7 @@
 <h1 class="p-form" style="padding-top:55px">確認</h1>
 
 <div class="p-acinfo__container2">
-    <div class="nes-container is-dark with-titlep-form__container2" style="width:600px; height:150px;">
+    <div class="nes-container is-dark with-titlep-form__container2" style="width:600px; overflow: scroll; max-height: 400px; border: 5px solid #fff; border-radius: 10px;">
         <table class="p-show" style="">
             <thead>
             <tr>

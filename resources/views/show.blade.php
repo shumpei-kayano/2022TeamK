@@ -70,7 +70,7 @@
 
 {{-- <div class="p-show"> --}}
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-form__container2">
+        <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; max-height: 250px; border: 5px solid #fff; border-radius: 10px;">
     <table class="p-show"style="color:white">
         <tr>
             <th>案件名</th>
