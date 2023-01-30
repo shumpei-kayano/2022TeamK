@@ -8,7 +8,7 @@
         @if ($form != null)
 
         {{-- ポートフォリオがあった場合の処理 --}}
-        <h1 class="p-form">ポートフォリオかくにん・へんしゅう</h1>
+        <h1 class="p-form">ポートフォリオ確認・編集</h1>
             <div class="nes-container is-rounded is-dark" style="height: 600px;">
         <form action='{{ route('portfolio_update',) }}'method='post'>
             @csrf
@@ -41,7 +41,7 @@
                         -->
 
                     <!-- 電話番号 -->
-                    <label for="tel" style="color:#fff;" >でんわばんごう
+                    <label for="tel" style="color:#fff;" >電話番号
                         @if($errors->has('tel'))
                             {{ $errors->first('tel') }}
                         @endif
@@ -52,7 +52,7 @@
                            -->
 
                     <!-- 最終学歴 -->
-                    <label for="gakureki" style="color:#fff;" >さいしゅうがくれき
+                    <label for="gakureki" style="color:#fff;" >最終学歴
                         @if($errors->has('educational_background'))
                             {{ $errors->first('educational_background') }}
                         @endif
