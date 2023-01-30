@@ -210,7 +210,7 @@
             @else
             {{-- ポートフォリオがあった場合の処理 --}}
             <div class="p-acinfo__container">
-                <div class="nes-container is-rounded is-dark p-portEdit__win">
+                <div class="nes-container is-rounded is-dark p-portEdit__win" style="text-align: center; margin-top: 100px; padding-top: 40px;">
                     <p>作成済みです。</p>
                     <a href="/portfolio">戻る</a>
                 </div>
