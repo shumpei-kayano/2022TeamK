@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1 class="p-form">承認待ちリスト</h1>
+<h1 class="p-form" style="padding-top: 30px;">承認待ちリスト</h1>
 
 <div class="p-acinfo__container2">
     <div class="nes-container is-dark with-title p-form__container2" style="width:600px; text-overflow: ellipsis; overflow: scroll; max-height: 400px; border: 5px solid #fff; border-radius: 10px;">

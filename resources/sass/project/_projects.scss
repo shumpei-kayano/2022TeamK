@@ -201,9 +201,17 @@
         justify-content: center;
     }
 
+    &__show {
+        display: flex;
+        float: left;
+        padding-left: 20px;
+        text-align: center;
+        
+    }
+
     &__key {
         height: 50px;
-        width: 880px;
+        width: 270px;
         margin-bottom: 20px;
     }
 
@@ -211,27 +219,30 @@
         height: 45px;
         width: 270px;
         margin-bottom: 20px;
-        float: left;
+       
+        // float: left;
     }
 
     &__oc {
         height: 45px;
-        width: 290px;
+        width: 270px;
         margin-bottom: 20px;
-        float: left;
+        // float: left;
         margin-left: 20px;
     }
 
     &__level {
         height: 45px;
         width: 270px;
-        float: right;
+        // float: right;
         margin-left: 20px;
 
     }
 
     &__box {
         display: block;
+        text-align: center;
+        height: 400px;
     }
 
     &__btn {
@@ -242,7 +253,8 @@
     }
 
     &__btn-container {
-        text-align: center;
+        // text-align: center;
+        // margin-left: 140px;
     }
 
 }
@@ -801,50 +813,20 @@ table.p-show td {
 
 
 
-////////インスタ//////////
+////////スクロール見出し固定//////////
 
-.insta_btn3 {/*ボタンの下地*/
-    color: #FFF;/*文字・アイコン色*/
-    border-radius: 14px;/*角丸に*/
-    position: relative;
-    display: block;
-    height: 120px;/*高さ*/
-    width: 120px;/*幅*/
-    text-align: center;/*中身を中央寄せ*/
-    padding-top: 12px;/*上側との余白*/
-    box-sizing: border-box;
-    font-size: 19px;/*文字のサイズ*/
-    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
-    overflow: hidden;/*はみ出た部分を隠す*/
-    text-decoration:none;/*下線は消す*/
-  }
-  
-  .insta_btn3:before{/*グラデーション②*/
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;/*全体を覆う*/
-    height: 100%;/*全体を覆う*/
-    background: -webkit-linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
-    background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
-  }
-  
-  .insta_btn3 div {
-    position: relative;
-  }
-  
-  .insta_btn3 .fa-instagram {
-      font-size: 70px;/*アイコンサイズ*/
-      position: relative;
-      display:inline-block;
-      position: relative;
-      transition: .5s
-  }
-  
-  .insta_btn3 .fa-instagram:hover {/*ホバーで一周回転*/
-    -webkit-transform: rotateX(360deg);
-    -ms-transform: rotateX(360deg);
-    transform: rotateX(360deg);
-  }
+// .fixed01 {
+//     position: sticky;
+//     top: 0;
+//     background-color: #fff;
+//     color: #808080;
+// }
+
+// th,td {
+//     vertical-align: middle;
+
+//     &:before{
+//         content: "";
+//         position: absolute;
+//     }
+// }

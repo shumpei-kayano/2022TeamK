@@ -7,25 +7,26 @@
 
 @section('content')
 
-<h1 class="p-form" style="padding-top: 30px;">案件検索</h1>
+<h1 class="p-form" style="padding-top: 30px; padding-bottom:20px;">案件検索</h1>
 
-<div class="p-form__container">
+<div class="p-form__show">
 
-     <div class="nes-container is-dark with-title p-form__box">
+<div class="p-form__container" style="margin-left:20px; width:350px;">
+     <div class="nes-container is-dark with-title p-form__box" style="margin-right:40px;  border: 5px solid #fff; border-radius: 10px;">
     <form action="{{route('show')}}" method="GET">
 
             {{--キーワード検索--}}
 
-            <div>
+           <div>
                 <label for="dark_field" style="color:#fff;" >キーワード</label><br>
                 <input type="search" id="dark_field" class="nes-input is-dark p-form__key" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
-            </div>
+            
 
             {{-- エリア検索 --}}
 
                     <!--<label for="dark_select" style="color:#fff">エリア</label>-->
                         <div class="nes-select is-dark p-form__eria">
-                            <select class="p-form__eriaselect" aria-label="Default select example"name="prefectures_id" id="dark_select">
+                            <select class="p-form__eriaselect" style="" aria-label="Default select example"name="prefectures_id" id="dark_select">
                                 <option value="" selected>エリアを選択してください</option>
                                 {{-- <option hidden>エリアを選択してください</option> --}}
                                 @foreach ($prefectures as $prefecture)
@@ -60,27 +61,36 @@
                                 @endforeach
                             </select>
                         </div>
+        <div class="p-form__btn-container">
+            {{-- <form action="{{route('show')}}" method="GET"> --}}
+                <button type="submit" class="nes-btn is-success p-form__btn">検索</button>
+            </form>
+            </div>
+           </div>
     </div>
+  
 </div>
-    <div class="p-form__btn-container">
+    {{-- <div class="p-form__btn-container"> --}}
     {{-- <form action="{{route('show')}}" method="GET"> --}}
-        <button type="submit" class="nes-btn is-success p-form__btn">検索</button>
+        {{-- <button type="submit" class="nes-btn is-success p-form__btn">検索</button>
     </form>
-    </div>
+    </div> --}}
 
 {{-- <div class="p-show"> --}}
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; max-height: 250px; border: 5px solid #fff; border-radius: 10px;">
+        <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px">
     <table class="p-show"style="color:white">
         <tr>
-            <th>案件名</th>
-            <th>職種</th>
-            <th>ランク</th>
-            <th>エリア</th>
-            <th>特記事項</th>
+            <th class="fixed01">案件名</th>
+            <th class="fixed01">職種</th>
+            <th class="fixed01">ランク</th>
+            <th class="fixed01">エリア</th>
+            <th class="fixed01">特記事項</th>
+            <th class="fixed01"></th>
         </tr>
 
         @foreach($items as $item)
+
         <tr>
             <td class="p-show__tokki">{{$item->matter_name}}</td>
             <td>{{$item->occupation_name}}</td>
@@ -123,12 +133,17 @@
                 @endif      
               @endif</td> --}}
         </tr>
+
         @endforeach
     </table>
 
 </div>
     </div>
         </div>
+</div>
+
+
+
 @endsection
 
 

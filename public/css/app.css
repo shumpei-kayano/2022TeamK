@@ -684,32 +684,37 @@ textarea,
   display: flex;
   justify-content: center;
 }
+.p-form__show {
+  display: flex;
+  float: left;
+  padding-left: 20px;
+  text-align: center;
+}
 .p-form__key {
   height: 50px;
-  width: 880px;
+  width: 270px;
   margin-bottom: 20px;
 }
 .p-form__eria {
   height: 45px;
   width: 270px;
   margin-bottom: 20px;
-  float: left;
 }
 .p-form__oc {
   height: 45px;
-  width: 290px;
+  width: 270px;
   margin-bottom: 20px;
-  float: left;
   margin-left: 20px;
 }
 .p-form__level {
   height: 45px;
   width: 270px;
-  float: right;
   margin-left: 20px;
 }
 .p-form__box {
   display: block;
+  text-align: center;
+  height: 400px;
 }
 .p-form__btn {
   width: 110px;
@@ -717,10 +722,6 @@ textarea,
   font-size: 20px;
   margin-top: 20px;
 }
-.p-form__btn-container {
-  text-align: center;
-}
-
 .p-show {
   margin-left: auto;
   margin-right: auto;
@@ -1133,48 +1134,6 @@ table.p-show td {
   max-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.insta_btn3 { /*ボタンの下地*/
-  color: #FFF; /*文字・アイコン色*/
-  border-radius: 14px; /*角丸に*/
-  position: relative;
-  display: block;
-  height: 120px; /*高さ*/
-  width: 120px; /*幅*/
-  text-align: center; /*中身を中央寄せ*/
-  padding-top: 12px; /*上側との余白*/
-  box-sizing: border-box;
-  font-size: 19px; /*文字のサイズ*/
-  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat; /*グラデーション①*/
-  overflow: hidden; /*はみ出た部分を隠す*/
-  text-decoration: none; /*下線は消す*/
-}
-
-.insta_btn3:before { /*グラデーション②*/
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /*全体を覆う*/
-  height: 100%; /*全体を覆う*/
-  background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
-}
-
-.insta_btn3 div {
-  position: relative;
-}
-
-.insta_btn3 .fa-instagram {
-  font-size: 70px; /*アイコンサイズ*/
-  position: relative;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.insta_btn3 .fa-instagram:hover { /*ホバーで一周回転*/
-  transform: rotateX(360deg);
 }
 
 /*  ゲーム風フォントの設定  */
