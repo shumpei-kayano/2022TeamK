@@ -633,7 +633,7 @@ table.p-show td {
 .p-keisaianken {
     text-align: center;
     margin-top: 130px;
-    width: 700px; //横幅
+    width: 1000px; //横幅
 }
 
 //案件掲載（黒い部分のサイズ）
@@ -815,18 +815,3 @@ table.p-show td {
 
 ////////スクロール見出し固定//////////
 
-// .fixed01 {
-//     position: sticky;
-//     top: 0;
-//     background-color: #fff;
-//     color: #808080;
-// }
-
-// th,td {
-//     vertical-align: middle;
-
-//     &:before{
-//         content: "";
-//         position: absolute;
-//     }
-// }

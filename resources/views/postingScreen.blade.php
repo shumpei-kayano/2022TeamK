@@ -20,23 +20,47 @@
 <p>案件ランク:{{$matter->rank}}</p> --}}
 {{-- {{ dd($matters)}} --}}
 
+<style>
+    table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+ th,td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgb(217, 206, 206);
+  border-color: rgb(217, 206, 206);
+ }
+
+ th {
+  position: sticky;
+  top: 0;
+  font-weight: normal;
+  font-size: .875rem;
+  color:black;
+  background-color: rgb(217, 206, 206);
+}
+
+</style>
+
 <div class="p-form">
     <h1 class="p-form" style="padding-top:45px;">掲載中案件</h1>
-    <div class="p-acinfo__container">
-        <div class="nes-container is-rounded is-dark p-keisaianken" style="overflow: scroll; max-height: 400px; border: 5px solid #fff; border-radius: 10px;">
+    <div class="p-acinfo__container" style="">
+        <div class="nes-container is-rounded is-dark p-keisaianken" style="overflow: scroll; overflow-x:hidden; max-height: 550px; width:1000px; border: 5px solid #fff; border-radius: 10px;padding-top:0; padding-left:0; padding-right:0;">
 
-            <table class="p-show"style="color:fff">
-                <tr>
+            <table class="p-show"style="color:white">
+                <tr style="padding-left: 0; padding-right:0;">
                     <th>案件名</th>
                     <th>職種</th>
-                    <th>レベル</th>
-                    <th>エリア</th>
+                    <th>ランク</th>
+                    <th style="width: 40px;">エリア</th>
                     <th>特記事項</th>
+                    <th style="width: 30px; padding-left:1px;">詳細</th>
                 </tr>
 
                 @foreach($matters as $matter)
                 <tr>
-                    <td class="p-show__tokki">{{$matter->matter_name}}</td>
+                    <td class="p-show__tokki" style="padding-left: 20px;">{{$matter->matter_name}}</td>
                     @php
                         $occupation1 = DB::table('occupations')->find($matter->occupation_id);
                         $engs = DB::table('ranks')->find($matter->rank);
@@ -49,7 +73,7 @@
                     @endphp
                     <td>{{ $prefectures1->prefectures_name }}</td>
                     <td class="p-show__tokki">{{$matter->remarks}}</td>
-                    <td><a href="{{ route('matterEdit',['id'=>$matter->id]) }}" class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px;">詳細</a></td>
+                    <td><a href="{{ route('matterEdit',['id'=>$matter->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
                 </tr>
                 @endforeach
         </div>

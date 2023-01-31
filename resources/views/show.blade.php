@@ -7,6 +7,29 @@
 
 @section('content')
 
+<style>
+    table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+ th,td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgb(217, 206, 206);
+  border-color: rgb(217, 206, 206);
+ }
+
+ th {
+  position: sticky;
+  top: 0;
+  font-weight: normal;
+  font-size: .875rem;
+  color:black;
+  background-color: rgb(217, 206, 206);
+}
+
+</style>
+
 <h1 class="p-form" style="padding-top: 30px; padding-bottom:20px;">案件検索</h1>
 
 <div class="p-form__show">
@@ -83,15 +106,15 @@
 
 {{-- <div class="p-show"> --}}
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px">
+        <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; overflow-x:hidden; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
     <table class="p-show"style="color:white">
-        <tr>
+        <tr style="padding-left: 0; padding-right:0;">
             <th class="fixed01">案件名</th>
             <th class="fixed01">職種</th>
             <th class="fixed01">ランク</th>
-            <th class="fixed01">エリア</th>
+            <th style="width: 40px;">エリア</th>
             <th class="fixed01">特記事項</th>
-            <th class="fixed01"></th>
+            <th style="width: 30px; padding-left:1px;">詳細</th>
         </tr>
 
         @foreach($items as $item)
@@ -101,12 +124,12 @@
                 $engs = DB::table('ranks')->find($item->rank);
                 $eng = $engs->rank;
                 @endphp
-            <td class="p-show__tokki">{{$item->matter_name}}</td>
+            <td class="p-show__tokki" style="padding-left: 20px;">{{$item->matter_name}}</td>
             <td>{{$item->occupation_name}}</td>
             <td>{{ $eng }}</td>
             <td>{{$item->prefectures_name}}</td>
             <td class="p-show__tokki">{{$item->remarks}}</td>
-            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px;">詳細</a></td>
+            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
             {{-- <td>@if (Auth::check())
                 @if (count($favorite) == 0) --}}
                     {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
