@@ -11,21 +11,22 @@
 
 <div class="p-form__show">
 
-<div class="p-form__container" style="margin-left:20px; width:350px;">
+<div class="p-form__container" style="margin-left:20px; width:350px; text-align:center; padding-bottom:20px; ">
      <div class="nes-container is-dark with-title p-form__box" style="margin-right:40px;  border: 5px solid #fff; border-radius: 10px;">
     <form action="{{route('show')}}" method="GET">
 
             {{--キーワード検索--}}
 
-           <div>
+          
+            
                 <label for="dark_field" style="color:#fff;" >キーワード</label><br>
-                <input type="search" id="dark_field" class="nes-input is-dark p-form__key" name="keyword" placeholder="キーワードを入力" value="{{$keyword}}">
+                <input type="search" id="dark_field" class="nes-input is-dark " name="keyword" placeholder="キーワードを入力" value="{{$keyword}}" style="" >
             
 
             {{-- エリア検索 --}}
 
                     <!--<label for="dark_select" style="color:#fff">エリア</label>-->
-                        <div class="nes-select is-dark p-form__eria">
+                        <div class="nes-select is-dark" style="padding-bottom: 20px; padding-top: 20px;">
                             <select class="p-form__eriaselect" style="" aria-label="Default select example"name="prefectures_id" id="dark_select">
                                 <option value="" selected>エリアを選択してください</option>
                                 {{-- <option hidden>エリアを選択してください</option> --}}
@@ -39,7 +40,7 @@
             {{-- 職種検索 --}}
         
                     <!-- <label for="dark_select" style="color:#fff">しょくしゅ</label>-->
-                        <div class=" nes-select is-dark p-form__oc">
+                        <div class=" nes-select is-dark ">
                             <select class="p-form__ocselect" aria-label="Default select example" name="occupation_id" id="dark_select">
                                 <option value="" selected>職種を選択してください</option>
                                 {{-- <option hidden>職種を選択してください</option> --}}
@@ -52,7 +53,7 @@
             {{-- レベル検索 --}}
             
                     <!--<label for="dark_select" style="color:#fff">レベル</label>-->
-                        <div class=" nes-select is-dark p-form__level">
+                        <div class=" nes-select is-dark " style="padding-bottom: 20px; padding-top: 20px;">
                             <select class="p-form__levelselect" aria-label="Default select example" name="level_id" id="dark_select">
                                 <option value="" selected>ランクを選択してください</option>
                                 {{-- <option hidden>ランクを選択してください</option> --}}
@@ -70,7 +71,7 @@
                 <button type="submit" class="nes-btn is-success p-form__btn">検索</button>
             </form>
             </div>
-           </div>
+          
     </div>
   
 </div>

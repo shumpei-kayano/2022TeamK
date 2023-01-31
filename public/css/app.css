@@ -704,17 +704,15 @@ textarea,
   height: 45px;
   width: 270px;
   margin-bottom: 20px;
-  margin-left: 20px;
 }
 .p-form__level {
   height: 45px;
   width: 270px;
-  margin-left: 20px;
 }
 .p-form__box {
   display: block;
   text-align: center;
-  height: 400px;
+  height: 450px;
 }
 .p-form__btn {
   width: 110px;
