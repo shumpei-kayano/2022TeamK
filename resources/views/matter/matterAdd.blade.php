@@ -254,7 +254,11 @@
                 @endif
                 <select name="rank" id="rank">
                         @foreach ($rank_of_difficulties as $item)
-                            <option value="{{$item->id}}">{{$item->rank}}</option> 
+                        @php
+                        $engs = DB::table('ranks')->find($item->rank);
+                        $eng = $engs->rank;
+                        @endphp
+                            <option value="{{$item->id}}">{{$eng}}</option> 
                         @endforeach
                 </select>
                 </div>

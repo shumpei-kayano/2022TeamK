@@ -39,9 +39,11 @@
                     <td class="p-show__tokki">{{$matter->matter_name}}</td>
                     @php
                         $occupation1 = DB::table('occupations')->find($matter->occupation_id);
+                        $engs = DB::table('ranks')->find($matter->rank);
+                        $eng = $engs->rank;
                     @endphp
                     <td>{{ $occupation1->occupation_name }}</td>
-                    <td>{{$matter->rank}}</td>
+                    <td>{{$eng}}</td>
                     @php
                         $prefectures1 = DB::table('prefectures')->find($matter->prefectures_id);
                     @endphp
