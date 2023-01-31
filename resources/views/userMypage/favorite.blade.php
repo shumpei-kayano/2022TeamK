@@ -18,7 +18,7 @@
                 <th>言語</th>
                 <th style="width: 40px;">エリア</th>
                 <th>特記事項</th>
-                <th style="width: 30px;"></th>
+                <th style="width: 30px; padding-left:1px;">詳細</th>
                 {{-- <th class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px; ">詳細</th> --}}
             </tr>
             </thead>
