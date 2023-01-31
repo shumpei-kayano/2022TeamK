@@ -7,17 +7,18 @@
 <h1 class="p-form" style="padding-top: 45px;">お気に入りリスト</h1>
 
 <div class="p-acinfo__container2">
-    <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; max-height: 350px; border: 5px solid #fff; border-radius: 10px;">
+    <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; max-height: 350px; border: 5px solid #fff; border-radius: 10px; padding-top:0;">
         {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
         </a> --}}
         <table class="p-show" style="color:white">
-            <thead>
-            <tr>
+            <thead style="">
+            <tr style="padding-left: 0; padding-right:0;">
                 <th>案件名</th>
                 <th>言語</th>
                 <th>エリア</th>
                 <th>特記事項</th>
+                <th class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px; ">詳細</th>
             </tr>
             </thead>
         @foreach($favorites as $favorite)
@@ -35,5 +36,27 @@
             </table>
     </div>
 </div>
+
+<style>
+    table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+ th,td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+ }
+
+ th {
+  position: sticky;
+  top: 0;
+  font-weight: normal;
+  font-size: .875rem;
+  color: #666;
+  background: #eee;
+}
+
+</style>
 
 @endsection
