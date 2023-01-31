@@ -57,7 +57,11 @@
                                 <option value="" selected>ランクを選択してください</option>
                                 {{-- <option hidden>ランクを選択してください</option> --}}
                                 @foreach ($rank_of_difficulties as $level)
-                                    <option value="{{$level->id}}">{{$level->rank}}</option> 
+                                    @php
+                                    $levels = DB::table('ranks')->find($level->rank);
+                                    $lev = $levels->rank;
+                                    @endphp
+                                    <option value="{{$level->id}}">{{$lev}}</option> 
                                 @endforeach
                             </select>
                         </div>
@@ -92,9 +96,13 @@
         @foreach($items as $item)
 
         <tr>
+                @php
+                $engs = DB::table('ranks')->find($item->rank);
+                $eng = $engs->rank;
+                @endphp
             <td class="p-show__tokki">{{$item->matter_name}}</td>
             <td>{{$item->occupation_name}}</td>
-            <td>{{$item->rank}}</td>
+            <td>{{ $eng }}</td>
             <td>{{$item->prefectures_name}}</td>
             <td class="p-show__tokki">{{$item->remarks}}</td>
             <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px;">詳細</a></td>
