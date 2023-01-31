@@ -10,9 +10,16 @@
 <div class="p-acinfo__container2">
     <div class="nes-container is-rounded is-dark p-acinfo">
         <p>ユーザーID：{{ $user->name }}</p>
-        <p> メールアドレス：{{ $user->email }}</p>
+        <p>メールアドレス：{{ $user->email }}</p>
+        <p>獲得経験値：{{ $user->total_experience }}</p>
+        @php
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $user->total_experience)->first();
+        $rank = $ranks->requirement_experience;
+        $next = $ranks->requirement_experience - $user->total_experience;
+        @endphp
+        <p>次のランクまで：{{ $next }}</p>
     </div>
-</div>
+    </div>
     <div class="p-acinfo__btn-container">
         <form action='{{ route('account_edit') }}' method="get">
             @csrf
