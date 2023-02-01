@@ -56,10 +56,10 @@
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->remarks }}</p><br>
             <!-- <p>特記事項：{{$matter->remarks}}</p> -->
 
-        <!-- 募集人数 -->
-        <label for="dark_field" style="color:#fff;" >募集人数<br>
+        <!-- パーティ人数 -->
+        <label for="dark_field" style="color:#fff;" >パーティ人数<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->number_of_person }}</p><br>
-            <!-- <p>募集人数：{{$matter->number_of_person}}</p> -->
+            <!-- <p>パーティ人数：{{$matter->number_of_person}}</p> -->
 
         <!-- 成功報酬 -->
         <label for="dark_field" style="color:#fff;" >成功報酬<br>

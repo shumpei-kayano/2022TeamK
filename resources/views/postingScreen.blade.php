@@ -15,7 +15,7 @@
 <p>求めるスキル:{{$development_language4->language_name}}</p> --}}
 {{-- <p>期限:{{$matter->deadline}}</p>
 <p>特記事項:{{$matter->remarks}}</p>
-<p>募集人数:{{$matter->number_of_person}}</p>
+<p>パーティ人数:{{$matter->number_of_person}}</p>
 <p>成功報酬:{{$matter->success_fee}}</p>
 <p>案件ランク:{{$matter->rank}}</p> --}}
 {{-- {{ dd($matters)}} --}}
@@ -145,10 +145,10 @@
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ old($matter->remarks) }}</p><br>
             <!-- <p>特記事項：{{$matter->remarks}}</p> -->
 
-        <!-- 募集人数 -->
-        <label for="dark_field" style="color:#fff;" >募集人数<br>
+        <!-- パーティ人数 -->
+        <label for="dark_field" style="color:#fff;" >パーティ人数<br>
             <p id="dark_field" class="nes-input is-dark p-posting__matter" name="name" >{{ $matter->number_of_person }}</p><br>
-            <!-- <p>募集人数：{{$matter->number_of_person}}</p> -->
+            <!-- <p>パーティ人数：{{$matter->number_of_person}}</p> -->
 
         <!-- 成功報酬 -->
         <label for="dark_field" style="color:#fff;" >成功報酬<br>

@@ -60,7 +60,7 @@
 <p>あんけんランク:{{$input["rank"]}}</p>
 
 <p>特記事項:{{$input["remarks"]}}</p>
-<p>募集人数:{{$input["number_of_person"]}}</p>
+<p>パーティ人数:{{$input["number_of_person"]}}</p>
 <p>成功報酬:{{$input["success_fee"]}}</p>
 <p>案件ランク:{{$input["rank"]}}</p>
 </div>
