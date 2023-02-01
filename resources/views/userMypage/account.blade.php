@@ -6,13 +6,36 @@
 
 @section('content')
 
+<style>
+    table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+ th,td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgb(217, 206, 206);
+  border-color: rgb(217, 206, 206);
+ }
+
+ th {
+  position: sticky;
+  top: 0;
+  font-weight: normal;
+  font-size: .875rem;
+  color:black;
+  background-color: rgb(217, 206, 206);
+}
+
+</style>
+
 
 <h1 class="p-form" style="padding-top:45px;">アカウント情報</h1>
 
 <div style="float: left; display:flex; margin-left:310px;">
 
 <div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-acinfo" style="padding-bottom: 10px;">
+    <div class="nes-container is-rounded is-dark p-acinfo" style="padding-bottom: 10px; border: 5px solid #fff; border-radius: 10px;">
         <p>ユーザーID：{{ $user->name }}</p>
         <p>メールアドレス：{{ $user->email }}</p>
         <p>獲得経験値：{{ $user->total_experience }}</p>
@@ -34,7 +57,7 @@
 {{-- 装備（言語の追加） --}}
 
 <div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-acinfo" style=" width:200px;text-align:left; text-indent: 18px; padding-bottom:30px;">
+    <div class="nes-container is-rounded is-dark p-acinfo" style=" width:200px;text-align:left; text-indent: 18px; padding-bottom:30px; border: 5px solid #fff; border-radius: 10px;">
     @php
     $equipments = DB::table('portfolios')->where('user_id', $user->id)->first();
     if ($equipments != null) {

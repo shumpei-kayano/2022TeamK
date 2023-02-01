@@ -11,9 +11,32 @@
 <a href="/register">登録</a>)</p>
 @endif --}}
 
+<style>
+    table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+ th,td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgb(217, 206, 206);
+  border-color: rgb(217, 206, 206);
+ }
+
+ th {
+  position: sticky;
+  top: 0;
+  font-weight: normal;
+  font-size: .875rem;
+  color:black;
+  background-color: rgb(217, 206, 206);
+}
+
+</style>
+
 <h1 class="p-form">マイページ（企業）</h1>
 <div class="p-myp">
-    <div class="nes-container is-dark with-title p-myp__container">
+    <div class="nes-container is-dark with-title p-myp__container" style="border: 5px solid #fff; border-radius: 10px;">
         <div>
             <a href="/postingScreen"><button type="button" class="nes-btn is-error p-myp__btn">掲載中案件を<br>確認する</button></a>
 
