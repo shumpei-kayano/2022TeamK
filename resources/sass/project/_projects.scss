@@ -752,15 +752,15 @@ table.p-show td {
 
 .p-syounin {
     //承認・却下のボタン
-    &__btn {
-        // position: absolute;
+    &__btn1 {
+        position: absolute;
         left: 110px;
         bottom: 70px;
     }
     &__btn2 {
-        // position: absolute;
+        position: absolute;
         left: 260px;
-        //right: 185px;
+        right: 185px;
         bottom: 70px;
     }
 

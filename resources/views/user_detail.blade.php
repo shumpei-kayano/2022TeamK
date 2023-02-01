@@ -177,7 +177,7 @@
     {{-- <a href="{{ route('approval', ['id'=>$order_received_matter->user_id]) }}" class="">承認</a>
     <a href="{{ route('rejected', ['id'=>$order_received_matter->user_id]) }}" class="">却下</a> --}}
     <form method="POST" action="{{ route('approval', ['id'=>$form]) }}">
-        <div class="p-syounin__btn">
+        <div class="p-syounin__btn1">
         @csrf
         <button type="submit" class="nes-btn is-primary p-acinfo__btn" 
         onclick='return confirm("承認してもよろしいでしょうか？");'>承認する</button>
