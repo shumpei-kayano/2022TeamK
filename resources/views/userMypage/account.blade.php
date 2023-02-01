@@ -6,9 +6,13 @@
 
 @section('content')
 
-<h1 class="p-form">アカウント情報</h1>
+
+<h1 class="p-form" style="padding-top:45px;">アカウント情報</h1>
+
+<div style="float: left; display:flex; margin-left:310px;">
+
 <div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-acinfo">
+    <div class="nes-container is-rounded is-dark p-acinfo" style="padding-bottom: 10px;">
         <p>ユーザーID：{{ $user->name }}</p>
         <p>メールアドレス：{{ $user->email }}</p>
         <p>獲得経験値：{{ $user->total_experience }}</p>
@@ -17,11 +21,20 @@
         $rank = $ranks->requirement_experience;
         $next = $ranks->requirement_experience - $user->total_experience;
         @endphp
-        <p>次のランクまで：{{ $next }}</p>
+        <p style="padding-bottom: 0px;">次のランクまで：{{ $next }}</p>
+        <div class="p-acinfo__btn-container" style="margin-top:-10px;">
+            <form action='{{ route('account_edit') }}' method="get" style="margin-top: -10px;">
+                @csrf
+                <button type="submit" class="nes-btn is-success p-acinfo__btn" style="">編集</button>
+            </form>
+        </div>
     </div>
 </div>
 
 {{-- 装備（言語の追加） --}}
+
+<div class="p-acinfo__container2">
+    <div class="nes-container is-rounded is-dark p-acinfo" style=" width:200px;text-align:left; text-indent: 18px; padding-bottom:30px;">
     @php
     $equipments = DB::table('portfolios')->where('user_id', $user->id)->first();
     $equipment1 = DB::table('development_languages')->find($equipments->development_language_id1); 
@@ -30,18 +43,24 @@
     $equipment4 = DB::table('development_language4s')->find($equipments->development_language_id4); 
     
     @endphp
-    E　{{$equipment1->language_name}}
-    E　{{$equipment2->language_name}}
-    E　{{$equipment3->language_name}}
-    E　{{$equipment4->language_name}}
+    <p style="font-weight: 900; color:yellow">使用可能言語</p>
+    <p>E　{{$equipment1->language_name}}</p>
+    <p>E　{{$equipment2->language_name}}</p>
+    <p>E　{{$equipment3->language_name}}</p>
+    <p>E　{{$equipment4->language_name}}</p>
+    
+    </div>
+</div>
+
+</div>
     
 
-    <div class="p-acinfo__btn-container">
+    {{-- <div class="p-acinfo__btn-container">
         <form action='{{ route('account_edit') }}' method="get">
             @csrf
             <button type="submit" class="nes-btn is-success p-acinfo__btn">編集</button>
         </form>
-    </div>
+    </div> --}}
 {{-- <div class="p-acinfo">
     <p class="p-acinfo__id">ユーザーID：{{ $user->name }}<br></p>
     メールアドレス：{{ $user->email }}
