@@ -1093,12 +1093,18 @@ table.p-show td {
 }
 
 .p-syounin__btn {
-  position: absolute;
   left: 110px;
   bottom: 70px;
 }
 .p-syounin__btn2 {
-  position: absolute;
+  left: 260px;
+  bottom: 70px;
+}
+.p-syounin__btn3 {
+  left: 110px;
+  bottom: 70px;
+}
+.p-syounin__btn4 {
   left: 260px;
   bottom: 70px;
 }

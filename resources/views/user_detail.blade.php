@@ -190,21 +190,31 @@
          onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
         </div>
     </form>
+
+    {{-- ポートフォリオがない場合 --}}
     @else
+    <div class="p-acinfo__container2">
+        <div class="nes-container is-rounded is-dark p-acinfo">
+            <p style="padding-top: 20px; font-weight:bolder;">ポートフォリオが作成されていませんが、よろしいですか？</p>  
+    <div class="btn" style="float: left; display:flex; text-align:center; padding-left:145px;padding-bottom:20px;">
+
     <form method="POST" action="{{ route('approval', ['id'=>$form]) }}">
-        <div class="p-syounin__btn">
+        <div class="p-syounin__btn3" style=" padding-right:20px;">
         @csrf
         <button type="submit" class="nes-btn is-primary p-acinfo__btn" 
         onclick='return confirm("承認してもよろしいでしょうか？");'>承認する</button>
     </div>
     </form>
     <form method="POST" action="{{ route('rejected', ['id'=>$form]) }}">
-        <div class="p-syounin__btn2">
+        <div class="p-syounin__btn4">
         @csrf
         <button type="submit" class="nes-btn is-error p-acinfo__btn"
          onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
         </div>
     </form>
+    </div>
+    </div>
+</div>
     @endif
 </div>
 </div>
