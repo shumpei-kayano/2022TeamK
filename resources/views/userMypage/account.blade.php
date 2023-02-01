@@ -37,19 +37,24 @@
     <div class="nes-container is-rounded is-dark p-acinfo" style=" width:200px;text-align:left; text-indent: 18px; padding-bottom:30px;">
     @php
     $equipments = DB::table('portfolios')->where('user_id', $user->id)->first();
+    if ($equipments != null) {
     $equipment1 = DB::table('development_languages')->find($equipments->development_language_id1); 
     $equipment2 = DB::table('development_language2s')->find($equipments->development_language_id2); 
     $equipment3 = DB::table('development_language3s')->find($equipments->development_language_id3); 
     $equipment4 = DB::table('development_language4s')->find($equipments->development_language_id4); 
-    
+    }
     @endphp
     <p style="font-weight: 900; color:yellow">使用可能言語</p>
+    @if ($equipments != null)
     <p>E　{{$equipment1->language_name}}</p>
     <p>E　{{$equipment2->language_name}}</p>
     <p>E　{{$equipment3->language_name}}</p>
     <p>E　{{$equipment4->language_name}}</p>
-    
+    @else
+    <p>学習なし</p>
+    @endif
     </div>
+
 </div>
 
 </div>
