@@ -69,6 +69,7 @@
     </thead>
 
         @foreach ($order_received_matters as $order_received_matter)
+        @if ($order_received_matter->adoption_flg == 0)
         <tbody>
             <tr>
                 <!-- 案件名 -->
@@ -93,11 +94,13 @@
                 </td>
 
                 <td>
+                    
                     <form method="POST" action="{{ route('user.detail', ['id'=>$order_received_matter->user_id]) }}">
                         @csrf
                         <input type="hidden" name="form" value="{{ $order_received_matter->id }}">
                         <button type="submit" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:green;">詳細</button>
                     </form>
+                    @endif
             </tr>
         @endforeach
     </tbody>
