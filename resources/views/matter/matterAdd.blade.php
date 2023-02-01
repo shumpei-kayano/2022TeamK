@@ -228,12 +228,12 @@
               {{-- <input type="search" id="dark_field" class="nes-input is-dark p-form__portfolio" placeholder="れんらくさき"name="remarks"> --}}
               <br>
 
-              <!-- 募集人数 -->
-              <label for="dark_select" style="color:#fff;">募集人数</label><br>
+              <!-- パーティ人数 -->
+              <label for="dark_select" style="color:#fff;">パーティ人数</label><br>
                 @if($errors->has('number_of_person'))
                   {{ $errors->first('number_of_person') }}
                 @endif
-              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="募集人数を入力してください" name="number_of_person" value="{{ old('number_of_person') }}"> 人
+              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="パーティ人数を入力してください" name="number_of_person" value="{{ old('number_of_person') }}"> 人
               <br>
               <!-- <input type="number" class="" placeholder="ぼしゅうにんずう"aria-describedby="basic-addon2" name="number_of_person"> -->
 

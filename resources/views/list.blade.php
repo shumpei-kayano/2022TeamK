@@ -63,6 +63,7 @@
         <tr>
             <th>案件名</th>
             <th>登録ユーザー</th>
+            <th>ランク</th>
             <th style="width: 30px; padding-left:1px;">詳細</th>
         </tr>
     </thead>
@@ -77,6 +78,18 @@
                 <!-- 登録ユーザー -->
                 <td class="p-show__tokki">
                     {{ $order_received_matter->user->name }}
+                </td>
+
+                </td>
+                <!-- ランク -->
+                <td class="p-show__tokki">
+                    @php
+                        $users = DB::table('users')->find($order_received_matter->user_id);
+                        $total_exe = $users->total_experience;
+                        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+                        $rank = $ranks->rank;
+                    @endphp
+                    {{ $rank }}
                 </td>
 
                 <td>
