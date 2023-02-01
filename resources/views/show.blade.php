@@ -40,7 +40,6 @@
 
             {{--キーワード検索--}}
 
-          
             
                 <label for="dark_field" style="color:#fff;" >キーワード</label><br>
                 <input type="search" id="dark_field" class="nes-input is-dark " name="keyword" placeholder="キーワードを入力" value="{{$keyword}}" style="" >
@@ -128,6 +127,7 @@
             <td>{{$item->occupation_name}}</td>
             <td>{{ $eng }}</td>
             <td>{{$item->prefectures_name}}</td>
+            {{-- <td>{{$item->deadline}}</td> --}}
             <td class="p-show__tokki">{{$item->remarks}}</td>
             <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
             {{-- <td>@if (Auth::check())
@@ -173,8 +173,6 @@
     </div>
         </div>
 </div>
-
-
 
 @endsection
 

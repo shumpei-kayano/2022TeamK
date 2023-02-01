@@ -61,12 +61,16 @@
 
           <!-- 募集人数 --> <!-- <P>要素にカラム値を入れて欲しいです -->
           <label for="dark_select" style="color:#fff;">募集人数</label><br>
-          <p>{{ $matter->success_fee }}</p><br>
+          <p>{{ $matter->number_of_person }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="rank" value="" disabled> 人<br>--> 
 
+          {{-- 期限 --}}
+          <label for="dark_select" style="color:#fff;">期限</label><br>
+          <p>{{ $matter->deadline }}</p><br>
+          
           <!-- 報酬金額 --> <!-- <P>要素にカラム値を入れて欲しいです -->
           <label for="dark_select" style="color:#fff;">報酬金額</label><br>
-          <p>{{ $matter->number_of_person }}</p><br>
+          <p>{{ $matter->success_fee }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="rank" value="" disabled> 円<br>--> 
 
 
