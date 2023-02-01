@@ -7,6 +7,8 @@
 <div class="p-port">
 
     <h1 class="p-form">ポートフォリオの詳細</h1>
+    @if ($portfolio != null)
+    {{-- ポートフォリオがあった場合の処理 --}}
     <div class="nes-container is-rounded is-dark" style="height: 600px;">
         <div class="p-port__container">
             <div class="p-port__left">
@@ -188,6 +190,22 @@
          onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
         </div>
     </form>
+    @else
+    <form method="POST" action="{{ route('approval', ['id'=>$form]) }}">
+        <div class="p-syounin__btn">
+        @csrf
+        <button type="submit" class="nes-btn is-primary p-acinfo__btn" 
+        onclick='return confirm("承認してもよろしいでしょうか？");'>承認する</button>
+    </div>
+    </form>
+    <form method="POST" action="{{ route('rejected', ['id'=>$form]) }}">
+        <div class="p-syounin__btn2">
+        @csrf
+        <button type="submit" class="nes-btn is-error p-acinfo__btn"
+         onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
+        </div>
+    </form>
+    @endif
 </div>
 </div>
 @endsection
