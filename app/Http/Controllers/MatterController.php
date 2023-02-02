@@ -121,10 +121,10 @@ class MatterController extends Controller
         $user = Auth::user();
         $prefectures = \DB::table('prefectures')->get();
         $occupations = \DB::table('occupations')->get();
-        $rank_of_difficulties = \DB::table('rank_of_difficulties')->get();
+        $ranks = \DB::table('ranks')->get();
         $development_languages = \DB::table('development_languages')->get();
         // dd($items);
-        return view('./matter/matterAdd', compact('user', 'occupations', 'rank_of_difficulties', 'development_languages', 'prefectures'));
+        return view('./matter/matterAdd', compact('user', 'occupations', 'ranks', 'development_languages', 'prefectures'));
     }
 
     function post(Request $request)

@@ -77,7 +77,7 @@
                               {{ $errors->first('rank') }}
                             @endif
                             <select name="rank" id="rank">
-                                    @foreach ($rank_of_difficulties as $item)
+                                    @foreach ($ranks as $item)
                                         <option value="{{$item->id}}">{{$item->rank}}</option> 
                                     @endforeach
                             </select>
