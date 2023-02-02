@@ -36,6 +36,6 @@ class RecievedMatterController extends Controller
         $recievedMatter->achievement_date = date('Y/m/d');
         $recievedMatter->save();
 
-        return redirect('home');
+        return redirect('./show');
     }
 }
