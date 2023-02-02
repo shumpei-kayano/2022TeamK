@@ -305,7 +305,7 @@ class MatterController extends Controller
 
     public function contract()
     {
-        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->where('adoption_flg', '=', '1')->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->where('adoption_flg', '=', '1')->with('user:id,name', 'matter:id,matter_name')->orderBy('evaluation', 'asc')->orderBy('id', 'asc')->paginate(20);
         return view('./contract', ['order_received_matters' => $order_received_matters,]);
     }
 
