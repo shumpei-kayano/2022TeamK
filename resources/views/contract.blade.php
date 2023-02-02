@@ -112,7 +112,8 @@ background-color: rgb(217, 206, 206);
                     </td>
                     @else 
                     <td></td>
-                    <td>評価しました。</td>
+                    
+                    <td>{{ $order_received_matter->assessment }}評価しました。</td>
                     @endif
                         
                     </tr>
