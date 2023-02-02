@@ -7,6 +7,10 @@
 <div class="p-port">
 
     <h1 class="p-form">ポートフォリオの詳細</h1>
+    @php
+        $orm = DB::table('order_received_matters')->find($form);
+    @endphp
+    {{-- {{dd($orm)}} --}}
     @if ($portfolio != null)
     {{-- ポートフォリオがあった場合の処理 --}}
     <div class="nes-container is-rounded is-dark" style="height: 600px;">
@@ -173,9 +177,8 @@
                     <textarea name="self_pr" class="nes-textarea is-dark p-form__Textarea" readonly>{{ $portfolio->self_pr }}</textarea>
                 </div>
                 </div>
-
-    {{-- <a href="{{ route('approval', ['id'=>$order_received_matter->user_id]) }}" class="">承認</a>
-    <a href="{{ route('rejected', ['id'=>$order_received_matter->user_id]) }}" class="">却下</a> --}}
+                {{-- {{dd($portfolio)}} --}}
+    @if($orm->adoption_flg == 0)      
     <form method="POST" action="{{ route('approval', ['id'=>$form]) }}">
         <div class="p-syounin__btn1">
         @csrf
@@ -190,9 +193,10 @@
          onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
         </div>
     </form>
-
+    @endif
     {{-- ポートフォリオがない場合 --}}
     @else
+    @if($orm->adoption_flg == 0)  
     <div class="p-acinfo__container2">
         <div class="nes-container is-rounded is-dark p-acinfo">
             <p style="padding-top: 20px; font-weight:bolder;">ポートフォリオが作成されていませんが、よろしいですか？</p>  
@@ -212,6 +216,7 @@
          onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
         </div>
     </form>
+    @endif
     </div>
     </div>
 </div>
