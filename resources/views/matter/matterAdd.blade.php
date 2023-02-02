@@ -261,7 +261,7 @@
                 @if($errors->has('number_of_person'))
                   {{ $errors->first('number_of_person') }}
                 @endif
-              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="パーティ人数を入力してください" name="number_of_person" value="{{ old('number_of_person') }}"> 人
+              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="人数を入力してください" name="number_of_person" value="{{ old('number_of_person') }}"> 人
               <br>
               <!-- <input type="number" class="" placeholder="ぼしゅうにんずう"aria-describedby="basic-addon2" name="number_of_person"> -->
 

@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1 class="p-infoUp">アカウントじょうほうへんしゅう</h1>
+<h1 class="p-infoUp">アカウント情報編集</h1>
 
 
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title','案件掲載(編集)')
+@section('title','案件掲載(編集・削除)')
 
 @section('content')
 {{-- @if (Auth::check())
@@ -35,7 +35,7 @@
                 {{ $errors->first('matter_name') }}
               @endif
               
-              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" placeholder="あんけんめい"name="matter_name" value="{{ $matters->matter_name }}"><br>
+              <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" placeholder="案件名を入力してください" name="matter_name" value="{{ $matters->matter_name }}"><br>
 
     <label for="dark_select" style="color:#fff;">都道府県</label><br>
       <div class="nes-select is-dark p-anken2__prdn">
@@ -56,7 +56,7 @@
       @if($errors->has('tel'))
         {{ $errors->first('tel') }}
       @endif
-    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" placeholder="れんらくさき"name="tel" value="{{ $matters->tel }}"><br>  
+    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" placeholder="連絡先を入力してください" name="tel" value="{{ $matters->tel }}"><br>  
       @php
         $occupation1 = DB::table('occupations')->find($matters->occupation_id);
       @endphp
@@ -263,7 +263,7 @@
 
     <!-- 編集 -->
     <div class="p-anken3__btn1">
-    <input type="submit" class="nes-btn is-primary" value="編集をする" onclick='return confirm("編集完了してもよろしいでしょうか？");'>
+    <input type="submit" class="nes-btn is-primary" value="編集する" onclick='return confirm("編集完了してもよろしいでしょうか？");'>
     </form>
     </div>
 
@@ -271,7 +271,7 @@
     <form action="{{ route('matter_remove',['id'=>$matters->id]) }}" method="post">
     @csrf
     <!-- 削除 -->
-    <input type="submit" class="nes-btn is-primary" value='削除をする' onclick='return confirm("本当に削除してもよろしいでしょうか？");'>
+    <input type="submit" class="nes-btn is-primary" value='削除する' onclick='return confirm("本当に削除してもよろしいでしょうか？");'>
     </div>
 
 
@@ -293,7 +293,8 @@
       @if($errors->has('number_of_person'))
         {{ $errors->first('number_of_person') }}
       @endif
-    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="number_of_person" value="{{ $matters->number_of_person }}"> 人
+    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="人数を入力してください"
+    name="number_of_person" value="{{ $matters->number_of_person }}"> 人
     <br>
 
     <!-- 成功報酬 -->
@@ -303,7 +304,8 @@
       @endif
     <!--     <input type="number" class="" placeholder="せいこうほしゅう"
             aria-describedby="basic-addon2" name="success_fee"> -->
-    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="success_fee" value="{{ $matters->success_fee }}"> 円
+    <input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" placeholder="金額を入力してください"
+    name="success_fee" value="{{ $matters->success_fee }}"> 円
     <br>
 
 
