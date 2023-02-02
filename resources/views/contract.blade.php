@@ -74,6 +74,7 @@ background-color: rgb(217, 206, 206);
                         <td class="p-show__tokki" style="padding-left: 20px;">
                             {{ $order_received_matter->user->name }}
                         </td>
+                        @if ($order_received_matter->evaluation == 0)  
                         <td>
                         <form method="POST" action="{{ route('evaluation', ['id'=>$order_received_matter->user_id]) }}">
                             @csrf
@@ -109,7 +110,10 @@ background-color: rgb(217, 206, 206);
                              <button type="submit" style="height:35px; width:60px; text-align:center; padding-top:0px;  padding-right:10px; color: green;" onclick='return confirm("評価してもよろしいでしょうか？");'>評価</button>
                         </form>
                     </td>
-                        
+                    @else 
+                    <td></td>
+                    <td>評価しました。</td>
+                    @endif
                         
                     </tr>
                 @endforeach
