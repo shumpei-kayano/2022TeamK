@@ -63,7 +63,7 @@
                 <tr style="text-align: center">
                     <td class="p-show__tokki" style="padding-left: 20px;">{{ $matter->matter_name }}</td>
                     <td>{{ $com->name }}</td>
-                    <td style="{{$color}} height:35px; width:60px; text-align:center;  padding-right:10px;" >{{ $ado }}</td>
+                    <td style="{{$color}} height:35px; width:60px; text-align:center;  padding-right:10px; " >{{ $ado }}</td>
                     
                 </tr>
                 </tbody>
