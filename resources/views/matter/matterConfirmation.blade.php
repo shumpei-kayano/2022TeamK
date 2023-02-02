@@ -30,9 +30,9 @@
               @endif
 <p>連絡先：{{$input["tel"]}}</p>
 
-<p>案件名：{{$input["matter_name"]}}</p>
+{{-- <p>案件名：{{$input["matter_name"]}}</p>
 <p>都道府県：{{$prefecture->prefectures_name}}</p>
-<p>連絡先：{{$input["tel"]}}</p>
+<p>連絡先：{{$input["tel"]}}</p> --}}
 <p>職種：{{$occupation->occupation_name}}</p>
 <p>求めるスキル：{{$development_language1->language_name}}</p>
 <p>求めるスキル：{{$development_language2->language_name}}</p>
@@ -45,7 +45,7 @@
 @if($errors->has('remarks'))
         {{ $errors->first('remarks') }}
       @endif
-<p>特記事項：{{$input["remarks"]}}</p>
+{{-- <p>特記事項：{{$input["remarks"]}}</p>
 @if($errors->has('number_of_person'))
         {{ $errors->first('number_of_person') }}
       @endif
@@ -57,7 +57,7 @@
 @if($errors->has('rank'))
 {{ $errors->first('rank') }}
 @endif
-<p>案件ランク：{{$input["rank"]}}</p>
+<p>案件ランク：{{$input["rank"]}}</p> --}}
 
 <p>特記事項：{{$input["remarks"]}}</p>
 <p>パーティ人数：{{$input["number_of_person"]}}</p>
