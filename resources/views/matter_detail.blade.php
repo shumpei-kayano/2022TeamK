@@ -8,7 +8,7 @@
 
 <h1 class="p-form">詳細</h1>
   <div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-anken" style="width: 600px;">
+    <div class="nes-container is-rounded is-dark p-anken" style="width: 800px;">
 
 
 <!--  <table class="">
@@ -29,28 +29,31 @@
             $occupation1 = DB::table('occupations')->find($matter->occupation_id);
             $prefectures1 = DB::table('prefectures')->find($matter->prefectures_id);
           @endphp
-
+      <div class="p-detail__anken" style="text-align:center;" >
           <!-- 案件名 -->
           <label for="dark_select" style="color:#fff;">案件名</label><br>
           <p>{{ $matter->matter_name }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="matter_name" value="{{ $matter->matter_name }}" disabled><br>--> 
+      </div>
 
+
+      <div class="p-detail__up" style="display:flex;  justify-content: space-around;  flex-direction: row;   margin:10px 0px;">
           <!-- 勤務地 -->
+        <div>
           <label for="dark_select" style="color:#fff;">勤務地</label><br>
           <p>{{ $prefectures1->prefectures_name }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="prefectures_id" value="{{ $prefectures1->prefectures_name }}" disabled><br>--> 
+        </div>
 
           <!-- 職種 -->
+        <div>
           <label for="dark_select" style="color:#fff;">職種</label><br>
           <p>{{ $occupation1->occupation_name }}</p><br>
-          <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="occupation_id" value="{{ $occupation1->occupation_name }}" disabled><br>--> 
-
-          <!-- 特記事項 -->
-          <label for="dark_select" style="color:#fff;">特記事項</label><br>
-          <p>{{ $matter->remarks }}</p><br>
-          <!--<textarea name="remarks" id="" class="nes-textarea is-dark p-anken2__textarea" aria-describedby="basic-addon2" disabled>{{ $matter->remarks }}</textarea><br>-->
+          <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="occupation_id" value="{{ $occupation1->occupation_name }}" disabled><br>-->
+        </div>
 
           <!-- ランク -->
+        <div>
           <label for="dark_select" style="color:#fff;">案件ランク</label><br>
             @php
             $engs = DB::table('ranks')->find($matter->rank);
@@ -58,21 +61,36 @@
             @endphp
           <p>{{ $eng }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-show__search" name="rank" value="{{ $matter->rank }}" disabled> ランク<br>--> 
+        </div>
 
           <!-- パーティ人数 --> <!-- <P>要素にカラム値を入れて欲しいです -->
+        <div>
           <label for="dark_select" style="color:#fff;">パーティ人数</label><br>
           <p>{{ $matter->number_of_person }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="rank" value="" disabled> 人<br>--> 
+        </div>
 
           {{-- 期限 --}}
+        <div>
           <label for="dark_select" style="color:#fff;">期限</label><br>
           <p>{{ $matter->deadline }}</p><br>
-          
+        </div>
+
           <!-- 報酬金額 --> <!-- <P>要素にカラム値を入れて欲しいです -->
+        <div>
           <label for="dark_select" style="color:#fff;">報酬金額</label><br>
           <p>{{ $matter->success_fee }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="rank" value="" disabled> 円<br>--> 
+        </div>
+      </div>
 
+
+      <div class="p-detail__tokki">
+          <!-- 特記事項 -->
+          <label for="dark_select" style="color:#fff;">特記事項</label><br>
+          <p>{{ $matter->remarks }}</p><br>
+          <!--<textarea name="remarks" id="" class="nes-textarea is-dark p-anken2__textarea" aria-describedby="basic-addon2" disabled>{{ $matter->remarks }}</textarea><br>-->
+      </div>
 
               {{-- <td>{{ dd($favorite) }}</td> --}}
               <td>@if (Auth::check())
