@@ -82,43 +82,43 @@
                     @endphp
 
                     @if($form->development_year1 == 0)
-                        <option hidden>{{ $year1 = "3か月" }}</option>
+                        <option hidden>{{ $year1 = "3か月未満" }}</option>
                     @elseif ($form->development_year1 == 1)
-                        <option hidden>{{ $year1 = "6か月" }}</option>
+                        <option hidden>{{ $year1 = "6か月未満" }}</option>
                     @elseif ($form->development_year1 == 2)
-                        <option hidden>{{ $year1 = "9か月" }}</option>
+                        <option hidden>{{ $year1 = "9か月未満" }}</option>
                     @else
-                        <option hidden>{{ $year1 = "12か月" }}</option>
+                        <option hidden>{{ $year1 = "12か月以上" }}</option>
                     @endif
 
                     @if($form->development_year2 == 0)
-                        <option hidden>{{ $year2 = "3か月" }}</option>
+                        <option hidden>{{ $year2 = "3か月未満" }}</option>
                     @elseif ($form->development_year2 == 1)
-                        <option hidden>{{ $year2 = "6か月" }}</option>
+                        <option hidden>{{ $year2 = "6か月未満" }}</option>
                     @elseif ($form->development_year2 == 2)
-                        <option hidden>{{ $year2 = "9か月" }}</option>
+                        <option hidden>{{ $year2 = "9か月未満" }}</option>
                     @else
-                        <option hidden>{{ $year2 = "12か月" }}</option>
+                        <option hidden>{{ $year2 = "12か月以上" }}</option>
                     @endif
 
                     @if($form->development_year3 == 0)
-                        <option hidden>{{ $year3 = "3か月" }}</option>
+                        <option hidden>{{ $year3 = "3か月未満" }}</option>
                     @elseif ($form->development_year3 == 1)
-                        <option hidden>{{ $year3 = "6か月" }}</option>
+                        <option hidden>{{ $year3 = "6か月未満" }}</option>
                     @elseif ($form->development_year3 == 2)
-                        <option hidden>{{ $year3 = "9か月" }}</option>
+                        <option hidden>{{ $year3 = "9か月未満" }}</option>
                     @else
-                        <option hidden>{{ $year3 = "12か月" }}</option>
+                        <option hidden>{{ $year3 = "12か月以上" }}</option>
                     @endif
 
                     @if($form->development_year4 == 0)
-                        <option hidden>{{ $year4 = "3か月" }}</option>
+                        <option hidden>{{ $year4 = "3か月未満" }}</option>
                     @elseif ($form->development_year4 == 1)
-                        <option hidden>{{ $year4 = "6か月" }}</option>
+                        <option hidden>{{ $year4 = "6か月未満" }}</option>
                     @elseif ($form->development_year4 == 2)
-                        <option hidden>{{ $year4 = "9か月" }}</option>
+                        <option hidden>{{ $year4 = "9か月未満" }}</option>
                     @else
-                        <option hidden>{{ $year4 = "12か月" }}</option>
+                        <option hidden>{{ $year4 = "12か月以上" }}</option>
                     @endif
 
                         <!-- 学習言語1 -->
@@ -144,10 +144,10 @@
                                         <select type="number" name="development_year1" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year1 }}" selected>{{ $year1 }}</p><br></option>
                                             {{-- <option hidden>{{ $year1 }}</option> --}}
-                                            <option value="0">3か月</option>
-                                            <option value="1">6か月</option>
-                                            <option value="2">9か月</option>
-                                            <option value="3">12か月</option>
+                                            <option value="0">3か月未満</option>
+                                            <option value="1">6か月未満</option>
+                                            <option value="2">9か月未満</option>
+                                            <option value="3">12か月以上</option>
                                         </select><br>
                                     </div>
                             </div>
@@ -175,10 +175,10 @@
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year2" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year2 }}" selected>{{ $year2 }}</p><br></option>
-                                            <option value="0">3か月</option>
-                                            <option value="1">6か月</option>
-                                            <option value="2">9か月</option>
-                                            <option value="3">12か月</option>
+                                            <option value="0">3か月未満</option>
+                                            <option value="1">6か月未満</option>
+                                            <option value="2">9か月未満</option>
+                                            <option value="3">12か月以上</option>
                                         </select><br>
                                     </div>
                             </div>
@@ -215,10 +215,10 @@
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year3" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year3 }}" selected>{{ $year3 }}</p><br></option>
-                                            <option value="0">3か月</option>
-                                            <option value="1">6か月</option>
-                                            <option value="2">9か月</option>
-                                            <option value="3">12か月</option>
+                                            <option value="0">3か月未満</option>
+                                            <option value="1">6か月未満</option>
+                                            <option value="2">9か月未満</option>
+                                            <option value="3">12か月以上</option>
                                         </select><br>
                                     </div>
                             </div>
@@ -255,10 +255,10 @@
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year4" required id="dark_select"  class="p-port__prdn">
                                             <option value="{{ $form->development_year4 }}" selected>{{ $year4 }}</p><br></option>
-                                            <option value="0">3か月</option>
-                                            <option value="1">6か月</option>
-                                            <option value="2">9か月</option>
-                                            <option value="3">12か月</option>
+                                            <option value="0">3か月未満</option>
+                                            <option value="1">6か月未満</option>
+                                            <option value="2">9か月未満</option>
+                                            <option value="3">12か月以上</option>
                                         </select><br>
                                     </div>
                             </div>

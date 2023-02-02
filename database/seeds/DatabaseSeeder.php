@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DevelopmentLanguage2sSeeder::class);
         $this->call(DevelopmentLanguage3sSeeder::class);
         $this->call(DevelopmentLanguage4sSeeder::class);
-        // $this->call(DevelopmentLanguage5sSeeder::class);
         $this->call(PortfoliosSeeder::class);
         $this->call(MattersSeeder::class);
     }

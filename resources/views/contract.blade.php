@@ -4,10 +4,34 @@
 
 @section('content')
 
-<h1 class="p-form">評価</h1>
+
+<style>
+  table {
+          border-collapse: collapse;
+          width: 100%;
+          }
+th,td {
+padding: 1rem 2rem;
+text-align: center;
+border-bottom: 1px solid rgb(217, 206, 206);
+border-color: rgb(217, 206, 206);
+}
+
+th {
+position: sticky;
+top: 0;
+font-weight: normal;
+font-size: .875rem;
+color:black;
+background-color: rgb(217, 206, 206);
+}
+
+</style>
+
+<h1 class="p-form" style="padding-top: 60px;">評価</h1>
 
 <div class="p-acinfo__container2">
-    <div class="nes-container is-dark with-title  p-form__container2" style="width:600px; text-overflow: ellipsis; overflow: scroll; max-height: 400px; border: 5px solid #fff; border-radius: 10px;">
+    <div class="nes-container is-dark with-title  p-form__container2" style="width:600px; text-overflow: ellipsis; overflow: scroll; overflow-x:hidden; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
         {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
         </a> --}}
@@ -32,12 +56,13 @@
                 </tr>
                 </tbody>
         @endforeach --}}
-        <table class="p-show">
-            <thead>
+        <table class="p-show" style="color:white">
+            <tr style="padding-left: 0; padding-right:0;">
                 <th>案件名</th>
                 <th>応募ユーザー</th>
-                <th>評価</th>
-            </thead>
+                <th style="">評価</th>
+                <th style="width: 30px;"></th>
+              </tr>
             <tbody>
                 @foreach ($order_received_matters as $order_received_matter)
                     <tr>
@@ -46,9 +71,10 @@
                            {{ $order_received_matter->matter->matter_name }}
                         </td>
                         <!-- 登録ユーザー -->
-                        <td class="p-show__tokki">
+                        <td class="p-show__tokki" style="padding-left: 20px;">
                             {{ $order_received_matter->user->name }}
                         </td>
+                        @if ($order_received_matter->evaluation == 0)  
                         <td>
                         <form method="POST" action="{{ route('evaluation', ['id'=>$order_received_matter->user_id]) }}">
                             @csrf
@@ -81,12 +107,13 @@
                               </label>
                             </td>
                             <td>
-                             </div>
-                             <button type="submit" class="nes-btn is-primary" 
-                             style="height:35px; width:60px; text-align:center; padding-top:0px;" onclick='return confirm("評価してもよろしいでしょうか？");'>評価</button>
+                             <button type="submit" style="height:35px; width:60px; text-align:center; padding-top:0px;  padding-right:10px; color: green;" onclick='return confirm("評価してもよろしいでしょうか？");'>評価</button>
                         </form>
                     </td>
-                        
+                    @else 
+                    <td></td>
+                    <td>評価しました。</td>
+                    @endif
                         
                     </tr>
                 @endforeach

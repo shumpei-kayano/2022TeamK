@@ -288,8 +288,8 @@
         {{ $matters->remarks }}
       </textarea><br>
 
-      <!-- 募集人数 -->
-      <label for="dark_select" style="color:#fff;">募集人数</label><br>
+      <!-- パーティ人数 -->
+      <label for="dark_select" style="color:#fff;">パーティ人数</label><br>
       @if($errors->has('number_of_person'))
         {{ $errors->first('number_of_person') }}
       @endif

@@ -13,6 +13,10 @@ class DevelopmentLanguagesTableSeeder extends Seeder
     {
         DB::table('development_languages')->insert([
             [
+                'language_name' => '言語不当'
+            ],
+            
+            [
                 'language_name' => 'Apex'
             ],
             
@@ -86,10 +90,6 @@ class DevelopmentLanguagesTableSeeder extends Seeder
             
             [
                 'language_name' => 'TypeScript'
-            ],
-            
-            [
-                'language_name' => '言語不当'
             ],
             
             [
