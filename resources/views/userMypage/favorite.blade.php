@@ -11,11 +11,12 @@
         {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
         </a> --}}
+        
         <table class="p-show" style="color:white">
             <thead style="">
             <tr style="padding-left: 0; padding-right:0;">
                 <th>案件名</th>
-                <th>言語</th>
+                <th>職種</th>
                 <th style="width: 40px;">エリア</th>
                 <th>特記事項</th>
                 <th style="width: 30px; padding-left:1px;">詳細</th>
@@ -23,13 +24,19 @@
             </tr>
             </thead>
         @foreach($favorites as $favorite)
-        
+                @php
+                    $matter = $matters->where('id', $favorite->matter_id)->first();
+                    // dd($matter);
+                    $occupation = DB::table('occupations')->find($matter->occupation_id);
+                    $prefectures = DB::table('prefectures')->find($matter->prefectures_id);
+                @endphp
+                
                 <tbody>
                 <tr>
-                    <td class="p-show__tokki" style="padding-left: 20px;">{{ $favorite->matter_name }}</td>
-                    <td>{{ $favorite->language_name }}</td>
-                    <td>{{ $favorite->prefectures_name }}</td>
-                    <td class="p-show__tokki">{{ $favorite->remarks }}</td>
+                    <td class="p-show__tokki" style="padding-left: 20px;">{{ $matter->matter_name }}</td>
+                    <td>{{ $occupation->occupation_name }}</td>
+                    <td>{{ $prefectures->prefectures_name }}</td>
+                    <td class="p-show__tokki">{{ $matter->remarks }}</td>
                     <td><a href="{{ route('matter.detail', ['id'=>$favorite->matter_id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
                 </tr>
                 </tbody>

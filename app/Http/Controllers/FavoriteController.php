@@ -39,18 +39,10 @@ class FavoriteController extends Controller
     }
 
     public function show(Request $request) {
-        $user = Auth::user();
-        $matters = DB::table('matters')->select('id','prefectures_id', 'matter_name', 'development_language_id1','development_language_id2',
-        'development_language_id3', 'development_language_id4', 'occupation_id','remarks','success_fee','deadline', 'rank', 'number_of_person','created_at','updated_at')->get();
-        // dd($matters);
-        $favorites = DB::table('favorites')->join('matters','favorites.matter_id', '=', 'matters.id')
-        ->join('prefectures', 'matters.prefectures_id', '=', 'prefectures.id')
-        ->join('occupations', 'matters.occupation_id', '=', 'occupations.id')
-        ->leftJoin('development_languages as t1', 'development_language_id1', '=', 't1.id')
-        ->leftJoin('development_languages as t2', 'development_language_id2', '=', 't2.id')
-        ->leftJoin('development_languages as t3', 'development_language_id3', '=', 't3.id')
-        ->leftJoin('development_languages as t4', 'development_language_id4', '=', 't4.id')
-        ->get();
+        $user = Auth::user()->id;
+        $favorites = DB::table('favorites')->where('user_id' , $user)->get();
+        $matters = DB::table('matters')->get();
+        
 
         //無理やりjoin実行して、でかいテーブル作成
         // $favorites = DB::table('matters')->select('id','prefectures_id', 'matter_name', 'occupation_id','remarks','success_fee','deadline', 'rank', 'number_of_person','created_at','updated_at')
@@ -63,6 +55,6 @@ class FavoriteController extends Controller
         // // ->join('development_languages', 'matters.development_language_id4', '=', 'development_languages.id')
         // ->get();
         // dd($favorites);
-        return view('./userMypage/favorite', compact('user','favorites'));
+        return view('./userMypage/favorite', compact('favorites', 'matters'));
     }
 }
