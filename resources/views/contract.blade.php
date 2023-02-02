@@ -56,11 +56,11 @@ background-color: rgb(217, 206, 206);
                 </tr>
                 </tbody>
         @endforeach --}}
-        <table class="p-show" style="color:white">
+        <table class="p-show tablesorter" style="color:white" id="myTable">
             <tr style="padding-left: 0; padding-right:0;">
-                <th>案件名</th>
-                <th>応募ユーザー</th>
-                <th style="">評価</th>
+                <th class="{sorter: 'metadata'}">案件名</th>
+                <th class="{sorter: 'metadata'}">応募ユーザー</th>
+                <th>評価</th>
                 <th style="width: 30px;"></th>
               </tr>
             <tbody>
@@ -123,7 +123,13 @@ background-color: rgb(217, 206, 206);
     </div>
 </div>
 @endsection
-            </table>
+
+<script type="text/javascript">
+  $(document).ready(function() { 
+	$("#myTable").tablesorter();
+});
+
+</script>
 
 
 {{-- <table>
