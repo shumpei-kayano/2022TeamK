@@ -58,11 +58,13 @@
 {{ $errors->first('rank') }}
 @endif
 <p>案件ランク：{{$input["rank"]}}</p> --}}
-
+@php
+    $rank = DB::table('ranks')->find($input["rank"]);
+@endphp
 <p>特記事項：{{$input["remarks"]}}</p>
 <p>パーティ人数：{{$input["number_of_person"]}}</p>
 <p>成功報酬：{{$input["success_fee"]}}</p>
-<p>案件ランク：{{$input["rank"]}}</p>
+<p>案件ランク：{{$rank->rank}}</p>
 </div>
 </div>
 
