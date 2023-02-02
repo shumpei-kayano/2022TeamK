@@ -105,31 +105,31 @@
 
 {{-- <div class="p-show"> --}}
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-form__container2" style="overflow: scroll; overflow-x:hidden; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
-    <table class="p-show"style="color:white">
-        <tr style="padding-left: 0; padding-right:0;">
-            <th class="fixed01">案件名</th>
-            <th class="fixed01">職種</th>
-            <th class="fixed01">ランク</th>
-            <th style="width: 40px;">エリア</th>
-            <th class="fixed01">特記事項</th>
-            <th style="width: 30px; padding-left:1px;">詳細</th>
+        <div class="nes-container is-dark with-title p-form__container2" style="display:flex; overflow: scroll; overflow-x:hidden; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
+    <table class="p-show"style="color:white height:40; display:flex;">
+        <tr style="padding-left: 0; padding-right:0; height: 45px;">
+            <th style="height: 45px;">案件名</th>
+            <th style="height: 45px;">職種</th>
+            <th style="height: 45px;">ランク</th>
+            <th style="width: 40px; height:45px;">エリア</th>
+            <th style="height: 45px;">特記事項</th>
+            <th style="width: 30px; padding-left:1px; height:45px;">詳細</th>
         </tr>
 
         @foreach($items as $item)
 
-        <tr>
+        <tr style="height: 40;">
                 @php
                 $engs = DB::table('ranks')->find($item->rank);
                 $eng = $engs->rank;
                 @endphp
-            <td class="p-show__tokki" style="padding-left: 20px;">{{$item->matter_name}}</td>
-            <td>{{$item->occupation_name}}</td>
-            <td>{{ $eng }}</td>
-            <td>{{$item->prefectures_name}}</td>
+            <td class="p-show__tokki" style="padding-left: 20px; height:40px;">{{$item->matter_name}}</td>
+            <td style="height: 40px;">{{$item->occupation_name}}</td>
+            <td style="height: 40px;">{{ $eng }}</td>
+            <td style="height: 40px;">{{$item->prefectures_name}}</td>
             {{-- <td>{{$item->deadline}}</td> --}}
-            <td class="p-show__tokki">{{$item->remarks}}</td>
-            <td><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
+            <td class="p-show__tokki" style="height: 40px;">{{$item->remarks}}</td>
+            <td style="height: 40px;"><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
             {{-- <td>@if (Auth::check())
                 @if (count($favorite) == 0) --}}
                     {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
