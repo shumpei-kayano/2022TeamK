@@ -275,32 +275,6 @@
               <!-- <input type="number" class="" placeholder="せいこうほしゅう"aria-describedby="basic-addon2" name="success_fee"> --> 
             </div>
 
-<<<<<<< HEAD
-</div>
-=======
-              <!-- 案件ランク -->
-              <label>案件ランク
-                <div class="nes-select is-dark p-anken2__prdn3">
-                @if($errors->has('rank'))
-                  {{ $errors->first('rank') }}
-                @endif
-                <select name="rank" id="rank">
-                        @foreach ($rank_of_difficulties as $item)
-                        @php
-                        $engs = DB::table('ranks')->find($item->rank);
-                        $eng = $engs->rank;
-                        @endphp
-                            <option value="{{$item->id}}">{{$eng}}</option> 
-                        @endforeach
-                </select>
-                </div>
-              </label><br> 
-
-              
-              <!-- 確認ボタン -->
-              <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="確認">
->>>>>>> 9b1041442590d8c3c20720e989d7697d63683270
-
 </div>
       </form>
 
