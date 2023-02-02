@@ -529,6 +529,7 @@ table.p-show td {
     &__prdn1 {
         float: left;
         margin-top: 20px;
+        width: 170px;       //プルダウンのサイズ
     }
 
     &__prdn2 {
@@ -536,6 +537,7 @@ table.p-show td {
         margin-left: 10px;
         margin-top: 20px;
         margin-right: 10px;
+        width: 170px;       //プルダウンのサイズ
     }
 
 
@@ -556,10 +558,6 @@ table.p-show td {
     &__eee {
         overflow: hidden;
         margin-bottom: 20px;
-    }
-
-    &__PR {
-
     }
 
     &__btn {
@@ -628,7 +626,9 @@ table.p-show td {
         width: 300px;
         margin-bottom: 10px;
     }
+
 }
+
 //掲載中案件（黒い部分のサイズ）
 .p-keisaianken {
     text-align: center;

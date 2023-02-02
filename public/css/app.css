@@ -942,12 +942,14 @@ table.p-show td {
 .p-port__prdn1 {
   float: left;
   margin-top: 20px;
+  width: 170px;
 }
 .p-port__prdn2 {
   float: left;
   margin-left: 10px;
   margin-top: 20px;
   margin-right: 10px;
+  width: 170px;
 }
 .p-port__bbb {
   overflow: hidden;

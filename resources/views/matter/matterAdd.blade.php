@@ -238,7 +238,7 @@
       </div>
                     <!-- 確認ボタン -->
                     <div class="p-anken2__btn">
-                      <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="確認をする">
+                      <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="確認する">
                       </div>
 
 
