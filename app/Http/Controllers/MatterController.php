@@ -312,13 +312,18 @@ class MatterController extends Controller
 
     public function evaluation(Request $request, $id)
     {
+        $order_received_matter = Order_received_matter::find($request->input('order_id'));
+        // dd($order_received_matter);
         $form = $request->input('form');
+        $order_received_matter->assessment = $form;
+        $order_received_matter->save();
         $rank = $request->input('rank');
         $order_id = $request->input('order_id');
         $max_exe = DB::table('rank_of_difficulties')->where('rank', $rank)->first();
         $exe = 0;
         $user_db = User::find($id);
         $matter = Order_received_matter::find($order_id);
+        
 
 
         if ($form == 1) {
