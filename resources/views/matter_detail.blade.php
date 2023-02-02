@@ -132,11 +132,11 @@
                 @elseif($user->total_experience < 10000000 && $matter->rank > 7)
                   <label for="" style="color: #ff0000">※ランクが足りない為、応募できません</label>
                 @else
-                  <form action="{{route('submission')}}" method="POST">
+                  <form action="{{route('submission')}}" method="POST" onclick='return confirm("本当に応募してもよろしいでしょうか？");'>
                     @csrf
-                  <input type="hidden" name="matter_id" value="{{$matter->id}}">
-                  <button type="submit" class="nes-btn is-primary">応募する</button>
-              </form>
+                      <input type="hidden" name="matter_id" value="{{$matter->id}}">
+                      <button type="submit" class="nes-btn is-primary">応募する</button>
+                  </form>
                 @endif
               @else
               <button type="button" class="nes-btn is-disabled">応募済み</button>

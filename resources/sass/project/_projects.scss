@@ -640,11 +640,19 @@ table.p-show td {
 .p-anken {
     text-align: center;
     margin-top: 130px;
-    width: 500px; //横幅
+    width: 1200px; //横幅
+    height: auto;  //高さ
 }
 
 //案件掲載
 .p-anken2{
+    width: 1350px;
+    margin: 0 auto;
+    &__container {
+        display: flex;
+        justify-content: space-around;
+    }
+
     //入力枠
     &__Inputs {
         height: 30px;        //高さ
@@ -676,6 +684,7 @@ table.p-show td {
     //プルダウン（都道府県）
     &__prdn {
         //float: left;
+        margin: auto;       //中央に配置
         margin-top: 10px;   //上の余白
         width: 290px;       //横幅
         margin-bottom: 30px //下の余白
@@ -713,37 +722,66 @@ table.p-show td {
         margin-bottom: 30px //下の余白
 
     }
+
+    //文字の配置（左）
+    &__Arrangement {
+        width: 400px;
+        float: left;
+    }
+
+    //文字の配置（右）
+    &__Arrangement2 {
+        float: right;
+        width: 400px;
+    }
+
+    //文字の配置（中央）
+    &__Arrangement3 {
+        height: 550px;  //高さ
+        width: 400px;   //横幅
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    //確認ボタン
+    &__btn {
+        position: absolute;
+        left: auto;     // 中央に配置
+        bottom: 40px;   //下に配置
+
+    }
 }
 
 
 //掲載中案件
-.p-anken2 {
-    margin: 0;
-    text-align: center;
-    height: auto;
-    &__matter {
-        height: auto;
-        width: 300px;
-        margin-bottom: 10px;
-    }
+.p-anken3 {
+    // margin: 0;
+    // text-align: center;
+    // height: auto;
+    // &__matter {
+    //     height: auto;
+    //     width: 300px;
+    //     margin-bottom: 10px;
+    // }
 
-    &__Edit {
-        height: 35px;
-        width: 250px;
-        margin-bottom: 20px;   
-    }
+    // &__Edit {
+    //     height: 35px;
+    //     width: 250px;
+    //     margin-bottom: 20px;   
+    // }
 
     //編集ボタン
-    &__btn {
+    &__btn1 {
         position: absolute;
-        left: 110px;
-        // bottom: 10px;
+        left: 470px;     // 中央に配置
+        bottom: 50px;   //下に配置
     }
+
+    //削除ボタン
     &__btn2 {
         position: absolute;
-        left: 260px;
-        //right: 185px;
-        // bottom: 10px;
+        left: 610px;     // 中央に配置
+        bottom: 35px;   //下に配置
     }
 
 }

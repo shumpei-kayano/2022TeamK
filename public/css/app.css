@@ -1016,9 +1016,18 @@ table.p-show td {
 .p-anken {
   text-align: center;
   margin-top: 130px;
-  width: 500px;
+  width: 1200px;
+  height: auto;
 }
 
+.p-anken2 {
+  width: 1350px;
+  margin: 0 auto;
+}
+.p-anken2__container {
+  display: flex;
+  justify-content: space-around;
+}
 .p-anken2__Inputs {
   height: 30px;
   width: 290px;
@@ -1040,6 +1049,7 @@ table.p-show td {
   margin-bottom: 30px;
 }
 .p-anken2__prdn {
+  margin: auto;
   margin-top: 10px;
   width: 290px;
   margin-bottom: 30px;
@@ -1067,29 +1077,35 @@ table.p-show td {
   width: 290px;
   margin-bottom: 30px;
 }
-
-.p-anken2 {
-  margin: 0;
-  text-align: center;
-  height: auto;
+.p-anken2__Arrangement {
+  width: 400px;
+  float: left;
 }
-.p-anken2__matter {
-  height: auto;
-  width: 300px;
-  margin-bottom: 10px;
+.p-anken2__Arrangement2 {
+  float: right;
+  width: 400px;
 }
-.p-anken2__Edit {
-  height: 35px;
-  width: 250px;
-  margin-bottom: 20px;
+.p-anken2__Arrangement3 {
+  height: 550px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .p-anken2__btn {
   position: absolute;
-  left: 110px;
+  left: auto;
+  bottom: 40px;
 }
-.p-anken2__btn2 {
+
+.p-anken3__btn1 {
   position: absolute;
-  left: 260px;
+  left: 470px;
+  bottom: 50px;
+}
+.p-anken3__btn2 {
+  position: absolute;
+  left: 610px;
+  bottom: 35px;
 }
 
 .p-syounin__btn1 {
