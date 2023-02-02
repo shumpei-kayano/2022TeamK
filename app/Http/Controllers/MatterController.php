@@ -78,9 +78,9 @@ class MatterController extends Controller
             'matter_name' => 'required',
             'remarks' => 'required',
             'tel' => 'numeric',
-            'success_fee' => 'numeric',
+            'success_fee' => 'numeric|max:90000000',
             'rank' => 'numeric',
-            'number_of_person' => 'numeric',
+            'number_of_person' => 'numeric|max:10000',
             'deadline' => 'required',
             'prefectures_id' => 'required'
         ]);
@@ -133,9 +133,9 @@ class MatterController extends Controller
             'matter_name' => 'required',
             'remarks' => 'required',
             'tel' => 'numeric',
-            'success_fee' => 'numeric',
+            'success_fee' => 'numeric|max:90000000',
             'rank' => 'numeric',
-            'number_of_person' => 'numeric',
+            'number_of_person' => 'numeric|max:10000',
             'deadline' => 'required',
             'prefectures_id' => 'required'
         ]);
