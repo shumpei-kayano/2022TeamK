@@ -67,7 +67,7 @@
                         @if($errors->has('birthday'))
                             {{ $errors->first('birthday') }}
                         @endif
-                            <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="{{ $form->birtday }}" name="birthday">
+                            <input type="date" id="birthday" class="nes-input is-dark p-form__portfolio" value="{{ $form->birthday }}" name="birthday">
                     </div>
                     
 

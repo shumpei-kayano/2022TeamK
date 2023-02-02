@@ -65,6 +65,7 @@ Route::post('/evaluation/{id}', 'MatterController@evaluation')->name('evaluation
 Route::post('/submission', 'RecievedMatterController@matterSubmission')->name('submission');
 Route::get('/list', 'MatterController@list')->name('list');
 Route::post('/list/{id}', 'MatterController@userdetail')->name('user.detail');
+Route::get('/list/{id}', 'MatterController@userdetail')->name('user.detail');
 
     // ポートフォリオルート
 Route::get('/portfolio', 'PortfolioController@portfolio')->name('portfolio');
