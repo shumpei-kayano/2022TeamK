@@ -105,7 +105,7 @@
 
 {{-- <div class="p-show"> --}}
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-form__container2" style="display:flex; overflow: scroll; overflow-x:hidden; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
+        <div class="nes-container is-dark with-title p-form__container2" style="display:flex; overflow: scroll; overflow-x:hidden; max-height: 525px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
     <table class="p-show"style="color:white height:40; display:flex;">
         <tr style="padding-left: 0; padding-right:0; height: 45px;">
             <th style="height: 45px;">案件名</th>
