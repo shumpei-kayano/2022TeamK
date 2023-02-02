@@ -4,6 +4,6 @@
 
 @section('content')
 
-<h1 class="p-form">また４年後。</h1>
+<h1 class="p-form">みうらこうたろう</h1>
 
 @endsection
