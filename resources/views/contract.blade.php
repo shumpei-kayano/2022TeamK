@@ -111,7 +111,7 @@ background-color: rgb(217, 206, 206);
                         </form>
                     </td>
                     @else 
-                    <td>{{ $order_received_matter->assessment }}</td>
+                    <td style="font-weight: 900;">{{ $order_received_matter->assessment }}</td>
                     
                     <td>評価しました。</td>
                     @endif
