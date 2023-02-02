@@ -14,7 +14,7 @@ class AddAssessmentToOrderReceivedMattersTable extends Migration
     public function up()
     {
         Schema::table('order_received_matters', function (Blueprint $table) {
-            $table->integer('assessment')->default(NULL)->after('evaluation');
+            $table->integer('assessment')->nullable()->after('adoption_flg');
         });
     }
 
