@@ -68,11 +68,11 @@ background-color: rgb(217, 206, 206);
                     <tr>
                         <!-- 商品名 -->
                         <td class="p-show__tokki">
-                           <a href="{{ route('matterEdit', ['id'=>$order_received_matter->matter->id])}}"> {{ $order_received_matter->matter->matter_name }}</a>
+                           <a href="{{ route('matterEdit', ['id'=>$order_received_matter->matter->id])}}" style="color: #fff;"> {{ $order_received_matter->matter->matter_name }}</a>
                         </td>
                         <!-- 登録ユーザー -->
                         <td class="p-show__tokki" style="padding-left: 20px;">
-                            <a href="{{ route('user.detail', ['id'=>$order_received_matter->user_id, 'form'=>$order_received_matter->id ])}}">{{ $order_received_matter->user->name }}</a>
+                            <a href="{{ route('user.detail', ['id'=>$order_received_matter->user_id, 'form'=>$order_received_matter->id ])}}" style="color:#00bfff;">{{ $order_received_matter->user->name }}</a>
                         </td>
                         @if ($order_received_matter->evaluation == 0)  
                         <td>

@@ -8,7 +8,7 @@
 
 <h1 class="p-form">詳細</h1>
   <div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-anken">
+    <div class="nes-container is-rounded is-dark p-anken" style="width: 600px;">
 
 
 <!--  <table class="">
