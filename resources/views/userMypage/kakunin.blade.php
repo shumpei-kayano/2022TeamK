@@ -52,11 +52,11 @@
                 }
                 else if ($item->adoption_flg == 1) {
                     $ado = "採用";
-                    $color = "color:blue;";
+                    $color = "color:#FF1493;";
                 }
                 else {
                     $ado = "不採用";
-                    $color = "color:red;";
+                    $color = "color:#87CEFA;";
                 }
             @endphp
                 <tbody>
