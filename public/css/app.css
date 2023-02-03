@@ -611,6 +611,11 @@ textarea,
   justify-content: center;
   margin-top: 30px;
 }
+.p-acinfo__container3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 .p-acinfo__id {
   text-indent: -220px;
 }
@@ -625,6 +630,20 @@ textarea,
 }
 .p-acinfo__left {
   float: left;
+}
+.p-acinfo__win {
+  width: 450px;
+  height: 250px;
+}
+.p-acinfo__win2 {
+  width: 210px;
+  height: 250px;
+}
+.p-acinfo__win3 {
+  text-align: center;
+  margin: auto;
+  width: 600px;
+  height: 200px;
 }
 
 .p-info {
