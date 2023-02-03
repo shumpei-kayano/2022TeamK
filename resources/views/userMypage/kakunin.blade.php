@@ -6,6 +6,7 @@
 
 @section('content')
 
+
 <style>
     table {
             border-collapse: collapse;
@@ -25,6 +26,42 @@
   font-size: .875rem;
   color:black;
   background-color: rgb(217, 206, 206);
+}
+
+
+/* //////////////////// */
+
+
+.tooltip { /* 補足説明するテキストのスタイル */
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 0.9em;
+  color: #4682b4;
+}
+ 
+.description_right { /* ツールチップのスタイル */
+  width: 150px; /* 横幅 */
+  position: absolute;
+  top: 50%;
+  left: 80%; /* X軸の位置 */
+  transform: translateY(-50%);
+  padding: 8px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: #666;
+  font-size: 0.7em;
+  color: #fff;
+  text-align: center;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+ 
+.tooltip:hover .description_right { /* マウスオーバー時のスタイル */
+  left: 100%; /* X軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
 }
 
 </style>
@@ -72,4 +109,9 @@
     </div>
 </div>
 
+{{-- ////////////練習/////////////// --}}
+<div class="asas" style="width: 200px;">
+<p>補足説明が必要な時は<span class="tooltip">ツールチップ
+    <span class="description_right">マウスオーバーすると、説明文が表示されます。</span></span>を使うと良いでしょう。</p>
+</div>
 @endsection

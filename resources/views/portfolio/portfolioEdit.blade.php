@@ -18,7 +18,7 @@
                     {{-- userId <input type="int" name="user_id"> --}}
                     
                     <!-- 名前 -->
-                    <label for="name" style="color:#fff;" >名前
+                    <label for="name" style="color:#fff;" >名前<br>
                         @if($errors->has('name'))
                             {{ $errors->first('name') }}
                         @endif
@@ -30,7 +30,7 @@
                         
 
                     <!-- メールアドレス -->
-                    <label for="mail" style="color:#fff;" >メールアドレス
+                    <label for="mail" style="color:#fff;" >メールアドレス<br>
                         @if($errors->has('email'))
                             {{ $errors->first('email') }}
                         @endif
@@ -41,7 +41,7 @@
                         -->
 
                     <!-- 電話番号 -->
-                    <label for="tel" style="color:#fff;" >電話番号（ハイフンなし）
+                    <label for="tel" style="color:#fff;" >電話番号（ハイフンなし）<br>
                         @if($errors->has('tel'))
                             {{ $errors->first('tel') }}
                         @endif
@@ -52,7 +52,7 @@
                            -->
 
                     <!-- 最終学歴 -->
-                    <label for="gakureki" style="color:#fff;" >最終学歴
+                    <label for="gakureki" style="color:#fff;" >最終学歴<br>
                         @if($errors->has('educational_background'))
                             {{ $errors->first('educational_background') }}
                         @endif
@@ -63,7 +63,7 @@
                         -->
                         
                     <!--生年月日 -->
-                    <label for="birthday" style="color:#fff;" >生年月日
+                    <label for="birthday" style="color:#fff;" >生年月日<br>
                         @if($errors->has('birthday'))
                             {{ $errors->first('birthday') }}
                         @endif
@@ -324,7 +324,7 @@
 
                 <!-- 編集ボタン -->
                 <div class="p-acinfo__btn-container p-port__btn">
-                    <button type="submit" class="nes-btn is-primary p-acinfo__btn" onclick='return confirm("編集完了してもよろしいでしょうか？");'>編集する</button>
+                    <button type="submit" class="nes-btn is-primary p-acinfo__btn" onclick='return confirm("編集完了してもよろしいでしょうか？");'>保存する</button>
             <div>
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
         </form>

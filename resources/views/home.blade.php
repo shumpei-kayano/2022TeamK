@@ -4,8 +4,32 @@
     
 
 @section('content')
+
+<style>
+    table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+ th,td {
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgb(217, 206, 206);
+  border-color: rgb(217, 206, 206);
+ }
+
+ th {
+  position: sticky;
+  top: 0;
+  font-weight: normal;
+  font-size: .875rem;
+  color:black;
+  background-color: rgb(217, 206, 206);
+}
+
+</style>
+
 <div class="p-mypage" style="padding-top: 75px;">
-    <div class="nes-container is-dark with-title p-mypage__container">
+    <div class="nes-container is-dark with-title p-mypage__container" style="border: 5px solid #fff; border-radius: 10px;">
         <p class="title">マイページ</p>
         @if (session('status'))
             <div class="alert alert-success" role="alert">

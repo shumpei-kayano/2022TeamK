@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    アカウント情報編集
+    アカウント情報
 @endsection
 
 @section('content')
@@ -32,10 +32,11 @@
 
 <h1 class="p-form" style="padding-top:45px;">アカウント情報</h1>
 
-<div style="float: left; display:flex; margin-left:310px;">
+{{-- < style="float: left; display:flex; margin-left:310px;"> --}}
 
 <div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-acinfo" style="padding-bottom: 10px; border: 5px solid #fff; border-radius: 10px;">
+    <div class="nes-container is-rounded is-dark p-acinfo p-acinfo__win">
+        {{-- style="padding-bottom: 10px; border: 5px solid #fff; border-radius: 10px;" --}}
         <p>ユーザーID：{{ $user->name }}</p>
         <p>メールアドレス：{{ $user->email }}</p>
         <p>獲得経験値：{{ $user->total_experience }}</p>
@@ -48,16 +49,15 @@
         <div class="p-acinfo__btn-container" style="margin-top:-10px;">
             <form action='{{ route('account_edit') }}' method="get" style="margin-top: -10px;">
                 @csrf
-                <button type="submit" class="nes-btn is-success p-acinfo__btn" style="">編集</button>
+                <button type="submit" class="nes-btn is-primary p-acinfo__btn" style="">編集</button>
             </form>
         </div>
     </div>
-</div>
 
 {{-- 装備（言語の追加） --}}
 
-<div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-acinfo" style=" width:200px;text-align:left; text-indent: 18px; padding-bottom:30px; border: 5px solid #fff; border-radius: 10px;">
+    <div class="nes-container is-rounded is-dark p-acinfo p-acinfo__win2">
+        {{-- style=" width:200px;text-align:left; text-indent: 18px; padding-bottom:30px; border: 5px solid #fff; border-radius: 10px;" --}}
     @php
     $equipments = DB::table('portfolios')->where('user_id', $user->id)->first();
     if ($equipments != null) {
@@ -77,9 +77,29 @@
     <p>学習なし</p>
     @endif
     </div>
-
 </div>
 
+<div class="p-acinfo__container3">
+<div class="nes-container is-rounded is-dark p-acinfo__win3">
+    <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
+    <table>
+        <tr>
+            <th>SS</th>
+            <th>S</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </table>
+</div>
 </div>
     
 
