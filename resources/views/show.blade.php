@@ -50,7 +50,7 @@
                     <!--<label for="dark_select" style="color:#fff">エリア</label>-->
                         <div class="nes-select is-dark" style="padding-bottom: 20px; padding-top: 20px;">
                             <select class="p-form__eriaselect" style="" aria-label="Default select example"name="prefectures_id" id="dark_select">
-                                <option value="prefectures_id" selected>エリアを選択してください</option>
+                                <option value="" selected>エリアを選択してください</option>
                                 {{-- <option hidden>エリアを選択してください</option> --}}
                                 @foreach ($prefectures as $prefecture)
                                     <option value="{{$prefecture->id}}">{{$prefecture->prefectures_name}}</option> 
