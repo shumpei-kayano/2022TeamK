@@ -263,7 +263,7 @@
 
     <!-- 編集 -->
     <div class="p-anken3__btn1">
-    <input type="submit" class="nes-btn is-primary" value="編集する" onclick='return confirm("編集完了してもよろしいでしょうか？");'>
+    <input type="submit" class="nes-btn is-primary" value="保存する" onclick='return confirm("編集完了してもよろしいでしょうか？");'>
     </form>
     </div>
 
