@@ -118,6 +118,11 @@
         justify-content: center;
         margin-top: 30px;
     }
+    &__container3 {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
     &__id {
         text-indent:-220px;
     }
@@ -132,6 +137,23 @@
     }
     &__left {
         float: left;
+    }
+    //アカウント情報のウィンドウ
+    &__win {
+        width: 450px;   //横幅
+        height: 250px;  //高さ
+    }
+    //使用可能言語のウィンドウ
+    &__win2 {
+        width: 210px;   //横幅
+        height: 250px;  //高さ
+    }
+    //案件記録のウィンドウ
+    &__win3 {
+        text-align: center;
+        margin: auto;
+        width: 600px;   //横幅
+        height: 200px;  //高さ
     }
 }
 
@@ -173,8 +195,6 @@
     &__btn-container {
         text-align: center;
     }
-
-    
 }
 
 //////////案件検索画面///////////// 
