@@ -8,7 +8,7 @@
 
 <h1 class="p-form">詳細</h1>
   <div class="p-acinfo__container2">
-    <div class="nes-container is-rounded is-dark p-anken" style="width: 800px;">
+    <div class="nes-container is-rounded is-dark p-anken" style="width:800px; overflow: scroll; overflow-x:hidden; max-height: 600px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
 
 
 <!--  <table class="">
@@ -30,6 +30,7 @@
             $prefectures1 = DB::table('prefectures')->find($matter->prefectures_id);
           @endphp
       <div class="p-detail__anken" style="text-align:center;" >
+        <br>
           <!-- 案件名 -->
           <label for="dark_select" style="color:#fff;">案件名</label><br>
           <p>{{ $matter->matter_name }}</p><br>
@@ -87,7 +88,7 @@
 
       <div class="p-detail__tokki">
           <!-- 特記事項 -->
-          <label for="dark_select" style="color:#fff;">特記事項</label><br>
+          <label for="dark_select" style="color:#fff; padding-left: 5px; padding-right:5px;">特記事項</label><br>
           <p>{{ $matter->remarks }}</p><br>
           <!--<textarea name="remarks" id="" class="nes-textarea is-dark p-anken2__textarea" aria-describedby="basic-addon2" disabled>{{ $matter->remarks }}</textarea><br>-->
       </div>
