@@ -276,6 +276,7 @@ class MatterController extends Controller
     public function list()
     {
         $order_received_matters = Order_received_matter::where('create_user_id', auth()->user()->id)->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        // dd($order_received_matters);
         return view('./list', ['order_received_matters' => $order_received_matters,]);
     }
 

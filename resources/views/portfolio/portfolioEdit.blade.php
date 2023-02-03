@@ -321,8 +321,6 @@
                             <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea">{{ $form->self_pr }}</textarea>
                     </div>
                 </div>
-                <!-- <label for="dark_field" style="color:#fff;" >自己PR<br> 
-                    <input type="search" id="dark_field" class="nes-input is-dark p-form__PR" name="self_pr" value='{{ $form->self_pr }}'><br> -->
 
                 <!-- 編集ボタン -->
                 <div class="p-acinfo__btn-container p-port__btn">
@@ -330,8 +328,21 @@
             <div>
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
         </form>
-    </div>
-</div>
+
+            @foreach ($order_received_matters as $order_received_matter)
+                @if ($order_received_matter->evaluation == 1)
+                    <!-- 案件名 -->
+                        {{ $order_received_matter->matter->matter_name }}
+                    <!-- ランク -->
+                    @php
+                        $users = DB::table('users')->find($order_received_matter->user_id);
+                        $total_exe = $users->total_experience;
+                        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+                        $rank = $ranks->rank;
+                    @endphp
+                    {{ $rank }}
+                @endif
+            @endforeach
             @else
             {{-- ポートフォリオがなかった場合の処理 --}}
             <div class="p-acinfo__container">
@@ -345,4 +356,98 @@
 
 @endsection
 
-{{-- aiueo --}}
+@foreach ($order_received_matters as $order_received_matter)
+@if ($order_received_matter->evaluation == 1)
+    {{-- ランクがEの時 --}}
+    @if ($order_received_matter->matter->rank == 1)
+    <!-- 案件名 -->
+        {{ $order_received_matter->matter->matter_name }}
+    <!-- ランク -->
+    @php
+        $users = DB::table('users')->find($order_received_matter->user_id);
+        $total_exe = $users->total_experience;
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+        $rank = $ranks->rank;
+    @endphp
+    {{ $rank }}
+    @endif
+    {{-- ランクがDの時 --}}
+    @if ($order_received_matter->matter->rank == 2)
+    <!-- 案件名 -->
+        {{ $order_received_matter->matter->matter_name }}
+    <!-- ランク -->
+    @php
+        $users = DB::table('users')->find($order_received_matter->user_id);
+        $total_exe = $users->total_experience;
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+        $rank = $ranks->rank;
+    @endphp
+    {{ $rank }}
+    @endif
+    {{-- ランクがCの時 --}}
+    @if ($order_received_matter->matter->rank == 3)
+    <!-- 案件名 -->
+        {{ $order_received_matter->matter->matter_name }}
+    <!-- ランク -->
+    @php
+        $users = DB::table('users')->find($order_received_matter->user_id);
+        $total_exe = $users->total_experience;
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+        $rank = $ranks->rank;
+    @endphp
+    {{ $rank }}
+    @endif
+    {{-- ランクがBの時 --}}
+    @if ($order_received_matter->matter->rank == 4)
+    <!-- 案件名 -->
+        {{ $order_received_matter->matter->matter_name }}
+    <!-- ランク -->
+    @php
+        $users = DB::table('users')->find($order_received_matter->user_id);
+        $total_exe = $users->total_experience;
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+        $rank = $ranks->rank;
+    @endphp
+    {{ $rank }}
+    @endif
+    {{-- ランクがAの時 --}}
+    @if ($order_received_matter->matter->rank == 5)
+    <!-- 案件名 -->
+        {{ $order_received_matter->matter->matter_name }}
+    <!-- ランク -->
+    @php
+        $users = DB::table('users')->find($order_received_matter->user_id);
+        $total_exe = $users->total_experience;
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+        $rank = $ranks->rank;
+    @endphp
+    {{ $rank }}
+    @endif
+    {{-- ランクがSの時 --}}
+    @if ($order_received_matter->matter->rank == 6)
+    <!-- 案件名 -->
+        {{ $order_received_matter->matter->matter_name }}
+    <!-- ランク -->
+    @php
+        $users = DB::table('users')->find($order_received_matter->user_id);
+        $total_exe = $users->total_experience;
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+        $rank = $ranks->rank;
+    @endphp
+    {{ $rank }}
+    @endif
+    {{-- ランクがSSの時 --}}
+    @if ($order_received_matter->matter->rank == 7)
+    <!-- 案件名 -->
+        {{ $order_received_matter->matter->matter_name }}
+    <!-- ランク -->
+    @php
+        $users = DB::table('users')->find($order_received_matter->user_id);
+        $total_exe = $users->total_experience;
+        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+        $rank = $ranks->rank;
+    @endphp
+    {{ $rank }}
+    @endif
+@endif
+@endforeach

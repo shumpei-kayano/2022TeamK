@@ -8,7 +8,10 @@ use App\Portfolio;
 use App\Development_language;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-
+use App\Order_received_matter;
+use App\Matter;
+use App\User;
+use App\Rank_of_difficulty;
 class PortfolioController extends Controller
 {
     /**
@@ -69,8 +72,9 @@ class PortfolioController extends Controller
         $user = Auth::user();
         $portfolio = Portfolio::whereUser_id($user->id)->first();
         $items = \DB::table('development_languages') -> get();
-        
-        return view('./portfolio/portfolioEdit',['form' => $portfolio] ,compact('items','user'));
+        $order_received_matters = Order_received_matter::where('user_id', auth()->user()->id)->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        // dd($order_received_matters);
+        return view('./portfolio/portfolioEdit',['form' => $portfolio] ,compact('items','user','order_received_matters'));
     }
 
     public function update(Request $request)
