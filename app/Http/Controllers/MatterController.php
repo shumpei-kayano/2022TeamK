@@ -243,6 +243,7 @@ class MatterController extends Controller
             'Matters.rank',
             'Prefectures.prefectures_name',
             'Matters.remarks',
+            'Matters.number_of_person',
             'Matters.deadline'
         )->get();
         // $items = $query->get();

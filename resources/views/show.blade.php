@@ -150,6 +150,7 @@
             <th style="height: 45px; width:20px;">ランク</th>
             <th style="width: 40px; height:45px;">エリア</th>
             <th style="height: 45px;">特記事項</th>
+            <th style="height: 45px;">パーティ人数</th>
             <th style="width: 30px; padding-left:1px; height:45px;">詳細</th>
         </tr>
 
@@ -167,41 +168,44 @@
             <td style="height: 40px;">{{$item->prefectures_name}}</td>
             {{-- <td>{{$item->deadline}}</td> --}}
             <td class="p-show__tokki" style="height: 40px;">{{$item->remarks}}</td>
-            <td style="height: 40px;"><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
-            {{-- <td>@if (Auth::check())
-                @if (count($favorite) == 0) --}}
-                    {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
-                    {{-- <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
-                        @csrf
-                        <input type="hidden" name="matter_id" value="{{$item->id}}">
-                        <button type="submit">お気に入り登録</button>
-                    </form>
-                @else
-                    @for ($i = 0; $i < count($favorite); $i++)
+            @php
+            $molecule = DB::table('order_received_matters')->where('matter_id', $item->id)->where('adoption_flg', 1)->get();
+            $put = array();
+            @endphp
+            <td class="p-show__tokki" style="height: 40px;">
+                {{ count($molecule) }}/{{$item->number_of_person}}
 
-                        @if ($favorite[$i]['matter_id'] == $item->id)
-                         --}}
-                            {{-- favoriteがあったら削除ボタン表示 --}}
-                            {{-- <form action="{{route('favorite.del', ['id'=>$item->id])}}" method="POST">
-                                <input type="hidden" name="matter_id" value="{{$item->id}}">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">お気に入り解除{{$favorite[$i]['matter_id']}}</button>
-                            </form>
-                            @break
-                        @else --}}
-                            {{-- favoliteがなかったらお気に入り登録ボタン表示 --}}
-                            {{-- <form action="{{route('favorite', ['id'=>$item->id])}}" method="POST">
-                                @csrf
-                                <input type="hidden" name="matter_id" value="{{$item->id}}">
-                                <button type="submit">お気に入り登録{{$favorite[$i]['matter_id']}}</button>
-                            </form>
-                            @break
-                        @endif
-                                                    
-                    @endfor 
-                @endif      
-              @endif</td> --}}
+            {{-- ここからツールチップ内の内容 --}}
+            @foreach ($molecule as $mol)
+            @php
+                $mol_rank = DB::table('ranks')->where('requirement_experience', '>=', DB::table('users')->find($mol->user_id)->total_experience)->first()->rank;
+                $put[] = $mol_rank;
+                $ranks = DB::table('ranks')->get();
+            @endphp
+            @endforeach
+                @if(!empty($put))
+                @php
+                $p = array_count_values($put);
+                @endphp
+                    @foreach ($ranks as $rank)
+                        @php
+                        if(!isset($p[$rank->rank])){
+                            $count = 0;
+                        } else {
+                            $count = $p[$rank->rank];
+                            
+                        }
+                        @endphp
+                        {{$rank->rank}}:{{$count}}
+                        {{-- {{($p[$rank->rank])}} --}}
+                    @endforeach
+                @else
+                    現在採用なし
+                @endif
+            </td>
+
+            <td style="height: 40px;"><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
+           
         </tr>
 
         @endforeach
