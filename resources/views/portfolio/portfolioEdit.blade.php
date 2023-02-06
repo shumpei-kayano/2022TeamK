@@ -264,54 +264,6 @@
                             </div>
                         </div>
 
-                        <!-- 
-                            学習期間4: <br><select type="number" name="development_year4">
-                            <option value="0">3か月</option>
-                            <option value="1">6か月</option>
-                            <option value="2">9か月</option>
-                            <option value="3">12か月</option>
-                            </select><br>
-                         -->
-
-                         <!-- 学習言語5 -->
-                        {{-- <div class="p-fort__eee">
-                            <div class="p-port__prdn1">  
-                                <label for="dark_select" style="color:#fff;">学習言語５</label><br>
-                                    <div class="nes-select is-dark p-port__prdn">
-                                        <select type="number" name="development_language_id5" required id="dark_select">
-                                            <option hidden>選択してください</option> 
-                                            @foreach ($items as $item)
-                                            <option value="{{ $item->id }}">{{  $item->language_name  }}</option>
-                                            @endforeach <br>
-                                        </select><br>
-                                    </div>
-                            </div> --}}
-
-
-                             <!-- 学習期間5 -->
-                            {{-- <div class="p-port__prdn2">
-                                <label for="dark_select" style="color:#fff;">学習期間５</label><br>
-                                    <div class="nes-select is-dark p-port__prdn">
-                                        <select type="number" name="development_year5" required id="dark_select"  class="p-port__prdn">
-                                            <option hidden>選択してください</option>
-                                            <option value="0">3か月</option>
-                                            <option value="1">6か月</option>
-                                            <option value="2">9か月</option>
-                                            <option value="3">12か月</option>
-                                        </select><br>
-                                    </div>
-                            </div>
-                        </div> --}}
-
-                        <!-- 
-                            学習期間5: <br><select type="number" name="development_year5">
-                            <option value="0">3か月</option>
-                            <option value="1">6か月</option>
-                            <option value="2">9か月</option>
-                            <option value="3">12か月</option>
-                            </select><br>
-                         -->
-
                     </div>
                     
 
@@ -329,21 +281,61 @@
                 <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
         </form>
 
-            @foreach ($order_received_matters as $order_received_matter)
-                @if ($order_received_matter->evaluation == 1)
-                    <!-- 案件名 -->
-                        {{ $order_received_matter->matter->matter_name }}
-                    <!-- ランク -->
-                    @php
-                        $users = DB::table('users')->find($order_received_matter->user_id);
-                        $total_exe = $users->total_experience;
-                        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-                        $rank = $ranks->rank;
-                    @endphp
-                    {{ $rank }}
-                @endif
-            @endforeach
+        @foreach ($order_received_matters as $order_received_matter)
+            {{-- {{dd($order_received_matter->rank)}} --}}
+            {{-- ランクがEの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "1")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            @if($order_received_matter->rank == "1")
+            <p>E</p>
             @else
+            @endif
+            {{-- ランクがDの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "2")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            {{ $order_received_matter->rank }}
+            @endif
+            {{-- ランクがCの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "3")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            {{ $order_received_matter->rank }}
+            @endif
+            {{-- ランクがBの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "4")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            {{ $order_received_matter->rank }}
+            @endif
+            {{-- ランクがAの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "5")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            {{ $order_received_matter->rank }}
+            @endif
+            {{-- ランクがSの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "6")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            {{ $order_received_matter->rank }}
+            @endif
+            {{-- ランクがSSの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "7")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            {{ $order_received_matter->rank }}
+            @endif
+        @endforeach
+    @else
             {{-- ポートフォリオがなかった場合の処理 --}}
             <div class="p-acinfo__container">
                     <div class="nes-container is-rounded is-dark p-portEdit__win" style="margin-top: 70px; text-align:center; padding-top:20px;">
@@ -351,103 +343,6 @@
                         <a href="/portfolioAdd">作成画面へ</a>
                     </div>
                 </div>
-            @endif
-
-
+    @endif
 @endsection
 
-@foreach ($order_received_matters as $order_received_matter)
-@if ($order_received_matter->evaluation == 1)
-    {{-- ランクがEの時 --}}
-    @if ($order_received_matter->matter->rank == 1)
-    <!-- 案件名 -->
-        {{ $order_received_matter->matter->matter_name }}
-    <!-- ランク -->
-    @php
-        $users = DB::table('users')->find($order_received_matter->user_id);
-        $total_exe = $users->total_experience;
-        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-        $rank = $ranks->rank;
-    @endphp
-    {{ $rank }}
-    @endif
-    {{-- ランクがDの時 --}}
-    @if ($order_received_matter->matter->rank == 2)
-    <!-- 案件名 -->
-        {{ $order_received_matter->matter->matter_name }}
-    <!-- ランク -->
-    @php
-        $users = DB::table('users')->find($order_received_matter->user_id);
-        $total_exe = $users->total_experience;
-        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-        $rank = $ranks->rank;
-    @endphp
-    {{ $rank }}
-    @endif
-    {{-- ランクがCの時 --}}
-    @if ($order_received_matter->matter->rank == 3)
-    <!-- 案件名 -->
-        {{ $order_received_matter->matter->matter_name }}
-    <!-- ランク -->
-    @php
-        $users = DB::table('users')->find($order_received_matter->user_id);
-        $total_exe = $users->total_experience;
-        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-        $rank = $ranks->rank;
-    @endphp
-    {{ $rank }}
-    @endif
-    {{-- ランクがBの時 --}}
-    @if ($order_received_matter->matter->rank == 4)
-    <!-- 案件名 -->
-        {{ $order_received_matter->matter->matter_name }}
-    <!-- ランク -->
-    @php
-        $users = DB::table('users')->find($order_received_matter->user_id);
-        $total_exe = $users->total_experience;
-        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-        $rank = $ranks->rank;
-    @endphp
-    {{ $rank }}
-    @endif
-    {{-- ランクがAの時 --}}
-    @if ($order_received_matter->matter->rank == 5)
-    <!-- 案件名 -->
-        {{ $order_received_matter->matter->matter_name }}
-    <!-- ランク -->
-    @php
-        $users = DB::table('users')->find($order_received_matter->user_id);
-        $total_exe = $users->total_experience;
-        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-        $rank = $ranks->rank;
-    @endphp
-    {{ $rank }}
-    @endif
-    {{-- ランクがSの時 --}}
-    @if ($order_received_matter->matter->rank == 6)
-    <!-- 案件名 -->
-        {{ $order_received_matter->matter->matter_name }}
-    <!-- ランク -->
-    @php
-        $users = DB::table('users')->find($order_received_matter->user_id);
-        $total_exe = $users->total_experience;
-        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-        $rank = $ranks->rank;
-    @endphp
-    {{ $rank }}
-    @endif
-    {{-- ランクがSSの時 --}}
-    @if ($order_received_matter->matter->rank == 7)
-    <!-- 案件名 -->
-        {{ $order_received_matter->matter->matter_name }}
-    <!-- ランク -->
-    @php
-        $users = DB::table('users')->find($order_received_matter->user_id);
-        $total_exe = $users->total_experience;
-        $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-        $rank = $ranks->rank;
-    @endphp
-    {{ $rank }}
-    @endif
-@endif
-@endforeach
