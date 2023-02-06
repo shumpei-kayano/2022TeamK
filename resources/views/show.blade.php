@@ -31,39 +31,6 @@
 /* ///////////////////// */
 
 
-.tooltip { /* 補足説明するテキストのスタイル */
-  position: relative;
-  cursor: pointer;
-  padding: 0 5px;
-  font-size: 0.9em;
-  color: #4682b4;
-}
- 
-.description_right { /* ツールチップのスタイル */
-  width: 100px; /* 横幅 */
-  position: absolute;
-  top: 50%;
-  left: 80%; /* X軸の位置 */
-  transform: translateY(-50%);
-  padding: 8px;
-  border-radius: 10px; /* 角の丸み */
-  background-color: #666;
-  font-size: 0.7em;
-  color: #fff;
-  text-align: center;
-  visibility: hidden; /* ツールチップを非表示に */
-  opacity: 0; /* 不透明度を0％に */
-  z-index: 1;
-  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
-  overflow: visible; /* はみ出して表示 */
-}
- 
-.tooltip:hover .description_right { /* マウスオーバー時のスタイル */
-  left: 100%; /* X軸の位置 */
-  visibility: visible; /* ツールチップを表示 */
-  opacity: 1; /* 不透明度を100％に */
-}
-
 
 </style>
 
@@ -142,7 +109,7 @@
 
 {{-- <div class="p-show"> --}}
     <div class="p-acinfo__container2">
-        <div class="nes-container is-dark with-title p-form__container2" style="display:flex; overflow: scroll; overflow-x:hidden; max-height: 525px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
+        <div class="nes-container is-dark with-title p-form__container2" style="display:flex; overflow-y: scroll; overflow-x:hidden; max-height: 525px; border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
     <table class="p-show"style="color:white height:40; display:flex;">
         <tr style="padding-left: 0; padding-right:0; height: 45px;">
             <th style="height: 45px; width:400px;">案件名</th>
@@ -160,8 +127,7 @@
                 $engs = DB::table('ranks')->find($item->rank);
                 $eng = $engs->rank;
                 @endphp
-            <td class="p-show__tokki" style=" height:40px;"><span class="tooltip" style="color: #fff;">{{$item->matter_name}}
-                <span class="description_right">マウスオーバー</span></span></td>
+            <td class="p-show__tokki" style=" height:40px;"><span class="tooltip" style="color: #fff;">{{$item->matter_name}}</td>
             <td style="height: 40px;">{{$item->occupation_name}}</td>
             <td style="height: 40px;">{{ $eng }}</td>
             <td style="height: 40px;">{{$item->prefectures_name}}</td>
