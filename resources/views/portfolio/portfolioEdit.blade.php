@@ -288,51 +288,49 @@
             <!-- 案件名 -->
                 {{ $order_received_matter->matter->matter_name }}
             <!-- ランク -->
-            @if($order_received_matter->rank == "1")
-            <p>E</p>
-            @else
+                <p>E</p>
             @endif
             {{-- ランクがDの時 --}}
             @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "2")
             <!-- 案件名 -->
                 {{ $order_received_matter->matter->matter_name }}
             <!-- ランク -->
-            {{ $order_received_matter->rank }}
+                <p>D</p>
             @endif
             {{-- ランクがCの時 --}}
             @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "3")
             <!-- 案件名 -->
                 {{ $order_received_matter->matter->matter_name }}
             <!-- ランク -->
-            {{ $order_received_matter->rank }}
+                <p>C</p>
             @endif
             {{-- ランクがBの時 --}}
             @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "4")
             <!-- 案件名 -->
                 {{ $order_received_matter->matter->matter_name }}
             <!-- ランク -->
-            {{ $order_received_matter->rank }}
+                <p>B</p>
             @endif
             {{-- ランクがAの時 --}}
             @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "5")
             <!-- 案件名 -->
                 {{ $order_received_matter->matter->matter_name }}
             <!-- ランク -->
-            {{ $order_received_matter->rank }}
+                <p>A</p>
             @endif
             {{-- ランクがSの時 --}}
             @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "6")
             <!-- 案件名 -->
                 {{ $order_received_matter->matter->matter_name }}
             <!-- ランク -->
-            {{ $order_received_matter->rank }}
+                <p>S</p>
             @endif
             {{-- ランクがSSの時 --}}
             @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "7")
             <!-- 案件名 -->
                 {{ $order_received_matter->matter->matter_name }}
             <!-- ランク -->
-            {{ $order_received_matter->rank }}
+                <p>SS</p>
             @endif
         @endforeach
     @else
