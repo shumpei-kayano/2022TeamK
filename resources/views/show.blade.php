@@ -116,8 +116,8 @@
             <th style="height: 45px; width:80px;">職種</th>
             <th style="height: 45px; width:20px;">ランク</th>
             <th style="width: 40px; height:45px;">エリア</th>
-            <th style="height: 45px;">特記事項</th>
-            <th style="height: 45px;">パーティ人数</th>
+            <th style="height: 45px;">人数</th>
+            <th style="height: 45px; width:100px;">パーティ内訳</th>
             <th style="width: 30px; padding-left:1px; height:45px;">詳細</th>
         </tr>
 
@@ -138,7 +138,7 @@
             $molecule = DB::table('order_received_matters')->where('matter_id', $item->id)->where('adoption_flg', 1)->get();
             $put = array();
             @endphp
-            <td class="p-show__tokki" style="height: 40px;">
+            <td class="p-show__ninzu" style="height: 40px;">
                 {{ count($molecule) }}/{{$item->number_of_person}}
 
             {{-- ここからツールチップ内の内容 --}}
