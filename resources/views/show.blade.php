@@ -150,6 +150,7 @@
             <th style="height: 45px; width:20px;">ランク</th>
             <th style="width: 40px; height:45px;">エリア</th>
             <th style="height: 45px;">特記事項</th>
+            <th style="height: 45px;">パーティ人数</th>
             <th style="width: 30px; padding-left:1px; height:45px;">詳細</th>
         </tr>
 
@@ -167,6 +168,43 @@
             <td style="height: 40px;">{{$item->prefectures_name}}</td>
             {{-- <td>{{$item->deadline}}</td> --}}
             <td class="p-show__tokki" style="height: 40px;">{{$item->remarks}}</td>
+            @php
+            $molecule = DB::table('order_received_matters')->where('matter_id', $item->matter_id)->where('adoption_flg', 1)->get();
+            @endphp
+            <td class="p-show__tokki" style="height: 40px;">
+                {{ count($molecule) }}/{{$item->number_of_person}}
+
+            {{-- ここからツールチップ内の内容 --}}
+            @foreach ($molecule as $mol)
+            @php
+                $mol_rank = DB::table('ranks')->where('requirement_experience', '>=', DB::table('users')->find($mol->user_id)->total_experience)->first()->rank;
+                $put[] = $mol_rank;
+            @endphp
+        @endforeach
+            @php
+                $ranks = DB::table('ranks')->get();
+            @endphp
+        @if(!empty($put))
+        @php
+        $p = array_count_values($put);
+        @endphp
+            @foreach ($ranks as $rank)
+                @php
+                if(!isset($p[$rank->rank])){
+                    $count = 0;
+                } else {
+                    $count = $p[$rank->rank];
+                    
+                }
+                @endphp
+                {{$rank->rank}}:{{$count}}
+                {{-- {{($p[$rank->rank])}} --}}
+            @endforeach
+        @else
+            現在採用なし
+        @endif
+            </td>
+
             <td style="height: 40px;"><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
             {{-- <td>@if (Auth::check())
                 @if (count($favorite) == 0) --}}
