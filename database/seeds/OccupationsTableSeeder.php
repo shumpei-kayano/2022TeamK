@@ -13,82 +13,82 @@ class OccupationsTableSeeder extends Seeder
     {
         DB::table('occupations')->insert([
             [
-                'occupation_name' => 'フロントエンドエンジニア',
+                'occupation_name' => 'ﾌﾛﾝﾄｴﾝﾄﾞｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'バックエンドエンジニア',
+                'occupation_name' => 'ﾊﾞｯｸｴﾝﾄﾞｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'インフラエンジニア',
+                'occupation_name' => 'ｲﾝﾌﾗｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'セキュリティエンジニア',
+                'occupation_name' => 'ｾｷｭﾘﾃｨｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'ネットワークエンジニア',
+                'occupation_name' => 'ﾈｯﾄﾜｰｸｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'データベースエンジニア',
+                'occupation_name' => 'ﾃﾞｰﾀﾍﾞｰｽｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'フルスタックエンジニア',
+                'occupation_name' => 'ﾌﾙｽﾀｯｸｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'DevOpsエンジニア',
+                'occupation_name' => 'DevOpsｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => '機械学習エンジニア',
+                'occupation_name' => '機械学習ｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'iosエンジニア',
+                'occupation_name' => 'iosｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'Androidエンジニア',
+                'occupation_name' => 'Androidｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'QAエンジニア',
+                'occupation_name' => 'QAｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'UXエンジニア',
+                'occupation_name' => 'UXｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'データサイエンティスト',
+                'occupation_name' => 'ﾃﾞｰﾀｻｲｴﾝﾃｨｽﾄ',
             ],
             [
-                'occupation_name' => '組み込みエンジニア',
+                'occupation_name' => '組み込みｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'ゲーム開発エンジニア',
+                'occupation_name' => 'ｹﾞｰﾑ開発ｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'SIエンジニア',
+                'occupation_name' => 'SIｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => '情報システム',
+                'occupation_name' => '情報ｼｽﾃﾑ',
             ],
             [
-                'occupation_name' => 'プリセールス',
+                'occupation_name' => 'ﾌﾟﾘｾｰﾙｽ',
             ],
             [
-                'occupation_name' => 'テクニカルサポートエンジニア',
+                'occupation_name' => 'ﾃｸﾆｶﾙｻﾎﾟｰﾄテｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'エンジニアマネージャー',
+                'occupation_name' => 'ｴﾝｼﾞﾆｱﾏﾈｰｼﾞｬｰ',
             ],
             [
-                'occupation_name' => 'プロダクトマネージャー',
+                'occupation_name' => 'ﾌﾟﾛﾀﾞｸﾄﾏﾈｰｼﾞｬｰ',
             ],
             [
                 'occupation_name' => '技術顧問',
             ],
             [
-                'occupation_name' => 'マークアップエンジニア',
+                'occupation_name' => 'ﾏｰｸｱｯﾌﾟｴﾝｼﾞﾆｱ',
             ],
             [
-                'occupation_name' => 'プロジェクトマネージャー',
+                'occupation_name' => 'ﾌﾟﾛｼﾞｪｸﾄﾏﾈｰｼﾞｬｰ',
             ],
             [
-                'occupation_name' => 'データエンジニアios/Android',
+                'occupation_name' => 'ﾃﾞｰﾀｴﾝｼﾞﾆｱios/Android',
             ],
         ]);
     }
