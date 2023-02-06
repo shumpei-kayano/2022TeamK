@@ -30,7 +30,7 @@
 <h1 class="p-form" style="padding-top: 30px;">承認待ちリスト</h1>
 
 <div class="p-acinfo__container2">
-    <div class="nes-container is-dark with-title p-form__container2" style="overflow-x:hidden; max-height: 600px; width:600px; text-overflow: ellipsis; overflow: scroll;  border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
+    <div class="nes-container is-dark with-title p-form__container2" style="overflow-x:hidden; max-height: 600px; text-overflow: ellipsis; overflow: scroll;  border: 5px solid #fff; border-radius: 10px; padding-top:0; margin-top:-26px;  padding-left:0; padding-right:0;">
         {{-- <a href="https://www.instagram.com/miura_koutaro?ref=badge" class="insta_btn3">
             <i class="fab fa-instagram"></i><div style="text-align: center">それでも!!!</div>
         </a> --}}
@@ -58,14 +58,14 @@
         @endforeach --}}
             {{-- </table> --}}
 
-<table class="p-show" style="color:white">
+<table class="p-show" style="color:white;">
     <thead>
         <tr>
             <th>案件名</th>
-            <th>案件ランク</th>
+            <th style="width:20px;">案件ランク</th>
             <th>パーティ人数</th>
-            <th>登録ユーザー</th>
-            <th>ランク</th>
+            <th style="width: 30px;">登録ユーザー</th>
+            <th style="width: 20px;">ランク</th>
             <th style="width: 30px; padding-left:1px;">詳細</th>
         </tr>
     </thead>
