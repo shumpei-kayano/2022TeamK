@@ -90,6 +90,7 @@
             <th>B</th>
             <th>C</th>
             <th>D</th>
+            <th>E</th>
         </tr>
         <tr>
             <td>1</td>
@@ -98,6 +99,7 @@
             <td>4</td>
             <td>5</td>
             <td>6</td>
+            <td>7</td>
         </table>
 </div>
 </div>
