@@ -67,7 +67,42 @@
           <!-- パーティ人数 --> <!-- <P>要素にカラム値を入れて欲しいです -->
         <div>
           <label for="dark_select" style="color:#fff;">パーティ人数</label><br>
-          <p>{{ $matter->number_of_person }}</p><br>
+          @php
+                //分子
+                $molecule = DB::table('order_received_matters')->where('matter_id', $matter->id)->where('adoption_flg', 1)->get();
+                // dd($molecule);
+                $put = array();
+                @endphp
+          <p>{{ count($molecule) }}/{{ $matter->number_of_person }}</p>
+          @foreach ($molecule as $mol)
+                    @php
+                        $mol_rank = DB::table('ranks')->where('requirement_experience', '>=', DB::table('users')->find($mol->user_id)->total_experience)->first()->rank;
+                        $put[] = $mol_rank;
+                    @endphp
+                @endforeach
+                    @php
+                        $ranks = DB::table('ranks')->get();
+                    @endphp
+                @if(!empty($put))
+                @php
+                $p = array_count_values($put);
+                @endphp
+                    @foreach ($ranks as $rank)
+                        @php
+                        if(!isset($p[$rank->rank])){
+                            $count = 0;
+                        } else {
+                            $count = $p[$rank->rank];
+                            
+                        }
+                        @endphp
+                        {{$rank->rank}}:{{$count}}
+                        {{-- {{($p[$rank->rank])}} --}}
+                    @endforeach
+                @else
+                    現在採用なし
+                @endif
+          <br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="rank" value="" disabled> 人<br>--> 
         </div>
 
