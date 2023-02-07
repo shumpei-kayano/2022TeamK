@@ -132,7 +132,7 @@
 @endforeach
 
 <div class="p-acinfo__container3">
-<div class="nes-container is-rounded is-dark p-acinfo__win3">
+<div class="nes-container is-rounded is-dark p-acinfo__win3" style="width:668px;">
     <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
     <table>
         <tr>
