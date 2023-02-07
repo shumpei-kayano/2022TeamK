@@ -271,7 +271,7 @@
                   <div>
                     <div class="p-port__PR">
                         <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>
-                            <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea" style="width:480px; height:250px; overflow-y: scroll; overflow-x:hidden;">{{ $form->self_pr }}</textarea>
+                            <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea" style="width:480px; height:250px; overflow-y: scroll; overflow-x:hidden; max-height:250px; min-height: 250px;">{{ $form->self_pr }}</textarea>
                     </div>
 
                            {{-- ランク別案件クリア数 --}}
