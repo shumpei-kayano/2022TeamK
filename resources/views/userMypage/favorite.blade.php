@@ -23,6 +23,9 @@
                 {{-- <th class="nes-btn is-primary" style="height:35px; width:60px; text-align:center; padding-top:0px; ">詳細</th> --}}
             </tr>
             </thead>
+            @php
+                $d = date('Y-m-d');
+            @endphp
         @foreach($favorites as $favorite)
                 @php
                     $matter = $matters->where('id', $favorite->matter_id)->first();
@@ -30,6 +33,7 @@
                     $occupation = DB::table('occupations')->find($matter->occupation_id);
                     $prefectures = DB::table('prefectures')->find($matter->prefectures_id);
                 @endphp
+        @if ($matter->deadline >= $d)
                 
                 <tbody>
                 <tr>
@@ -40,6 +44,7 @@
                     <td><a href="{{ route('matter.detail', ['id'=>$favorite->matter_id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
                 </tr>
                 </tbody>
+        @endif        
         @endforeach
             </table>
     </div>

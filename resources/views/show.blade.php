@@ -123,13 +123,15 @@
         
         @foreach($items as $item)
         @php
-            $d = now();
+            $d = date('Y-m-d');
             $molecule = DB::table('order_received_matters')->where('matter_id', $item->id)->where('adoption_flg', 1)->get();
             $put = array();
+            // dd($d, $item->deadline);
         @endphp
         <tr style="height: 40;">
             
             @if($item->deadline >= $d && count($molecule) < $item->number_of_person)
+            
                 @php
                 $engs = DB::table('ranks')->find($item->rank);
                 $eng = $engs->rank;
