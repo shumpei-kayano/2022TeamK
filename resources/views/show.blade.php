@@ -120,10 +120,13 @@
             <th style="height: 45px; width:100px;">パーティ内訳</th>
             <th style="width: 30px; padding-left:1px; height:45px;">詳細</th>
         </tr>
-
+        @php
+            $d = now()
+        @endphp
         @foreach($items as $item)
-
         <tr style="height: 40;">
+            
+            @if($item->deadline >= $d)
                 @php
                 $engs = DB::table('ranks')->find($item->rank);
                 $eng = $engs->rank;
@@ -173,6 +176,7 @@
             <td style="height: 40px;"><a href="{{ route('matter.detail', ['id'=>$item->id]) }}" style="height:35px; width:60px; text-align:center; padding-top:0px; padding-right:10px; color:aqua;">詳細</a></td>
            
         </tr>
+        @endif
 
         @endforeach
     </table>
