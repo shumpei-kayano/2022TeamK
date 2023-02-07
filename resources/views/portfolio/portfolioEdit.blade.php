@@ -268,20 +268,13 @@
                     
 
                     <!-- 自己PR -->
+                  <div>
                     <div class="p-port__PR">
                         <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>
-                            <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea">{{ $form->self_pr }}</textarea>
+                            <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea" style="width:480px; height:250px; overflow-y: scroll; overflow-x:hidden;">{{ $form->self_pr }}</textarea>
                     </div>
-                </div>
 
-                <!-- 編集ボタン -->
-                <div class="p-acinfo__btn-container p-port__btn">
-                    <button type="submit" class="nes-btn is-primary p-acinfo__btn" onclick='return confirm("編集完了してもよろしいでしょうか？");'>保存する</button>
-            <div>
-                <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
-        </form>
-
-       {{-- ランク別案件クリア数 --}}
+                           {{-- ランク別案件クリア数 --}}
 
 {{ $E = 0 }}
 {{ $D = 0 }}
@@ -331,10 +324,10 @@
 @endif
 @endforeach
 
-<div class="p-acinfo__container3">
-<div class="nes-container is-rounded is-dark p-acinfo__win3">
+<div class="p-acinfo__container3" style="width: 500px; height:150px; margin-top:0; display: flex; justify-content:center; ">
+<div class="nes-container is-rounded is-dark p-acinfo__win3" style="margin: auto; text-align:center; ">
     <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
-    <table>
+    <table style="table-layout:fixed;">
         <tr>
             <th>E</th>
             <th>D</th>
@@ -355,6 +348,18 @@
         </table>
 </div>
 </div>
+                  </div>
+                </div>
+
+                <!-- 編集ボタン -->
+                <div class="p-acinfo__btn-container p-port__btn">
+                    <button type="submit" class="nes-btn is-primary p-acinfo__btn" onclick='return confirm("編集完了してもよろしいでしょうか？");'>保存する</button>
+                </div>
+
+                <!-- <br><input type="submit" class="nes-btn is-success" value="編集"> -->
+        </form>
+
+ 
     @else
             {{-- ポートフォリオがなかった場合の処理 --}}
             <div class="p-acinfo__container">

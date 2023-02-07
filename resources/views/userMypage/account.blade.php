@@ -67,7 +67,9 @@
     $equipment4 = DB::table('development_language4s')->find($equipments->development_language_id4); 
     }
     @endphp
+    
     <p style="font-weight: 900; color:yellow">使用可能言語</p>
+    <div style="text-indent:left; padding-left:10px; text-align:left;">
     @if ($equipments != null)
     <p>E　{{$equipment1->language_name}}</p>
     <p>E　{{$equipment2->language_name}}</p>
@@ -76,6 +78,7 @@
     @else
     <p>学習なし</p>
     @endif
+    </div>
     </div>
 </div>
 {{-- ランク別案件クリア数 --}}
