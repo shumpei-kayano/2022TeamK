@@ -78,32 +78,80 @@
     @endif
     </div>
 </div>
+{{-- ランク別案件クリア数 --}}
+
+{{ $E = 0 }}
+{{ $D = 0 }}
+{{ $C = 0 }}
+{{ $B = 0 }}
+{{ $A = 0 }}
+{{ $S = 0 }}
+{{ $SS = 0 }}
+@foreach ($order_received_matters as $order_received_matter)
+{{-- {{dd($order_received_matter->rank)}} --}}
+{{-- ランクがEの時 --}}
+@if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "1")
+<!-- ランク -->
+    {{ $E += 1 }}
+@endif
+{{-- ランクがDの時 --}}
+@if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "2")
+<!-- ランク -->
+{{ $D += 1 }}
+@endif
+{{-- ランクがCの時 --}}
+@if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "3")
+<!-- ランク -->
+{{ $C += 1 }}
+@endif
+{{-- ランクがBの時 --}}
+@if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "4")
+<!-- ランク -->
+{{ $B += 1 }}
+@endif
+{{-- ランクがAの時 --}}
+@if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "5")
+<!-- ランク -->
+{{ $A += 1 }}
+@endif
+{{-- ランクがSの時 --}}
+@if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "6")
+<!-- 案件名 -->
+    {{ $order_received_matter->matter->matter_name }}
+<!-- ランク -->
+{{ $S += 1 }}
+@endif
+{{-- ランクがSSの時 --}}
+@if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "7")
+<!-- ランク -->
+{{ $SS += 1 }}
+@endif
+@endforeach
 
 <div class="p-acinfo__container3">
 <div class="nes-container is-rounded is-dark p-acinfo__win3">
     <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
     <table>
         <tr>
-            <th>SS</th>
-            <th>S</th>
-            <th>A</th>
-            <th>B</th>
-            <th>C</th>
-            <th>D</th>
             <th>E</th>
+            <th>D</th>
+            <th>C</th>
+            <th>B</th>
+            <th>A</th>
+            <th>S</th>
+            <th>SS</th>
         </tr>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
+            <td>{{$E}}</td>
+            <td>{{$D}}</td>
+            <td>{{$C}}</td>
+            <td>{{$B}}</td>
+            <td>{{$A}}</td>
+            <td>{{$S}}</td>
+            <td>{{$SS}}</td>
         </table>
 </div>
 </div>
-    
 
     {{-- <div class="p-acinfo__btn-container">
         <form action='{{ route('account_edit') }}' method="get">

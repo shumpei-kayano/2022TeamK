@@ -32,7 +32,8 @@ class UserMypageController extends Controller
     public function account(Request $request)
     {
         $user = Auth::user();
-        return view('./userMypage/account', compact('user'));
+        $order_received_matters = Order_received_matter::where('user_id', auth()->user()->id)->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        return view('./userMypage/account', compact('user','order_received_matters'));
     }
 
     // ログアウト
