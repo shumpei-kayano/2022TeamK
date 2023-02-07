@@ -120,13 +120,16 @@
             <th style="height: 45px; width:100px;">パーティ内訳</th>
             <th style="width: 30px; padding-left:1px; height:45px;">詳細</th>
         </tr>
-        @php
-            $d = now()
-        @endphp
+        
         @foreach($items as $item)
+        @php
+            $d = now();
+            $molecule = DB::table('order_received_matters')->where('matter_id', $item->id)->where('adoption_flg', 1)->get();
+            $put = array();
+        @endphp
         <tr style="height: 40;">
             
-            @if($item->deadline >= $d)
+            @if($item->deadline >= $d && count($molecule) < $item->number_of_person)
                 @php
                 $engs = DB::table('ranks')->find($item->rank);
                 $eng = $engs->rank;
@@ -137,10 +140,7 @@
             <td style="height: 40px;">{{$item->prefectures_name}}</td>
             {{-- <td>{{$item->deadline}}</td> --}}
             <td class="p-show__tokki" style="height: 40px;">{{$item->remarks}}</td>
-            @php
-            $molecule = DB::table('order_received_matters')->where('matter_id', $item->id)->where('adoption_flg', 1)->get();
-            $put = array();
-            @endphp
+
             <td class="p-show__ninzu" style="height: 40px;">
                 {{ count($molecule) }}/{{$item->number_of_person}}
 
