@@ -286,7 +286,8 @@ class MatterController extends Controller
         $form = $request->input('form');
         $portfolio = Portfolio::whereUser_id($id)->first();
         $items = \DB::table('development_languages') -> get();
-        return view('./user_detail', compact('portfolio', 'form','items'));
+        $order_received_matters = Order_received_matter::where('user_id', auth()->user()->id)->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
+        return view('./user_detail', compact('portfolio', 'form','items','order_received_matters'));
     }
 
     public function approval(Request $request, $id)
