@@ -123,7 +123,7 @@
 
       <div class="p-detail__tokki">
           <!-- 特記事項 -->
-          <label for="dark_select" style="color:#fff; padding-left: 5px; padding-right:5px;">特記事項</label><br>
+          <label for="dark_select" style="color:#fff; padding-left: 5px; padding-right:5px; margin:30px;">特記事項</label><br>
           <p>{{ $matter->remarks }}</p><br>
           <!--<textarea name="remarks" id="" class="nes-textarea is-dark p-anken2__textarea" aria-describedby="basic-addon2" disabled>{{ $matter->remarks }}</textarea><br>-->
       </div>
