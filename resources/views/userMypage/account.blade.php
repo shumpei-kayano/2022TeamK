@@ -82,59 +82,75 @@
     </div>
 </div>
 {{-- ランク別案件クリア数 --}}
-
-{{ $E = 0 }}
-{{ $D = 0 }}
-{{ $C = 0 }}
-{{ $B = 0 }}
-{{ $A = 0 }}
-{{ $S = 0 }}
-{{ $SS = 0 }}
+@php
+    $E = 0;
+    $D = 0;
+    $C = 0;
+    $B = 0;
+    $A = 0;
+    $S = 0;
+    $SS = 0;
+@endphp
+ 
 @foreach ($order_received_matters as $order_received_matter)
 {{-- {{dd($order_received_matter->rank)}} --}}
 {{-- ランクがEの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "1")
 <!-- ランク -->
-    {{ $E += 1 }}
+    @php
+        $E += 1
+    @endphp
 @endif
 {{-- ランクがDの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "2")
 <!-- ランク -->
-{{ $D += 1 }}
+    @php
+        $D += 1
+    @endphp
 @endif
 {{-- ランクがCの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "3")
 <!-- ランク -->
-{{ $C += 1 }}
+    @php
+        $C += 1
+    @endphp
 @endif
 {{-- ランクがBの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "4")
 <!-- ランク -->
-{{ $B += 1 }}
+    @php
+        $B += 1
+    @endphp
 @endif
 {{-- ランクがAの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "5")
 <!-- ランク -->
-{{ $A += 1 }}
+    @php
+        $A += 1
+    @endphp
 @endif
 {{-- ランクがSの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "6")
 <!-- 案件名 -->
     {{ $order_received_matter->matter->matter_name }}
 <!-- ランク -->
-{{ $S += 1 }}
+    @php
+        $S += 1
+    @endphp
 @endif
 {{-- ランクがSSの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "7")
 <!-- ランク -->
-{{ $SS += 1 }}
+    @php
+        $SS += 1
+    @endphp
 @endif
 @endforeach
 
-<div class="p-acinfo__container3">
-<div class="nes-container is-rounded is-dark p-acinfo__win3" style="width:668px;">
+<div class="p-acinfo__container3" style="width: 500px; height:150px; margin-top:0; display: flex; justify-content:center; ">
+<div class="nes-container is-rounded is-dark p-acinfo__win3" style="margin: auto; text-align:center; ">
     <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
-    <table>
+    <table style="table-layout:fixed;">
         <tr>
             <th>E</th>
             <th>D</th>

@@ -274,53 +274,69 @@
                             <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea" style="width:480px; height:250px; overflow-y: scroll; overflow-x:hidden; max-height:250px; min-height: 250px;">{{ $form->self_pr }}</textarea>
                     </div>
 
-                           {{-- ランク別案件クリア数 --}}
-
-{{ $E = 0 }}
-{{ $D = 0 }}
-{{ $C = 0 }}
-{{ $B = 0 }}
-{{ $A = 0 }}
-{{ $S = 0 }}
-{{ $SS = 0 }}
+{{-- ランク別案件クリア数 --}}
+@php
+    $E = 0;
+    $D = 0;
+    $C = 0;
+    $B = 0;
+    $A = 0;
+    $S = 0;
+    $SS = 0;
+@endphp
+ 
 @foreach ($order_received_matters as $order_received_matter)
 {{-- {{dd($order_received_matter->rank)}} --}}
 {{-- ランクがEの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "1")
 <!-- ランク -->
-    {{ $E += 1 }}
+    @php
+        $E += 1
+    @endphp
 @endif
 {{-- ランクがDの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "2")
 <!-- ランク -->
-{{ $D += 1 }}
+    @php
+        $D += 1
+    @endphp
 @endif
 {{-- ランクがCの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "3")
 <!-- ランク -->
-{{ $C += 1 }}
+    @php
+        $C += 1
+    @endphp
 @endif
 {{-- ランクがBの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "4")
 <!-- ランク -->
-{{ $B += 1 }}
+    @php
+        $B += 1
+    @endphp
 @endif
 {{-- ランクがAの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "5")
 <!-- ランク -->
-{{ $A += 1 }}
+    @php
+        $A += 1
+    @endphp
 @endif
 {{-- ランクがSの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "6")
 <!-- 案件名 -->
     {{ $order_received_matter->matter->matter_name }}
 <!-- ランク -->
-{{ $S += 1 }}
+    @php
+        $S += 1
+    @endphp
 @endif
 {{-- ランクがSSの時 --}}
 @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "7")
 <!-- ランク -->
-{{ $SS += 1 }}
+    @php
+        $SS += 1
+    @endphp
 @endif
 @endforeach
 
