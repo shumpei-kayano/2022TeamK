@@ -109,9 +109,4 @@
     </div>
 </div>
 
-{{-- ////////////練習/////////////// --}}
-{{-- <div class="asas" style="width: 200px;">
-<p>補足説明が必要な時は<span class="tooltip">ツールチップ
-    <span class="description_right">マウスオーバーすると、説明文が表示されます。</span></span>を使うと良いでしょう。</p>
-</div> --}}
 @endsection

@@ -63,7 +63,7 @@
         <tr>
             <th>案件名</th>
             <th style="width:20px;">案件ランク</th>
-            <th>パーティ人数</th>
+            <th style="width:20px;">人数</th>
             <th style="width: 30px;">登録ユーザー</th>
             <th style="width: 20px;">ランク</th>
             <th style="width: 30px; padding-left:1px;">詳細</th>
@@ -127,7 +127,7 @@
                 @else
                     現在採用なし
                 @endif
-                </td>
+                </>
                 <!-- 登録ユーザー -->
                 <td class="p-show__tokki">
                     {{ $order_received_matter->user->name }}
