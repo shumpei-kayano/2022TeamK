@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('title')
-案件検索！
+案件検索
 @endsection
 
 @section('content')
@@ -94,7 +94,7 @@
                         </div>
         <div class="p-form__btn-container">
             {{-- <form action="{{route('show')}}" method="GET"> --}}
-                <button type="submit" class="nes-btn is-success p-form__btn">検索</button>
+                <button type="submit" class="nes-btn is-primary p-form__btn">検索</button>
             </form>
             </div>
           

@@ -31,7 +31,7 @@
     <div class="portfolio">
         <div class="nes-container is-dark with-title portfolio__container" style="solid #fff; border-radius: 10px; margin-top:-40px;">
             <a href="portfolioAdd"><button type="button" class="nes-btn is-primary portfolio__btn">ポートフォリオを<br>作成する</button></a>
-            <a href="portfolioEdit"><button type="button" class="nes-btn is-warning portfolio__btn">ポートフォリオを<br>編集する</button></a>
+            <a href="portfolioEdit"><button type="button" class="nes-btn is-warning portfolio__btn">ポートフォリオを<br>確認・編集する</button></a>
             <a href="portfolioDel"><button type="button" class="nes-btn is-error portfolio__btn">ポートフォリオを<br>削除する</button></a>
         </div>
     </div>

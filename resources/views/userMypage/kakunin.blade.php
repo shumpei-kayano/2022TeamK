@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    確認
+    採用状況を確認
 @endsection
 
 @section('content')
@@ -110,8 +110,8 @@
 </div>
 
 {{-- ////////////練習/////////////// --}}
-<div class="asas" style="width: 200px;">
+{{-- <div class="asas" style="width: 200px;">
 <p>補足説明が必要な時は<span class="tooltip">ツールチップ
     <span class="description_right">マウスオーバーすると、説明文が表示されます。</span></span>を使うと良いでしょう。</p>
-</div>
+</div> --}}
 @endsection

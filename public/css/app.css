@@ -653,8 +653,8 @@ textarea,
 .p-acinfoEdit {
   text-align: center;
   margin-top: 130px;
-  width: 600px;
-  height: 230px;
+  width: 601px;
+  height: auto;
   /*text-align: center;
   margin-top: 130px;
   width: 500px;
