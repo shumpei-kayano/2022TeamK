@@ -44,7 +44,7 @@
         <div class="p-mypage__btn-container">
             <a href="/portfolio"><button type="button" class="nes-btn is-primary p-mypage__btn">ポートフォリオ</button></a> 
             <a href="/kakunin"><button type="button" class="nes-btn is-primary p-mypage__btn">採用状況を確認</button></a> 
-            <a href="/company"><button type="button" class="nes-btn is-primary p-mypage__btn">企業</button></a> 
+            {{-- <a href="/company"><button type="button" class="nes-btn is-primary p-mypage__btn">企業</button></a>  --}}
         </div>  
 </div>
 @endsection
