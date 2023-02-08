@@ -141,10 +141,10 @@
             <td style="height: 40px;">{{ $eng }}</td>
             <td style="height: 40px;">{{$item->prefectures_name}}</td>
             {{-- <td>{{$item->deadline}}</td> --}}
-            <td class="p-show__tokki" style="height: 40px;">{{$item->remarks}}</td>
+            <td class="p-show__tokki" style="height: 40px;">{{ count($molecule) }}/{{$item->number_of_person}}</td>
 
             <td class="p-show__ninzu" style="height: 40px;">
-                {{ count($molecule) }}/{{$item->number_of_person}}
+                {{-- {{ count($molecule) }}/{{$item->number_of_person}} --}}
 
             {{-- ここからツールチップ内の内容 --}}
             @foreach ($molecule as $mol)
