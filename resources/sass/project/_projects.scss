@@ -161,6 +161,7 @@
         margin: auto;
         width: 670px;   //横幅
         height: 200px;  //高さ
+        bottom: 40px;
     }
 }
 
@@ -273,16 +274,16 @@
     }
 
     &__btn {
-        width: 110px;
+        width: 140px;
         padding: 0;
         font-size: 20px;
         margin-top: 20px;
     }
 
-    &__btn-container {
-        // text-align: center;
-        // margin-left: 140px;
-    }
+    // &__btn-container {
+    //     // text-align: center;
+    //     // margin-left: 140px;
+    // }
 
 }
 
@@ -556,7 +557,7 @@ table.p-show td {
     &__prdn1 {
         float: left;
         margin-top: 20px;
-        width: 170px;       //プルダウンのサイズ
+        width: 201px;       //作成・削除のプルダウンのサイズ
     }
 
     &__prdn2 {
@@ -564,7 +565,21 @@ table.p-show td {
         margin-left: 10px;
         margin-top: 20px;
         margin-right: 10px;
-        width: 170px;       //プルダウンのサイズ
+        width: 201px;       //作成・削除のプルダウンのサイズ
+    }
+
+    &__prdn3 {
+        float: left;
+        margin-top: 20px;
+        width: 181px;       //確認・編集のプルダウンのサイズ
+    }
+
+    &__prdn4 {
+        float: left;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+        width: 170px;       //確認・編集のプルダウンのサイズ
     }
 
 
@@ -587,9 +602,17 @@ table.p-show td {
         margin-bottom: 20px;
     }
 
+    //作成・削除ボタン
     &__btn {
         position: absolute;
-        left: 185px;
+        left: 550px;
+        bottom: 70px;
+    }
+
+    //確認・編集の保存ボタン
+    &__btn2 {
+        position: absolute;
+        left: 490px;
         bottom: 70px;
     }
 
@@ -796,10 +819,10 @@ table.p-show td {
     //     margin-bottom: 20px;   
     // }
 
-    //編集ボタン
+    //保存ボタン
     &__btn1 {
         position: absolute;
-        left: 470px;     // 中央に配置
+        left: 460px;     // 中央に配置
         bottom: 36px;   //下に配置
     }
 
@@ -818,12 +841,12 @@ table.p-show td {
     //承認・却下のボタン
     &__btn1 {
         position: absolute;
-        left: 80px;
+        left: 410px;
         bottom: 70px;
     }
     &__btn2 {
         position: absolute;
-        left: 220px;
+        left: 560px;
         bottom: 70px;
     }
 

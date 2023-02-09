@@ -650,6 +650,7 @@ textarea,
   margin: auto;
   width: 670px;
   height: 200px;
+  bottom: 40px;
 }
 
 .p-info {
@@ -740,11 +741,12 @@ textarea,
   height: 450px;
 }
 .p-form__btn {
-  width: 110px;
+  width: 140px;
   padding: 0;
   font-size: 20px;
   margin-top: 20px;
 }
+
 .p-show {
   margin-left: auto;
   margin-right: auto;
@@ -967,9 +969,21 @@ table.p-show td {
 .p-port__prdn1 {
   float: left;
   margin-top: 20px;
-  width: 170px;
+  width: 201px;
 }
 .p-port__prdn2 {
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 201px;
+}
+.p-port__prdn3 {
+  float: left;
+  margin-top: 20px;
+  width: 181px;
+}
+.p-port__prdn4 {
   float: left;
   margin-left: 10px;
   margin-top: 20px;
@@ -991,7 +1005,12 @@ table.p-show td {
 }
 .p-port__btn {
   position: absolute;
-  left: 185px;
+  left: 550px;
+  bottom: 70px;
+}
+.p-port__btn2 {
+  position: absolute;
+  left: 490px;
   bottom: 70px;
 }
 .p-port__container {
@@ -1126,7 +1145,7 @@ table.p-show td {
 
 .p-anken3__btn1 {
   position: absolute;
-  left: 470px;
+  left: 460px;
   bottom: 36px;
 }
 .p-anken3__btn2 {
@@ -1137,12 +1156,12 @@ table.p-show td {
 
 .p-syounin__btn1 {
   position: absolute;
-  left: 80px;
+  left: 410px;
   bottom: 70px;
 }
 .p-syounin__btn2 {
   position: absolute;
-  left: 220px;
+  left: 560px;
   bottom: 70px;
 }
 .p-syounin__btn3 {

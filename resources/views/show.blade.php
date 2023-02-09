@@ -38,7 +38,7 @@
 
 <div class="p-form__show">
 
-<div class="p-form__container" style="margin-left:20px; width:350px; text-align:center; padding-bottom:20px; ">
+<div class="p-form__container" style="margin-left:20px; width:370px; text-align:center; padding-bottom:20px; ">
      <div class="nes-container is-dark with-title p-form__box" style="margin-right:40px;  border: 5px solid #fff; border-radius: 10px;">
     <form action="{{route('show')}}" method="GET">
 
@@ -52,7 +52,7 @@
             {{-- エリア検索 --}}
 
                     <!--<label for="dark_select" style="color:#fff">エリア</label>-->
-                        <div class="nes-select is-dark" style="padding-bottom: 20px; padding-top: 20px;">
+                        <div class="nes-select is-dark" style="padding-bottom: 20px; padding-top: 20px; width: 261px;">
                             <select class="p-form__eriaselect" style="" aria-label="Default select example"name="prefectures_id" id="dark_select">
                                 <option value="" selected>エリアを選択してください</option>
                                 {{-- <option hidden>エリアを選択してください</option> --}}

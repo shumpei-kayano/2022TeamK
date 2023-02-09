@@ -123,7 +123,7 @@
 
                         <!-- 学習言語1 -->
                         <div class="p-fort__aaa">
-                            <div class="p-port__prdn1">   
+                            <div class="p-port__prdn3">   
                                 <label for="dark_select" style="color:#fff;">学習言語１</label><br>
                                         <div class="nes-select is-dark p-port__prdn">
                                             <select name="development_language_id1" required id="dark_select">
@@ -138,7 +138,7 @@
                             </div>
 
                              <!-- 学習期間1 -->
-                            <div class="p-port__prdn2">
+                            <div class="p-port__prdn4">
                                 <label for="dark_select" style="color:#fff;">学習期間1 </label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year1" required id="dark_select"  class="p-port__prdn">
@@ -155,7 +155,7 @@
 
                          <!-- 学習言語2 -->
                         <div class="p-fort__bbb">
-                            <div class="p-port__prdn1"> 
+                            <div class="p-port__prdn3"> 
                                 <label for="dark_select" style="color:#fff;">学習言語２</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                     <select type="number" name="development_language_id2" required id="dark_select">
@@ -170,7 +170,7 @@
                             </div>
 
                              <!-- 学習期間2 -->
-                            <div class="p-port__prdn2">
+                            <div class="p-port__prdn4">
                                 <label for="dark_select" style="color:#fff;">学習期間2</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year2" required id="dark_select"  class="p-port__prdn">
@@ -195,7 +195,7 @@
 
                          <!-- 学習言語3 -->
                         <div class="p-fort__ccc">
-                            <div class="p-port__prdn1"> 
+                            <div class="p-port__prdn3"> 
                                 <label for="dark_select" style="color:#fff;">学習言語３</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id3" required id="dark_select">
@@ -210,7 +210,7 @@
                             </div>
 
                              <!-- 学習期間3 -->
-                            <div class="p-port__prdn2">
+                            <div class="p-port__prdn4">
                                 <label for="dark_select" style="color:#fff;">学習期間3</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year3" required id="dark_select"  class="p-port__prdn">
@@ -235,7 +235,7 @@
                         
                          <!-- 学習言語4 -->
                         <div class="p-fort__ddd">
-                            <div class="p-port__prdn1">              
+                            <div class="p-port__prdn3">              
                                 <label for="dark_select" style="color:#fff;">学習言語４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_language_id4" required id="dark_select">
@@ -250,7 +250,7 @@
                             </div>
 
                              <!-- 学習期間4 -->
-                            <div class="p-port__prdn2">
+                            <div class="p-port__prdn4">
                                 <label for="dark_select" style="color:#fff;">学習期間４</label><br>
                                     <div class="nes-select is-dark p-port__prdn">
                                         <select type="number" name="development_year4" required id="dark_select"  class="p-port__prdn">
@@ -368,7 +368,7 @@
                 </div>
 
                 <!-- 編集ボタン -->
-                <div class="p-acinfo__btn-container p-port__btn">
+                <div class="p-acinfo__btn-container p-port__btn2">
                     <button type="submit" class="nes-btn is-primary p-acinfo__btn" onclick='return confirm("編集完了してもよろしいでしょうか？");'>保存する</button>
                 </div>
 
