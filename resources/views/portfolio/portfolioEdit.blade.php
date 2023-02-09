@@ -343,7 +343,7 @@
 <div class="p-acinfo__container3" style="width: 500px; height:150px; margin-top:0; display: flex; justify-content:center; ">
 <div class="nes-container is-rounded is-dark p-acinfo__win3" style="margin: auto; text-align:center; margin-top:10px;">
     <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
-    <table style="table-layout:fixed;">
+    <table style="table-layout:fixed;"  width="400">
         <tr>
             <th>E</th>
             <th>D</th>

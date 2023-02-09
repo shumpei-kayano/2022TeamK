@@ -65,11 +65,9 @@
 <p>パーティ人数：{{$input["number_of_person"]}}</p>
 <p>成功報酬：{{$input["success_fee"]}}</p>
 <p>案件ランク：{{$rank->rank}}</p>
-</div>
-</div>
-
-<input type="submit" class="nes-btn is-success" value="登録">
-
+<input type="submit" class="nes-btn is-primary" value="登録">
+    </div>
+  </div>
 </form>
 </div>
 @endsection

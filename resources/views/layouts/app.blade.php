@@ -45,7 +45,7 @@
                             <li class="c-nav__list"><a href="{{ route('favorite_list')}}">お気に入り</a></li>
                             <li class="c-nav__list"><a href="/show">案件検索</a></li>
                             <li class="c-nav__list"><a href="/portfolio">ポートフォリオ</a></li>
-                            {{-- <li class="c-nav__list"><a href="/company">企業</a></li> --}}
+                            <li class="c-nav__list"><a href="/company">企業</a></li>
                             <li class="c-nav__list"><a href="/kakunin">採用状況を確認</a></li>
                         </ul>
                     @endauth

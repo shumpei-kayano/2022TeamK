@@ -153,6 +153,13 @@
         text-align: center;
         margin: auto;
         width: 670px;   //横幅
+        height: 160px;  //高さ
+    }
+    //アカウント情報の案件記録のウィンドウ
+    &__win4 {
+        text-align: center;
+        margin: auto;
+        width: 670px;   //横幅
         height: 200px;  //高さ
     }
 }
@@ -584,7 +591,6 @@ table.p-show td {
         position: absolute;
         left: 185px;
         bottom: 70px;
-
     }
 
     &__container {
@@ -812,13 +818,12 @@ table.p-show td {
     //承認・却下のボタン
     &__btn1 {
         position: absolute;
-        left: 110px;
+        left: 80px;
         bottom: 70px;
     }
     &__btn2 {
         position: absolute;
-        left: 260px;
-        right: 185px;
+        left: 220px;
         bottom: 70px;
     }
 

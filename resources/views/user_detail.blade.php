@@ -174,10 +174,95 @@
             <!-- 自己PR -->
             <div class="p-port__PR">
                 <label for="pr" style="color:#fff; margin-top: 20px;">自己PR</label><br>
-                    <textarea name="self_pr" class="nes-textarea is-dark p-form__Textarea" readonly>{{ $portfolio->self_pr }}</textarea>
+                    <textarea name="self_pr" id="" class="nes-textarea is-dark nes-textarea is-dark p-form__Textarea" style="width:480px; height:250px; overflow-y: scroll; overflow-x:hidden; max-height:250px; min-height: 250px;" readonly>{{ $portfolio->self_pr }}</textarea>
+            {{-- ランク別案件クリア数 --}}
+
+            {{-- {{ $E = 0 }}
+            {{ $D = 0 }}
+            {{ $C = 0 }}
+            {{ $B = 0 }}
+            {{ $A = 0 }}
+            {{ $S = 0 }}
+            {{ $SS = 0 }} --}}
+            @php
+            $E = 0;
+            $D = 0;
+            $C = 0;
+            $B = 0;
+            $A = 0;
+            $S = 0;
+            $SS = 0;
+            @endphp
+
+            @foreach ($order_received_matters as $order_received_matter)
+            {{-- {{dd($order_received_matter->rank)}} --}}
+            {{-- ランクがEの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "1")
+            <!-- ランク -->
+                {{ $E += 1 }}
+            @endif
+            {{-- ランクがDの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "2")
+            <!-- ランク -->
+            {{ $D += 1 }}
+            @endif
+            {{-- ランクがCの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "3")
+            <!-- ランク -->
+            {{ $C += 1 }}
+            @endif
+            {{-- ランクがBの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "4")
+            <!-- ランク -->
+            {{ $B += 1 }}
+            @endif
+            {{-- ランクがAの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "5")
+            <!-- ランク -->
+            {{ $A += 1 }}
+            @endif
+            {{-- ランクがSの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "6")
+            <!-- 案件名 -->
+                {{ $order_received_matter->matter->matter_name }}
+            <!-- ランク -->
+            {{ $S += 1 }}
+            @endif
+            {{-- ランクがSSの時 --}}
+            @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "7")
+            <!-- ランク -->
+            {{ $SS += 1 }}
+            @endif
+            @endforeach
+            
+            <div class="p-acinfo__container3" style="width: 500px; height:150px; margin-top:0; display: flex; justify-content:center; ">
+            <div class="nes-container is-rounded is-dark p-acinfo__win3" style="margin: auto; text-align:center; ">
+                <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
+
+                <table style="table-layout:fixed;" width="400">
+                    <tr>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>C</th>
+                        <th>B</th>
+                        <th>A</th>
+                        <th>S</th>
+                        <th>SS</th>
+                    </tr>
+                    <tr>
+                        <td>{{$E}}</td>
+                        <td>{{$D}}</td>
+                        <td>{{$C}}</td>
+                        <td>{{$B}}</td>
+                        <td>{{$A}}</td>
+                        <td>{{$S}}</td>
+                        <td>{{$SS}}</td>
+                </table>
+
                 </div>
                 </div>
-                {{-- {{dd($portfolio)}} --}}
+
+    {{-- {{dd($portfolio)}} --}}
     @if($orm->adoption_flg == 0)      
     <form method="POST" action="{{ route('approval', ['id'=>$form]) }}">
         <div class="p-syounin__btn1">
@@ -190,10 +275,11 @@
         <div class="p-syounin__btn2">
         @csrf
         <button type="submit" class="nes-btn is-error p-acinfo__btn"
-         onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
+        onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
         </div>
     </form>
     @endif
+
     {{-- ポートフォリオがない場合 --}}
     @else
     @if($orm->adoption_flg == 0)  
@@ -213,7 +299,7 @@
         <div class="p-syounin__btn4">
         @csrf
         <button type="submit" class="nes-btn is-error p-acinfo__btn"
-         onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
+        onclick='return confirm("却下してもよろしいでしょうか？");'>却下する</button>
         </div>
     </form>
     @endif
@@ -223,78 +309,7 @@
     @endif
 </div>
 </div>
- {{-- ランク別案件クリア数 --}}
 
- {{ $E = 0 }}
- {{ $D = 0 }}
- {{ $C = 0 }}
- {{ $B = 0 }}
- {{ $A = 0 }}
- {{ $S = 0 }}
- {{ $SS = 0 }}
- @foreach ($order_received_matters as $order_received_matter)
- {{-- {{dd($order_received_matter->rank)}} --}}
- {{-- ランクがEの時 --}}
- @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "1")
- <!-- ランク -->
-     {{ $E += 1 }}
- @endif
- {{-- ランクがDの時 --}}
- @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "2")
- <!-- ランク -->
- {{ $D += 1 }}
- @endif
- {{-- ランクがCの時 --}}
- @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "3")
- <!-- ランク -->
- {{ $C += 1 }}
- @endif
- {{-- ランクがBの時 --}}
- @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "4")
- <!-- ランク -->
- {{ $B += 1 }}
- @endif
- {{-- ランクがAの時 --}}
- @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "5")
- <!-- ランク -->
- {{ $A += 1 }}
- @endif
- {{-- ランクがSの時 --}}
- @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "6")
- <!-- 案件名 -->
-     {{ $order_received_matter->matter->matter_name }}
- <!-- ランク -->
- {{ $S += 1 }}
- @endif
- {{-- ランクがSSの時 --}}
- @if ($order_received_matter->evaluation == 1 && $order_received_matter->rank == "7")
- <!-- ランク -->
- {{ $SS += 1 }}
- @endif
- @endforeach
- 
- <div class="p-acinfo__container3" style="width: 500px; height:150px; margin-top:0; display: flex; justify-content:center; ">
- <div class="nes-container is-rounded is-dark p-acinfo__win3" style="margin: auto; text-align:center; ">
-     <p style="font-weight: 900; color:yellow">クリアした案件の記録（ランク）</p>
-     <table style="table-layout:fixed;">
-         <tr>
-             <th>E</th>
-             <th>D</th>
-             <th>C</th>
-             <th>B</th>
-             <th>A</th>
-             <th>S</th>
-             <th>SS</th>
-         </tr>
-         <tr>
-             <td>{{$E}}</td>
-             <td>{{$D}}</td>
-             <td>{{$C}}</td>
-             <td>{{$B}}</td>
-             <td>{{$A}}</td>
-             <td>{{$S}}</td>
-             <td>{{$SS}}</td>
-         </table>
- </div>
- </div>
+</div>
+</div>
 @endsection

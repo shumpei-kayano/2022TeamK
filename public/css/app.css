@@ -643,6 +643,12 @@ textarea,
   text-align: center;
   margin: auto;
   width: 670px;
+  height: 160px;
+}
+.p-acinfo__win4 {
+  text-align: center;
+  margin: auto;
+  width: 670px;
   height: 200px;
 }
 
@@ -1131,13 +1137,12 @@ table.p-show td {
 
 .p-syounin__btn1 {
   position: absolute;
-  left: 110px;
+  left: 80px;
   bottom: 70px;
 }
 .p-syounin__btn2 {
   position: absolute;
-  left: 260px;
-  right: 185px;
+  left: 220px;
   bottom: 70px;
 }
 .p-syounin__btn3 {
