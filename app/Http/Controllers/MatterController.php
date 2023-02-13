@@ -63,13 +63,13 @@ class MatterController extends Controller
         // dd($matters, $id);
         $prefectures = \DB::table('prefectures')->get();
         $occupations = \DB::table('occupations')->get();
-        $rank_of_difficulties = \DB::table('rank_of_difficulties')->get();
+        $ranks = \DB::table('ranks')->get();
         $development_languages = \DB::table('development_languages')->get();
         $development_language2s = \DB::table('development_language2s')->get();
         $development_language3s = \DB::table('development_language3s')->get();
         $development_language4s = \DB::table('development_language4s')->get();
         
-        return view('matterEdit', ['matters' => $matters], compact('user', 'prefectures', 'occupations', 'rank_of_difficulties', 'development_languages', 'development_language2s', 'development_language3s', 'development_language4s'));
+        return view('matterEdit', ['matters' => $matters], compact('user', 'prefectures', 'occupations', 'ranks', 'development_languages', 'development_language2s', 'development_language3s', 'development_language4s'));
     }
 
     public function matterUpdate(Request $request, $id)
