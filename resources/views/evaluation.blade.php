@@ -1,5 +1,5 @@
 {{-- {{ dd($form) }} --}}
-@extends('layouts.app')
+@extends('layouts.appp')
 
 @section('title')
     評価完了
