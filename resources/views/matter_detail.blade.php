@@ -38,23 +38,23 @@
       </div>
 
 
-      <div class="p-detail__up" style="display:flex;  justify-content: space-around;  flex-direction: row;   margin:10px 0px;">
+      <div class="p-detail__up" style="display:flex;  justify-content: space-around;  flex-direction: row; margin:10px 0px; ">
           <!-- 勤務地 -->
-        <div>
+        <div style="vertical-align: middle;">
           <label for="dark_select" style="color:#fff;">勤務地</label><br>
           <p>{{ $prefectures1->prefectures_name }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="prefectures_id" value="{{ $prefectures1->prefectures_name }}" disabled><br>--> 
         </div>
 
           <!-- 職種 -->
-        <div>
+        <div style="vertical-align: middle;">
           <label for="dark_select" style="color:#fff;">職種</label><br>
           <p>{{ $occupation1->occupation_name }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="occupation_id" value="{{ $occupation1->occupation_name }}" disabled><br>-->
         </div>
 
           <!-- ランク -->
-        <div>
+        <div style="vertical-align: middle;">
           <label for="dark_select" style="color:#fff;">案件ランク</label><br>
             @php
             $engs = DB::table('ranks')->find($matter->rank);
@@ -65,7 +65,7 @@
         </div>
 
           <!-- パーティ人数 --> <!-- <P>要素にカラム値を入れて欲しいです -->
-        <div>
+        <div style="vertical-align: middle;">
           <label for="dark_select" style="color:#fff;">パーティ人数</label><br>
           @php
                 //分子
@@ -107,13 +107,13 @@
         </div>
 
           {{-- 期限 --}}
-        <div>
+        <div style="vertical-align: middle;">
           <label for="dark_select" style="color:#fff;">期限</label><br>
           <p>{{ $matter->deadline }}</p><br>
         </div>
 
           <!-- 報酬金額 --> <!-- <P>要素にカラム値を入れて欲しいです -->
-        <div>
+        <div style="vertical-align: middle;">
           <label for="dark_select" style="color:#fff;">報酬金額</label><br>
           <p>{{ $matter->success_fee }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs2" name="rank" value="" disabled> 円<br>--> 
