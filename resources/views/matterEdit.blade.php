@@ -261,22 +261,6 @@
 
 </div>
 
-    <!-- 編集 -->
-    <div class="p-anken3__btn1">
-    <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="保存する" onclick='return confirm("編集完了してもよろしいでしょうか？");'>
-    </form>
-    </div>
-
-    <div class="p-anken3__btn2">
-    <form action="{{ route('matter_remove',['id'=>$matters->id]) }}" method="post">
-    @csrf
-    <!-- 削除 -->
-    <input type="submit" class="nes-btn is-primary p-acinfo__btn" value='削除する' onclick='return confirm("本当に削除してもよろしいでしょうか？");'>
-    </div>
-
-
-
-
 <div class="p-anken2__Arrangement2">
 
     <!-- 特記事項 -->
@@ -310,6 +294,19 @@
 
 
   </div>
+  <!-- 編集 -->
+  <div class="p-anken3__btn1">
+    <input type="submit" class="nes-btn is-primary p-acinfo__btn" value="保存する" onclick='return confirm("編集完了してもよろしいでしょうか？");'>
+    </form>
+    </div>
+
+    <div class="p-anken3__btn2">
+    <form action="{{ route('matter_remove',['id'=>$matters->id]) }}" method="post">
+    @csrf
+    <!-- 削除 -->
+    <input type="submit" class="nes-btn is-primary p-acinfo__btn" value='削除する' onclick='return confirm("本当に削除してもよろしいでしょうか？");'>
+    </div>
+
 
   </div>
   </form>
