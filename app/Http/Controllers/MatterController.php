@@ -212,13 +212,13 @@ class MatterController extends Controller
         // dd($keyword,$prefectures_id,$occupation_id,$level_id);
 
         $query = Matter::query();
-
+        // dd($query, $request);
         //テーブルの結合
-        $query->join('prefectures', function ($query) use ($request) {
-            $query->on('matters.prefectures_id', '=', 'prefectures.id');
-        })->join('occupations', function ($query) use ($request) {
-            $query->on('matters.occupation_id', '=', 'occupations.id');
-        });
+        // $query->join('prefectures', function ($query) use ($request) {
+        //     $query->on('matters.prefectures_id', '=', 'prefectures.id');
+        // })->join('occupations', function ($query) use ($request) {
+        //     $query->on('matters.occupation_id', '=', 'occupations.id');
+        // });
 
         if (!empty($prefectures_id)) {
             $query->where('prefectures_id', 'LIKE', $prefectures_id);
@@ -237,14 +237,22 @@ class MatterController extends Controller
         }
 
         $items = $query->select(
-            'Matters.id',
-            'Matters.matter_name',
-            'Occupations.occupation_name',
-            'Matters.rank',
-            'Prefectures.prefectures_name',
-            'Matters.remarks',
-            'Matters.number_of_person',
-            'Matters.deadline'
+            // 'Matters.id',
+            // 'Matters.matter_name',
+            // 'Occupations.occupation_name',
+            // 'Matters.rank',
+            // 'Prefectures.prefectures_name',
+            // 'Matters.remarks',
+            // 'Matters.number_of_person',
+            // 'Matters.deadline'
+            'id',
+            'matter_name',
+            'occupation_id',
+            'rank',
+            'prefectures_id',
+            'remarks',
+            'number_of_person',
+            'deadline',
         )->get();
         // $items = $query->get();
 
