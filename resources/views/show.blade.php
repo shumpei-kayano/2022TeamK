@@ -134,12 +134,13 @@
             
                 @php
                 $engs = DB::table('ranks')->find($item->rank);
-                $eng = $engs->rank;
+                $occs = DB::table('occupations')->find($item->occupation_id);
+                $pres = DB::table('prefectures')->find($item->prefectures_id);
                 @endphp
             <td class="p-show__tokki" style=" height:40px;"><span class="tooltip" style="color: #fff;">{{$item->matter_name}}</td>
-            <td style="height: 40px;">{{$item->occupation_name}}</td>
-            <td style="height: 40px;">{{ $eng }}</td>
-            <td style="height: 40px;">{{$item->prefectures_name}}</td>
+            <td style="height: 40px;">{{$occs->occupation_name}}</td>
+            <td style="height: 40px;">{{ $engs->rank }}</td>
+            <td style="height: 40px;">{{$pres->prefectures_name}}</td>
             {{-- <td>{{$item->deadline}}</td> --}}
             <td class="p-show__tokki" style="height: 40px;">{{ count($molecule) }}/{{$item->number_of_person}}</td>
 
