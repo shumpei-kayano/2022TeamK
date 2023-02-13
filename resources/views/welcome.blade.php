@@ -57,14 +57,14 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ url('/home') }}'">ほーむ</button>
+                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ url('/home') }}'">>ホーム</button>
                         {{-- <a href="{{ url('/home') }}">Home</a> --}}
                     @else
                     <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('login') }}'">ログイン</button>
                         {{-- <a href="{{ route('login') }}">Login</a> --}}
 
                         @if (Route::has('register'))
-                        <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('register') }}'">しんきとうろく</button>
+                        <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('register') }}'">新規登録</button>
                             {{-- <a href="{{ route('register') }}">Register</a> --}}
                         @endif
                     @endauth
