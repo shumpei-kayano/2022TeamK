@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appp')
 
 @section('title','ポートフォリオ詳細')
 

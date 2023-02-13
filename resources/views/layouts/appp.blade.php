@@ -28,7 +28,7 @@
         <nav class="c-nav">
             <div class="c-nav__container">
                 <h1 class="c-nav__sitetitle">
-                    <a class="nav__text" href="{{ url('/home') }}">
+                    <a class="nav__text" href="{{ url('/company') }}">
                         {{ config('app.name', 'マッチングRPG') }}
                     </a>
                 </h1>
