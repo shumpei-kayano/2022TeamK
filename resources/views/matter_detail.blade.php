@@ -28,12 +28,21 @@
           @php
             $occupation1 = DB::table('occupations')->find($matter->occupation_id);
             $prefectures1 = DB::table('prefectures')->find($matter->prefectures_id);
+            $createuser1 = DB::table('users')->find($matter->user_id);
           @endphp
       <div class="p-detail__anken" style="text-align:center;" >
         <br>
           <!-- 案件名 -->
           <label for="dark_select" style="color:#fff;">案件名</label><br>
           <p>{{ $matter->matter_name }}</p><br>
+          <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="matter_name" value="{{ $matter->matter_name }}" disabled><br>--> 
+      </div>
+
+      <div class="p-detail__anken" style="text-align:center;" >
+        <br>
+          <!-- 企業担当者名 -->
+          <label for="dark_select" style="color:#fff;">企業担当者名</label><br>
+          <p>{{ $createuser1->name }}</p><br>
           <!--<input type="search" id="dark_field" class="nes-input is-dark p-anken2__Inputs" name="matter_name" value="{{ $matter->matter_name }}" disabled><br>--> 
       </div>
 
