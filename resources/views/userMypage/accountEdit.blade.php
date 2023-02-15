@@ -14,7 +14,7 @@
                 @if($errors->has('name'))
                     {{ $errors->first('name') }}
                 @endif
-                    ユーザーID<input class="nes-input is-dark p-acinfoEdit__input" type="text" name='name' value='{{ $form->name }}'>br
+                    ユーザーID<input class="nes-input is-dark p-acinfoEdit__input" type="text" name='name' value='{{ $form->name }}'>
                 @if($errors->has('email'))
                     {{ $errors->first('email') }}
                 @endif
