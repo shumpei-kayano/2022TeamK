@@ -60,7 +60,7 @@
                     <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ url('/home') }}'">>ホーム</button>
                         {{-- <a href="{{ url('/home') }}">Home</a> --}}
                     @else
-                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('login') }}'">ログイン</button>
+                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('login') }}'">サインイン</button>
                         {{-- <a href="{{ route('login') }}">Login</a> --}}
 
                         @if (Route::has('register'))
