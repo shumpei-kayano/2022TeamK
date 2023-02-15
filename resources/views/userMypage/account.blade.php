@@ -37,7 +37,7 @@
 <div class="p-acinfo__container2">
     <div class="nes-container is-rounded is-dark p-acinfo p-acinfo__win">
         {{-- style="padding-bottom: 10px; border: 5px solid #fff; border-radius: 10px;" --}}
-        <p>ユーザーID：{{ $user->name }}</p>
+        <p>ユーザー名：{{ $user->name }}</p>
         <p>メールアドレス：{{ $user->email }}</p>
         <p>獲得経験値：{{ $user->total_experience }}</p>
         @php
