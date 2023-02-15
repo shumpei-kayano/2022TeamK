@@ -71,10 +71,10 @@
                                             $id = Auth::user()->id;
                                             $users = DB::table('users')->find($id);
                                             $total_exe = $users->total_experience;
-                                            $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
-                                            $rank = $ranks->rank;
+                                            // $ranks = DB::table('ranks')->where('requirement_experience', '>=', $total_exe)->first();
+                                            // $rank = $ranks->rank;
                                         @endphp
-                                        ランク{{$rank}}
+                                        {{-- ランク{{$rank}} --}}
                                     </span>
                                 </a>
 
