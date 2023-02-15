@@ -43,10 +43,11 @@
 
     <body>
         <div class="p-mail">
-            <h1>マッチングRPG<i class="nes-pokeball"></i></h1>
+            <h1>マッチングRPG</h1>
         </div>    
             <div class="p-mail__messe">
                 <p>登録したメールアドレス宛に、仮登録メールを送信しました。<br>
                    記載されているURLから、本登録を行ってください。</p>
             </div>
     </body>
+    {{-- <i class="nes-pokeball"></i> --}}
