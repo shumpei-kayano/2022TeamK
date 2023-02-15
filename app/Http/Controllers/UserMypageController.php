@@ -60,6 +60,7 @@ class UserMypageController extends Controller
             'email' => 'email',
         ]);
         
+        $order_received_matters = Order_received_matter::where('user_id', auth()->user()->id)->with('user:id,name', 'matter:id,matter_name')->orderBy('id', 'asc')->paginate(20);
         $user_form = $request->all();
         $user = Auth::user();
         //不要な「_token」の削除
@@ -71,7 +72,7 @@ class UserMypageController extends Controller
         // // dd($request);
         // unset($form['_token']);
         // $user->fill($form)->save();
-        return view('./userMypage/account',compact('user'));
+        return view('./userMypage/account',compact('user','order_received_matters'));
     }
 
     public function accountDelete(Request $request)
