@@ -57,7 +57,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ url('/home') }}'">>ホーム</button>
+                    <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ url('/home') }}'">ホーム</button>
                         {{-- <a href="{{ url('/home') }}">Home</a> --}}
                     @else
                     <button type="button" class="nes-btn p-wel__btn" onclick="location.href='{{ route('login') }}'">サインイン</button>
