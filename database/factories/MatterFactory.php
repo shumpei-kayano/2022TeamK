@@ -93,7 +93,7 @@ $factory->define(Matter::class, function (Faker $faker) {
         'rank' => rand(1,7),
         'number_of_person' => rand(1,5),
         'tel' => $faker->phoneNumber(),
-        'user_id' => rand(3,5),
+        'user_id' => rand(9,16),
         
     ];
 });

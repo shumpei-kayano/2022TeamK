@@ -18,7 +18,7 @@ class CreatePortfoliosTable extends Migration
             $table->integer('user_id');
             $table->string('name');
             $table->string('email');
-            $table->string('tel');
+            $table->integer('tel');
             $table->string('educational_background');
             $table->integer('development_language_id1');
             $table->integer('development_year1');

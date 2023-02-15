@@ -11,6 +11,6 @@ class MattersSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Matter::class, 100)->create();
+        factory(App\Matter::class, 250)->create();
     }
 }
